@@ -21,7 +21,7 @@ in `LOG.md`), never loosened without Ziggy's word. **STOP** means stop the sessi
 - Evidence: `evidence/G1.md`.
 - **STOP-1.** Report `reports/STOP-1.md`, covering: the source map; per region, which series is "household" and "industrial" (band
   choices); the consumption source for weights; the carbon price in or out; the China and Russia plan with its caveats; the
-  code licence question; the keys needed. Ziggy answers in the repo (an issue or a commit to the report) before G2.
+  keys needed. (The code licence is settled: MIT.) Ziggy answers in the repo (an issue or a commit to the report) before G2.
 
 ## G2 — Adapters
 - One adapter per source: fetch (live, or fixture when offline or keyless) → a normalised series in the common schema

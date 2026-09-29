@@ -1,8 +1,8 @@
 # Setup before the first cloud session (Ziggy's hands)
 
 1. **Push** this repo to `origin` (`git push -u origin main`).
-2. **Visibility and licence:** decide whether the repo is public now or at STOP-3 (GitHub Pages on a private repo needs
-   a paid plan), and the code licence (the session asks at STOP-1; MIT would match PyTTAI).
+2. **Visibility and licence:** decided 2026-09-29: public, MIT (`LICENSE`). Pages is switched on at STOP-3.
+   GitHub Sponsors: when the profile is live, tell the session so it adds `.github/FUNDING.yml` and the footer link.
 3. **EIA API key** (free, instant registration at eia.gov/opendata). Put it in two places:
    - the repo's Actions secrets as `EIA_API_KEY`;
    - the cloud environment's environment variables as `EIA_API_KEY`.

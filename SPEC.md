@@ -118,7 +118,11 @@ caveat. A missing value is shown as a gap with the reason, never interpolated si
 - **No secrets in the repo.** API keys arrive as environment variables (GitHub Actions secrets in CI; the build
   environment's variables in the session). With a key absent, the pipeline runs from committed fixtures and says so.
 - **Attribution for every source**, in the footer and on the sources page, in the form the source's licence asks for.
-- **Licence of the code:** Ziggy's call (STOP-1). Data carries its sources' terms.
+- **Licence of the code:** MIT (Ziggy, 2026-09-29; `LICENSE`). Data carries its sources' terms, stated per source.
+- **Public from the start** (Ziggy, 2026-09-29): the repo is public; Pages is switched on by Ziggy at STOP-3.
+- **Sponsorship:** this project is the pilot for Ziggy's GitHub Sponsors profile. The site gets a small "Sponsor" link in the footer
+  and `.github/FUNDING.yml` is added **only once the profile is live** (Ziggy says so; never link a profile that does not
+  exist). There is no paywall, no gated data, and no sponsor influence on the numbers or the method, and the site says that in one line.
 
 ## Out of scope (for this build)
 
