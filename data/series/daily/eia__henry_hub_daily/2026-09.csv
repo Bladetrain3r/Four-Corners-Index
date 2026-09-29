@@ -1,0 +1,16 @@
+series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-01,2026-09-01,2.9,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-02,2026-09-02,2.88,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-03,2026-09-03,2.95,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-04,2026-09-04,2.92,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-08,2026-09-08,2.9,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-09,2026-09-09,2.81,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-10,2026-09-10,2.76,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-11,2026-09-11,2.71,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-14,2026-09-14,2.85,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-15,2026-09-15,2.97,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-16,2026-09-16,3.0,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-17,2026-09-17,2.9,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-18,2026-09-18,2.97,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-21,2026-09-21,2.93,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-09-22,2026-09-22,2.9,USD/MMBtu,USD,,primary

@@ -34,7 +34,8 @@ method. It exists as a unit of account for readers (and later for the fleet's ow
 10. **South Africa** keeps only the layers with a public licence (mix and carbon intensity, coal, FX). Eskom tariffs are not used: their terms bar commercial use and automated collection. A publicly licensed tariff source would bring the price layers back.
 11. **No carbon (EUA) price.** Omitted and said so on the site.
 12. **Candidate layer, not built:** air-quality indicators (needs its own scoping and source check first).
-13. **Nowcast** (if any) is a separate line, never in "final"; decided at G4.
+13. **Nowcast** (if any) is a separate line, never in "final"; decided at G4: none at launch (METHOD.md section 9).
+14. **United Kingdom beside the basket** (Ziggy: "I think the UK might be a good option"). Not in either index and not weighted. DESNZ QEP tables 5.6.2 and 5.4.2 use Eurostat's own household band DC and non-household band ID, so it is like-for-like with the EU series; all under OGL v3.0. Source check 2026-09-29 (SOURCES.md Part F); adapters follow G4.
 
 ## The three layers (what is tracked)
 

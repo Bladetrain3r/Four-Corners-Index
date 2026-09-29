@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-11",
+  "name": "nrg_cb_e",
+  "raw_sha256": "b3a319c41d2378e6a6decb83b13f207afef1484cb4510bae1ba631a36e8c9728",
+  "retrieved_at": "2026-09-29T21:17:18Z",
+  "role": "primary",
+  "rows": 615,
+  "since": "2015-01-01",
+  "source": "eurostat",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_cb_e?geo=EU27_2020&geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&nrg_bal=FC&nrg_bal=ID&siec=E7000&unit=GWH&sinceTimePeriod=2013&format=JSON"
+}

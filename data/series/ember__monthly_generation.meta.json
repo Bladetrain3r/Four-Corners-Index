@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-29",
+  "name": "monthly_generation",
+  "raw_sha256": "6c8a587a5dfe32277616135e3c5af8e3cb60dff8eba1d4bc18b9b936b0c75d55",
+  "retrieved_at": "2026-09-29T21:17:22Z",
+  "role": "primary",
+  "rows": 7348,
+  "since": "2015-01-01",
+  "source": "ember",
+  "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv"
+}

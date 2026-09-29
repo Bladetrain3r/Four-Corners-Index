@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-29",
+  "name": "retail_price",
+  "raw_sha256": "144f71a54bf7a11fec29beae0ed81f1c4992ec781824481da2041d3f084ca685",
+  "retrieved_at": "2026-09-29T21:17:19Z",
+  "role": "primary",
+  "rows": 278,
+  "since": "2015-01-01",
+  "source": "eia",
+  "url": "https://api.eia.gov/v2/electricity/retail-sales/data/?api_key=REDACTED&frequency=monthly&data[0]=price&facets[stateid][]=US&start=2015-01&length=5000&facets[sectorid][]=RES&facets[sectorid][]=IND"
+}
