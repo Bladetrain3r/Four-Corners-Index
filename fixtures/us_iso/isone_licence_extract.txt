@@ -1,0 +1,8 @@
+ISO New England - Legal and Privacy (Terms and Conditions) - verbatim extract
+URL: https://www.iso-ne.com/legal-privacy
+Fetched: 2026-09-29T19:26Z (minute precision)
+No data fixture saved for ISO-NE: the licence says duplication may violate copyright, and the public CSV endpoints returned 403 from this environment.
+
+To request permission to use a graph, chart, or other image on this website, please email 
+
+You are also hereby put on notice that the Content is protected by copyright under United States laws. Any duplication of the Content or non-personal use may violate copyright, trademark, and other laws.

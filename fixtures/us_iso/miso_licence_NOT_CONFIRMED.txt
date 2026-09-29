@@ -1,0 +1,5 @@
+MISO website terms - NOT CONFIRMED
+Checked: 2026-09-29
+https://www.misoenergy.org/markets-and-operations/real-time--market-data/market-reports/ and https://www.misoenergy.org/legal/terms-of-use/ both returned HTTP 403 with header 'cf-mitigated: challenge' (Cloudflare 'Just a moment...' page) to curl. Not worked around.
+The data host docs.misoenergy.org serves the CSV files with no challenge and no licence text (file preamble has only a title, a date and a time-zone note).
+Secondary source only (a web-search summary, not verified against the page): MISO's Legal and Privacy page at https://www.misoenergy.org/meet-miso/legal-and-privacy/ is reported to say users may not "modify, publish, transmit, participate in the transfer or sale of, reproduce, create derivative works of, distribute, publicly perform, publicly display or in any way exploit any of the materials or content on the MISO Website". Treat as restrictive until read directly (e.g. by Ziggy in a browser).

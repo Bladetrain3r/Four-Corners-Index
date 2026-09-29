@@ -1,0 +1,92 @@
+[
+  {
+    "file": "caiso_prc_lmp_dam_hubs_20260927.csv",
+    "url": "https://oasis.caiso.com/oasisapi/SingleZip?queryname=PRC_LMP&market_run_id=DAM&node=TH_NP15_GEN-APND,TH_SP15_GEN-APND,TH_ZP26_GEN-APND&startdatetime=20260927T07:00-0000&enddatetime=20260928T07:00-0000&version=1&resultformat=6",
+    "fetched_at": "2026-09-29T19:23:47Z",
+    "sha256": "92a85cfc3608f06c708d71eb98a819828c1409259d88964809a1bc286d4bf86a",
+    "bytes": 12880,
+    "source_kind": "live",
+    "note": "TRIMMED: response zip member 20260927_20260928_PRC_LMP_DAM_20260929_12_23_47_v1.csv (360 rows) reduced to LMP_TYPE=LMP rows only (72 = 3 trading hubs TH_NP15/SP15/ZP26_GEN-APND x 24 hours); MCC, MCE, MCL, MGHG component rows dropped (288 rows). Timestamps GMT. Operating day 2026-09-27 (Pacific). Licence: reuse allowed with credit to California ISO (see caiso_licence_extract.txt)."
+  },
+  {
+    "file": "ercot_dam_spp_display_20260928.html",
+    "url": "https://www.ercot.com/content/cdr/html/20260928_dam_spp.html",
+    "fetched_at": "2026-09-29T19:23:14Z",
+    "sha256": "d6418206faface3c5fc90f60a26f6dce72b8fa500678c6a00af45017c5a47b2c",
+    "bytes": 23171,
+    "source_kind": "live",
+    "note": "Untrimmed raw response (byte-identical copy). ERCOT \"DAM Settlement Point Prices Display\" for operating day 2026-09-28, page says \"Last Date and Time: Sep 27, 2026 12:52\". Keyless HTML, one operating day per URL; only ~31 days back are served (20260901 worked, 20150115 returned 404). Licence: reuse allowed, see ercot_licence_extract.txt."
+  },
+  {
+    "file": "ercot_dam_spp_20260928.csv",
+    "url": "https://www.ercot.com/content/cdr/html/20260928_dam_spp.html",
+    "fetched_at": "2026-09-29T19:23:14Z",
+    "sha256": "f2475523b09d29830fb66f7bdc58d5609705f6ab371522eb44a1a7c02ff23cc4",
+    "bytes": 2641,
+    "source_kind": "live",
+    "note": "DERIVED, not trimmed: the 24 x 17 table of the HTML above converted to CSV by a scratch script (header row + 24 hourly rows: 7 hubs HB_*, 8 load zones LZ_*); values copied as text, none altered. Hour Ending 1..24, ERCOT local time. $/MWh (unit taken from the ERCOT product definition, not printed on the page: not confirmed on the page itself)."
+  },
+  {
+    "file": "nyiso_licence_extract.txt",
+    "url": "https://www.nyiso.com/legal-notice",
+    "fetched_at": "2026-09-29T19:21:30Z",
+    "sha256": "e88622e9f61d3df0a0f60cf75c66bbcad0f1e402f3104af1cea68ac8ff63f364",
+    "bytes": 980,
+    "source_kind": "live",
+    "note": "Verbatim paragraph from the NYISO Legal Notice. Finding: no data-reuse grant; rights reserved."
+  },
+  {
+    "file": "caiso_licence_extract.txt",
+    "url": "https://www.caiso.com/privacy-terms-of-use",
+    "fetched_at": "2026-09-29T19:23:00Z",
+    "sha256": "1e4e6effec2c4b1248b05729d942704714d7873446ef2f4ad6f24e7a14a9e66b",
+    "bytes": 2913,
+    "source_kind": "live",
+    "note": "Verbatim Terms of Use paragraphs + API Terms. Finding: reuse allowed with credit to California ISO and notices kept."
+  },
+  {
+    "file": "ercot_licence_extract.txt",
+    "url": "https://www.ercot.com/help/terms",
+    "fetched_at": "2026-09-29T19:22:00Z",
+    "sha256": "01b3df44edb07bba28a13fbd9310e00435c6f2bbcafa11e2b59b74940a650b34",
+    "bytes": 818,
+    "source_kind": "live",
+    "note": "Verbatim clause 5. Finding: raw data may be used/redistributed in compilations, charts and analyses without notices."
+  },
+  {
+    "file": "isone_licence_extract.txt",
+    "url": "https://www.iso-ne.com/legal-privacy",
+    "fetched_at": "2026-09-29T19:26:00Z",
+    "sha256": "6e78c4821a53c608c70f93431f9e2f1749878fe2a0d9bec70ad03c7e8785e91a",
+    "bytes": 615,
+    "source_kind": "live",
+    "note": "Verbatim sentences. Finding: copyright asserted, non-personal use may violate; permission via info@iso-ne.com. No data fixture saved."
+  },
+  {
+    "file": "spp_licence_extract.txt",
+    "url": "https://www.spp.org/terms-conditions/",
+    "fetched_at": "2026-09-29T19:26:00Z",
+    "sha256": "5e58cc2b778f5c355456e1f1d5c78787688eafec0d6c6ef1c2c6007ac02fe232",
+    "bytes": 1247,
+    "source_kind": "live",
+    "note": "Verbatim paragraphs. Finding: copy/distribute with citation except commercial use; written authorisation needed. No data fixture saved."
+  },
+  {
+    "file": "pjm_licence_extract.txt",
+    "url": "https://www.pjm.com/markets-and-operations/etools/data-miner-2",
+    "fetched_at": "2026-09-29T19:27:00Z",
+    "sha256": "b5694a0270354791c8477112b6839e7f5de04a6da4c7eb9962024ad1ebb863d5",
+    "bytes": 1222,
+    "source_kind": "live",
+    "note": "Verbatim sentences. Finding: redistribution of Data Miner data or derived data prohibited without PJM membership. No data fixture saved."
+  },
+  {
+    "file": "miso_licence_NOT_CONFIRMED.txt",
+    "url": "https://www.misoenergy.org/markets-and-operations/real-time--market-data/market-reports/",
+    "fetched_at": "2026-09-29T19:21:33Z",
+    "sha256": "ac16d0c07700a9c62918de1303cf840831e19fcb5d608a078c873961462b1a56",
+    "bytes": 977,
+    "source_kind": "live",
+    "note": "Not an extract: records that the MISO terms page is behind a Cloudflare challenge (HTTP 403, cf-mitigated: challenge) and carries an unverified secondary-source sentence. Licence NOT CONFIRMED."
+  }
+]
