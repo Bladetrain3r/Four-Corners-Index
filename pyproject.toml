@@ -1,0 +1,18 @@
+[project]
+name = "four-corners-index"
+version = "0.0.0"
+description = "Electricity price dashboard and two monthly indices"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "jsonschema", "pyyaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
