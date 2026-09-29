@@ -24,12 +24,12 @@ checks:
     unit: EUR/kWh
     abs: 0.0001
     why: "As above."
-  eurostat_nonhousehold_excl_taxes_eu27_all_bands:
+  eurostat_nonhousehold_excl_taxes_eu27_band_ic:
     badge: A
-    what: "EU-27 non-household, all bands (TOT_KWH), excluding taxes (X_TAX) against the same article, which averages across bands; our headline band ID is NOT comparable to it and is not used here"
+    what: "EU-27 non-household band IC (500-1,999 MWh/yr), excluding taxes (X_TAX), against the non-household values Eurostat states in the same article"
     unit: EUR/kWh
     abs: 0.0001
-    why: "As above."
+    why: "As above. AMENDED after run 1 (evidence/G3-run1-red.md): I had assumed the article's non-household figure was an all-bands average (TOT_KWH); it is band IC. The four half-years then match to four decimals. The tolerance number is unchanged; the wrong premise was mine."
   eia_us_retail_price_epm:
     badge: A
     what: "US residential and industrial average price, July 2026 and July 2025, against EIA Electric Power Monthly Table 5.6.A"

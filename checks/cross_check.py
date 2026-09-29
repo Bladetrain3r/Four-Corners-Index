@@ -98,7 +98,7 @@ def eurostat_checks() -> list[Row]:
         start = f"{label[:4]}-01-01" if label.endswith("S1") else f"{label[:4]}-07-01"
         ours = _one(hh, region="EU", series_id="nrg_pc_204:KWH2500-4999:X_TAX:EUR", period_start=start)["value"]
         rows.append(_abs_row("eurostat_household_excl_taxes_eu27", label, ours, want))
-    raw, at = _raw("eurostat", "nrg_pc_205_tot_kwh.json")
+    raw, at = _raw("eurostat", "nrg_pc_205_band_ic.json")
     nh = eurostat.parse(raw, "nrg_pc_205", at)
     nh_theirs = {
         "2024-S1": _num(r"first half of 2024 \(€([0-9.]+) per kWh\)", text),
@@ -108,8 +108,8 @@ def eurostat_checks() -> list[Row]:
     }
     for label, want in nh_theirs.items():
         start = f"{label[:4]}-01-01" if label.endswith("S1") else f"{label[:4]}-07-01"
-        ours = _one(nh, region="EU", series_id="nrg_pc_205:TOT_KWH:X_TAX:EUR", period_start=start)["value"]
-        rows.append(_abs_row("eurostat_nonhousehold_excl_taxes_eu27_all_bands", label, ours, want))
+        ours = _one(nh, region="EU", series_id="nrg_pc_205:MWH500-1999:X_TAX:EUR", period_start=start)["value"]
+        rows.append(_abs_row("eurostat_nonhousehold_excl_taxes_eu27_band_ic", label, ours, want))
     return rows
 
 
