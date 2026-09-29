@@ -1,0 +1,56 @@
+### sheet: Cover Sheet
+Energy Prices Domestic Prices
+Average annual domestic electricity bills by payment type
+Publication date: 30/06/2026
+Data period: Data for the 2025/26 financial year and revisions to standard electricity in 2023/24 and 2024/25 and Economy 7 in 2022/23
+Next update: 17/12/2026
+Revisions to this time series
+Domestic bills for standard electricity in financial years 2023/24 and 2024/25 and Economy 7 in 2022/23 have been revised as part of this release 
+This is to correct processing errors identified during quality assurance
+"These issues have been rectified, corrected in this revised data, and do not affect the estimates of 2025/26 domestic bills presented in this release"
+About this data
+Data in these tables show annual household bills for Standard and Economy 7 electricity for UK domestic consumers.
+Annual household bills data are presented by payment type.
+Data is shown in current (cash) terms.
+"Bills are based on fixed consumption levels of 3,400 kWh per year for standard electricity and 4,800 kWh per year for E7, of which 2,400 kWh are off-peak."
+"Prior to 2024, bills were based on fixed consumption levels of 3,600 kWh per year for standard electricity and 5,100 kWh per year for E7, of which 2,550 kWh are off-peak."
+Average bills on fixed and variable tariffs are official statistics in development calculated using the same consumption levels as in the main 2.2.1 table.
+Further information
+Quarterly Energy Prices Publication (opens in a new window)
+Annual domestic energy bills webpage (opens in a new window)
+Domestic price statistics data sources and methodologies (opens in a new window)
+Revisions policy and standards for official statistics (opens in a new window)
+Digest of United Kingdom Energy Statistics (DUKES): glossary and acronyms (opens in a new window)
+Contacts
+Energy Prices Statistics Team
+020 7215 1445
+energyprices.stats@energysecurity.gov.uk
+Press Office (media enquiries)
+020 7215 1000
+newsdesk@energysecurity.gov.uk 
+### sheet: 2.2.1
+"Average annual domestic Standard Electricity bills in cash terms for fixed and variable tariffs based on consumption of 3,400kWh/year, United Kingdom"
+Figures in cash terms.
+"These figures incorporate the Energy Price Guarantee from October 2022 but do not reflect payments made through the Energy Bills Support Scheme, which provided UK customers with £200 of support in 2022."
+The bills estimates presented here which are disaggregated by fixed tariffs and variable tariffs are official statistics in development.
+The tariffs that DESNZ can identify as being explicitly fixed tariffs are used to calculate fixed tariff bills. All other tariffs are assumed to be variable.
+The method used to calculate these figures does not allow DESNZ to perfectly determine which tariffs are fixed/capped and which are not.
+The methodology is dependent on the tariff name explicitly specifying that it is fixed/capped. The comparison between fixed and variable tariffs should be treated with some caution.
+"The number and proportion of customers on some tariffs, such as pre-payment fixed tariffs, is small. This should be borne in mind when considering trends and comparisons."
+Figures from 2014 to 2021 inclusive have been calculated from the average variable unit costs and average fixed costs in table 2.2.4.
+In the table r indicates revised data. An r in the year column indicates all data in the row has been revised.
+In the table p indicates provisional data. A p in the year column indicates all data in the row is provisional.
+Source: Department for Energy Security and Net Zero
+Year,Standard credit: Fixed tariffs (pounds),Standard credit: Variable tariffs (pounds),Standard credit: All Tariffs (pounds),Direct debit: Fixed tariffs (pounds),Direct debit: Variable tariffs (pounds),Direct debit: All Tariffs (pounds),Prepayment: Fixed tariffs (pounds),Prepayment: Variable tariffs (pounds),Prepayment: All Tariffs (pounds),Overall: Fixed tariffs (pounds),Overall: Variable tariffs (pounds),Overall: All Tariffs (pounds)
+2014,,,572.2773938274851,,,526.8967046945921,,,575.486205103443,,,547.5030113506989
+2015,,,568.6348990683985,,,516.7130565378859,,,570.688026763472,,,539.5046478271029
+2016,,,566.7541143783174,,,506.6389947781862,,,564.9900107725603,,,531.1527541629849
+2017,,,610.8140994496896,,,547.6114258732192,,,563.784215701992,,,564.5298652035176
+2018,,,662.244044799982,,,597.073435204867,,,592.5263653090013,,,609.8129069577199
+2019,,,716.5268182241632,,,648.5883967661624,,,666.2468734953129,,,664.2333796830887
+2020,,,718.8664445029292,,,653.9612676706889,,,686.4297604899688,,,670.7254794105726
+2021,,,780.5768365002767,,,716.9567522010816,,,741.5344770647934,,,731.0974056086263
+2022,1108.779174095628,1177.9392175787063,1166.7306844582668,997.831602315384,1152.9285884292103,1094.848191805197,1053.7973163633512,1068.5444290688672,1067.3798670416745,1010.7125402031668,1141.8418512895096,1103.3120053293162
+2023,1139.2429524719516,1267.3528227810116,1260.5134795537276,1099.105864840542,1228.9709130935244,1205.620496961719,1171.065243518432,1205.662734465651,1195.237778636654,1119.2049806579414,1233.7685718675118,1213.366842800942
+2024,1115.3150251636384,1123.823321103994,1123.4097255615118,1056.4677457082546,1091.028243921707,1081.6596225185785,1134.1052982666847,1042.4369747070255,1044.2921294534763,1059.7184071488616,1089.2032936883654,1083.2274977667098
+2025,1065.7025865583441,1130.6938327486814,1124.8298067873222,1021.6440838142062,1093.0524856031825,1059.3856398583757,1138.575938317024,1054.874037900403,1055.7450401468823,1023.8360684459169,1094.4103176880767,1069.3428586253615

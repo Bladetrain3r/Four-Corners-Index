@@ -1,0 +1,43 @@
+Notes for Table 2.2.1
+Notice of change
+Customers with their ‘home’ supplier as referred to in this data set are those with the energy companies that were the regional suppliers of gas and electricity to households prior to privatisation.
+"Therefore, customers with ‘non-home’ suppliers are those with any energy companies that were established following privatisation or a regional supplier operating outside its former region."
+"In the instances where home suppliers no longer exist as a distinct company or brand, the company which acquired or merged with the home supplier are classed as such in the region the former company operated."
+"Given overall market changes in recent years, companies no longer being distinguishable as home-suppliers due to mergers or market exits and customers being able to choose multiple suppliers unrelated to their geographical location including their own former ‘home’ supplier, this categorisation of domestic consumers is no longer deemed relevant."
+We stopped producing a home and non-home customer split in tables 2.2.1 and 2.3.1 for bills data in the first publication of 2024 estimated bills (the December 2024 publication)
+For customer proportions tables 2.4.1 and 2.5.1 these were removed in the June 2024 release of the Quarterly Energy Prices. 
+Overall Methodology on Data Collection
+Data on gas and electricity tariffs is received directly from all the main energy companies that supply electricity and gas across the UK via a quarterly survey.
+"The suppliers provide figures for each tariff (unit costs, standing charges, split levels, discounts, dates of tariff changes and number of customers), splitting the tariff information by payment type and region."
+"Data is received as part of a quarterly template, sent out to energy suppliers shortly after the end of each quarter."
+All information received from suppliers is quality assured by DESNZ prior to publication.
+Bill Calculation Methodology
+"Bills reflect the prices of all suppliers and include standing charges. No allowances are made for introductory offers, loyalty or prompt-pay discounts, cancellation fees or non-cash benefits that may be available from suppliers."
+"The bills shown relate to the total bill (including VAT) in cash terms received during the calendar year, for the payment type shown, including all changes made to tariff structure and prices. Averages are weighted by the number of domestic customers."
+Consumption
+"Bills are based on fixed consumption levels of 3,400 kWh per year for standard electricity and 4,800 kWh per year for E7, of which 2,400 kWh are off-peak."
+General Notes
+"Note 1. Provisional quarterly data is published three months in arrears. Any revised data is marked with an ""r"". Provisional annual data is published in the December edition of QEP, with the final data being published in March."
+"Note 2. Home supplier denotes the former public electricity suppliers within their own distribution areas, or their parent company."
+Note 2. Non-home suppliers are new entrant suppliers and the former electricity suppliers outside of their distribution areas.
+Note 3. Most domestic tariffs have now moved from a two-tier pricing structure to a single unit price and standing charge structure.
+"Note 3. Under the two-tier price system, a higher unit price was charged up to the split level (a certain number of units of energy) and additional use beyond this was priced at the lower, second tier price."
+"Note 3. Under the new pricing system, a single unit price is charged for each unit of energy used and a standing charge is applied, expressed in pence per day."
+Note 4. Standard credit customers pay on receipt of their bill which is usually payment 3 months in arrears. 
+Note 5. Direct debit transfers an agreed or variable amount directly from the customer’s bank account to the energy supplier. 
+Note 6. Prepayment requires the customer to make advance payment before fuel can be used. 
+Changes to domestic bills methodology
+"From the March 2011 edition of 'Quarterly Energy Prices', the domestic price statistics found in Chapter 2 for 2007 onwards are calculated using a slightly different methodology to that previously used."
+DESNZ sought users’ views about these changes and received no adverse views.
+The period over which the annual average domestic gas and electricity bills are calculated was changed so that they are based on consumption within the full calendar year to which they relate.
+"For 2006 and earlier years, bills were based on consumption from Q4 of the previous year to Q3 of the named year."
+"In addition, the assumed gas consumption pattern more accurately reflects quarterly consumption according to data collected from energy suppliers by another part of DESNZ’ Energy Statistics team."
+"More details of these changes are set out in an article found in the September 2010 edition of the Department's Energy Trends publication, which can be found here"
+"Prior to the March 2014 edition of 'Quarterly Energy Prices', domestic electricity bill estimates were published based on standard household consumption levels of 3,300kWh for standard electricity and 6,600kWh for Economy 7, with a split of 3,600kWh off peak and 3,000kWh on peak."
+This had remained unchanged since DESNZ started publishing such estimates in the 1990s.
+"Following changes in typical household consumption in more recent years, DESNZ has reviewed the available evidence."
+"The team decided to revise the levels used to 3,800kWh for standard electricity and 6,000kWh for E7 with a 50/50 on/off peak split."
+A special feature article within the March 2014 publication of Energy Trends provides more details and is available here.
+"From the March 2020 edition, domestic energy bills are based on updated standard household consumption levels: 3,600 kWh per year for standard electricity and 5,100 kWh per year for E7, of which 2,550 kWh are off-peak."
+"In March 2025 these were updated again, in line with our policy to review every 5 years, to 3,400kWh for standard electricity and 4,800kWh for E7, off which 2,400kWh are off-peak."
+Return to Contents Page

@@ -1,0 +1,202 @@
+
+=====PAGE 1=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+ 
+ 
+ 
+ 
+ 
+ 
+Energy price cap (default tariff) update from 1 October 2026  
+ 
+Dear colleagues,  
+Today we have published the updated cap levels for charge restriction period (“cap 
+period”) 17a, covering the three months from 1 October to 31 December 2026.1 
+Alongside the cap levels we have also published the updated versions of the cost 
+allowance models. All figures in this letter reflect the latest (2026) Typical Domestic 
+Consumption Values (TDCV) at medium consumption. 
+We are obliged to update the price cap level at intervals by applying updated inputs for 
+items such as wholesale costs to the price cap formulae which have been determined 
+by our previous decisions. That is what we have done today. In updating the price cap in 
+this way, we are not making a policy decision or exercising a judgment. 
+Alongside the price cap rates published today, we have also published our annual letter 
+regarding Smart Metering Net Cost Change allowances. 
+Later this week, we will also be publishing the decision for the introduction of an 
+allowance to cover the costs to suppliers of the Bill Discount Scheme (BDS) starting 
+from April 2027, which supports the funding of a new government scheme that provides 
+discounts to households near new or upgraded electricity transmission.  
+ 
+1 The data used in this document is not intended for use as an index by reference to which the amount payable 
+under a financial instrument or a financial contract, or the value of a financial instrument, is determined, or as 
+an index that is used to measure the performance of an investment fund with the purpose of tracking the 
+return of such index or of defining the asset allocation of a portfolio or of computing the performance fees. 
+Such outputs may not be used as a benchmark with the meaning of the EU Benchmark Regulation (Regulation 
+(EU) 2016/11 on indices used as benchmarks in financial instruments and financial contracts or to measure the 
+performance of investment funds) Regulation, UK Benchmark Regulation or otherwise.  
+To all market participants and 
+interested parties Email: retailpriceregulation@ofgem.gov.uk  
+ 
+Date: 26 August 2026 
+  
+=====PAGE 2=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+Summary of changes to the energy price cap by payment method and meter type 
+Cap level July to September 
+2026 
+October to 
+December 2026 
+Change (%) 
+Direct Debit £1,663 £1,723 4% 
+Standard Credit £1,796 £1,861 4% 
+PPM £1,620 £1,678 4% 
+Economy 7 
+(Direct Debit) 
+£1,039 £1,046 1% 
+All bill values presented in the table above are communicated using the current Typical 
+Domestic Consumption Values (TDCVs) at medium consumption, 2,500kWh for 
+electricity, 9,500 kWh for gas and 3,400 kWh for multi-register meters, such as 
+Economy 7 customers. All values are rounded to the nearest £ or %. 
+You can get a further breakdown by payment type of the cost components which make 
+up the price cap in the attached appendices. More details on the energy price cap can 
+be found at Energy price cap unit rates and standing charges | Ofgem on the Ofgem 
+website. 
+What’s driving the changes to the October to December 2026 cap level? 
+The main factors which have produced the change in the cap level are updates in the 
+model inputs for: 
+• Wholesale costs: The wholesale cost allowance has increased by 11%. It now 
+makes up 47% of the total price cap as compared to 44% in the previous quarter.  
+The continued conflict and geopolitical instability in the Middle East has been 
+the primary driver for wholesale market movements over the last three months 
+with prices also being compounded by extreme temperatures impacting much 
+of Britain and Europe as a whole. Gas prices continued to be impacted as the 
+market adjusted risk factors surrounding liquefied natural gas (LNG) supply. 
+Power prices have also been impacted due to increased cooling demand along 
+with tighter-than-normal margins caused by thermal curtailment of power 
+generating plants across continental Europe. These conditions, paired with low 
+wind generation led to an increased reliance on gas fired generation. 
+=====PAGE 3=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+Due to the role gas continues to have in setting power prices, the gas wholesale 
+allowance is going up by 13% and the electricity wholesale allowance is going up 
+by 10% as compared to the previous quarter. 
+ 
+• VAT reduction: The government has decided to reduce the level of VAT from all 
+electricity bills from 5% to zero. This change will apply to all bills, including those 
+under the price cap , from 1 October  2026 to 31 March 202 7. This change only 
+applies to electricity bills and VAT will remain unchanged for gas bills at 5% for 
+this period.  
+ 
+Compliance with the price caps 
+We expect suppliers to take seriously their obligations and comply with business-as-
+usual practices in line with Standard Licence Conditions. Ofgem will be closely 
+monitoring supplier compliance and will continue to take firm action against suppliers 
+who fall short of their requirements.  
+We expect any related data provided to Ofgem to be accurate, complete and provided 
+in a timely manner. We will also continue to monitor the quality of service suppliers 
+deliver to their customers and stand ready to take compliance and enforcement action 
+in the event that any licence requirements or contract terms are not met.  
+Yours faithfully, 
+Daniel Newport 
+Deputy Director, Price Cap  
+=====PAGE 4=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+Annexes 
+Annex 1 - Direct Debit Price Cap Cost Breakdown at current (2026) TDCV 
+ 
+Figures may not sum to total due to rounding. 
+ 
+ 
+Cost   July to Sept 2026 Oct to Dec 2026 
+Wholesale incl. contracts for 
+difference   
+44% 47% 
+Networks 25% 24% 
+Operating, debt and industry 
+costs 
+17% 17% 
+Policy 6% 6% 
+Earnings Before Interest and 
+Tax (EBIT) allowance    
+2.6% 2.7% 
+Headroom   1% 1% 
+Levelisation allowance   0.5% 0.5% 
+VAT (gas)  5% 5% 
+VAT (electricity)  5% 0% 
+Total   £1,663 £1,723 
+=====PAGE 5=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+ Annex 2 – Standard Credit Price Cap Cost Breakdown at current (2026) TDCV 
+  
+Figures may not sum to total due to rounding. 
+ 
+ 
+Cost   July to Sept 2026 Oct to Dec 2026 
+Wholesale incl. contracts for 
+difference   
+41% 44% 
+Networks 23% 22% 
+Operating, debt and industry 
+costs 
+23% 23% 
+Policy 5% 5% 
+Earnings Before Interest and 
+Tax (EBIT) allowance    
+2.5% 2.6% 
+Headroom   1% 1% 
+Levelisation allowance   0% 0% 
+VAT (gas)  5% 5% 
+VAT (electricity)  5% 0% 
+Total   £1,796 £1,861 
+=====PAGE 6=====
+   
+ 
+   
+ 
+OFFICIAL 
+OFFICIAL 
+Annex 3 – Prepayment Price Cap Cost Breakdown at current (2026) TDCV 
+Figures may not sum to total due to rounding. 
+ 
+ 
+Cost   July to Sept 2026 Oct to Dec 2026 
+Wholesale incl. contracts for 
+difference   
+45% 48% 
+Networks 25% 25% 
+Operating, debt and industry 
+costs 
+19% 18% 
+Policy 6% 6% 
+Earnings Before Interest and 
+Tax (EBIT) allowance    
+2.6% 2.7% 
+Headroom   1% 1% 
+Levelisation allowance   -3% -3% 
+VAT (gas)  5% 5% 
+VAT (electricity)  5% 0% 
+Total   £1,620 £1,678 

@@ -55,7 +55,7 @@ REQUESTS: tuple[Request, ...] = (
             "nrg_pc_204_c_components.json", _es("nrg_pc_204_c")),
     Request("eurostat", "prc_hicp_minr", f"{_ES}/prc_hicp_minr?{_HICP_GEOS}&coicop18=CP0451&unit=I25&unit=RCH_A&sinceTimePeriod=2020-01&format=JSON",
             "prc_hicp_minr_CP0451.json", _es("prc_hicp_minr")),
-    Request("eurostat", "nrg_cb_e", f"{_ES}/nrg_cb_e?{_geos(EU27)}&nrg_bal=FC&nrg_bal=ID&siec=E7000&unit=GWH&sinceTimePeriod=2015&format=JSON",
+    Request("eurostat", "nrg_cb_e", f"{_ES}/nrg_cb_e?{_geos(EU27)}&nrg_bal=FC&nrg_bal=ID&siec=E7000&unit=GWH&sinceTimePeriod=2013&format=JSON",
             "nrg_cb_e_consumption.json", _es("nrg_cb_e")),
     Request("eia", "retail_price", _eia_url("electricity/retail-sales", frequency="monthly", **{
         "data[0]": "price", "facets[stateid][]": "US", "start": "2015-01", "length": "5000"}) + "&facets[sectorid][]=RES&facets[sectorid][]=IND",

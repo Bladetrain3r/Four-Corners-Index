@@ -1,0 +1,47 @@
+[
+  {
+    "file": "17a-PDF-Cap-Tables.pdf",
+    "url": "https://www.ofgem.gov.uk/sites/default/files/2026-08/17a-PDF-Cap-Tables.pdf",
+    "fetched_at": "2026-09-29T21:14:52Z",
+    "sha256": "f34dd54ac09069e753cfe95a273f0ee0e53c7612d1aa0cf1b8cea9f2e630dcc8",
+    "bytes": 163634,
+    "note": "Untrimmed. Benchmark maximum charges, cap period 17a (1 Oct to 31 Dec 2026), by region and payment method; values exclusive of VAT; electricity single-rate m = 2,500 kWh, multi-register m = 3,400 kWh, gas m = 9,500 kWh.",
+    "source_kind": "live"
+  },
+  {
+    "file": "Summary-of-changes-to-energy-price-cap-1-July-to-30-September-2026-revised-TDCV.pdf",
+    "url": "https://www.ofgem.gov.uk/sites/default/files/2026-06/Summary-of-changes-to-energy-price-cap-1-July-to-30-September-2026-revised-TDCV.pdf",
+    "fetched_at": "2026-09-29T21:14:54Z",
+    "sha256": "e426c685f0fa7be3c2b8afba0d037125a3abbf91d4b3ed81d0a5aeecb56b7476",
+    "bytes": 159089,
+    "note": "Untrimmed. Ofgem letter re-published 2026-07-01 stating the 2026 TDCV (2,500 kWh electricity) replacing the 2023 TDCV (2,700 kWh).",
+    "source_kind": "live"
+  },
+  {
+    "file": "Summary-of-changes-2026-10-to-12_text.txt",
+    "url": "https://www.ofgem.gov.uk/sites/default/files/2026-08/Summary-of-changes-to-energy-price-cap-1-October-to-31-December-2026.pdf",
+    "fetched_at": "2026-09-29T21:14:53Z",
+    "sha256": "a535922a8056f4ba9f1d3fa32ff9feab3ed61cb28ada220c0dd4507a72ae1a88",
+    "bytes": 7162,
+    "note": "Trimmed: plain-text extraction (pypdf) of all 6 pages of the official PDF; the PDF itself (494988 bytes, sha256 c1709864a2537f0e8384af489046194e9dda7ee04ee6b93c05a90cb39e42f429) is not stored. Letter dated 26 August 2026: cap Direct Debit GBP 1,723 at 2026 TDCV; electricity VAT 5% to 0% from 1 Oct 2026 to 31 Mar 2027.",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_cap_levels_page_text_extract.txt",
+    "url": "https://www.ofgem.gov.uk/energy-regulation/domestic-and-non-domestic/energy-pricing-rules/energy-price-cap/energy-price-cap-default-tariff-levels",
+    "fetched_at": "2026-09-29T21:14:29Z",
+    "sha256": "9b80df82d56bdd950e18c7cb91f4e1e75be5ad5f351288dc2ac13753de92045e",
+    "bytes": 3603,
+    "note": "Trimmed: first ~3,600 characters of visible page text (HTML tags stripped) listing the cap periods and attachments; full HTML was 388,117 bytes, sha256 9a10d16a353908eb009b68fb07358200cda33f602bc39381df1b65f0b1620d3c.",
+    "source_kind": "live"
+  },
+  {
+    "file": "ofgem_copyright_page_text_extract.txt",
+    "url": "https://www.ofgem.gov.uk/copyright",
+    "fetched_at": "2026-09-29T21:15:46Z",
+    "sha256": "53f92aa4a57ad693199af8288929a2ea6e3f34d5f5c1a217f437f9180c11c039",
+    "bytes": 1185,
+    "note": "Trimmed: ~1,500 characters of visible page text from \"Copyright and disclaimer\"; full HTML 191590 bytes, sha256 82aaa60731ca832a5082e8a84838f66ae486d8297744f90a6983643c99a99b52.",
+    "source_kind": "live"
+  }
+]
