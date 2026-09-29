@@ -301,6 +301,8 @@ Method: live requests through the session proxy (TLS verified). EIA API calls us
 
 # Part C: FX, commodities, carbon
 
+> **Fixture note (2026-09-29, after STOP-1):** the raw data files listed below for sources we do not use and whose terms restrict reuse or state none (Bank of Russia XML, the Chinese government PDFs and pages, the Eskom workbook and booklet extracts) were **removed from git**. Their terms-evidence files and the values read on 2026-09-29 stay here as dated facts with URLs. See each `fixtures/<source>/README.md`.
+
 Checked 2026-09-29 (UTC evening) from the cloud session, keyless, through the agent proxy, TLS verification on.
 Every claim below was re-verified by a live request today unless marked "not confirmed". Fixtures and their
 exact request URLs, fetch times and sha256 are in `fixtures/<source>/MANIFEST.json`.
@@ -613,6 +615,8 @@ CAISO per-request window limit; CAISO DLAP node availability; CAISO API Terms sc
 ---
 
 # Part E: China, Russia, South Africa
+
+> **Fixture note (2026-09-29, after STOP-1):** the raw data files listed below for sources we do not use and whose terms restrict reuse or state none (Bank of Russia XML, the Chinese government PDFs and pages, the Eskom workbook and booklet extracts) were **removed from git**. Their terms-evidence files and the values read on 2026-09-29 stay here as dated facts with URLs. See each `fixtures/<source>/README.md`.
 
 Method: curl through the session proxy, TLS verification always on, User-Agent naming the project, 1-3 requests per host, no retries around a block. Fixtures in `fixtures/china/`, `fixtures/russia/` and `fixtures/southafrica/` (each with `MANIFEST.json`; Russia also `NO_SOURCE.md`). Tags: [T] = read from a response fetched today; [S] = search-engine snippet only, not fetched; "not confirmed" = not read from a fetched response. Times UTC, 2026-09-29 ~19:00-19:20.
 

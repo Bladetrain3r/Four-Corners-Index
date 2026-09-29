@@ -1,50 +1,18 @@
 [
- {
-  "file": "eskom_historical_average_prices_2010-11_to_2025-26.csv",
-  "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/09/Historical-average-prices-and-increase.xlsx",
-  "fetched_at": "2026-09-29T19:03:44Z",
-  "sha256": "8a917e44fcd4de8d0eaf412bc20046399167ad14c620e6265771bd6c7cdce9f4",
-  "source_kind": "live",
-  "note": "TRIMMED by us: long-format CSV extracted from sheet \"Historical trend\" of the Eskom XLSX (full file 270427 bytes, sha256 ef0cba7ab9235aa13fd952cf96472747adf68a99b8edcfba1770c6b9a514069e, Last-Modified Thu, 03 Sep 2026 10:01:24 GMT; not stored, over size budget). Blocks kept: average price c/kWh sold, sales GWh, calculated average price adjustment, NERSA/Eskom per-tariff increases; financial years 2010/11 to 2025/26 only. Values copied unchanged (floats as in file). Eskom direct sales only (not municipal end-customers)."
- },
- {
-  "file": "eskom_tariff_booklet_2026-27_extract.txt",
-  "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/07/Eskom-Tariff-booklet_Final.pdf",
-  "fetched_at": "2026-09-29T19:03:46Z",
-  "sha256": "546046a7afb8bb8bd7191e6d6d9d2a018d3feef5a4a99ac8b26beefa0759a31a",
-  "source_kind": "live",
-  "note": "TRIMMED by us: text of 5 of 57 pdf pages (Megaflex p12, Miniflex p19, Businessrate p22, Homepower p26, Homelight p29). Full PDF sha256 eef82b077d7df4dd7b157ce757e2e56368170cec3bb69614fd81042451a1be84, Last-Modified Mon, 06 Jul 2026 09:29:45 GMT. Row/column alignment is as extracted by pypdf; a G2 parser must be tested against the PDF text layer, not this note."
- },
- {
-  "file": "eskom_tariff_booklet_2025-26_homelight_extract.txt",
-  "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2025/06/Tariff-booklet.pdf",
-  "fetched_at": "2026-09-29T19:06:31Z",
-  "sha256": "1230d18c39b8ccd94b681b68e5c9c9704a0b957f378dad297635b25992e876ff",
-  "source_kind": "live",
-  "note": "TRIMMED by us: one page of text. Full PDF sha256 8af137b78ac1d3124e5ed19ea030c478a7ee9f5f80a621cadfb295932b45ac6a, Last-Modified Fri, 13 Jun 2025 10:19:46 GMT. Shows Homelight 20A 216.11 c/kWh (248.53 incl VAT) for 2025/26."
- },
- {
-  "file": "eskom_website_terms_extract.txt",
-  "url": "https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf",
-  "fetched_at": "2026-09-29T19:05:14Z",
-  "sha256": "31f6e2530ae5e818fd73543a53b0c1c4266d5e40a7fd052a158f656857ee0da4",
-  "source_kind": "live",
-  "note": "TRIMMED by us: licence clause 2 (allowed use and licence) only. Full PDF sha256 50c41cef4e5f1732c9e1e2a6d6eac7e4d5f5b9cf33f983c8ef0143bcc5c1be26. Linked from https://www.eskom.co.za/about-eskom/website-terms-and-conditions/. Data-portal disclaimer at https://www.eskom.co.za/dataportal/disclaimer/ adds that data \"may not be exploited by the User for any purposes, including but not limited to, commercial purposes\"."
- },
- {
-  "file": "ntcsa_sawem_page_extract.txt",
-  "url": "https://www.ntcsa.co.za/sa-wholesale-electricity-market-sawem/",
-  "fetched_at": "2026-09-29T19:07:18Z",
-  "sha256": "68f658c16c34dd6ba4dc874b1e17d4652764e5da7c83ad5d27b9dca1acf9eca5",
-  "source_kind": "live",
-  "note": "TRIMMED by us: page text only. Evidence that the SAWEM portal is \"Coming soon\" and the page countdown (Apr 01 2026) has already elapsed, i.e. no operating day-ahead market on 2026-09-29."
- },
- {
-  "file": "eskom_tariffs_2026-04-01_workbook_extract.csv",
-  "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/03/Eskom-tariffs-1-April-2026-Public.xlsm",
-  "fetched_at": "2026-09-29T19:04:24Z",
-  "sha256": "cc52be77919749b2f85dd4ce042122abb1dfe6942229e086f1da9e8b7b5b550b",
-  "source_kind": "live",
-  "note": "TRIMMED by us: every non-empty cell (sheet,cell,value; cached values via openpyxl data_only) of 5 of 38 sheets (Homelight NLA, Homepower NLA, Businessrate NLA, Megaflex NLA, Miniflex NLA) of Eskom's machine-readable tariff workbook. Full file 466672 bytes, sha256 aeebe852d693cc43a13440dedb2f8312646c6b8a94ae1b4309cc11fe979737ad, Last-Modified Wed, 11 Mar 2026 12:38:03 GMT (before the 2026-07 booklet; values match the booklet extract for Homelight 20A 235.04/60A 298.79). NLA = non-local authority (Eskom direct); \"Munic\" sheets not extracted."
- }
+  {
+    "file": "eskom_website_terms_extract.txt",
+    "url": "https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf",
+    "fetched_at": "2026-09-29T19:05:14Z",
+    "sha256": "31f6e2530ae5e818fd73543a53b0c1c4266d5e40a7fd052a158f656857ee0da4",
+    "source_kind": "live",
+    "note": "TRIMMED by us: licence clause 2 (allowed use and licence) only. Full PDF sha256 50c41cef4e5f1732c9e1e2a6d6eac7e4d5f5b9cf33f983c8ef0143bcc5c1be26. Linked from https://www.eskom.co.za/about-eskom/website-terms-and-conditions/. Data-portal disclaimer at https://www.eskom.co.za/dataportal/disclaimer/ adds that data \"may not be exploited by the User for any purposes, including but not limited to, commercial purposes\"."
+  },
+  {
+    "file": "ntcsa_sawem_page_extract.txt",
+    "url": "https://www.ntcsa.co.za/sa-wholesale-electricity-market-sawem/",
+    "fetched_at": "2026-09-29T19:07:18Z",
+    "sha256": "68f658c16c34dd6ba4dc874b1e17d4652764e5da7c83ad5d27b9dca1acf9eca5",
+    "source_kind": "live",
+    "note": "TRIMMED by us: page text only. Evidence that the SAWEM portal is \"Coming soon\" and the page countdown (Apr 01 2026) has already elapsed, i.e. no operating day-ahead market on 2026-09-29."
+  }
 ]
