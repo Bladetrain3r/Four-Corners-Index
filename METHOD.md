@@ -1,6 +1,6 @@
 # Method — Four Corners Index
 
-*Version 1, written and frozen 2026-09-30 at the start of G4, **before any index value was computed** (the commit order shows it: this file's commit precedes every file that computes an index). A change to anything below is a new version with a dated entry in "Changes", never an edit in place. Decisions marked **Ziggy** are his (STOP-1 answers, 2026-09-29); everything else is the builder's, logged in `LOG.md`.*
+*Version 2. Version 1 was written and frozen 2026-09-30 at the start of G4, **before any index value was computed** (the commit order shows it: that commit precedes every file that computes an index); version 2 was committed before any value it adds (the ex-China variant). A change to anything below is a new version with a dated entry in "Changes"; earlier versions stay in git history. Decisions marked **Ziggy** are his (STOP-1 answers, 2026-09-29); everything else is the builder's, logged in `LOG.md`.*
 
 Two monthly indices, in nominal US dollars per kWh: the **Retail index** (household prices) and the **Wholesale index** (day-ahead prices). Each value can be re-derived from the kept raw snapshots by `python -m pipeline.build`; see "Reproducibility".
 
