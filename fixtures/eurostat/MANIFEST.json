@@ -1,0 +1,47 @@
+[
+  {
+    "file": "nrg_pc_204_household.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204?geo=EU27_2020&geo=DE&geo=FR&geo=IT&geo=ES&geo=PL&geo=NL&currency=EUR&nrg_cons=KWH2500-4999&sinceTimePeriod=2024-S1&format=JSON",
+    "fetched_at": "2026-09-29T19:01:47Z",
+    "sha256": "4baa01bb9ee644fb3127409483855bf87cb6d9aa0d9ef4c98efa0eefbb585051",
+    "bytes": 5039,
+    "note": "Household electricity price, band DC (KWH2500-4999), EUR/kWh, all three tax levels (X_TAX level 1, X_VAT level 2, I_TAX level 3). Trimmed by query: 7 geos (EU27_2020, DE, FR, IT, ES, PL, NL) and periods 2024-S1..2025-S2 only (full dataset since 2007-S1). Unfiltered JSON-stat body otherwise.",
+    "source_kind": "live"
+  },
+  {
+    "file": "nrg_pc_205_nonhousehold.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?geo=EU27_2020&geo=DE&geo=FR&geo=IT&geo=ES&geo=PL&geo=NL&currency=EUR&nrg_cons=MWH2000-19999&sinceTimePeriod=2024-S1&format=JSON",
+    "fetched_at": "2026-09-29T19:01:48Z",
+    "sha256": "0ecff2a7335805d972e96ae335fd6f09427d054783a0c3139396119eedc3cead",
+    "bytes": 5043,
+    "note": "Non-household electricity price, band ID (MWH2000-19999), EUR/kWh, all three tax levels. Same geos and periods as the household fixture. Dataset label in the response reads \"industrial consumers\" although Eurostat describes the sector as final non-household. Trimmed by query.",
+    "source_kind": "live"
+  },
+  {
+    "file": "nrg_pc_204_c_components.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204_c?geo=DE&currency=EUR&nrg_cons=KWH2500-4999&sinceTimePeriod=2024&format=JSON",
+    "fetched_at": "2026-09-29T19:01:49Z",
+    "sha256": "f894d34e50b8117556abef55b94f6cccab3b38a26241c58c36ee773b41baf3e3",
+    "bytes": 3892,
+    "note": "Annual household price components, band DC, EUR/kWh, DE only, 2024-2025 (dataset annual, 2017-2025). 15 nrg_prc component codes. Components nest: TAX_FEE_LEV_CHRG appears to include VAT (see G1-eurostat.md); do not sum every code. Trimmed by query to one geo.",
+    "source_kind": "live"
+  },
+  {
+    "file": "prc_hicp_minr_CP0451.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?geo=EU&geo=EA&geo=DE&geo=FR&coicop18=CP0451&unit=I25&unit=RCH_A&sinceTimePeriod=2025-09&format=JSON",
+    "fetched_at": "2026-09-29T19:01:50Z",
+    "sha256": "0466f09ba16c8245f11b0f7c0fb266429d1dccd2ea87cecd22a63d71444f6d72",
+    "bytes": 6123,
+    "note": "HICP ECOICOP v2 electricity (CP0451), monthly, units I25 (2025=100) and RCH_A (annual rate %), geos EU, EA, DE, FR, months 2025-09..2026-08. Trimmed by query. Note prc_hicp_minr is the new ECOICOP ver.2 dataset (dimension coicop18).",
+    "source_kind": "live"
+  },
+  {
+    "file": "nrg_cb_e_consumption.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_cb_e?geo=EU27_2020&geo=DE&geo=FR&geo=IT&geo=ES&geo=PL&geo=NL&nrg_bal=FC&nrg_bal=ID&siec=E7000&unit=GWH&sinceTimePeriod=2022&format=JSON",
+    "fetched_at": "2026-09-29T19:03:22Z",
+    "sha256": "cb44fe253258376acf6dcef448761f529d6f0a6a699abaa084c100090eeeb628",
+    "bytes": 4620,
+    "note": "Annual electricity consumption, GWh, nrg_bal FC (final consumption) and ID (inland demand), geos EU27_2020, DE, FR, IT, ES, PL, NL, years 2022-2025 (dataset 1990-2025). 2025 values carry status flag p (provisional). Trimmed by query.",
+    "source_kind": "live"
+  }
+]
