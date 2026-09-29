@@ -1,0 +1,16 @@
+Area,ISO 3 code,Date,Area type,Electricity source,Is aggregated source,Generation (TWh),Generation YoY change (TWh),Generation YoY change (%),Share of generation (%),Share of generation YoY change (% points),Emissions (MtCO2e),Emissions YoY change (MtCO2e),Emissions YoY change (%),Share of emissions (%),Emissions intensity (gCO2e/kWh),Continent,Ember region,EU member,OECD member,G20 member,G7 member,ASEAN member
+Austria,AUT,2015-01-01,Country or economy,Solar,False,0.022,,,0.392,,0.001,,,0.088,45.455,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Onshore wind,False,0.549,,,9.794,,0.007,,,0.618,12.75,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Hydro,False,3.13,,,55.836,,0.075,,,6.617,23.962,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Bioenergy,False,0.231,,,4.121,,0.053,,,4.676,229.437,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Other renewables,False,0.0,,,0.0,,0.0,,,0.0,,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Gas,False,1.157,,,20.64,,0.551,,,48.61,476.232,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Other fossil,False,0.255,,,4.549,,0.178,,,15.703,698.039,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Net imports,False,1.304,,,23.262,,0.0,,,0.0,0.0,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Wind,True,0.549,,,9.794,,0.007,,,0.618,12.75,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Coal,True,0.262,,,4.674,,0.269,,,23.732,1026.718,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Wind and solar,True,0.571,,,10.186,,0.008,,,0.706,14.011,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,"Hydro, bioenergy and other renewables",True,3.361,,,59.957,,0.128,,,11.292,38.084,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Renewables,True,3.932,,,70.143,,0.136,,,11.998,34.588,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Clean,True,3.932,,,70.143,,0.136,,,11.998,34.588,Europe,Europe,True,True,False,False,False
+Austria,AUT,2015-01-01,Country or economy,Fossil,True,1.674,,,29.863,,0.997,,,87.957,595.579,Europe,Europe,True,True,False,False,False

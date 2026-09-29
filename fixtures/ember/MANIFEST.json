@@ -1,0 +1,50 @@
+[
+  {
+    "file": "monthly_generation_global_sample.csv",
+    "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv",
+    "fetched_at": "2026-09-29T19:14:28Z",
+    "sha256": "4332e6e4fd4d19292447b0b89873b28fe81f3650880c4f80e07cc29668307c05",
+    "note": "Trimmed from the 28,333,064-byte global file (Last-Modified 2026-09-18T21:29:31Z), read with HTTP Range requests only (file not downloaded in full). Header + rows for 5 areas (China, EU, Russia, South Africa, United States) and 3 months per area: the first month, the second-to-last month and the last month in the file (China 2016-01/2026-07/2026-08; EU 2016-01/2026-07/2026-08; Russia 2019-01/2026-06/2026-07; South Africa 2018-01/2026-06/2026-07; United States 2001-01/2026-07/2026-08). All electricity sources kept per month (16 or 17 rows). Re-serialised with Python csv.writer (roundtrip verified identical to the raw bytes on the file head).",
+    "source_kind": "live"
+  },
+  {
+    "file": "monthly_generation_europe_head.csv",
+    "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_lower.csv",
+    "fetched_at": "2026-09-29T19:15:00Z",
+    "sha256": "7d1b6af9e0149dedf224cd16f90e296b585bf060f6b682b39a872f1825b52450",
+    "note": "First 16 complete lines (HTTP Range bytes 0-2500) of the 14,423,164-byte Europe-only monthly file (Last-Modified 2026-09-18T21:29:24Z). Shows the same 23-column header and that this file has finer sources (e.g. \"Onshore wind\") than the global file.",
+    "source_kind": "live"
+  },
+  {
+    "file": "yearly_generation_global_sample.csv",
+    "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_yearly_global.csv",
+    "fetched_at": "2026-09-29T19:14:58Z",
+    "sha256": "c2bc27d113c11cf59a3ccfd950b00fbcedc7f9fd5bd393bce7781a1c4ab23c1b",
+    "note": "Trimmed from the 16,084,305-byte global yearly file (Last-Modified 2026-09-22T16:24:55Z; downloaded in full, then trimmed). Header + rows for China, EU, Russia, South Africa, United States for 3 years each: first year, 2024, 2025 (China/Russia first year 1985, EU/South Africa/United States 2000). Includes the Demand rows (TWh). Yearly header differs from monthly: \"Year\" instead of \"Date\" and an added \"Capacity (GW)\" column. Re-serialised with csv.writer (whole-file roundtrip not separately verified for this file).",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_monthly_sample.csv",
+    "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_monthly.csv",
+    "fetched_at": "2026-09-29T19:14:58Z",
+    "sha256": "856e762b2a8df0c9a0f3eaf89b1d05b784d4bd09b788e16ce927fa0ddf94bf15",
+    "note": "Trimmed from the 118,947-byte monthly price file (Last-Modified 2026-09-29T09:12:35Z): header + 2015-01 (first month) + 2026-06, 2026-07, 2026-08, 2026-09 for all countries present in those months. 2026-09 is a PARTIAL month. Whole-file csv roundtrip verified identical.",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_daily_sample.csv",
+    "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_daily.csv",
+    "fetched_at": "2026-09-29T19:14:59Z",
+    "sha256": "874659d65c872e69281215c1d7e640c301617ed89cbf4c475bb518d31070b054",
+    "note": "Trimmed from the 3,612,735-byte daily price file (Last-Modified 2026-09-29T09:11:52Z): header + 2015-01-01 and 2026-09-24..2026-09-28 for all countries present on those days. Whole-file csv roundtrip verified identical.",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_hourly_head.csv",
+    "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_hourly.zip",
+    "fetched_at": "2026-09-29T19:14:59Z",
+    "sha256": "01f4380dba2d8bac324acb24b70d33ca0f5cedab6ab5b2c9753f2dd8f1a60f9d",
+    "note": "First 40 lines of all_countries.csv inside the 42,018,516-byte hourly ZIP (Last-Modified 2026-09-29T09:16:49Z), read by HTTP Range requests through the ZIP central directory (zip not downloaded in full). Zip contains all_countries.csv (172,090,669 bytes uncompressed) plus 32 per-country CSVs. The hourly latest timestamp was NOT measured.",
+    "source_kind": "live"
+  }
+]
