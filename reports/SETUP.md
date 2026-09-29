@@ -2,7 +2,7 @@
 
 1. **Push** this repo to `origin` (`git push -u origin main`).
 2. **Visibility and licence:** decided 2026-09-29: public, MIT (`LICENSE`). Pages is switched on at STOP-3.
-   GitHub Sponsors: when the profile is live, tell the session so it adds `.github/FUNDING.yml` and the footer link.
+   GitHub Sponsors: live 2026-09-29; `.github/FUNDING.yml` is in; the footer link comes at G5.
 3. **EIA API key** (free, instant registration at eia.gov/opendata). Put it in two places:
    - the repo's Actions secrets as `EIA_API_KEY`;
    - the cloud environment's environment variables as `EIA_API_KEY`.

@@ -121,7 +121,8 @@ caveat. A missing value is shown as a gap with the reason, never interpolated si
 - **Licence of the code:** MIT (Ziggy, 2026-09-29; `LICENSE`). Data carries its sources' terms, stated per source.
 - **Public from the start** (Ziggy, 2026-09-29): the repo is public; Pages is switched on by Ziggy at STOP-3.
 - **Sponsorship:** this project is the pilot for Ziggy's GitHub Sponsors profile. The site gets a small "Sponsor" link in the footer
-  and `.github/FUNDING.yml` is added **only once the profile is live** (Ziggy says so; never link a profile that does not
+  and `.github/FUNDING.yml` is added **only once the profile is live** (live 2026-09-29, github.com/sponsors/Bladetrain3r;
+  FUNDING.yml added the same day; the footer link is the builder's at G5) (Ziggy says so; never link a profile that does not
   exist). There is no paywall, no gated data, and no sponsor influence on the numbers or the method, and the site says that in one line.
 
 ## Out of scope (for this build)
