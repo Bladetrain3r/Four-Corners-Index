@@ -1,0 +1,10 @@
+[
+ {
+  "file": "so_ups_energy_system_2025_extract.txt",
+  "url": "https://www.so-ups.ru/functioning/ups/ups2026/",
+  "fetched_at": "2026-09-29T19:13:40Z",
+  "sha256": "e4dcd7dde8ba2e27c74b516c4c7f4465101150586b69a50f04aa69eb3608639a",
+  "source_kind": "live",
+  "note": "TRIMMED by us to one paragraph. Only annual totals; no monthly series found on this page. No reuse terms found on so-ups.ru (the \"Использование информации\" page at https://www.so-ups.ru/responsibility/ was fetched and carries only a cookie notice)."
+ }
+]

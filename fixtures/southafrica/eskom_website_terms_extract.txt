@@ -1,0 +1,70 @@
+# Extract of Eskom "Website terms and conditions" (Sep 2021 version): clause 2 in full (pypdf text layer; page-break markers kept). PDF 169,593 bytes not stored.
+
+2. ALLOWED USE AND LICENSE  
+ 
+2.1 Eskom licenses the User to view, download and print the content of the Eskom website, 
+provided that such content is used for private, personal, educational and/or non-commercial 
+purposes only.  
+ 
+2.2 Content from the Eskom website may not be used or exploited by Users for any 
+commercial and non-private purposes without the prior written consent of Eskom.  
+ 
+2.3 Users may only access, browse and use the Eskom website for legitimate personal or 
+commercial purposes and may not use the Eskom website or any Eskom services and/or 
+products for:  
+2.3.1 Harmful purposes;  
+2.3.2 Illegal purposes;  
+2.3.3 Disclosing, sharing or publishing material that may be offensive, defamatory, 
+regulated, prohibited, infringing or damaging to any person and/or;  
+2.3.4 The creation, storage and sending of unsolicited commercial communications.  
+ 
+ 2.4 The caching of the Eskom website shall only be allowed if:  
+ 
+2.4.1 The purpose of the caching is to make the onward transmission of the content 
+from the Eskom website more efficient;  
+2.4.2 The cached content is not modified in any manner whatsoever;  
+2.4.3 The cached content is updated at least every 12 (twelve) hours; and  
+2.4.4 The cached content is removed or updated when so required by Eskom. 
+2.5 If any User uses content from the Eskom website in breach of the provisions detailed 
+herein:  
+2.5.1 Eskom reserves the right to claim damages from the user;  
+2.5.2 Eskom reserves the right to institute criminal proceedings against the User; and  
+2.5.3 Eskom shall not be liable, in any manner whatsoever, for any damage, loss or 
+liability that resulted from the use of such content by the User or any third party w ho 
+obtained any content from the User.  
+ 
+2.6 Hyperlinks to the Eskom website from any other source shall be directed to the home 
+page of the Eskom website. Links beyond the Eskom home page may only be used with 
+Eskom’s prior written consent.  
+ 
+2.7 Eskom shall not be liable, in any manner whatsoever, for any damage, loss or liability that 
+resulted from the use of content, products or services available from the Eskom website, if 
+such contents, products or services were accessed through a hyperlink not dir ected at the 
+home page of the Eskom website. Persons who create links to pages beyond the home page 
+of the Eskom website without Eskom’s prior written consent shall do so at their own risk and 
+Eskom is indemnified against any loss, liability or damage that may result from the use of 
+such hyperlinks. Eskom’s non-liability for deep linking is based on the fact that deep links 
+bypass these terms and conditions.  
+ 
+2.8 Users may quote small and reasonable amounts of content available from th e Eskom 
+website, in any format, subject to such a quote being placed in inverted commas and 
+acknowledged.  
+ 
+2.9 No person may, without the prior written consent of Eskom, frame the Eskom website in 
+any manner whatsoever.  
+ 
+2.10 Apart from bona-fide search engine operators and use of the search facility provided on 
+the Eskom website by Users, no person may use or attempt to use any technology or 
+=====PAGE 3=====
+applications (including web crawlers, robots or web spiders) to search, collect or copy content 
+from the Eskom website, for any purposes, without the prior written consent of Eskom.  
+2.11 Email addresses, names and telephone numbers published on the Eskom website may 
+not be incorporated into any database used for electronic marketing or similar purposes. No 
+permission is given or should be implied that information on the Eskom website may be used 
+to communicate unsolicited communications to Eskom and all rights detailed in Section 69 of 
+Protection of Personal Information Act, 2013 are reserved. 
+ 
+2.12 All licenses and/or permissions granted in terms of this clause 2 are provided on a  
+limited, non-exclusive and non-transferable basis and may be terminated or cancelled by 
+Eskom at any time without prior notice or reasons.  
+ 

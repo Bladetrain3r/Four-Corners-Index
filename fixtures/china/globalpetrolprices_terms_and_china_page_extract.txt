@@ -1,0 +1,5 @@
+# Not a data fixture: evidence of terms only. Text of terms.php (169,589 bytes HTML, not stored) from the "GPP Terms and Conditions" heading, then the title and the "Download data API" area of the China electricity page (182,841 bytes HTML, not stored). No price figures are stored.
+
+GPP Terms and Conditions The following terms and conditions apply to data subscriptions at www.globalpetrolprices.com. Home Privacy Terms Data API About Contacts www.GlobalPetrolPrices.com is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License Copyright 2026 This site uses cookies. Learn more here OK
+
+[China page title] China electricity prices, December 2025 | GlobalPetrolPrices

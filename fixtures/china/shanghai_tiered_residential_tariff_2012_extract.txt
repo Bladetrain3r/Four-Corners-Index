@@ -1,0 +1,24 @@
+# Text layer (pypdf) of lines 128-150 (end of pdf page 6) of Shanghai DRC notice hu-fa-gai-jia-guan (2012) No. 020, dated 2012-06-15 (PDF 277,936 bytes, Last-Modified 2024-08-19, not stored).
+# Tier 1: 0-3120 kWh/household-year at 0.617 yuan/kWh (<1 kV, single-TOU users). Page 3 of the notice says tier-1 price "not adjusted and basically stable for three years".
+起，按照峰、谷不同的加价水平执行。
+2、居民累计电量在第二或第三档临界点的月份，由于当月超基数部
+分的峰谷电量数据无法准确区分，具体执行时，该月第二档、第三档的加
+价按照峰、谷均为 0.05 元或 0.30 元的加价水平执行。
+上海市居民电价表（未分时用户）
+用户分类 分档
+电量水平（度/
+户·年）
+电价水平（元/度）
+不满 1 千伏 10 千伏
+一户一表居民用户
+第一档 0-3120（含） 0.617
+第二档
+3120-4800
+（含）
+0.667
+第三档 4800 以上 0.917
+非居民用户
+（学校、养老院、居民公建设施等）
+0.641 0.636
+上海市发展和改革委员会
+二○一二年六月十五日

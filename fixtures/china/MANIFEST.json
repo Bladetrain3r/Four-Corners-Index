@@ -1,0 +1,82 @@
+[
+ {
+  "file": "henan_agency_purchase_price_2026-08.pdf",
+  "url": "https://pds.gov.cn/upload/files/2026/7/29/2026年8月代理购电价格公示表.pdf",
+  "fetched_at": "2026-09-29T19:08:14Z",
+  "sha256": "63a10610eff5428c6a12df0b77c0c6222a75d72ef9745934810fea31df63343d",
+  "source_kind": "live",
+  "note": "Untrimmed 2-page PDF (231,037 bytes, Last-Modified 2026-07-29). State Grid Henan agency-purchase (代理购电) C&I price table for Aug 2026, published 2026-07-28; mirrored on a city government site (Pingdingshan); primary publisher State Grid Henan (ha.sgcc.com.cn) is not reachable from this environment. Page 1 tariff table (yuan/kWh by voltage class and TOU period), page 2 price-build-up table (agency price 0.451405 yuan/kWh). Needs a PDF text library (pypdf) to parse."
+ },
+ {
+  "file": "guangdong_agency_purchase_price_2026-04_shantou.pdf",
+  "url": "https://www.shantou.gov.cn/attachment/0/150/150864/2524702.pdf",
+  "fetched_at": "2026-09-29T19:08:19Z",
+  "sha256": "5992d61e615637ad382919c388d0e2f0399450903537c065c749a98af670cbb0",
+  "source_kind": "live",
+  "note": "Untrimmed 1-page PDF (185,695 bytes, Last-Modified 2026-03-30). Guangdong Power Grid agency-purchase C&I price table for April 2026 (fen/kWh incl. tax), valid for Shantou/Chaozhou/Jieyang/Shanwei/Yangjiang/Zhanjiang/Maoming/Zhaoqing and parts of Jiangmen; hosted by Shantou city government. Guangdong has multiple regional tables; primary publisher (gd.csg.cn) not reachable."
+ },
+ {
+  "file": "guangdong_shantou_price_list_2021-12_extract.txt",
+  "url": "https://www.shantou.gov.cn/attachment/0/82/82778/2192164.pdf",
+  "fetched_at": "2026-09-29T19:11:22Z",
+  "sha256": "bb768c4253c20f4406c509974bda96d0a6d9822c3a797756f52b4e4f14b85751",
+  "source_kind": "live",
+  "note": "TRIMMED: text layer of the whole (1-page) PDF; PDF Last-Modified 2025-07-09. Page states the catalogue prices retained for households and agriculture only, C&I catalogue prices abolished (2021)."
+ },
+ {
+  "file": "shanghai_tiered_residential_tariff_2012_extract.txt",
+  "url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf",
+  "fetched_at": "2026-09-29T19:09:00Z",
+  "sha256": "29cc0b65955576cb0da45646c6286c2744b045daf53e37529966375a88083a7d",
+  "source_kind": "live",
+  "note": "TRIMMED: 23 lines of the price table. The 2012 notice is the base document; later Shanghai changes (if any) were NOT checked, so the 0.617 figure is \"as of the 2012 notice, as republished on the DRC site (PDF Last-Modified 2024-08-19)\", not confirmed as current 2026 price."
+ },
+ {
+  "file": "ndrc_notice_809_2021-10-23.html",
+  "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202110/t20211026_1300892.html",
+  "fetched_at": "2026-09-29T19:07:55Z",
+  "sha256": "50ff3cecd3af534c0646d66c1d4dd264c3bd8641b6b6f2242ba28065dc25cd42",
+  "source_kind": "live",
+  "note": "Untrimmed HTML (20,091 bytes). NDRC General Office notice 发改办价格〔2021〕809号 on grid-company agency purchasing (代理购电); established that C&I users without direct market purchase are supplied at a monthly agency price. Confirms the desk research cite."
+ },
+ {
+  "file": "nea_national_consumption_2026-08.html",
+  "url": "https://www.nea.gov.cn/20260924/9b291b0f1f524078855c63061fe5ced9/c.html",
+  "fetched_at": "2026-09-29T19:12:12Z",
+  "sha256": "7385f05b9ac353a15693d1462a71ba0c3920fee1a21b8c5b6f51aaf632267ada",
+  "source_kind": "live",
+  "note": "Untrimmed HTML (11,470 bytes). Xinhua text via NEA, dated 2026-09-24: Aug 2026 total consumption 10332 (x100m kWh) = 1,033.2 bn kWh, residential 1883; Jan-Aug 71730 and residential 11132."
+ },
+ {
+  "file": "nbs_energy_production_2026-08.html",
+  "url": "https://www.stats.gov.cn/english/PressRelease/202609/t20260916_1965338.html",
+  "fetched_at": "2026-09-29T19:12:15Z",
+  "sha256": "5be4133c446412ae78b76490474ce9c76f666fcd1b5b19672a54d31c4ebd8482",
+  "source_kind": "live",
+  "note": "Untrimmed HTML (19,020 bytes), NBS press release 2026-09-16; generation above designated size 943.8 bn kWh for Aug 2026 (text only, no table)."
+ },
+ {
+  "file": "nbs_terms_of_service.html",
+  "url": "https://www.stats.gov.cn/english/nbs/200701/t20070104_59236.html",
+  "fetched_at": "2026-09-29T19:12:36Z",
+  "sha256": "58d4c0ff784c9d187b4636808be3d2727dae4e73632d5f12ab2b8706d23affad",
+  "source_kind": "live",
+  "note": "Untrimmed HTML (20,858 bytes), NBS Terms of Service (2022-09-06): section III.1 \"You are allowed to download and use the statistical data on this website.\""
+ },
+ {
+  "file": "globalpetrolprices_terms_and_china_page_extract.txt",
+  "url": "https://www.globalpetrolprices.com/terms.php",
+  "fetched_at": "2026-09-29T19:12:52Z",
+  "sha256": "23a2d1662be33693356d5446caf4a9c10c51e966486a7e5831582f6f310a0188",
+  "source_kind": "live",
+  "note": "TRIMMED terms evidence only (no data). Licence line found: CC BY-NC-ND 3.0 (non-commercial, no derivatives), so NOT reusable for the index. China page (https://www.globalpetrolprices.com/China/electricity_prices/, fetched once, same time) was titled \"China electricity prices, December 2025\" on 2026-09-29, i.e. 9 months stale."
+ },
+ {
+  "file": "guangdong_drc_price_page_extract.txt",
+  "url": "https://drc.gd.gov.cn/spjg/content/post_846283.html",
+  "fetched_at": "2026-09-29T19:11:13Z",
+  "sha256": "ffae0ed9ea13d5b28549901367645a1c194538d92c56bf7700cf192bf7547fec",
+  "source_kind": "live",
+  "note": "TRIMMED: body and footer. Footer copyright line reads \"版权所有：广东省发展和改革委员会 未经书面授权禁止复制或建立镜像\" (all rights reserved; copying or mirroring without written authorisation prohibited). Page itself is a 2014 stub pointing to an .xls of provincial tier prices (not fetched; 2014 vintage)."
+ }
+]
