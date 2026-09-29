@@ -1,0 +1,58 @@
+[
+  {
+    "file": "pink_sheet_monthly_gas_coal_last36.csv",
+    "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+    "fetched_at": "2026-09-29T19:07:00Z",
+    "sha256": "b78a9a34e7f41520e09a41b0eb540c06a61177c00fe9a097c18a35d0428463cc",
+    "note": "TRIMMED extraction (script-made) from full XLSX (586735 bytes, full-file sha256 9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225, Last-Modified Wed, 02 Sep 2026 20:17:37 GMT, sheet \"Monthly Prices\", file header \"Updated on September 02, 2026\"). Kept: 4 title rows, column-name row, unit row, and last 36 monthly rows (2023M09-2026M08); only columns Coal Australian, Coal South African, Natural gas US, Natural gas Europe, LNG Japan, Natural gas index. Values as published (\"\u2026\" = n/a).",
+    "source_kind": "live"
+  },
+  {
+    "file": "pink_sheet_history_starts.csv",
+    "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+    "fetched_at": "2026-09-29T19:07:00Z",
+    "sha256": "f11025160596d2e33bbfc21805a8d6600d1b2cb2f379d3c149e0787b07200b79",
+    "note": "TRIMMED extraction (script-made) from full XLSX (586735 bytes, full-file sha256 9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225, Last-Modified Wed, 02 Sep 2026 20:17:37 GMT, sheet \"Monthly Prices\", file header \"Updated on September 02, 2026\"). Derived by script: first/last non-blank period per relevant column.",
+    "source_kind": "live"
+  },
+  {
+    "file": "licence_and_description_extract.txt",
+    "url": "https://datacatalog.worldbank.org/search/dataset/0038238/commodity-prices-history-and-projections ; https://www.worldbank.org/ext/en/legal/terms-conditions/datasets ; XLSX Description sheet from https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+    "fetched_at": "2026-09-29T19:07:18Z",
+    "sha256": "45fe9d88e3d44eb92b170fd2152cefb064f6819dc2d5e6327c9e4a0d36f81879",
+    "note": "Text extracts (licence + series definitions); not raw HTML/XLSX.",
+    "source_kind": "live"
+  },
+  {
+    "file": "imf_pcps_ttf_coal_last36_monthly.csv",
+    "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.RES,PCPS,9.0.0/G001.PNGASEU+PCOALAU+PCOALSA.USD.M?lastNObservations=36&detail=dataonly",
+    "fetched_at": "2026-09-29T19:10:41Z",
+    "sha256": "b971dc2e28fc0e7da833f00f6617b54ddc45afa206891810c5c757c514989edb",
+    "note": "IMF PCPS (SDMX 2.1, request header \"Accept: application/vnd.sdmx.data+csv;version=1.0.0\"). Monthly USD series PNGASEU (TTF day-ahead, $/MMBtu), PCOALAU, PCOALSA ($/mt), last 36 obs; detail=dataonly (metadata columns empty). Untrimmed response.",
+    "source_kind": "live"
+  },
+  {
+    "file": "imf_pcps_first_obs.csv",
+    "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.RES,PCPS,9.0.0/G001.PNGASEU+PCOALAU+PCOALSA.USD.M?firstNObservations=1&detail=dataonly",
+    "fetched_at": "2026-09-29T19:10:42Z",
+    "sha256": "ae909f37e14ba06b2ad12bc32a965e26c7d5c05fafe2b145dbe4f74fa150bea1",
+    "note": "IMF PCPS first monthly obs per series (history start 1992-M01). Same request header.",
+    "source_kind": "live"
+  },
+  {
+    "file": "imf_pcps_dataset_metadata_row.csv",
+    "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.RES,PCPS,9.0.0/G001.PNGASEU.USD.M?lastNObservations=1",
+    "fetched_at": "2026-09-29T19:10:42Z",
+    "sha256": "b609b3623a7a57473a179100a2684fb1efa996087ef0b62ee2427bf84a090f2c",
+    "note": "IMF PCPS last obs WITH full metadata columns (LICENSE, FULL_DESCRIPTION, UPDATE_DATE). Same request header.",
+    "source_kind": "live"
+  },
+  {
+    "file": "imf_terms_extract.txt",
+    "url": "https://www.imf.org/en/_site_imf/about/copyright-and-terms",
+    "fetched_at": "2026-09-29T19:10:42Z",
+    "sha256": "9c77d5930326c379acb0e65f3d5abf115aa27e5ef48c8e7745071ca684d61b63",
+    "note": "Text extract of IMF data-usage terms (mentions Primary Commodity Prices). Not raw HTML.",
+    "source_kind": "live"
+  }
+]

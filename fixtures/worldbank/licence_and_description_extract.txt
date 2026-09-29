@@ -1,0 +1,38 @@
+EXTRACTS (script-made, text of pages with tags stripped; nbsp->space; lines verbatim)
+
+== https://datacatalog.worldbank.org/search/dataset/0038238/commodity-prices-history-and-projections (Data Catalog record 'Commodity Prices - History and Projections'; 'Metadata last updated on May 14, 2025'; page footer year 2022) ==
+Temporal Coverage
+1960 - 2030
+Periodicity
+Annual
+Additional Metadata
+View More
+Data Access and Licensing
+Classification
+: 
+Public
+This dataset is classified as 
+Public
+under the Access to Information Classification Policy. Users inside and outside the Bank can access this dataset.
+License
+: 
+Creative Commons Attribution 4.0
+This dataset is licensed under 
+Creative Commons Attribution 4.0
+Contact
+data@worldbank.org
+Commodity prices are updated in the second business day of the month. Commodity price forecasts are updated twice a year (April and October). The Manufacture Unit Value Index (MUV), also updated twice a year, can be found in the in the worksheet “Annual Price” excel file, “Annual Indices (Real)” worksheet.
+This dataset includes data previously published as the "Global Economic Monitor (GEM) Commodities" and "Manufactures Unit Value Index (MUV Index)".
+
+== https://www.worldbank.org/ext/en/legal/terms-conditions/datasets (Terms of Use for Datasets; reached via redirect from https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets) ==
+Unless specifically labeled otherwise, these Datasets are provided to you under a Creative Commons Attribution 4.0 International License (CC BY 4.0), with the additional terms below.  The basic terms may be accessed
+You agree to provide attribution to The World Bank and its data providers in the following format: The World Bank: Dataset name: Data source (if known). When sharing or facilitating access to the Datasets, you agree to include the same acknowledgment requirement in any sub-licenses of the data that you grant, and a requirement that any sub-licensees do the same. You may meet this requirement by providing the uniform resource locator (URL) of these terms of use.
+Some datasets and indicators are provided by third parties, and may not be redistributed or reused without the consent of the original data provider, or may be subject to terms and conditions that are different from those described above. Where applicable, these conditions are included in the dataset or indicator metadata.
+
+== XLSX sheet 'Description' rows for the relevant series (cells joined with ' | ') ==
+   * | Coal (Australia), from February 2022, port thermal, f.o.b. Newcastle, 6000 kcal/kg futures price. From 2015 to January 2022, port thermal, f.o.b. Newcastle, 6000 kcal/kg spot price. 2002-2014, thermal GAR, f.o.b. piers, Newcastle/Port Kembla , 6,300 kcal/kg (11,340 btu/lb), less than 0.8%, sulfur 13% ash; previously 6,667 kcal/kg (12,000 btu/lb), less than 1.0% sulfur, 14%  ash | Bloomberg Finance L.P. Finance L.P. Finance L.P.; Coal Week International; Coal Week; IHS McCloskey Coal Report; International Coal Report World Bank.
+Coal (South Africa), from January 2015, f.o.b. Richards Bay, NAR, 6,000 kcal/kg, sulfur less than 1%, forward month 1;  from February 13, 2017 to December 2017, thermal NAR netback assessment f.o.b. Richards Bay 6,000 kcal/kg; during 2006-February 10, 2017 thermal NAR; during 2002-2005 6,200 kcal/kg (11,200 btu/lb), less than 1.0%, sulfur 16% ash; years 1990-2001 6390 kcal/kg (11,500 btu/lb) | Bloomberg Finance L.P. Finance L.P.; Coal Week; Coal Week International; International Coal Report; World Bank.
+   * | Natural Gas (Europe), from April 2015, Netherlands Title Transfer Facility (TTF); April 2010 to March 2015, average import border price and a spot price component, including UK; during June 2000 - March 2010 prices excludes UK.   | Bloomberg Finance L.P. Finance L.P.; World Gas Intelligence; World Bank.
+   * | Natural Gas (U.S.), spot price at Henry Hub, Louisiana | Bloomberg Finance L.P. Finance L.P.; Thomson Reuters Datastream; The Wall Street Journal; World Bank.
+   * | Liquefied natural gas (Japan), LNG, import price, cif; recent two months' averages are estimates. | Official Statistics of Japan; World Gas Intelligence; World Bank.
+Coal (South Africa), June to November 2022, March, April, June to September, December 2023, and January-May 2024 are estimates based on similar benchmarks, December 2022 to February 2023, May, and October-November 2023 replaced with source data.

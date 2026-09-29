@@ -1,0 +1,7 @@
+series,unit,first_non_blank_period,first_value,last_period,last_value
+"Coal, Australian",($/mt),1970M01,7.8,2026M08,135.2
+"Coal, South African **",($/mt),1984M01,29.3,2026M08,96.8
+"Natural gas, US",($/mmbtu),1960M01,0.14,2026M08,2.77
+"Natural gas, Europe",($/mmbtu),1960M01,0.4,2026M08,21.11
+"Liquefied natural gas, Japan",($/mmbtu),1977M01,2.77,2026M08,13.94
+Natural gas index,(2010=100),1977M01,18.5,2026M08,143.4
