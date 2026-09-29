@@ -16,3 +16,8 @@ Env note (R1): the default python3 is 3.11; the build uses python3.12 in `.venv`
 
 ### G0 retrospective
 Rounds used: 1 (one red ruff flag inside it). What evaluation caught that reading would not: the lint rule PLW1510 firing on my test helper, which I would not have spotted by eye; and the size check's failure path was only proved by actually running it with a tiny limit. Next time: GATES should say which Python the local environment must use (the box default was 3.11, the spec says 3.12), and G0 could name the lint ruleset instead of leaving it to defaults.
+
+### R2 — G1/sources — 2026-09-29T19:20Z
+plan: re-verify every SOURCES.md line from this environment via 4 parallel research agents (EU+HICP+consumption; EIA+Ember; FX+World Bank+carbon; China+Russia+South Africa); each saves small fixtures under fixtures/<source>/ with fetch date + URL and drafts entries in the scratchpad; I assemble SOURCES.md | eval: a script (checks/verify_fixtures.py) that every fixture dir has a manifest with url + fetch date + sha256 matching the file, plus a table of region/layer cells each mapped to a source or "no source" | expect: every SPEC region cell mapped; every keyless source has a real fixture; the EIA fixture is keyed-live
+result: pending
+decision: pending
