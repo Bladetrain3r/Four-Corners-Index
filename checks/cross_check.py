@@ -18,7 +18,7 @@ from typing import Any
 
 import yaml
 
-from pipeline import ecb, eia, ember, eurostat, fetch, registry, worldbank
+from pipeline import desnz, ecb, eia, ember, eurostat, fetch, registry, worldbank
 
 ROOT = Path(__file__).resolve().parent.parent
 FIX = ROOT / "fixtures"
@@ -241,6 +241,31 @@ def fx_and_commodity_checks() -> list[Row]:
     return rows
 
 
+# ---------------------------------------------------------------- United Kingdom
+def uk_checks() -> list[Row]:
+    """DESNZ (UK column) against Eurostat's own UK series in national currency, over the semesters both hold."""
+    rows = []
+    jobs = (
+        ("desnz_household_vs_eurostat_uk", "table_562_medium_domestic_eu_uk.csv", "5.6.2", "nrg_pc_204_uk_dc_nac.json", "nrg_pc_204",
+         "nrg_pc_204:KWH2500-4999", {"incl_tax": "I_TAX", "excl_tax": "X_TAX"}),
+        ("desnz_nonhousehold_vs_eurostat_uk", "table_542_medium_nondomestic_eu_uk.csv", "5.4.2", "nrg_pc_205_uk_id_nac.json", "nrg_pc_205",
+         "nrg_pc_205:MWH2000-19999", {"incl_tax": "X_VAT", "excl_tax": "X_TAX"}),
+    )
+    for check, d_file, table, e_file, dataset, prefix, mapping in jobs:
+        raw, at = _raw("desnz", d_file)
+        ours = desnz.parse(raw, at, table, "fixture")
+        raw, at = _raw("eurostat", e_file)
+        theirs = eurostat.parse(raw, dataset, at)
+        for level, tax in mapping.items():
+            sid_d = f"desnz:qep_{table}:medium:{level}"
+            sid_e = f"{prefix}:{tax}:NAC"
+            eu = {p["period_start"]: p["value"] for p in theirs if p["series_id"] == sid_e}
+            for start in sorted(eu):
+                o = _one(ours, series_id=sid_d, period_start=start)["value"]
+                rows.append(_abs_row(check, f"{level} vs {tax} {start[:4]}-S{1 if start[5:7] == '01' else 2}", o, eu[start]))
+    return rows
+
+
 # ---------------------------------------------------------------- sanity ranges
 def sanity_checks(points: list[dict[str, Any]]) -> list[Row]:
     rows = []
@@ -272,7 +297,7 @@ def live_points() -> list[dict[str, Any]]:
 
 
 def run(live: bool = False) -> list[Row]:
-    rows = eurostat_checks() + eia_checks() + ember_checks() + fx_and_commodity_checks()
+    rows = eurostat_checks() + eia_checks() + ember_checks() + fx_and_commodity_checks() + uk_checks()
     return rows + sanity_checks(live_points() if live else fixture_points())
 
 

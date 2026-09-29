@@ -62,5 +62,23 @@
     "sha256": "43e68be1b7b7df290f3d9b220095d684637029311df2020c849b517de48909ae",
     "note": "Text extract (selected lines, script-made) of the reference-rate page (RUB suspension, timing, transaction warning) and the ECB Disclaimer & copyright section. Raw HTML not stored (>100 KB each).",
     "source_kind": "live"
+  },
+  {
+    "file": "exr_monthly_usd_cny_zar_gbp_2022-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2022-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T21:51:48Z",
+    "sha256": "56502ed67ca1a2c1fd64dec22c07f5ccfbb03c79613dc1fc992fd092414c8ce3",
+    "bytes": 13970,
+    "note": "Monthly averages USD, CNY, ZAR, GBP per EUR since 2022-01. Untrimmed for that window; adds GBP for the UK.",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_daily_usd_cny_zar_gbp_2026-06-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2026-06-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T21:51:49Z",
+    "sha256": "9dda3eab6a264c84b58fa3fa8694888ad2e88ef7229ff42b32c443286eedabd3",
+    "bytes": 20026,
+    "note": "Daily USD, CNY, ZAR, GBP per EUR since 2026-06-01. Untrimmed for that window; adds GBP for the UK.",
+    "source_kind": "live"
   }
 ]

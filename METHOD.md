@@ -39,6 +39,7 @@ Because Russia has no price, the weights are **renormalised over the regions tha
 - **Retail index level** R(m) = Σ w'(r, m) · p_household(r, m) over the included regions. **Wholesale index level** W(m) = Σ w'(r, m) · p_wholesale(r, m); with only the EU included its weight is 1 and W(m) is the EU wholesale price. The site labels it **EU wholesale** (Ziggy, STOP-1 decision 1).
 - **Index form (2015 = 100):** I(m) = 100 · L(m) / L̄₂₀₁₅, where L̄₂₀₁₅ is the mean of that index's twelve monthly levels of 2015 (of the same definition and composition as published for 2015). Levels are published beside it.
 - **Contributions:** each region's contribution is w'(r, m) · p(r, m); they sum to the level.
+- **Retail excluding China (variant, version 2; Ziggy, after STOP-2):** the same construction over EU and US only: w'(r, m) = w(r, y) / (w(EU, y) + w(US, y)) for r in {EU, US}, weights from the same Ember Demand shares (China and Russia stay in the denominator of w, then are dropped in the renormalisation). Level, index form (2015 = 100 over its own 2015 months) and contributions are published beside the headline on the headline page. It is a variant like the equal-weighted one: **not** a ledger series, and it shares the headline's provisional or final status for the month. Its purpose is to show the part of the Retail index that rests on measured prices rather than on one administrative tariff (section 11).
 - **Coverage:** monthly from 2015-01 to the latest month for which every included region has a value (observed or carried forward as below).
 
 ## 5. EU wholesale aggregate
@@ -54,7 +55,7 @@ For month m in year y: the EU value is the demand-weighted mean of the Ember cou
 
 ## 7. Revisions and the ledger
 
-Every published index value is one line in `ledger/index.jsonl`: `index`, `month`, `value_usd_per_kwh`, `index_2015_100`, `status`, `composition`, `method_version`, `published` (date), `inputs_sha256` (the SHA-256 of the raw snapshots used), `prev_hash`, `hash`. `hash` is SHA-256 over the canonical JSON (sorted keys, separators `,` and `:`, UTF-8) of the entry without `hash`; `prev_hash` is the previous line's `hash`, the first line's is `GENESIS`. A revision (a later publication changing a month's value or status) is a **new line** with `supersedes` = the `hash` of the line it replaces; earlier lines are never edited. `ledger/verify.py` recomputes the chain; tampering with any line, or with the order, makes it fail. Signing is out of scope.
+Every published index value is one line in `ledger/index.jsonl`: `index`, `month`, `value_usd_per_kwh`, `index_2015_100`, `status`, `composition`, `method_version` (the version of the **headline** method that produced the value; adding a variant does not change it, so it stays 1 while the headline definition is unchanged), `published` (date), `inputs_sha256` (the SHA-256 of the raw snapshots used), `prev_hash`, `hash`. `hash` is SHA-256 over the canonical JSON (sorted keys, separators `,` and `:`, UTF-8) of the entry without `hash`; `prev_hash` is the previous line's `hash`, the first line's is `GENESIS`. A revision (a later publication changing a month's value or status) is a **new line** with `supersedes` = the `hash` of the line it replaces; earlier lines are never edited. `ledger/verify.py` recomputes the chain; tampering with any line, or with the order, makes it fail. Signing is out of scope.
 
 The launch backfill (2015-01 to the latest month) is published on the build date and marked `backfill: true`.
 
@@ -68,7 +69,7 @@ Every month-on-month move in a headline index level above **4% (Retail)** or **2
 
 ## 10. Reproducibility
 
-`python -m pipeline.build --raw raw_cache --out <dir>` reads only the raw snapshots listed in `data/manifests/raw_snapshots.jsonl` (each verified against its SHA-256), makes no network request, and writes byte-identical outputs on every run (`evidence/G4.md` compares hashes of two clean rebuilds with the network blocked). Raw snapshots are kept forever, append-only, as monthly GitHub Release assets with the manifest committed here; until the first upload they live in `raw_cache/` (not in git).
+`python -m pipeline.build --raw raw_cache --out <dir>` reads only the raw snapshots listed in `data/manifests/raw_snapshots.jsonl` (each verified against its SHA-256), makes no network request, and writes byte-identical outputs on every run (`evidence/G4.md` compares hashes of two clean rebuilds with the network blocked). Raw snapshots are kept forever, append-only, as monthly GitHub Release assets with the manifest committed here. **Exception (Ziggy, 2026-09-30):** because no Release upload was possible from the build session, one gzipped archive of every snapshot in the manifest as of the 2026-09-29 snapshot is committed once as `snapshots/raw_2026-09-29.tar.gz`; `python -m pipeline.snapshot --restore` extracts it into `raw_cache/` and verifies every file against its manifest SHA-256. Further snapshots are uploaded as Release assets in a session that has a token; until then they live in `raw_cache/` (not in git).
 
 ## 11. Known limits (read before using a number)
 
@@ -80,3 +81,4 @@ Every month-on-month move in a headline index level above **4% (Retail)** or **2
 
 ## Changes
 - 2026-09-30, version 1: first version.
+- 2026-09-30, version 2: adds the Retail-excluding-China variant (section 4); records the one-off snapshot archive committed to git (section 10); clarifies that the ledger's `method_version` is the headline method's. No headline value changes.
