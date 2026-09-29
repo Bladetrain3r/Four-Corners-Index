@@ -13,3 +13,6 @@ result: red then green — first `ruff check` flagged PLW1510 (subprocess.run wi
 decision: proceed — G0 checks are green locally; the CI run itself is proved on push (see evidence/G0.md)
 
 Env note (R1): the default python3 is 3.11; the build uses python3.12 in `.venv` (CI pins 3.12). Dev-only deps: pytest, ruff, jsonschema, pyyaml. The pipeline itself stays stdlib.
+
+### G0 retrospective
+Rounds used: 1 (one red ruff flag inside it). What evaluation caught that reading would not: the lint rule PLW1510 firing on my test helper, which I would not have spotted by eye; and the size check's failure path was only proved by actually running it with a tiny limit. Next time: GATES should say which Python the local environment must use (the box default was 3.11, the spec says 3.12), and G0 could name the lint ruleset instead of leaving it to defaults.
