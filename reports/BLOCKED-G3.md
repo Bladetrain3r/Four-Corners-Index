@@ -5,7 +5,7 @@
 Evidence: `evidence/G3.md` (run 2), `evidence/G3-run1-red.md` (run 1, unedited), `checks/tolerances.yaml` (committed before any check ran, `85d3655`).
 
 ## What is green
-55 of 58 fixture rows, including every gate-level requirement: Eurostat household all-taxes and excluding-taxes EU-27 against the publisher's article (8 of 8 exact to four decimals) and non-household band IC (4 of 4 exact); EIA US residential and industrial against Electric Power Monthly Table 5.6.A (4 of 4 exact) and Henry Hub monthly against the mean of daily; Ember monthly price against the mean of daily for six countries; ECB monthly against the mean of daily (exact); Ember US generation, Russia demand and China demand against independent figures. One check (`eurostat_nonhousehold_...`) was red in run 1 because my premise was wrong (see G3.md); fixed with the tolerance unchanged.
+53 of 58 fixture rows (all rows of 11 of the 13 checks), including every gate-level requirement: Eurostat household all-taxes and excluding-taxes EU-27 against the publisher's article (8 of 8 exact to four decimals) and non-household band IC (4 of 4 exact); EIA US residential and industrial against Electric Power Monthly Table 5.6.A (4 of 4 exact) and Henry Hub monthly against the mean of daily; Ember monthly price against the mean of daily for six countries; ECB monthly against the mean of daily (exact); Ember US generation, Russia demand and China demand against independent figures. One check (`eurostat_nonhousehold_...`) was red in run 1 because my premise was wrong (see G3.md); fixed with the tolerance unchanged.
 
 ## The three open items and what I recommend
 
