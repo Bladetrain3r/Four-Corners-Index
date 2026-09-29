@@ -13,7 +13,7 @@ from typing import Any
 
 from pipeline import http
 from pipeline.common import SourceError
-from pipeline.registry import REQUESTS, Request, resolve_pink_sheet_url
+from pipeline.registry import REQUESTS, RESOLVERS, Request
 
 ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = ROOT / "fixtures"
@@ -55,8 +55,9 @@ def load(req: Request, mode: str = "auto", *, opener: http.Opener = http._urlope
         raise SourceError(req.source, f"{req.key_env} is not set")
     url = req.url
     if url.startswith("resolve:"):
-        page, _ = http.get(req.source, url.removeprefix("resolve:"), opener=opener)
-        url = resolve_pink_sheet_url(page)
+        page_url, resolver = RESOLVERS[url.removeprefix("resolve:")]
+        page, _ = http.get(req.source, page_url, opener=opener)
+        url = resolver(page)
     fetch_url = url.replace("{key}", key)
     raw, _headers = http.get(req.source, fetch_url, opener=opener)
     return Loaded(req, raw, now(), "live", http.redact(fetch_url))

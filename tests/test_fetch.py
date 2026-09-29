@@ -110,8 +110,27 @@ def test_pink_sheet_url_is_resolved_from_the_landing_page():
 
 
 def test_every_registry_request_has_a_fixture_that_parses_and_no_key_in_url():
-    assert len(registry.REQUESTS) == 17
+    assert len(registry.REQUESTS) == 19
     for req in registry.REQUESTS:
         assert "api_key=" not in req.url or "api_key={key}" in req.url
         loaded = fetch.load(req, "fixture")
         assert fetch.parse(loaded), req.name
+
+
+def test_govuk_attachment_url_is_resolved_by_title_and_fails_loudly_when_absent():
+    api = (b'{"details":{"attachments":[{"title":"Non-domestic electricity prices in the EU (QEP 5.4.1)","url":"https://a/x/table_541.xlsx"},'
+           b'{"title":"Domestic electricity prices in the EU for small, medium and large consumers (QEP 5.6.1)","url":"https://a/y/table_561.xlsx"}]}}')
+    assert registry.resolve_govuk_url(api, "Domestic electricity prices in the EU").endswith("table_561.xlsx")  # not the non-domestic one
+    assert registry.resolve_govuk_url(api, "Non-domestic electricity prices in the EU").endswith("table_541.xlsx")
+    with pytest.raises(SourceError, match=r"^\[desnz\].*no .xlsx attachment"):
+        registry.resolve_govuk_url(api, "Domestic gas prices")
+    with pytest.raises(SourceError, match=r"^\[desnz\].*no attachments"):
+        registry.resolve_govuk_url(b"{}", "x")
+
+
+def test_live_fetch_resolves_the_uk_workbook_url_through_the_content_api():
+    api = b'{"details":{"attachments":[{"title":"Domestic electricity prices in the EU for small (QEP 5.6.1)","url":"https://assets.example/z/table_561.xlsx"}]}}'
+    op = FakeOpener((200, api), (200, b"WORKBOOK-BYTES"))
+    loaded = fetch.load(_req("desnz", "qep_562"), "live", opener=op, now=lambda: "2026-10-01T00:00:00Z")
+    assert op.calls[0].endswith("/international-domestic-energy-prices") and op.calls[1] == "https://assets.example/z/table_561.xlsx"
+    assert loaded.raw == b"WORKBOOK-BYTES" and loaded.kind == "live"

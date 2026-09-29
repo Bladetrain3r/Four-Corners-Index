@@ -7,20 +7,16 @@ of the real workbook; the real workbook is parsed live in evidence/G2.md.
 from __future__ import annotations
 
 import calendar
-import csv
-import io
 import math
 import re
-import zipfile
 from datetime import date
-from xml.etree import ElementTree as ET
 
+from pipeline import xlsx
 from pipeline.common import SourceError, gap, sha256_hex, validate_point
+from pipeline.xlsx import read_csv_grid
 
 SOURCE = "worldbank"
 SHEET = "Monthly Prices"
-NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
-      "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"}
 
 # column name (as published, footnote marks stripped) -> (series slug, region, fuel, unit, expected sheet unit)
 COLUMNS = {
@@ -35,6 +31,10 @@ _MONTH = re.compile(r"^(\d{4})M(\d{2})$")
 _UPDATED = re.compile(r"Updated on ([A-Za-z]+ \d{1,2}, \d{4})")
 
 
+def read_xlsx_sheet(raw: bytes, sheet: str = SHEET) -> list[list[str]]:
+    return xlsx.read_xlsx_sheet(raw, sheet, SOURCE)
+
+
 def _parse_updated(text: str) -> str:
     """'September 02, 2026' -> '2026-09-02'."""
     month_name, day, year = re.match(r"([A-Za-z]+) (\d{1,2}), (\d{4})", text).groups()  # type: ignore[union-attr]
@@ -42,52 +42,6 @@ def _parse_updated(text: str) -> str:
     if month_name not in months:
         raise SourceError(SOURCE, f"bad month name in 'Updated on' line: {text!r}")
     return date(int(year), months[month_name], int(day)).isoformat()
-
-
-def _col_index(ref: str) -> int:
-    letters = re.match(r"[A-Z]+", ref).group(0)  # type: ignore[union-attr]
-    n = 0
-    for ch in letters:
-        n = n * 26 + (ord(ch) - 64)
-    return n - 1
-
-
-def read_xlsx_sheet(raw: bytes, sheet: str = SHEET) -> list[list[str]]:
-    try:
-        z = zipfile.ZipFile(io.BytesIO(raw))
-        wb = ET.fromstring(z.read("xl/workbook.xml"))
-        rels = ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
-        rid = next(s.get(f"{{{NS['r']}}}id") for s in wb.find("m:sheets", NS) if s.get("name") == sheet)
-        target = next(r.get("Target") for r in rels if r.get("Id") == rid)
-        shared: list[str] = []
-        if "xl/sharedStrings.xml" in z.namelist():
-            for si in ET.fromstring(z.read("xl/sharedStrings.xml")):
-                shared.append("".join(t.text or "" for t in si.iter(f"{{{NS['m']}}}t")))
-        path = target.lstrip("/") if target.startswith("/") else f"xl/{target}"
-        ws = ET.fromstring(z.read(path))
-    except (zipfile.BadZipFile, KeyError, StopIteration, ET.ParseError) as exc:
-        raise SourceError(SOURCE, f"cannot read sheet {sheet!r} from the workbook ({exc!r})") from exc
-    grid: list[list[str]] = []
-    for row in ws.iter(f"{{{NS['m']}}}row"):
-        cells: dict[int, str] = {}
-        for c in row:
-            v = c.find("m:v", NS)
-            if c.get("t") == "s" and v is not None:
-                text = shared[int(v.text)]
-            elif c.get("t") == "inlineStr":
-                text = "".join(t.text or "" for t in c.iter(f"{{{NS['m']}}}t"))
-            else:
-                text = v.text if v is not None and v.text is not None else ""
-            cells[_col_index(c.get("r"))] = text
-        r = int(row.get("r")) - 1
-        while len(grid) <= r:
-            grid.append([])
-        grid[r] = [cells.get(i, "") for i in range(max(cells) + 1)] if cells else []
-    return grid
-
-
-def read_csv_grid(raw: bytes) -> list[list[str]]:
-    return list(csv.reader(io.StringIO(raw.decode("utf-8-sig"))))
 
 
 def parse_grid(grid: list[list[str]], raw: bytes, retrieved_at: str, confidence: str = "primary",

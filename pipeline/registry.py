@@ -1,12 +1,13 @@
 """Every live request the pipeline makes, paired with the fixture that stands in for it and the parser that reads it."""
 from __future__ import annotations
 
+import json
 import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pipeline import ecb, eia, ember, eurostat, worldbank
+from pipeline import desnz, ecb, eia, ember, eurostat, worldbank
 from pipeline.common import SourceError
 
 EU27 = ("BE", "BG", "CZ", "DK", "DE", "EE", "IE", "EL", "ES", "FR", "HR", "IT", "CY", "LV", "LT", "LU", "HU", "MT",
@@ -78,12 +79,16 @@ REQUESTS: tuple[Request, ...] = (
             "price_monthly_sample.csv", lambda raw, at, kind, gaps: ember.parse_prices(raw, at, "monthly", gaps=gaps)),
     Request("ember", "prices_daily", f"{_EMBER}/price/outputs/european_wholesale_electricity_price_data_daily.csv",
             "price_daily_sample.csv", lambda raw, at, kind, gaps: ember.parse_prices(raw, at, "daily", gaps=gaps)),
-    Request("ecb", "exr_monthly", "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2015-01&format=csvdata&detail=dataonly",
+    Request("ecb", "exr_monthly", "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01&format=csvdata&detail=dataonly",
             "exr_monthly_usd_cny_zar_2022-01.csv", lambda raw, at, kind, gaps: ecb.parse(raw, at)),
-    Request("ecb", "exr_daily", "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly",
+    Request("ecb", "exr_daily", "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly",
             "exr_daily_usd_cny_zar_2026-06-01.csv", lambda raw, at, kind, gaps: ecb.parse(raw, at)),
-    Request("worldbank", "pink_sheet_monthly", "resolve:https://www.worldbank.org/en/research/commodity-markets",
+    Request("worldbank", "pink_sheet_monthly", "resolve:pink_sheet",
             "pink_sheet_monthly_gas_coal_last36.csv", _wb),
+    Request("desnz", "qep_562", "resolve:desnz_domestic", "table_562_medium_domestic_eu_uk.csv",
+            lambda raw, at, kind, gaps: desnz.parse(raw, at, "5.6.2", kind, gaps=gaps)),
+    Request("desnz", "qep_542", "resolve:desnz_nondomestic", "table_542_medium_nondomestic_eu_uk.csv",
+            lambda raw, at, kind, gaps: desnz.parse(raw, at, "5.4.2", kind, gaps=gaps)),
 )
 
 
@@ -94,3 +99,23 @@ def resolve_pink_sheet_url(landing_html: bytes) -> str:
         raise SourceError("worldbank", "no CMO-Historical-Data-Monthly.xlsx link on the commodity-markets page")
     url = hits[0].decode()
     return url if url.startswith("https://") else "https://www.worldbank.org" + url
+
+
+def resolve_govuk_url(api_json: bytes, title_prefix: str) -> str:
+    """The workbook's URL embeds an id that changes every release; take it from the GOV.UK content API attachments."""
+    try:
+        attachments = json.loads(api_json)["details"]["attachments"]
+    except (ValueError, KeyError, TypeError) as exc:
+        raise SourceError("desnz", f"GOV.UK content API response has no attachments ({exc!r})") from exc
+    hits = [a["url"] for a in attachments if a.get("title", "").startswith(title_prefix) and a.get("url", "").endswith(".xlsx")]
+    if not hits:
+        raise SourceError("desnz", f"no .xlsx attachment titled {title_prefix!r} on the GOV.UK dataset page")
+    return hits[0]
+
+
+_GOVUK = "https://www.gov.uk/api/content/government/statistical-data-sets"
+RESOLVERS: dict[str, tuple[str, Callable[[bytes], str]]] = {
+    "pink_sheet": ("https://www.worldbank.org/en/research/commodity-markets", resolve_pink_sheet_url),
+    "desnz_domestic": (f"{_GOVUK}/international-domestic-energy-prices", lambda b: resolve_govuk_url(b, "Domestic electricity prices in the EU")),
+    "desnz_nondomestic": (f"{_GOVUK}/international-non-domestic-energy-prices", lambda b: resolve_govuk_url(b, "Non-domestic electricity prices in the EU")),
+}

@@ -28,7 +28,7 @@ GEN_COLUMNS_YEARLY = tuple(("Year" if c == "Date" else c) for c in GEN_COLUMNS_M
     "Capacity (GW)",) + GEN_COLUMNS_MONTHLY[11:]
 PRICE_COLUMNS = ("Country", "ISO3 Code", "Date", "Price (EUR/MWhe)")
 
-AREA_REGION = {"EU": "EU", "China": "CN", "Russia": "RU", "South Africa": "ZA", "United States": "US"}
+AREA_REGION = {"EU": "EU", "China": "CN", "Russia": "RU", "South Africa": "ZA", "United States": "US", "United Kingdom": "GB"}
 AREA_CONFIDENCE = {"Russia": "low_confidence"}  # Ziggy, STOP-1 decision 9
 # Ember source name -> fuel field. Aggregates are skipped explicitly (derivable from the fuels).
 FUEL = {

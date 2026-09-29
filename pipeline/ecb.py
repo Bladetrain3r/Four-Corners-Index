@@ -16,7 +16,7 @@ from pipeline.common import SourceError, sha256_hex, validate_point
 
 SOURCE = "ecb"
 COLUMNS = ("KEY", "FREQ", "CURRENCY", "CURRENCY_DENOM", "EXR_TYPE", "EXR_SUFFIX", "TIME_PERIOD", "OBS_VALUE")
-CURRENCIES = {"USD", "CNY", "ZAR", "RUB"}
+CURRENCIES = {"USD", "CNY", "ZAR", "RUB", "GBP"}
 
 
 def parse(raw: bytes, retrieved_at: str, confidence: str = "primary") -> list[dict[str, Any]]:

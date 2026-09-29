@@ -61,5 +61,23 @@
     "bytes": 4042,
     "note": "Non-household price, band IC (500-1,999 MWh/yr), EU27_2020, EUR, all three tax levels, 2024-S1..2025-S2. Trimmed by query. Found in G3 to be the band behind the EU non-household figure in Eurostat's Statistics Explained article.",
     "source_kind": "live"
+  },
+  {
+    "file": "nrg_pc_204_uk_dc_nac.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204?geo=UK&currency=NAC&nrg_cons=KWH2500-4999&sinceTimePeriod=2015-S1&format=JSON",
+    "fetched_at": "2026-09-29T21:50:19Z",
+    "sha256": "efc7e5c1458a8989293c886e79ca0500f7e5faa417d0aa73f9d2b09d82205ba5",
+    "bytes": 4887,
+    "note": "UK household band DC, national currency (GBP), all three tax levels, 2015-S1 onward. Eurostat's own UK series (the UK stopped reporting after Brexit). Used as the independent oracle for the G3 UK checks.",
+    "source_kind": "live"
+  },
+  {
+    "file": "nrg_pc_205_uk_id_nac.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?geo=UK&currency=NAC&nrg_cons=MWH2000-19999&sinceTimePeriod=2015-S1&format=JSON",
+    "fetched_at": "2026-09-29T21:50:21Z",
+    "sha256": "06f7a024923c9a8741435440c557268d9b1e47cbcf1c8bffdb5c0fba45a54951",
+    "bytes": 4893,
+    "note": "UK non-household band ID, national currency (GBP), all three tax levels, 2015-S1 onward. Used as the independent oracle for the G3 UK checks.",
+    "source_kind": "live"
   }
 ]

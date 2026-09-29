@@ -96,6 +96,25 @@ checks:
     rel: 0.03
     why: "Different compilers and revision timing for a monthly total; 3%."
 
+  # ---- United Kingdom (added 2026-09-30, after Ziggy asked for it as weight-bearing; written BEFORE the UK checks are run) -----
+  # Oracle: Eurostat's own UK series in national currency (the UK stopped reporting after 2020-S1, so 11 semesters overlap).
+  # Nothing of our-versus-theirs for the UK had been compared when this was written; only the list of periods Eurostat holds
+  # (2015-S1 to 2020-S1) was looked at. Tax-level mapping is a HYPOTHESIS stated in advance: DESNZ household 'incl tax' includes
+  # VAT = Eurostat I_TAX, 'excl tax' = X_TAX; DESNZ non-household 'incl tax' = 'any taxes or charges relating to environmental or
+  # social policies' but not VAT = Eurostat X_VAT, 'excl tax' = X_TAX.
+  desnz_household_vs_eurostat_uk:
+    badge: A
+    what: "DESNZ QEP 5.6.2 Medium (2,500-4,999 kWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_204 band DC for the UK in national currency (I_TAX and X_TAX), every semester 2015-S1 to 2020-S1"
+    unit: GBP/kWh
+    abs: 0.0001
+    why: "DESNZ prints pence to five decimals, Eurostat GBP to four; 0.0001 GBP (0.01 penny) allows for Eurostat's rounding. DESNZ says its UK series follows Eurostat's methodology and is supplied to it."
+  desnz_nonhousehold_vs_eurostat_uk:
+    badge: A
+    what: "DESNZ QEP 5.4.2 Medium (2,000-19,999 MWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_205 band ID for the UK in national currency (X_VAT and X_TAX), every semester 2015-S1 to 2020-S1"
+    unit: GBP/kWh
+    abs: 0.0001
+    why: "As above. Information for the industrial layer only: the UK is weight-bearing in the Retail index, which uses the household series."
+
 sanity_ranges:   # inclusive plausibility bounds on every normalised point of the series; they catch unit errors (x100, x1000)
   # AMENDED with Ziggy's word (reports/BLOCKED-G3.md item D): all-taxes keeps 0.03; the lower tax levels get 0.01 because
   # Eurostat publishes NL household 2022-S1 at 0.0336 all taxes and 0.0278 excluding VAT (a real value, not a unit error).
@@ -113,3 +132,6 @@ sanity_ranges:   # inclusive plausibility bounds on every normalised point of th
   ecb_zar_per_eur:                    {series_prefix: "ecb:EXR:", region: ZAR, min: 10.0, max: 30.0}
   worldbank_gas_usd_per_mmbtu:        {series_prefix: "worldbank:pink_sheet:natural_gas", unit: USD/MMBtu, min: 0.0, max: 100.0}
   worldbank_coal_usd_per_t:           {series_prefix: "worldbank:pink_sheet:coal", unit: USD/t, min: 0.0, max: 600.0}
+  desnz_household_gbp_per_kwh:        {series_prefix: "desnz:qep_5.6.2:", unit: GBP/kWh, min: 0.05, max: 0.60}
+  desnz_nonhousehold_gbp_per_kwh:     {series_prefix: "desnz:qep_5.4.2:", unit: GBP/kWh, min: 0.03, max: 0.50}
+  ecb_gbp_per_eur:                    {series_prefix: "ecb:EXR:", region: GBP, min: 0.5, max: 1.1}
