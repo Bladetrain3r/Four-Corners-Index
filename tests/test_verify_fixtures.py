@@ -44,3 +44,12 @@ def test_unlisted_file_fails(tmp_path):
 def test_missing_manifest_fails(tmp_path):
     (tmp_path / "src").mkdir()
     assert vf.main(["--root", str(tmp_path)]) == 1
+
+
+def test_malformed_manifest_fails_cleanly(tmp_path):
+    d = tmp_path / "src"
+    d.mkdir()
+    (d / "MANIFEST.json").write_text(json.dumps({"files": []}))
+    assert vf.main(["--root", str(tmp_path)]) == 1
+    (d / "MANIFEST.json").write_text("{not json")
+    assert vf.main(["--root", str(tmp_path)]) == 1

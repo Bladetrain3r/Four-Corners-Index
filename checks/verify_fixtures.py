@@ -21,7 +21,12 @@ def check_source(src_dir: Path) -> list[str]:
     if not mpath.exists():
         return [f"{src_dir.name}: no MANIFEST.json (need one, or a NO_SOURCE.md)"] if not (
             src_dir / "NO_SOURCE.md").exists() else []
-    entries = json.loads(mpath.read_text())
+    try:
+        entries = json.loads(mpath.read_text())
+    except json.JSONDecodeError as exc:
+        return [f"{src_dir.name}: MANIFEST.json is not valid JSON ({exc})"]
+    if not isinstance(entries, list) or not all(isinstance(e, dict) for e in entries):
+        return [f"{src_dir.name}: MANIFEST.json must be a list of objects"]
     listed = set()
     for e in entries:
         missing = [k for k in REQUIRED if not e.get(k)]
