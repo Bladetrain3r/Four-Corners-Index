@@ -35,3 +35,8 @@ Environment notes: five parallel research agents each ran about 5 to 19 minutes 
 plan: record Ziggy's nine answers in reports/STOP-1.md, update SPEC (decisions 6-13, SA row, carbon, headline-page variant) and SOURCES.md map so the docs agree | eval: pytest (tests/test_sources_doc.py checks the map cells and entries), ruff | expect: green, no empty map cell
 result: green — 17 passed, ruff clean; SA row rewritten without an empty cell
 decision: proceed to G2 (adapters for Eurostat, EIA, Ember, ECB, World Bank); two research passes queued in parallel (Russia secondary sources; alternate or additional regions), proposals only
+
+### R5 — G2/common+eurostat — 2026-09-29T20:45Z
+plan: add `confidence` (+ optional `component`, `source_flag`) to schema/series.schema.json; write pipeline/common.py (SourceError naming the source, point validation with no-NaN, deterministic JSON) and pipeline/eurostat.py (JSON-stat parser for nrg_pc_204/205, _c components, prc_hicp_minr, nrg_cb_e) | eval: pytest tests/test_eurostat.py against fixtures/eurostat: parse ok, schema validates, EU27_2020 DC I_TAX 2025-S2 = 0.2896, units, and a corrupted fixture (dimension renamed) fails naming eurostat | expect: green, corrupted fixture raises SourceError containing "eurostat"
+result: green — 11 eurostat tests, 28 in total; EU27 DC I_TAX 2025-S2 = 0.2896 EUR/kWh, DE 0.3869 and FR 0.2561 (checks geo decoded by index not request order), industrial X_VAT 0.1596 vs I_TAX 0.1920, HICP EU I25 2026-08 = 102.58, nrg_cb_e EU FC = 2,412,055.15 GWh flagged p; three corruptions (renamed dimension, list-form value, non-numeric value) and a wrong unit each raise SourceError starting "[eurostat]"
+decision: proceed — next EIA

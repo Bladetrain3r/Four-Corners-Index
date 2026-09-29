@@ -23,7 +23,7 @@ def test_series_schema_accepts_and_rejects():
         "source": "eia", "series_id": "x", "region": "US", "layer": "cost", "buyer_type": "household",
         "period_start": "2026-01-01", "period_end": "2026-01-31", "value": 0.17, "unit": "USD/kWh",
         "currency": "USD", "as_of": "2026-03-01", "retrieved_at": "2026-09-29T19:00:00Z",
-        "raw_sha256": "0" * 64,
+        "raw_sha256": "0" * 64, "confidence": "primary",
     }
     jsonschema.validate(good, schema)
     bad = dict(good, value="n/a")
