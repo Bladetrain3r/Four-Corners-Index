@@ -4,10 +4,10 @@
   "keep_days": 730,
   "months": 25,
   "name": "exr_daily",
-  "raw_sha256": "823adf81ffe0f027e2ab3b8b2c4eaa063499df8f8e1297efbc77e001ccc6d319",
-  "retrieved_at": "2026-09-29T21:17:28Z",
+  "raw_sha256": "dd43a827b4bb42c215d09fee2594eaaaaf2edd208961fca8d512c883672a9ef9",
+  "retrieved_at": "2026-09-29T21:49:53Z",
   "role": "primary",
-  "rows": 1530,
+  "rows": 2040,
   "source": "ecb",
-  "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly"
+  "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly"
 }

@@ -19,7 +19,8 @@ from pipeline import ledger, outputs, registry, snapshot
 from pipeline.common import SourceError
 
 ROOT = Path(__file__).resolve().parent.parent
-METHOD_VERSION = 1
+HEADLINE_METHOD_VERSION = 1  # the ledger's method_version: the headline definition, unchanged by METHOD.md v2 (adds a variant only)
+METHOD_DOC_VERSION = 2
 BASKET = ("EU", "US", "CN", "RU")
 RETAIL_REGIONS = ("EU", "US", "CN")  # RU has no price (METHOD section 1)
 DAILY = {"henry_hub_daily", "prices_daily", "exr_daily"}
@@ -82,7 +83,7 @@ def build_retail(points, fx_usd, fx_cny, demand, snap_date: date, manual: Path, 
     us = ix.carry_forward(us_obs, all_months, CARRY_US)
     cutoff = date(snap_date.year - 1, snap_date.month, min(snap_date.day, 28))
     rows, region_rows = [], []
-    levels_w, levels_e = {}, {}
+    levels_w, levels_e, levels_x = {}, {}, {}
     for m in all_months:
         if m not in fx_usd or m not in fx_cny or m not in eu or m not in us or m < cn_from:
             continue
@@ -99,17 +100,19 @@ def build_retail(points, fx_usd, fx_cny, demand, snap_date: date, manual: Path, 
         usd = {r: p.usd for r, p in parts.items()}
         c = ix.combine(m, usd, base)
         e = ix.combine(m, usd, base, equal=True)
+        x = ix.combine(m, {r: usd[r] for r in ("EU", "US")}, base)  # variant: China dropped, weights renormalised over EU and US
         prov = any(p.provisional for p in parts.values())
-        levels_w[m], levels_e[m] = c.level, e.level
+        levels_w[m], levels_e[m], levels_x[m] = c.level, e.level, x.level
         rows.append({"month": m, "status": "provisional" if prov else "final", "level": c.level, "equal_level": e.level,
-                     "composition": "|".join(c.composition), "contrib": c.contributions, "weights": c.weights})
+                     "composition": "|".join(c.composition), "contrib": c.contributions, "weights": c.weights,
+                     "exchina_level": x.level, "exchina_contrib": x.contributions})
         for r, p in sorted(parts.items()):
             region_rows.append({"index": "retail", "month": m, "region": r, "local_value": p.local_value, "local_unit": p.local_unit,
                                 "usd_per_local": p.usd_per_local.quantize(D("0.00000001")), "usd_per_kwh": p.usd,
                                 "carried": int(p.carried), "provisional": int(p.provisional)})
-    idx_w, idx_e = ix.index_form(levels_w), ix.index_form(levels_e)
+    idx_w, idx_e, idx_x = ix.index_form(levels_w), ix.index_form(levels_e), ix.index_form(levels_x)
     for r in rows:
-        r["index"], r["equal_index"] = idx_w[r["month"]], idx_e[r["month"]]
+        r["index"], r["equal_index"], r["exchina_index"] = idx_w[r["month"]], idx_e[r["month"]], idx_x[r["month"]]
     return rows, region_rows
 
 
@@ -144,8 +147,10 @@ def build_wholesale(points, fx_usd, snap_date: date, id_by_country: dict[tuple[s
 
 
 def _index_csv(rows: list[dict[str, Any]], regions: tuple[str, ...]) -> str:
+    has_x = "exchina_level" in rows[0]
     cols = ("month", "status", "level_usd_per_kwh", "index_2015_100", "equal_level_usd_per_kwh", "equal_index_2015_100", "composition") + tuple(
-        f"contrib_{r}" for r in regions) + tuple(f"weight_{r}" for r in regions)
+        f"contrib_{r}" for r in regions) + tuple(f"weight_{r}" for r in regions) + (
+        ("exchina_level_usd_per_kwh", "exchina_index_2015_100", "exchina_contrib_EU", "exchina_contrib_US") if has_x else ())
     flat = []
     for r in rows:
         d = {"month": r["month"], "status": r["status"], "level_usd_per_kwh": r["level"], "index_2015_100": r["index"],
@@ -153,11 +158,16 @@ def _index_csv(rows: list[dict[str, Any]], regions: tuple[str, ...]) -> str:
         for reg in regions:
             d[f"contrib_{reg}"] = r["contrib"].get(reg, "")
             d[f"weight_{reg}"] = r["weights"].get(reg, "")
+        if has_x:
+            d |= {"exchina_level_usd_per_kwh": r["exchina_level"], "exchina_index_2015_100": r["exchina_index"],
+                  "exchina_contrib_EU": r["exchina_contrib"]["EU"], "exchina_contrib_US": r["exchina_contrib"]["US"]}
         flat.append(d)
     return outputs.csv_text(cols, flat)
 
 
-def build(raw_dir: Path, out: Path, manifest: Path = snapshot.MANIFEST, manual: Path = ROOT / "data" / "manual" / "china_household_tariff.json") -> dict[str, Any]:
+def build(raw_dir: Path, out: Path, manifest: Path = snapshot.MANIFEST, manual: Path = ROOT / "data" / "manual" / "china_household_tariff.json",
+          ledger_seed: Path | None = None) -> dict[str, Any]:
+    """`ledger_seed`: an existing ledger to extend (append-only): only values that changed become new, superseding lines."""
     points, gaps, meta = _parse_all(raw_dir, manifest)
     snap_date = date.fromisoformat(max(e["retrieved_at"] for e in meta.values())[:10])
     fx_usd, fx_cny = _fx(points)
@@ -197,12 +207,13 @@ def build(raw_dir: Path, out: Path, manifest: Path = snapshot.MANIFEST, manual: 
     for name, rows in (("retail", retail), ("wholesale", wholesale)):
         for r in rows:
             values.append({"index": name, "month": r["month"], "value_usd_per_kwh": f"{r['level']:.6f}", "index_2015_100": f"{r['index']:.3f}",
-                           "status": r["status"], "composition": r["composition"].split("|"), "method_version": METHOD_VERSION})
-    lines = ledger.append([], values, published, inputs_sha, backfill=True)
-    outputs.write(out / "ledger" / "index.jsonl", ledger.dumps(lines))
-    info = {"method_version": METHOD_VERSION, "inputs_sha256": inputs_sha, "published": published, "snapshots": {f"{s}/{n}": e["sha256"] for (s, n), e in sorted(meta.items())},
+                           "status": r["status"], "composition": r["composition"].split("|"), "method_version": HEADLINE_METHOD_VERSION})
+    seed = ledger.loads(ledger_seed.read_text()) if ledger_seed and ledger_seed.exists() else []
+    lines = ledger.append(seed, values, published, inputs_sha, backfill=not seed)
+    outputs.write(out / "ledger" / "index.jsonl", ledger.dumps(seed + lines))
+    info = {"method_doc_version": METHOD_DOC_VERSION, "headline_method_version": HEADLINE_METHOD_VERSION, "inputs_sha256": inputs_sha, "published": published, "snapshots": {f"{s}/{n}": e["sha256"] for (s, n), e in sorted(meta.items())},
             "retail_months": [retail[0]["month"], retail[-1]["month"]], "wholesale_months": [wholesale[0]["month"], wholesale[-1]["month"]],
-            "ledger_lines": len(lines), "series_rows": counts}
+            "ledger_lines": len(seed) + len(lines), "ledger_lines_added": len(lines), "series_rows": counts}
     outputs.write(out / "data" / "index" / "build_info.json", outputs.json_text(info))
     return info
 
@@ -211,8 +222,10 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--raw", type=Path, default=snapshot.RAW)
     ap.add_argument("--out", type=Path, default=ROOT)
+    ap.add_argument("--ledger-seed", type=Path, default=ROOT / "ledger" / "index.jsonl",
+                    help="existing ledger to extend (default: the repo's); pass a non-existent path for a from-scratch backfill")
     args = ap.parse_args(argv)
-    info = build(args.raw, args.out)
+    info = build(args.raw, args.out, ledger_seed=args.ledger_seed)
     print(json.dumps({k: v for k, v in info.items() if k not in ("snapshots", "series_rows")}, indent=2))
     return 0
 

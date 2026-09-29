@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-29",
+  "name": "qep_562",
+  "raw_sha256": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
+  "retrieved_at": "2026-09-29T21:49:55Z",
+  "role": "primary",
+  "rows": 44,
+  "since": "2015-01-01",
+  "source": "desnz",
+  "url": "https://assets.publishing.service.gov.uk/media/6ab505c6a9c3d267bcccee5e/table_561.xlsx"
+}

@@ -53,16 +53,19 @@ def main() -> None:
     xs = [d(r["month"]) for r in retail]
 
     ax = axes[0]
-    style(ax, "Retail index: consumption-weighted vs equal-weighted (USD per kWh, nominal)", "USD/kWh")
+    style(ax, "Retail index: weighted (headline), equal-weighted, and excluding China (USD per kWh, nominal)", "USD/kWh")
     w = [float(r["level_usd_per_kwh"]) for r in retail]
     e = [float(r["equal_level_usd_per_kwh"]) for r in retail]
     ax.plot(xs, w, color=BLUE, linewidth=2, label="Weighted (headline)")
     ax.plot(xs, e, color=ORANGE, linewidth=2, label="Equal-weighted")
-    ax.set_ylim(0.10, 0.22)
+    x_ = [float(r["exchina_level_usd_per_kwh"]) for r in retail]
+    ax.plot(xs, x_, color=INK2, linewidth=2, linestyle=(0, (5, 3)), label="Excluding China (EU + US)")
+    ax.set_ylim(0.10, 0.27)
     shade_provisional(ax, retail)
     ax.text(xs[-1], w[-1] - 0.006, f"weighted {w[-1]:.3f}", color=INK, fontsize=9, ha="right", va="top")
-    ax.text(xs[-1], e[-1] + 0.005, f"equal {e[-1]:.3f}", color=INK, fontsize=9, ha="right", va="bottom")
-    ax.legend(frameon=False, loc="upper left", fontsize=9, labelcolor=INK2, ncol=2)
+    ax.text(xs[-1], e[-1] - 0.007, f"equal {e[-1]:.3f}", color=INK, fontsize=9, ha="right", va="top")
+    ax.text(xs[-1], x_[-1] + 0.005, f"ex-China {x_[-1]:.3f}", color=INK, fontsize=9, ha="right", va="bottom")
+    ax.legend(frameon=False, loc="upper left", fontsize=9, labelcolor=INK2, ncol=3)
 
     ax = axes[1]
     style(ax, "Retail index: contribution by region (weight x price, USD per kWh; they sum to the headline)", "USD/kWh")

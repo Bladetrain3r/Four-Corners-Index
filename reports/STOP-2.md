@@ -54,3 +54,15 @@ After your answers: UK adapters and tests (G2b, small); then **G5**, the static 
 
 ## Process note
 G4 took three rounds: METHOD.md, then the build (first run of the real numbers, hand-checked against the raw inputs), then the continuity and reproducibility evidence. The evaluation that mattered was the hand recomputation of one month and the continuity decomposition: the second showed that 32 wholesale "moves" are almost entirely local price moves (not FX or composition), which is the property the continuity gate exists to establish. Details in `LOG.md`.
+
+---
+
+## Ziggy's answers (2026-09-30, in the session) and how the builder reads them
+
+| # | Answer | Builder's reading and status |
+|---|---|---|
+| 1 | "add the ex-china variant" | Done (METHOD v2, committed before computing it). Retail excluding China went from 100.6 (2015-01) to **142.7** (2026-08) against the headline's 111.7, so the measured-price part of the index rose about 43% while the headline rose about 12%. Details: `evidence/G4b.md`. |
+| 2 | "bringing the UK in as a weight bearing index if you're confident in the sources" | Household: confident (band identical to Eurostat DC, OGL, matches Eurostat's own UK series to four decimals in all 11 overlapping semesters). **UK wholesale: not confident** (Ember does not say whether it converts the UK price from sterling; no independent figure), so it stays out. The UK enters the Retail index at METHOD v3 once you rule on `reports/BLOCKED-G3b.md` (two 2020-S1 rows that differ from Eurostat by 0.0007 and 0.0010 GBP/kWh; the series the index uses matches in all eleven). |
+| 3 | "commit it once" (the raw archive) | Done: `snapshots/raw_2026-09-29.tar.gz`, 8.45 MB, 21 files, deterministic, with a verified restore; rebuilds from it are byte-identical with the network blocked, and that test now runs in CI. |
+| 4 | "don't see a need to override any" | Assumptions stand. |
+| 5 | "Anything else you might need from me?" | See the chat reply: only the G3b ruling; and, before G6, the Actions workflow permissions setting (repo settings, which the builder must not change). |

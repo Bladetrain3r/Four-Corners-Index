@@ -1,11 +1,11 @@
 {
   "as_of": "2026-09-29",
   "name": "exr_monthly",
-  "raw_sha256": "67490e9641a35a3b206ea931c365d071c9a16e85f66e500f36fddf0900b38be3",
-  "retrieved_at": "2026-09-29T21:17:26Z",
+  "raw_sha256": "df512c426da692670390f844ca6c413959626e8cddf58043029941c49b4bde04",
+  "retrieved_at": "2026-09-29T21:49:51Z",
   "role": "primary",
-  "rows": 420,
+  "rows": 560,
   "since": "2015-01-01",
   "source": "ecb",
-  "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2015-01&format=csvdata&detail=dataonly"
+  "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01&format=csvdata&detail=dataonly"
 }

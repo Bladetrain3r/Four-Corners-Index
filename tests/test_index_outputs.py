@@ -128,3 +128,25 @@ def test_method_md_was_committed_before_any_index_code():
         return int(out[-1]) if out else 2**62  # not committed yet: necessarily after METHOD.md
     for later in ("pipeline/index.py", "pipeline/build.py", "data/index/retail.csv", "data/index/wholesale.csv", "ledger/index.jsonl"):
         assert first("METHOD.md") <= first(later), later
+
+
+def test_retail_excluding_china_is_recomputed_independently_for_every_month(retail):
+    w = {}
+    for r in _rows("weights.csv"):
+        w[(r["year"], r["region"])] = D(r["share_of_four"])
+    usd = {(r["month"], r["region"]): D(r["usd_per_kwh"]) for r in _rows("region_prices.csv") if r["index"] == "retail"}
+    for r in retail:
+        y, m = r["month"][:4], r["month"]
+        weu, wus = w[(y, "EU")], w[(y, "US")]
+        expect = (weu * usd[(m, "EU")] + wus * usd[(m, "US")]) / (weu + wus)
+        assert abs(expect - D(r["exchina_level_usd_per_kwh"])) <= D("0.000001"), m
+        contrib = D(r["exchina_contrib_EU"]) + D(r["exchina_contrib_US"])
+        assert abs(contrib - D(r["exchina_level_usd_per_kwh"])) <= D("0.000002"), m
+
+
+def test_ex_china_index_averages_100_in_2015_and_is_not_a_ledger_series(retail):
+    rows = [r for r in retail if r["month"].startswith("2015-")]
+    assert abs(sum(D(r["exchina_index_2015_100"]) for r in rows) / 12 - 100) < D("0.01")
+    assert {ln["index"] for ln in ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())} == {"retail", "wholesale"}
+    assert all(ln["method_version"] == 1 for ln in ledger.loads((ROOT / "ledger" / "index.jsonl").read_text()))  # headline unchanged
+    assert D(retail[-1]["exchina_index_2015_100"]) > D(retail[-1]["index_2015_100"])  # the measured part rose more than the headline

@@ -44,8 +44,9 @@ def main(argv: list[str] | None = None) -> int:
     socket.socket.connect, socket.create_connection = _deny, _deny  # type: ignore[method-assign,assignment]
     try:
         with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
-            build.build(args.raw, Path(a))
-            build.build(args.raw, Path(b))
+            seed = ROOT / "ledger" / "index.jsonl"  # the ledger is append-only history: a rebuild extends it, and must add nothing new
+            build.build(args.raw, Path(a), ledger_seed=seed)
+            build.build(args.raw, Path(b), ledger_seed=seed)
             ha, hb, hc = hashes(Path(a)), hashes(Path(b)), hashes(ROOT)
     finally:
         socket.socket.connect, socket.create_connection = real_connect, real_cc  # type: ignore[method-assign]
