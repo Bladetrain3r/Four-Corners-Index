@@ -66,3 +66,15 @@ def dumps(points: list[dict[str, Any]]) -> str:
 
 def sort_points(points: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(points, key=lambda p: (p["source"], p["series_id"], p["region"], p["period_start"]))
+
+
+def gap(source: str, series_id: str, region: str, period_start: str, period_end: str, reason: str) -> dict[str, Any]:
+    """A period the publisher left empty. Shown on the site as a gap with its reason, never interpolated."""
+    return {"source": source, "series_id": series_id, "region": region, "period_start": period_start,
+            "period_end": period_end, "reason": reason}
+
+
+def check_gap_share(source: str, what: str, n_gaps: int, n_rows: int, limit: float = 0.5) -> None:
+    """A response that is mostly empty is a broken response, not a few honest gaps."""
+    if n_rows and n_gaps / n_rows > limit:
+        raise SourceError(source, f"{what}: {n_gaps} of {n_rows} rows are empty, more than {limit:.0%}: treating as a broken response")

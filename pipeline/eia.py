@@ -11,7 +11,7 @@ from datetime import date
 from decimal import Decimal, InvalidOperation
 from typing import Any
 
-from pipeline.common import SourceError, sha256_hex, validate_point
+from pipeline.common import SourceError, check_gap_share, gap, sha256_hex, validate_point
 
 SOURCE = "eia"
 
@@ -69,10 +69,12 @@ def _base(raw: bytes, retrieved_at: str, confidence: str) -> dict[str, Any]:
             "raw_sha256": sha256_hex(raw), "confidence": confidence}
 
 
-def parse_retail_price(raw: bytes, retrieved_at: str, confidence: str = "primary") -> list[dict[str, Any]]:
+def parse_retail_price(raw: bytes, retrieved_at: str, confidence: str = "primary",
+                       gaps: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     what = "retail-sales"
     out = []
-    for r in _rows(raw, what, "monthly"):
+    rows = _rows(raw, what, "monthly")
+    for r in rows:
         sector = r.get("sectorid")
         if sector in SECTOR_SKIP:
             continue
@@ -81,8 +83,12 @@ def parse_retail_price(raw: bytes, retrieved_at: str, confidence: str = "primary
         if r.get("price-units") != "cents per kilowatt-hour":
             raise SourceError(SOURCE, f"{what}: price units {r.get('price-units')!r}, expected cents per kilowatt-hour")
         start, end = _bounds(r["period"], what)
+        sid = f"electricity/retail-sales:price:{sector}"
+        if gaps is not None and r.get("price") in (None, ""):
+            gaps.append(gap(SOURCE, sid, r["stateid"], start.isoformat(), end.isoformat(), "EIA published no price"))
+            continue
         p = _base(raw, retrieved_at, confidence) | {
-            "series_id": f"electricity/retail-sales:price:{sector}", "region": r["stateid"], "layer": "cost",
+            "series_id": sid, "region": r["stateid"], "layer": "cost",
             "buyer_type": SECTOR_BUYER[sector], "period_start": start.isoformat(), "period_end": end.isoformat(),
             "value": float(_number(r, "price", what) / 100), "unit": "USD/kWh", "currency": "USD",
         }
@@ -111,19 +117,28 @@ def parse_generation(raw: bytes, retrieved_at: str, confidence: str = "primary")
     return out
 
 
-def parse_henry_hub(raw: bytes, retrieved_at: str, frequency: str, confidence: str = "primary") -> list[dict[str, Any]]:
+def parse_henry_hub(raw: bytes, retrieved_at: str, frequency: str, confidence: str = "primary",
+                    gaps: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     what = f"henry-hub-{frequency}"
     out = []
-    for r in _rows(raw, what, frequency):
+    rows = _rows(raw, what, frequency)
+    n_gaps = 0
+    for r in rows:
         if r.get("series") != "RNGWHHD":
             raise SourceError(SOURCE, f"{what}: series {r.get('series')!r}, expected RNGWHHD")
         if r.get("units") != "$/MMBTU":
             raise SourceError(SOURCE, f"{what}: units {r.get('units')!r}, expected $/MMBTU")
         start, end = _bounds(r["period"], what)
+        sid = f"natural-gas/pri/fut:RNGWHHD:{frequency}"
+        if gaps is not None and r.get("value") in (None, ""):
+            n_gaps += 1
+            gaps.append(gap(SOURCE, sid, "US", start.isoformat(), end.isoformat(), "EIA published no price for this day"))
+            continue
         p = _base(raw, retrieved_at, confidence) | {
-            "series_id": f"natural-gas/pri/fut:RNGWHHD:{frequency}", "region": "US", "layer": "driver",
+            "series_id": sid, "region": "US", "layer": "driver",
             "fuel": "gas", "period_start": start.isoformat(), "period_end": end.isoformat(),
             "value": float(_number(r, "value", what)), "unit": "USD/MMBtu", "currency": "USD",
         }
         out.append(validate_point(p))
+    check_gap_share(SOURCE, what, n_gaps, len(rows))
     return out

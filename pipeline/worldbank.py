@@ -15,7 +15,7 @@ import zipfile
 from datetime import date
 from xml.etree import ElementTree as ET
 
-from pipeline.common import SourceError, sha256_hex, validate_point
+from pipeline.common import SourceError, gap, sha256_hex, validate_point
 
 SOURCE = "worldbank"
 SHEET = "Monthly Prices"
@@ -90,7 +90,8 @@ def read_csv_grid(raw: bytes) -> list[list[str]]:
     return list(csv.reader(io.StringIO(raw.decode("utf-8-sig"))))
 
 
-def parse_grid(grid: list[list[str]], raw: bytes, retrieved_at: str, confidence: str = "primary") -> list[dict]:
+def parse_grid(grid: list[list[str]], raw: bytes, retrieved_at: str, confidence: str = "primary",
+               gaps: list[dict] | None = None) -> list[dict]:
     as_of = None
     for row in grid[:8]:
         for cell in row:
@@ -126,6 +127,9 @@ def parse_grid(grid: list[list[str]], raw: bytes, retrieved_at: str, confidence:
         for i, (slug, region, fuel, unit) in cols.items():
             cell = (row[i] if i < len(row) else "").strip()
             if cell in ("", "…", "..."):  # published as not available: a gap, never interpolated
+                if gaps is not None and cell:
+                    gaps.append(gap(SOURCE, f"worldbank:pink_sheet:{slug}", region, start.isoformat(), end.isoformat(),
+                                    "World Bank marks this month not available"))
                 continue
             try:
                 v = float(cell)
@@ -151,9 +155,9 @@ def parse_grid(grid: list[list[str]], raw: bytes, retrieved_at: str, confidence:
     return out
 
 
-def parse_csv_extract(raw: bytes, retrieved_at: str) -> list[dict]:
-    return parse_grid(read_csv_grid(raw), raw, retrieved_at)
+def parse_csv_extract(raw: bytes, retrieved_at: str, gaps: list[dict] | None = None) -> list[dict]:
+    return parse_grid(read_csv_grid(raw), raw, retrieved_at, gaps=gaps)
 
 
-def parse_xlsx(raw: bytes, retrieved_at: str) -> list[dict]:
-    return parse_grid(read_xlsx_sheet(raw), raw, retrieved_at)
+def parse_xlsx(raw: bytes, retrieved_at: str, gaps: list[dict] | None = None) -> list[dict]:
+    return parse_grid(read_xlsx_sheet(raw), raw, retrieved_at, gaps=gaps)

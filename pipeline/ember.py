@@ -13,7 +13,7 @@ import math
 from datetime import date
 from typing import Any
 
-from pipeline.common import SourceError, sha256_hex, validate_point
+from pipeline.common import SourceError, check_gap_share, gap, sha256_hex, validate_point
 
 SOURCE = "ember"
 
@@ -133,12 +133,14 @@ def parse_generation(raw: bytes, retrieved_at: str, period: str = "monthly", as_
     return out
 
 
-def parse_prices(raw: bytes, retrieved_at: str, period: str = "monthly", as_of: str | None = None) -> list[dict[str, Any]]:
+def parse_prices(raw: bytes, retrieved_at: str, period: str = "monthly", as_of: str | None = None,
+                 gaps: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     """European wholesale (day-ahead) price per country, EUR/MWh, load-weighted average per Ember. period: monthly|daily."""
     what = f"{period} wholesale price"
     rd = _reader(raw, PRICE_COLUMNS, what)
     base = _common(raw, retrieved_at, as_of)
     out = []
+    n_gaps = n_rows_ok = 0
     for row in rd:
         iso = row["ISO3 Code"]
         if iso not in ISO3:
@@ -150,12 +152,19 @@ def parse_prices(raw: bytes, retrieved_at: str, period: str = "monthly", as_of: 
                 start = end = date.fromisoformat(row["Date"])
             except ValueError as exc:
                 raise SourceError(SOURCE, f"{what}: bad date {row['Date']!r}") from exc
+        sid = f"ember:{period}:day_ahead_price"
+        if gaps is not None and (row.get("Price (EUR/MWhe)") or "").strip() == "":
+            n_gaps += 1
+            gaps.append(gap(SOURCE, sid, ISO3[iso], start.isoformat(), end.isoformat(), "Ember published no price"))
+            continue
+        n_rows_ok += 1
         out.append(validate_point(base | {
-            "series_id": f"ember:{period}:day_ahead_price", "region": ISO3[iso], "layer": "cost",
+            "series_id": sid, "region": ISO3[iso], "layer": "cost",
             "buyer_type": "wholesale", "period_start": start.isoformat(), "period_end": end.isoformat(),
             "value": _num(row, "Price (EUR/MWhe)", what), "unit": "EUR/MWh", "currency": "EUR",
             "confidence": "primary",
         }))
+    check_gap_share(SOURCE, what, n_gaps, n_gaps + n_rows_ok)
     if not out:
         raise SourceError(SOURCE, f"{what}: no rows")
     return out
