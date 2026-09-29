@@ -74,3 +74,23 @@ One adapter per source in `pipeline/`, each parsing its committed fixtures into 
 
 ## Process note (for the owner)
 Five research agents ran in parallel for G1 and produced 570+ lines of drafts. The evaluation that mattered was mine, after assembly: `test_sources_doc.py` failed twice on real gaps (a China fixture cited only by shorthand, and 11 entries with no per-entry check date, 4 with no licence line) that reading the drafts had not shown. Details in `LOG.md`.
+
+---
+
+## Ziggy's answers (2026-09-29, in the session) and how the builder reads them
+
+| # | Answer (Ziggy's words) | Builder's reading, and what changes |
+|---|---|---|
+| 1 | "Go with A" | Wholesale index is published as **EU wholesale**, labelled EU-only; US, China, Russia, South Africa shown as "no source" with the reason. |
+| 2 | "Ember" | Ember Demand is the weights source for all regions. Cross-checks at G3. |
+| 3 | "Keep Russia data noted as unreliable, best estimates from secondary public sources maybe? Russia we treat as high uncertainty." | Russia is a **low-confidence tier**, flagged on every figure. Secondary sources are welcome **only where a licence or terms allow reuse and the number traces to a kept snapshot** (the card's "never invent a number" still holds; an estimate is a sourced number with a caveat, not a guess). **Not authorised:** pinning the Russian CA for Rosstat, or using the Bank of Russia rate beyond a cited, linked, low-confidence use. If no usable secondary source is found, Russia is "no source" and the Retail index says which regions composed each month. A research pass on secondary sources is queued. |
+| 4 | "Go with A" | Equal-weighted variant and a contribution-by-region panel move to the **headline page** (SPEC changed; it said "one click down"). China stays at its consumption weight, badge C. |
+| 5 | "Frankly, screw Eskom, but if there aren't any publicly licensed sources then let's play it safe. Can drop SA maybe." | Eskom terms are not a public licence, so **no Eskom price series**. South Africa keeps only the layers with a public licence: **mix and carbon intensity (Ember, CC-BY)**, coal (World Bank, CC BY 4.0) and FX (ECB). Household, industrial and wholesale are "no source", with the reason. If a publicly licensed SA tariff source turns up, it comes back in. |
+| 6 | "Fine, don't care about carbon credit crap... Air quality indicators maybe." | EUA carbon price is **out**, said on the site. Air quality is noted as a **candidate layer** in `SPEC.md`, not built (adding a layer needs a scoped decision and a G1-style source check first). |
+| 7 | "Go with your recommendation." | Nowcast, if any, is a separate line, never in "final"; decided at G4. |
+| 8 | "Main focus will be sourcable bands in the table but include low confidence or high latency equivalents (highlighted as such) where possible for some comparison." | The series schema gets a **confidence tier** (`primary`, `low_confidence`, `high_latency`) and every series carries it. Sourced bands are the headline; low-confidence or high-latency equivalents are shown, highlighted, beside them. |
+| 9a | Release assets: "Should be a GITHUB_TOKEN the next time the cloud env starts up, permissions not entirely sure on." | Noted. G6 will say which release-asset steps are unproved. The workflow will request `contents: write` explicitly. |
+| 9b | "If it's unreachable, don't bother wasting the effort for it, if there are no alternatives, we fall back. Might want to consider alternate countries or blocs which offer more public cost data." | Unreachable sources get a "no source" and no more effort. A research pass on **candidate additional or alternate regions** with public cost data is queued as a proposal only: the basket (SPEC decision 3) is not changed without your word. |
+| 9c | "Go with your recommendation on attribution." | As written above. |
+
+Next: G2 (adapters), for the sources that survived: Eurostat, EIA, Ember, ECB, World Bank. Not built: Eskom, CBR, CAISO/ERCOT/NYISO/MISO, carbon.
