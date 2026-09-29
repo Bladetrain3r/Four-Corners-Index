@@ -49,6 +49,8 @@ REQUESTS: tuple[Request, ...] = (
             "nrg_pc_204_household.json", _es("nrg_pc_204")),
     Request("eurostat", "nrg_pc_205", f"{_ES}/nrg_pc_205?{_geos(EU27)}&currency=EUR&nrg_cons=MWH2000-19999&sinceTimePeriod=2015-S1&format=JSON",
             "nrg_pc_205_nonhousehold.json", _es("nrg_pc_205")),
+    Request("eurostat", "nrg_pc_205_ic", f"{_ES}/nrg_pc_205?{_geos(EU27)}&currency=EUR&nrg_cons=MWH500-1999&sinceTimePeriod=2015-S1&format=JSON",
+            "nrg_pc_205_band_ic.json", _es("nrg_pc_205")),  # Eurostat's own headline non-household band, shown beside ID
     Request("eurostat", "nrg_pc_204_c", f"{_ES}/nrg_pc_204_c?{_geos(EU27)}&currency=EUR&nrg_cons=KWH2500-4999&sinceTimePeriod=2017&format=JSON",
             "nrg_pc_204_c_components.json", _es("nrg_pc_204_c")),
     Request("eurostat", "prc_hicp_minr", f"{_ES}/prc_hicp_minr?{_HICP_GEOS}&coicop18=CP0451&unit=I25&unit=RCH_A&sinceTimePeriod=2020-01&format=JSON",

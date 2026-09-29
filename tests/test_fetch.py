@@ -110,7 +110,7 @@ def test_pink_sheet_url_is_resolved_from_the_landing_page():
 
 
 def test_every_registry_request_has_a_fixture_that_parses_and_no_key_in_url():
-    assert len(registry.REQUESTS) == 16
+    assert len(registry.REQUESTS) == 17
     for req in registry.REQUESTS:
         assert "api_key=" not in req.url or "api_key={key}" in req.url
         loaded = fetch.load(req, "fixture")

@@ -1,3 +1,5 @@
+# RESOLVED — Ziggy approved the recommendations on 2026-09-30 ("go with recommended, the 12 month/5% gate, and the extra bounds for lower tax"). G3 passed: `evidence/G3.md`. Original report follows unchanged.
+
 # BLOCKED — G3 (cross-checks) — 2026-09-29
 
 **Why I stopped.** G3 has three red rows that come from real behaviour in the publishers' data, and none of them can be fixed by changing my code. The rules (GATES.md) say a check may be tightened by the builder and never loosened without Ziggy's word, so I did not touch them. This is the first round on each, not the third; I am stopping early because no new idea of mine changes the outcome. Nothing past G3 has been started.

@@ -35,6 +35,7 @@ class Row:
     tolerance: str
     passed: bool
     note: str = ""
+    gating: bool = True
 
 
 def _raw(source: str, name: str) -> tuple[bytes, str]:
@@ -145,10 +146,12 @@ def ember_checks() -> list[Row]:
         months = [p for p in _pick(monthly, region=region, fuel="demand") if p["period_start"].startswith("2025-")]
         if len(months) != 12:
             rows.append(Row("ember_yearly_demand_vs_sum_of_monthly", region, float("nan"), float("nan"), "12 months", False,
-                            f"only {len(months)} monthly Demand rows for 2025"))
+                            f"only {len(months)} monthly Demand rows for 2025", gating=False))
             continue
         y = _one(yearly, region=region, fuel="demand", period_start="2025-01-01")["value"]
-        rows.append(_rel_row("ember_yearly_demand_vs_sum_of_monthly", f"{region} 2025", sum(p["value"] for p in months), y))
+        r = _rel_row("ember_yearly_demand_vs_sum_of_monthly", f"{region} 2025", sum(p["value"] for p in months), y)
+        r.gating = False  # information row (Ziggy, BLOCKED-G3 item B)
+        rows.append(r)
     raw, at = _raw("ember", "price_monthly_2026-06_six_countries.csv")
     pm = ember.parse_prices(raw, at, "monthly")
     raw, at = _raw("ember", "price_daily_2026-06_six_countries.csv")
@@ -218,12 +221,23 @@ def fx_and_commodity_checks() -> list[Row]:
             y, m = r["TIME_PERIOD"].split("-M")
             imf[f"{y}-{m}-01"] = float(r["OBS_VALUE"])
     months = sorted(set(wb) & set(imf))
-    worst = max(months, key=lambda k: abs(wb[k] - imf[k]) / imf[k])
-    tol = TOL["checks"]["worldbank_vs_imf_europe_gas"]["rel"]
-    bad = [k for k in months if abs(wb[k] - imf[k]) / imf[k] > tol]
-    rows.append(Row("worldbank_vs_imf_europe_gas", f"{len(months)} months, worst {worst[:7]}", wb[worst], imf[worst], f"rel {tol:.0%} every month",
-                    len(months) == 36 and not bad,
-                    f"{len(bad)} months outside; worst diff {abs(wb[worst] - imf[worst]) / imf[worst]:.2%}"))
+    t = TOL["checks"]["worldbank_vs_imf_europe_gas"]
+    tol, window = t["rel"], t["gating_window_months"]
+
+    def rel(k: str) -> float:
+        return abs(wb[k] - imf[k]) / imf[k]
+
+    recent = months[-window:]
+    worst_recent = max(recent, key=rel)
+    rows.append(Row("worldbank_vs_imf_europe_gas", f"latest {len(recent)} months, worst {worst_recent[:7]}", wb[worst_recent],
+                    imf[worst_recent], f"rel {tol:.0%} each of {window} months", len(recent) == window and all(rel(k) <= tol for k in recent),
+                    f"worst diff {rel(worst_recent):.2%}"))
+    outside = [k for k in months if rel(k) > tol]
+    worst = max(months, key=rel)
+    rows.append(Row("worldbank_vs_imf_europe_gas", f"all {len(months)} months (information), worst {worst[:7]}", wb[worst], imf[worst],
+                    f"rel {tol:.0%}", not outside,
+                    f"{len(outside)} months outside: {', '.join(k[:7] for k in outside) or 'none'}; median diff "
+                    f"{statistics.median(rel(k) for k in months):.2%}", gating=False))
     return rows
 
 
@@ -232,6 +246,8 @@ def sanity_checks(points: list[dict[str, Any]]) -> list[Row]:
     rows = []
     for name, r in TOL["sanity_ranges"].items():
         sel = [p for p in points if p["series_id"].startswith(r["series_prefix"])
+               and (("series_contains" not in r) or r["series_contains"] in p["series_id"])
+               and (("series_contains_any" not in r) or any(c in p["series_id"] for c in r["series_contains_any"]))
                and (("unit" not in r) or p["unit"] == r["unit"]) and (("region" not in r) or p["region"] == r["region"])]
         if not sel:
             rows.append(Row("sanity", name, float("nan"), float("nan"), f"{r['min']}..{r['max']}", False, "no points matched"))
@@ -263,7 +279,8 @@ def run(live: bool = False) -> list[Row]:
 def markdown(rows: list[Row]) -> str:
     out = ["| check | item | ours | theirs | tolerance | pass | note |", "|---|---|---|---|---|---|---|"]
     for r in rows:
-        out.append(f"| {r.check} | {r.item} | {r.ours:.6g} | {r.theirs:.6g} | {r.tolerance} | {'PASS' if r.passed else 'FAIL'} | {r.note} |")
+        status = ("PASS" if r.passed else "FAIL") if r.gating else ("INFO ok" if r.passed else "INFO outside")
+        out.append(f"| {r.check} | {r.item} | {r.ours:.6g} | {r.theirs:.6g} | {r.tolerance} | {status} | {r.note} |")
     return "\n".join(out)
 
 
@@ -273,8 +290,9 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     rows = run(args.live)
     print(markdown(rows))
-    failed = [r for r in rows if not r.passed]
-    print(f"\n{len(rows) - len(failed)} of {len(rows)} passed")
+    gating = [r for r in rows if r.gating]
+    failed = [r for r in gating if not r.passed]
+    print(f"\n{len(gating) - len(failed)} of {len(gating)} gating rows passed; {len(rows) - len(gating)} information rows")
     return 1 if failed else 0
 
 
