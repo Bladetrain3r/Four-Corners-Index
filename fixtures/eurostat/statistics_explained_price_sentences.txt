@@ -1,0 +1,11 @@
+Extract of sentences from Eurostat Statistics Explained, 'Electricity price statistics' (page notes: data extracted April 2026; planned update 30 October 2026).
+URL: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Electricity_price_statistics
+Reuse: Eurostat copyright notice, source acknowledged.
+
+The EU average price in the second half of 2025 – a weighted average using the most recent (2024) consumption data for electricity by household consumers – was €0.2896 per kWh.
+
+The prices rose sharply in both semesters of 2022 and reached a peak of €0.2385 per kWh in the first half of 2023. In the second half of 2023, the price excluding taxes fell to €0.2244 per kWh. After that, prices broadly stabilised - remaining above pre crisis levels - at €0.2222 per kWh in the first half of 2024 and €0.2175 per kWh in the second half of 2024. The downward trend continued in 2025, reaching €0.2075 per kWh in the first half and €0.2059 per kWh in the second half.
+
+Electricity prices including taxes for household consumers rose steadily after 2021, with the only interruption being a fall in the second half of 2023. Prices then peaked in the first half of 2024 at €0.2916 per kWh, before edging down to €0.2887 in the second half of 2024 and €0.2879 in the first half of 2025. In the second half of 2025, prices ticked up slightly to €0.2896 per kWh, still 0.7% below the first-half 2024 peak.
+
+The price without taxes, i.e. the energy, supply and network, underwent minor fluctuations until 2021. After this point in time, during the second half of 2021 and even more so, throughout both halves of 2022, the price registered significant increases, peaking at €0.1987 per kWh in the second half of 2022. Subsequently, in both halves of 2023 (€0.1938 per kWh in the first half and €0.1767 per kWh in the second) as well as the first half of 2024 (€0.1575 per kWh), the price recorded declines. In the second half of 2024, prices excluding taxes showed a marginal increase for the first time since the peak, reaching €0.1629 per kWh. However, in the first half of 2025 prices excluding taxes decreased to €0.1570 per kWh, and further decreased in the second half to €0.1511, which is the lowest since the beginning of 2022.

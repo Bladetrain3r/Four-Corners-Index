@@ -190,5 +190,23 @@
     "sha256": "28bc16e2ae29632f12eed9ad1ddae226cf61467497083209d733e9682d651332",
     "note": "Keyless. Trimmed from 28 KB to the ELEC, EBA and NG dataset entries and re-serialised as indented JSON (so the hash is of the trimmed file, not of the original download). Zips themselves NOT downloaded; HEAD 2026-09-29: ELEC.zip 293234846 bytes Last-Modified Fri 25 Sep 2026 10:09:38 GMT; EBA.zip 692669101 bytes Tue 29 Sep 2026 09:51:54 GMT; NG.zip 4425090 bytes Fri 25 Sep 2026 10:09:57 GMT.",
     "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_daily_2026-08.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?api_key=REDACTED&frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2026-08-01&end=2026-08-31&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=5000",
+    "fetched_at": "2026-09-29T20:29:40Z",
+    "sha256": "9e4585e1e525e9b073a3281dbdccf2e0c0ce15fc7ee3f0c188b86a5c8f06f017",
+    "bytes": 6306,
+    "note": "Henry Hub daily spot, 2026-08-01..2026-08-31, ascending. Untrimmed response for that window. Used by the G3 monthly-vs-daily check.",
+    "source_kind": "live"
+  },
+  {
+    "file": "epm_table_5_6_a_extract.txt",
+    "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "fetched_at": "2026-09-29T20:29:42Z",
+    "sha256": "c44401aafba566872eb722685628c595bf59b1661fa123214d7a1a72e8b2e310",
+    "bytes": 807,
+    "note": "TRIMMED: header row and the U.S. Total, Texas and California rows of the table, cells joined with ' | '. Oracle evidence for G3.",
+    "source_kind": "live"
   }
 ]

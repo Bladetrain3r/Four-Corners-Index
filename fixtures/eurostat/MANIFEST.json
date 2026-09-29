@@ -43,5 +43,23 @@
     "bytes": 4620,
     "note": "Annual electricity consumption, GWh, nrg_bal FC (final consumption) and ID (inland demand), geos EU27_2020, DE, FR, IT, ES, PL, NL, years 2022-2025 (dataset 1990-2025). 2025 values carry status flag p (provisional). Trimmed by query.",
     "source_kind": "live"
+  },
+  {
+    "file": "nrg_pc_205_tot_kwh.json",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?geo=EU27_2020&currency=EUR&nrg_cons=TOT_KWH&sinceTimePeriod=2024-S1&format=JSON",
+    "fetched_at": "2026-09-29T20:29:37Z",
+    "sha256": "7ba26990a4b2e56ca3da15170339a1b7241097a3b66d7ae73b3ad9047fadadfe",
+    "bytes": 4017,
+    "note": "Non-household price, all bands (TOT_KWH), EU27_2020, EUR, all three tax levels, 2024-S1..2025-S2. Trimmed by query. Used by the G3 all-bands check against the Statistics Explained article.",
+    "source_kind": "live"
+  },
+  {
+    "file": "statistics_explained_price_sentences.txt",
+    "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Electricity_price_statistics",
+    "fetched_at": "2026-09-29T20:29:38Z",
+    "sha256": "0935a37ca1c4642740ea50094c739cf8a6bcee6d42905db6f8abe65612efc135",
+    "bytes": 2280,
+    "note": "TRIMMED: four passages of the article text that state EU-27 price levels, kept verbatim, whitespace normalised. Oracle evidence for G3.",
+    "source_kind": "live"
   }
 ]

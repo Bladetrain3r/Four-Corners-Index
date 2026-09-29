@@ -46,5 +46,32 @@
     "sha256": "01f4380dba2d8bac324acb24b70d33ca0f5cedab6ab5b2c9753f2dd8f1a60f9d",
     "note": "First 40 lines of all_countries.csv inside the 42,018,516-byte hourly ZIP (Last-Modified 2026-09-29T09:16:49Z), read by HTTP Range requests through the ZIP central directory (zip not downloaded in full). Zip contains all_countries.csv (172,090,669 bytes uncompressed) plus 32 per-country CSVs. The hourly latest timestamp was NOT measured.",
     "source_kind": "live"
+  },
+  {
+    "file": "monthly_demand_and_total_2025-01_to_2026-08_five_areas.csv",
+    "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv",
+    "fetched_at": "2026-09-29T20:29:44Z",
+    "sha256": "0afcb535f52c2a742ea418eef9e6c3e069ede796754e07707b5c41f69358cdb7",
+    "bytes": 29965,
+    "note": "TRIMMED from the 28333064-byte monthly file: rows with source Demand or Total generation, five areas, dates from 2025-01-01 (196 rows). Used by the G3 yearly-vs-monthly and NEA checks.",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_monthly_2026-06_six_countries.csv",
+    "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_monthly.csv",
+    "fetched_at": "2026-09-29T20:29:44Z",
+    "sha256": "29bed03414a35076214c2770b8aaea66e87ec16bceff874b072064a9da497492",
+    "bytes": 216,
+    "note": "TRIMMED from the 118947-byte file: six countries (DE FR IT ES PL NL), dates in 2026-06 (6 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "price_daily_2026-06_six_countries.csv",
+    "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_daily.csv",
+    "fetched_at": "2026-09-29T20:29:46Z",
+    "sha256": "b0b475cb31abbd7baef6bb5aca1eb88adcca7245a599ae46f6b2143f8fd8a917",
+    "bytes": 5265,
+    "note": "TRIMMED from the 3612735-byte file: six countries (DE FR IT ES PL NL), dates in 2026-06 (180 rows).",
+    "source_kind": "live"
   }
 ]

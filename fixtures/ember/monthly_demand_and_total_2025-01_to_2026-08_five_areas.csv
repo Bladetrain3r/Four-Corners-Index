@@ -1,0 +1,197 @@
+Area,ISO 3 code,Date,Area type,Electricity source,Is aggregated source,Generation (TWh),Generation YoY change (TWh),Generation YoY change (%),Share of generation (%),Share of generation YoY change (% points),Emissions (MtCO2e),Emissions YoY change (MtCO2e),Emissions YoY change (%),Share of emissions (%),Emissions intensity (gCO2e/kWh),Continent,Ember region,EU member,OECD member,G20 member,G7 member,ASEAN member
+China,CHN,2025-01-01,Country or economy,Total generation,True,834.429,41.38,5.218,100.0,0.0,521.361,0.052,0.01,100.0,624.812,Asia,Asia,False,False,True,False,False
+China,CHN,2025-01-01,Country or economy,Demand,True,833.01,40.843,5.156,99.83,-0.059,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-02-01,Country or economy,Total generation,True,742.565,-21.46,-2.809,100.0,0.0,428.306,-62.456,-12.726,100.0,576.793,Asia,Asia,False,False,True,False,False
+China,CHN,2025-02-01,Country or economy,Demand,True,740.909,-21.754,-2.852,99.777,-0.045,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-03-01,Country or economy,Total generation,True,832.066,39.994,5.049,100.0,0.0,475.964,-11.921,-2.443,100.0,572.027,Asia,Asia,False,False,True,False,False
+China,CHN,2025-03-01,Country or economy,Demand,True,830.713,40.181,5.083,99.837,0.031,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-04-01,Country or economy,Total generation,True,774.712,37.227,5.048,100.0,0.0,419.05,-9.681,-2.258,100.0,540.911,Asia,Asia,False,False,True,False,False
+China,CHN,2025-04-01,Country or economy,Demand,True,773.016,36.914,5.015,99.781,-0.032,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-05-01,Country or economy,Total generation,True,808.187,34.133,4.41,100.0,0.0,431.768,4.047,0.946,100.0,534.243,Asia,Asia,False,False,True,False,False
+China,CHN,2025-05-01,Country or economy,Demand,True,806.487,33.35,4.314,99.79,-0.091,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-06-01,Country or economy,Total generation,True,871.675,48.526,5.895,100.0,0.0,464.057,5.938,1.296,100.0,532.374,Asia,Asia,False,False,True,False,False
+China,CHN,2025-06-01,Country or economy,Demand,True,870.183,48.414,5.891,99.829,-0.003,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-07-01,Country or economy,Total generation,True,1011.611,71.086,7.558,100.0,0.0,565.12,26.929,5.004,100.0,558.634,Asia,Asia,False,False,True,False,False
+China,CHN,2025-07-01,Country or economy,Demand,True,1009.511,70.762,7.538,99.792,-0.019,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-08-01,Country or economy,Total generation,True,1012.635,46.146,4.775,100.0,0.0,585.896,10.426,1.812,100.0,578.586,Asia,Asia,False,False,True,False,False
+China,CHN,2025-08-01,Country or economy,Demand,True,1010.804,46.262,4.796,99.819,0.02,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-09-01,Country or economy,Total generation,True,892.164,39.265,4.604,100.0,0.0,484.374,-26.802,-5.243,100.0,542.92,Asia,Asia,False,False,True,False,False
+China,CHN,2025-09-01,Country or economy,Demand,True,890.184,39.158,4.601,99.778,-0.002,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-10-01,Country or economy,Total generation,True,856.239,75.366,9.652,100.0,0.0,479.389,31.612,7.06,100.0,559.878,Asia,Asia,False,False,True,False,False
+China,CHN,2025-10-01,Country or economy,Demand,True,854.44,75.273,9.661,99.79,0.008,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-11-01,Country or economy,Total generation,True,838.335,44.721,5.635,100.0,0.0,464.164,-19.578,-4.047,100.0,553.674,Asia,Asia,False,False,True,False,False
+China,CHN,2025-11-01,Country or economy,Demand,True,836.723,44.624,5.634,99.808,-0.001,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2025-12-01,Country or economy,Total generation,True,914.61,21.372,2.393,100.0,0.0,542.85,-17.834,-3.181,100.0,593.532,Asia,Asia,False,False,True,False,False
+China,CHN,2025-12-01,Country or economy,Demand,True,913.147,21.258,2.383,99.84,-0.009,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-01-01,Country or economy,Total generation,True,850.915,16.486,1.976,100.0,0.0,506.524,-14.837,-2.846,100.0,595.27,Asia,Asia,False,False,True,False,False
+China,CHN,2026-01-01,Country or economy,Demand,True,849.243,16.233,1.949,99.803,-0.027,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-02-01,Country or economy,Total generation,True,812.023,69.458,9.354,100.0,0.0,472.602,44.296,10.342,100.0,582.006,Asia,Asia,False,False,True,False,False
+China,CHN,2026-02-01,Country or economy,Demand,True,810.265,69.356,9.361,99.784,0.007,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-03-01,Country or economy,Total generation,True,860.948,28.882,3.471,100.0,0.0,498.027,22.063,4.635,100.0,578.464,Asia,Asia,False,False,True,False,False
+China,CHN,2026-03-01,Country or economy,Demand,True,859.244,28.531,3.435,99.802,-0.035,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-04-01,Country or economy,Total generation,True,810.311,35.599,4.595,100.0,0.0,433.78,14.73,3.515,100.0,535.325,Asia,Asia,False,False,True,False,False
+China,CHN,2026-04-01,Country or economy,Demand,True,808.392,35.376,4.576,99.763,-0.018,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-05-01,Country or economy,Total generation,True,859.729,51.542,6.377,100.0,0.0,443.798,12.03,2.786,100.0,516.207,Asia,Asia,False,False,True,False,False
+China,CHN,2026-05-01,Country or economy,Demand,True,857.868,51.381,6.371,99.784,-0.006,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-06-01,Country or economy,Total generation,True,908.32,36.645,4.204,100.0,0.0,468.363,4.306,0.928,100.0,515.637,Asia,Asia,False,False,True,False,False
+China,CHN,2026-06-01,Country or economy,Demand,True,905.797,35.614,4.093,99.722,-0.107,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Total generation,True,1025.706,14.095,1.393,100.0,0.0,546.698,-18.422,-3.26,100.0,532.997,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Demand,True,1023.669,14.158,1.402,99.801,0.009,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Total generation,True,1021.987,9.352,0.924,100.0,0.0,562.199,-23.697,-4.045,100.0,550.104,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Demand,True,1020.1,9.296,0.92,99.815,-0.004,,,,,,Asia,Asia,False,False,True,False,False
+EU,,2025-01-01,Region,Total generation,True,251.721,0.382,0.152,100.0,0.0,61.591,2.766,4.702,99.999,244.68,,,False,False,True,False,False
+EU,,2025-01-01,Region,Demand,True,250.324,0.425,0.17,99.445,0.018,,,,,,,,False,False,True,False,False
+EU,,2025-02-01,Region,Total generation,True,226.009,3.744,1.684,100.0,0.0,60.679,12.287,25.391,100.0,268.48,,,False,False,True,False,False
+EU,,2025-02-01,Region,Demand,True,225.687,5.013,2.272,99.857,0.573,,,,,,,,False,False,True,False,False
+EU,,2025-03-01,Region,Total generation,True,230.23,6.445,2.88,100.0,0.0,52.706,3.943,8.086,100.0,228.928,,,False,False,True,False,False
+EU,,2025-03-01,Region,Demand,True,227.559,5.164,2.322,98.84,-0.539,,,,,,,,False,False,True,False,False
+EU,,2025-04-01,Region,Total generation,True,202.095,-3.281,-1.598,100.0,0.0,40.995,2.462,6.389,100.001,202.85,,,False,False,True,False,False
+EU,,2025-04-01,Region,Demand,True,200.692,-3.856,-1.885,99.306,-0.291,,,,,,,,False,False,True,False,False
+EU,,2025-05-01,Region,Total generation,True,202.022,1.265,0.63,100.0,0.0,34.95,-2.455,-6.563,100.0,173.001,,,False,False,True,False,False
+EU,,2025-05-01,Region,Demand,True,200.433,0.894,0.448,99.214,-0.179,,,,,,,,False,False,True,False,False
+EU,,2025-06-01,Region,Total generation,True,204.979,5.906,2.967,100.0,0.0,35.729,-3.701,-9.386,99.999,174.306,,,False,False,True,False,False
+EU,,2025-06-01,Region,Demand,True,204.932,6.336,3.19,99.977,0.217,,,,,,,,False,False,True,False,False
+EU,,2025-07-01,Region,Total generation,True,215.086,0.708,0.33,100.0,0.0,44.572,0.144,0.324,100.0,207.229,,,False,False,True,False,False
+EU,,2025-07-01,Region,Demand,True,214.116,-1.016,-0.472,99.549,-0.803,,,,,,,,False,False,True,False,False
+EU,,2025-08-01,Region,Total generation,True,204.209,-2.71,-1.31,100.0,0.0,39.199,-5.465,-12.236,100.001,191.955,,,False,False,True,False,False
+EU,,2025-08-01,Region,Demand,True,202.666,-5.644,-2.709,99.245,-1.427,,,,,,,,False,False,True,False,False
+EU,,2025-09-01,Region,Total generation,True,201.305,1.382,0.691,100.0,0.0,39.719,-3.042,-7.114,99.999,197.308,,,False,False,True,False,False
+EU,,2025-09-01,Region,Demand,True,200.967,1.474,0.739,99.832,0.047,,,,,,,,False,False,True,False,False
+EU,,2025-10-01,Region,Total generation,True,218.325,7.16,3.391,100.0,0.0,48.428,0.214,0.444,100.001,221.816,,,False,False,True,False,False
+EU,,2025-10-01,Region,Demand,True,215.984,4.521,2.138,98.928,-1.213,,,,,,,,False,False,True,False,False
+EU,,2025-11-01,Region,Total generation,True,226.689,2.782,1.242,100.0,0.0,55.256,-4.757,-7.927,100.0,243.752,,,False,False,True,False,False
+EU,,2025-11-01,Region,Demand,True,225.19,2.291,1.028,99.339,-0.211,,,,,,,,False,False,True,False,False
+EU,,2025-12-01,Region,Total generation,True,241.876,3.261,1.367,100.0,0.0,56.763,-1.806,-3.084,100.0,234.678,,,False,False,True,False,False
+EU,,2025-12-01,Region,Demand,True,237.873,1.166,0.493,98.345,-0.855,,,,,,,,False,False,True,False,False
+EU,,2026-01-01,Region,Total generation,True,264.707,12.986,5.159,100.0,0.0,67.432,5.841,9.484,100.001,254.742,,,False,False,True,False,False
+EU,,2026-01-01,Region,Demand,True,261.34,11.016,4.401,98.728,-0.717,,,,,,,,False,False,True,False,False
+EU,,2026-02-01,Region,Total generation,True,232.23,6.221,2.753,100.0,0.0,53.964,-6.715,-11.066,100.001,232.373,,,False,False,True,False,False
+EU,,2026-02-01,Region,Demand,True,227.911,2.224,0.985,98.14,-1.717,,,,,,,,False,False,True,False,False
+EU,,2026-03-01,Region,Total generation,True,235.069,4.839,2.102,100.0,0.0,50.829,-1.877,-3.561,100.001,216.23,,,False,False,True,False,False
+EU,,2026-03-01,Region,Demand,True,229.584,2.025,0.89,97.667,-1.173,,,,,,,,False,False,True,False,False
+EU,,2026-04-01,Region,Total generation,True,208.931,6.836,3.383,100.0,0.0,39.882,-1.113,-2.715,100.0,190.886,,,False,False,True,False,False
+EU,,2026-04-01,Region,Demand,True,205.438,4.746,2.365,98.328,-0.978,,,,,,,,False,False,True,False,False
+EU,,2026-05-01,Region,Total generation,True,204.95,2.928,1.449,100.0,0.0,39.111,4.161,11.906,99.999,190.832,,,False,False,True,False,False
+EU,,2026-05-01,Region,Demand,True,202.003,1.57,0.783,98.562,-0.652,,,,,,,,False,False,True,False,False
+EU,,2026-06-01,Region,Total generation,True,210.362,5.383,2.626,100.0,0.0,40.264,4.535,12.693,99.999,191.403,,,False,False,True,False,False
+EU,,2026-06-01,Region,Demand,True,209.708,4.776,2.331,99.689,-0.288,,,,,,,,False,False,True,False,False
+EU,,2026-07-01,Region,Total generation,True,224.834,9.748,4.532,100.0,0.0,45.223,0.651,1.461,100.0,201.14,,,False,False,True,False,False
+EU,,2026-07-01,Region,Demand,True,222.641,8.525,3.981,99.025,-0.524,,,,,,,,False,False,True,False,False
+EU,,2026-08-01,Region,Total generation,True,214.481,10.272,5.03,100.0,0.0,46.326,7.127,18.182,100.001,215.991,,,False,False,True,False,False
+EU,,2026-08-01,Region,Demand,True,212.277,9.611,4.742,98.972,-0.273,,,,,,,,False,False,True,False,False
+Russia,RUS,2025-01-01,Country or economy,Total generation,True,110.144,-4.129,-3.613,100.0,0.0,52.6,-0.91,-1.701,100.0,477.557,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-01-01,Country or economy,Demand,True,109.905,-4.281,-3.749,99.783,-0.141,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-02-01,Country or economy,Total generation,True,101.898,-3.424,-3.251,100.0,0.0,49.896,-0.388,-0.772,99.999,489.666,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-02-01,Country or economy,Demand,True,101.677,-3.471,-3.301,99.783,-0.052,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-03-01,Country or economy,Total generation,True,103.528,-1.629,-1.549,100.0,0.0,49.128,1.13,2.354,99.999,474.538,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-03-01,Country or economy,Demand,True,103.331,-1.8,-1.712,99.81,-0.165,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-04-01,Country or economy,Total generation,True,92.371,0.832,0.909,100.0,0.001,41.317,2.8,7.27,100.0,447.294,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-04-01,Country or economy,Demand,True,92.318,0.806,0.881,99.943,-0.027,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-05-01,Country or economy,Total generation,True,88.141,-0.701,-0.789,100.0,0.0,36.011,1.093,3.13,100.0,408.561,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-05-01,Country or economy,Demand,True,88.13,-0.678,-0.763,99.988,0.026,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-06-01,Country or economy,Total generation,True,82.212,-2.364,-2.795,100.0,0.0,32.395,-1.455,-4.298,100.001,394.042,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-06-01,Country or economy,Demand,True,82.211,-2.277,-2.695,99.998,0.102,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-07-01,Country or economy,Total generation,True,88.036,-0.668,-0.753,100.001,0.001,35.288,-1.768,-4.771,100.0,400.836,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-07-01,Country or economy,Demand,True,87.992,-0.591,-0.667,99.951,0.088,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-08-01,Country or economy,Total generation,True,86.757,-0.52,-0.596,100.0,0.001,35.913,-0.236,-0.653,100.0,413.949,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-08-01,Country or economy,Demand,True,86.672,-0.49,-0.562,99.902,0.034,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-09-01,Country or economy,Total generation,True,86.168,0.659,0.771,100.001,0.001,35.401,-0.187,-0.525,100.0,410.837,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-09-01,Country or economy,Demand,True,86.142,0.642,0.751,99.97,-0.019,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-10-01,Country or economy,Total generation,True,98.258,0.395,0.404,100.0,0.0,41.967,-1.167,-2.706,100.0,427.11,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-10-01,Country or economy,Demand,True,98.112,0.302,0.309,99.851,-0.095,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-11-01,Country or economy,Total generation,True,100.875,-2.935,-2.827,100.0,0.0,45.395,-2.008,-4.236,99.999,450.012,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-11-01,Country or economy,Demand,True,100.726,-2.976,-2.87,99.853,-0.043,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-12-01,Country or economy,Total generation,True,111.754,-0.834,-0.741,100.0,0.0,52.274,0.418,0.806,99.999,467.76,Europe,Europe,False,False,True,False,False
+Russia,RUS,2025-12-01,Country or economy,Demand,True,111.571,-0.799,-0.711,99.836,0.03,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-01-01,Country or economy,Total generation,True,115.325,5.181,4.704,100.0,0.0,54.322,1.722,3.274,100.0,471.034,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-01-01,Country or economy,Demand,True,114.921,5.016,4.564,99.65,-0.133,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-02-01,Country or economy,Total generation,True,103.837,1.939,1.903,100.0,0.0,49.748,-0.148,-0.297,99.999,479.097,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-02-01,Country or economy,Demand,True,103.628,1.951,1.919,99.799,0.016,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-03-01,Country or economy,Total generation,True,102.722,-0.806,-0.779,100.0,0.0,48.708,-0.42,-0.855,100.0,474.173,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-03-01,Country or economy,Demand,True,102.551,-0.78,-0.755,99.833,0.023,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-04-01,Country or economy,Total generation,True,92.354,-0.017,-0.018,100.0,0.0,41.058,-0.259,-0.627,100.001,444.572,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-04-01,Country or economy,Demand,True,92.319,0.001,0.001,99.962,0.019,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-05-01,Country or economy,Total generation,True,86.461,-1.68,-1.906,100.0,0.0,34.355,-1.656,-4.599,99.999,397.347,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-05-01,Country or economy,Demand,True,86.449,-1.681,-1.907,99.987,-0.001,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Total generation,True,81.276,-0.936,-1.139,100.0,0.0,30.091,-2.304,-7.112,99.999,370.232,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Demand,True,81.267,-0.944,-1.148,99.989,-0.009,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Total generation,True,84.947,-3.089,-3.509,100.001,0.0,30.775,-4.513,-12.789,100.0,362.285,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Demand,True,84.938,-3.054,-3.471,99.99,0.039,,,,,,Europe,Europe,False,False,True,False,False
+South Africa,ZAF,2025-01-01,Country or economy,Total generation,True,19.22,1.04,5.721,100.0,0.0,12.764,0.359,2.894,100.004,664.1,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-01-01,Country or economy,Demand,True,18.52,0.21,1.147,96.358,-4.357,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-02-01,Country or economy,Total generation,True,17.46,0.05,0.287,100.0,0.0,12.06,0.037,0.308,99.997,690.722,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-02-01,Country or economy,Demand,True,16.92,-0.54,-3.093,96.907,-3.38,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-03-01,Country or economy,Total generation,True,19.38,0.23,1.201,100.0,0.0,14.033,0.417,3.063,99.999,724.097,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-03-01,Country or economy,Demand,True,18.81,-0.21,-1.104,97.059,-2.262,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-04-01,Country or economy,Total generation,True,18.77,0.02,0.107,100.0,0.0,13.395,-0.105,-0.778,99.998,713.639,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-04-01,Country or economy,Demand,True,18.31,-0.49,-2.606,97.549,-2.718,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-05-01,Country or economy,Total generation,True,20.39,0.47,2.359,100.0,0.0,14.553,-0.087,-0.594,100.002,713.732,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-05-01,Country or economy,Demand,True,19.84,-0.1,-0.502,97.303,-2.797,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-06-01,Country or economy,Total generation,True,20.57,-0.27,-1.296,100.0,0.0,14.751,-0.765,-4.93,100.003,717.112,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-06-01,Country or economy,Demand,True,19.85,-0.76,-3.688,96.5,-2.396,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-07-01,Country or economy,Total generation,True,21.08,-0.5,-2.317,100.0,0.0,15.181,-0.705,-4.438,99.998,720.161,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-07-01,Country or economy,Demand,True,20.28,-1.02,-4.789,96.205,-2.498,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-08-01,Country or economy,Total generation,True,20.26,-0.64,-3.062,100.0,0.0,14.537,-0.511,-3.396,100.003,717.522,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-08-01,Country or economy,Demand,True,19.46,-1.06,-5.166,96.051,-2.131,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-09-01,Country or economy,Total generation,True,18.81,-1.14,-5.714,100.0,0.0,13.303,-1.147,-7.938,99.999,707.23,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-09-01,Country or economy,Demand,True,17.86,-1.41,-7.317,94.949,-1.642,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-10-01,Country or economy,Total generation,True,19.32,-1.07,-5.248,100.0,0.0,13.221,-1.054,-7.384,100.001,684.317,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-10-01,Country or economy,Demand,True,18.29,-1.37,-6.968,94.669,-1.751,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-11-01,Country or economy,Total generation,True,18.32,-1.45,-7.334,100.0,0.0,11.941,-1.928,-13.902,99.999,651.801,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-11-01,Country or economy,Demand,True,17.5,-1.37,-7.26,95.524,0.076,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-12-01,Country or economy,Total generation,True,17.51,-1.46,-7.696,100.0,0.0,10.618,-2.455,-18.779,99.999,606.396,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2025-12-01,Country or economy,Demand,True,17.05,-1.22,-6.678,97.373,1.063,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-01-01,Country or economy,Total generation,True,18.04,-1.18,-6.139,100.0,0.0,11.166,-1.598,-12.52,99.996,618.958,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-01-01,Country or economy,Demand,True,17.38,-1.14,-6.156,96.341,-0.017,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-02-01,Country or economy,Total generation,True,16.85,-0.61,-3.494,100.0,0.0,10.823,-1.237,-10.257,99.997,642.315,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-02-01,Country or economy,Demand,True,16.34,-0.58,-3.428,96.973,0.066,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-03-01,Country or economy,Total generation,True,18.12,-1.26,-6.502,100.0,0.0,11.792,-2.241,-15.97,100.0,650.773,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-03-01,Country or economy,Demand,True,18.12,-0.69,-3.668,100.0,2.941,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-04-01,Country or economy,Total generation,True,17.12,-1.65,-8.791,100.0,0.0,11.699,-1.696,-12.661,100.002,683.353,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-04-01,Country or economy,Demand,True,17.33,-0.98,-5.352,101.227,3.678,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-05-01,Country or economy,Total generation,True,18.68,-1.71,-8.386,100.0,0.0,13.572,-0.981,-6.741,99.999,726.552,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-05-01,Country or economy,Demand,True,19.01,-0.83,-4.183,101.767,4.464,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Total generation,True,18.94,-1.63,-7.924,100.0,0.0,13.783,-0.968,-6.562,100.002,727.719,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Demand,True,19.16,-0.69,-3.476,101.162,4.662,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Total generation,True,19.41,-1.67,-7.922,100.0,0.0,14.277,-0.904,-5.955,99.997,735.549,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Demand,True,19.68,-0.6,-2.959,101.391,5.186,,,,,,Africa,Africa,False,False,True,False,False
+United States,USA,2025-01-01,Country or economy,Total generation,True,407.389,21.715,5.63,100.0,0.0,169.731,5.809,3.544,100.0,416.631,North America,North America,False,True,True,True,False
+United States,USA,2025-01-01,Country or economy,Demand,True,410.23,22.819,5.89,100.697,0.247,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-02-01,Country or economy,Total generation,True,344.231,16.716,5.104,100.0,0.0,134.882,17.452,14.862,100.0,391.836,North America,North America,False,True,True,True,False
+United States,USA,2025-02-01,Country or economy,Demand,True,346.118,18.443,5.628,100.548,0.499,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-03-01,Country or economy,Total generation,True,341.36,9.335,2.812,100.0,0.0,115.526,3.491,3.116,100.0,338.429,North America,North America,False,True,True,True,False
+United States,USA,2025-03-01,Country or economy,Demand,True,342.171,10.495,3.164,100.238,0.343,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-04-01,Country or economy,Total generation,True,329.092,10.601,3.329,100.0,0.0,110.107,4.344,4.107,100.0,334.578,North America,North America,False,True,True,True,False
+United States,USA,2025-04-01,Country or economy,Demand,True,330.761,12.733,4.004,100.507,0.652,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-05-01,Country or economy,Total generation,True,353.161,-3.735,-1.047,100.0,0.0,124.3,-2.019,-1.598,100.0,351.964,North America,North America,False,True,True,True,False
+United States,USA,2025-05-01,Country or economy,Demand,True,355.495,-1.446,-0.405,100.661,0.648,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-06-01,Country or economy,Total generation,True,402.446,2.482,0.621,100.0,0.0,155.769,1.084,0.701,100.0,387.056,North America,North America,False,True,True,True,False
+United States,USA,2025-06-01,Country or economy,Demand,True,404.253,2.867,0.714,100.449,0.093,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-07-01,Country or economy,Total generation,True,455.769,17.96,4.102,100.0,0.0,190.771,6.546,3.553,100.0,418.569,North America,North America,False,True,True,True,False
+United States,USA,2025-07-01,Country or economy,Demand,True,456.648,16.352,3.714,100.193,-0.375,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-08-01,Country or economy,Total generation,True,429.216,-2.067,-0.479,100.0,0.0,175.584,-4.255,-2.366,100.0,409.081,North America,North America,False,True,True,True,False
+United States,USA,2025-08-01,Country or economy,Demand,True,430.317,-3.122,-0.72,100.256,-0.244,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-09-01,Country or economy,Total generation,True,376.082,9.24,2.519,100.0,0.0,150.825,2.997,2.027,100.0,401.043,North America,North America,False,True,True,True,False
+United States,USA,2025-09-01,Country or economy,Demand,True,377.379,8.435,2.286,100.345,-0.228,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-10-01,Country or economy,Total generation,True,352.575,11.903,3.494,100.0,0.0,133.916,5.786,4.516,100.0,379.823,North America,North America,False,True,True,True,False
+United States,USA,2025-10-01,Country or economy,Demand,True,351.991,9.428,2.752,99.834,-0.721,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-11-01,Country or economy,Total generation,True,340.817,13.114,4.002,100.0,0.0,127.351,6.15,5.074,100.0,373.664,North America,North America,False,True,True,True,False
+United States,USA,2025-11-01,Country or economy,Demand,True,339.779,11.533,3.514,99.696,-0.47,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2025-12-01,Country or economy,Total generation,True,387.652,21.488,5.868,100.0,0.0,148.663,4.725,3.283,100.0,383.496,North America,North America,False,True,True,True,False
+United States,USA,2025-12-01,Country or economy,Demand,True,387.007,18.757,5.094,99.834,-0.736,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-01-01,Country or economy,Total generation,True,405.348,-2.041,-0.501,100.0,0.0,158.447,-11.284,-6.648,100.0,390.891,North America,North America,False,True,True,True,False
+United States,USA,2026-01-01,Country or economy,Demand,True,404.658,-5.572,-1.358,99.83,-0.867,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-02-01,Country or economy,Total generation,True,349.055,4.824,1.401,100.0,0.0,130.447,-4.435,-3.288,100.0,373.715,North America,North America,False,True,True,True,False
+United States,USA,2026-02-01,Country or economy,Demand,True,349.454,3.336,0.964,100.114,-0.434,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-03-01,Country or economy,Total generation,True,357.608,16.248,4.76,100.0,0.0,116.091,0.565,0.489,100.0,324.632,North America,North America,False,True,True,True,False
+United States,USA,2026-03-01,Country or economy,Demand,True,357.61,15.439,4.512,100.001,-0.237,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-04-01,Country or economy,Total generation,True,340.315,11.223,3.41,100.0,0.0,110.103,-0.004,-0.004,100.0,323.533,North America,North America,False,True,True,True,False
+United States,USA,2026-04-01,Country or economy,Demand,True,339.811,9.05,2.736,99.852,-0.655,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-05-01,Country or economy,Total generation,True,365.153,11.992,3.396,100.0,0.0,122.407,-1.893,-1.523,100.0,335.221,North America,North America,False,True,True,True,False
+United States,USA,2026-05-01,Country or economy,Demand,True,364.965,9.47,2.664,99.949,-0.712,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-06-01,Country or economy,Total generation,True,410.15,7.704,1.914,100.0,0.0,147.059,-8.71,-5.592,100.0,358.549,North America,North America,False,True,True,True,False
+United States,USA,2026-06-01,Country or economy,Demand,True,410.522,6.269,1.551,100.091,-0.358,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Total generation,True,467.936,12.167,2.67,100.0,0.0,189.085,-1.686,-0.884,100.0,404.083,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Demand,True,468.828,12.18,2.667,100.191,-0.002,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Total generation,True,465.153,35.937,8.373,100.0,0.0,187.397,11.813,6.728,100.0,402.872,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Demand,True,466.212,35.895,8.342,100.228,-0.028,,,,,,North America,North America,False,True,True,True,False
