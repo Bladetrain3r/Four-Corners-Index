@@ -1,23 +1,5 @@
 [
   {
-    "file": "17a-PDF-Cap-Tables.pdf",
-    "url": "https://www.ofgem.gov.uk/sites/default/files/2026-08/17a-PDF-Cap-Tables.pdf",
-    "fetched_at": "2026-09-29T21:14:52Z",
-    "sha256": "f34dd54ac09069e753cfe95a273f0ee0e53c7612d1aa0cf1b8cea9f2e630dcc8",
-    "bytes": 163634,
-    "note": "Untrimmed. Benchmark maximum charges, cap period 17a (1 Oct to 31 Dec 2026), by region and payment method; values exclusive of VAT; electricity single-rate m = 2,500 kWh, multi-register m = 3,400 kWh, gas m = 9,500 kWh.",
-    "source_kind": "live"
-  },
-  {
-    "file": "Summary-of-changes-to-energy-price-cap-1-July-to-30-September-2026-revised-TDCV.pdf",
-    "url": "https://www.ofgem.gov.uk/sites/default/files/2026-06/Summary-of-changes-to-energy-price-cap-1-July-to-30-September-2026-revised-TDCV.pdf",
-    "fetched_at": "2026-09-29T21:14:54Z",
-    "sha256": "e426c685f0fa7be3c2b8afba0d037125a3abbf91d4b3ed81d0a5aeecb56b7476",
-    "bytes": 159089,
-    "note": "Untrimmed. Ofgem letter re-published 2026-07-01 stating the 2026 TDCV (2,500 kWh electricity) replacing the 2023 TDCV (2,700 kWh).",
-    "source_kind": "live"
-  },
-  {
     "file": "Summary-of-changes-2026-10-to-12_text.txt",
     "url": "https://www.ofgem.gov.uk/sites/default/files/2026-08/Summary-of-changes-to-energy-price-cap-1-October-to-31-December-2026.pdf",
     "fetched_at": "2026-09-29T21:14:53Z",

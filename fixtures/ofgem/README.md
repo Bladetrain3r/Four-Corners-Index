@@ -1,0 +1,1 @@
+Text extracts only (Ofgem price-cap summary text and the copyright page). The two cap PDFs were removed: not used as a data source, and the copyright page says Crown copyright under the Open Government Licence without naming the version. Re-fetch under a licence check if the cap is ever adopted.
