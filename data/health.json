@@ -9,8 +9,10 @@
    "status": "ok"
   },
   "eia": {
+   "failing_since": "2026-09-30",
    "last_good": "2026-09-30",
-   "status": "ok"
+   "message": "retail_price: [eia] forced failure (test flag --force-fail)",
+   "status": "failed"
   },
   "ember": {
    "last_good": "2026-09-30",
