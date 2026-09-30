@@ -9,10 +9,8 @@
    "status": "ok"
   },
   "eia": {
-   "failing_since": "2026-09-30",
    "last_good": "2026-09-30",
-   "message": "retail_price: [eia] EIA_API_KEY is not set",
-   "status": "failed"
+   "status": "ok"
   },
   "ember": {
    "last_good": "2026-09-30",
