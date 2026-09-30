@@ -11,12 +11,13 @@ from pipeline import daily, fetch, ledger, publish, snapshot
 
 ROOT = Path(__file__).resolve().parent.parent
 TODAY = date(2026, 9, 30)
+LAUNCH = ROOT / "snapshots" / "launch"  # manifest and ledger at the state of the committed archive; the daily job moves the live ones
 
 
 @pytest.fixture(scope="module")
 def raw_dir(tmp_path_factory):
     d = tmp_path_factory.mktemp("raw")
-    snapshot.restore(ROOT / "snapshots" / "raw_2026-09-29.tar.gz", d)
+    snapshot.restore(ROOT / "snapshots" / "raw_2026-09-29.tar.gz", d, LAUNCH / "manifest.jsonl")
     return d
 
 
@@ -26,8 +27,8 @@ def work(raw_dir, tmp_path):
     w = tmp_path
     (w / "data" / "manifests").mkdir(parents=True)
     (w / "ledger").mkdir()
-    shutil.copy(snapshot.MANIFEST, w / "data" / "manifests" / "raw_snapshots.jsonl")
-    shutil.copy(ROOT / "ledger" / "index.jsonl", w / "ledger" / "index.jsonl")
+    shutil.copy(LAUNCH / "manifest.jsonl", w / "data" / "manifests" / "raw_snapshots.jsonl")
+    shutil.copy(LAUNCH / "ledger.jsonl", w / "ledger" / "index.jsonl")
     (w / "raw").symlink_to(raw_dir, target_is_directory=True)
     return w
 
@@ -66,7 +67,7 @@ def test_the_fifteenth_rule_publishes_the_previous_month_from_the_15th_only():
 def test_a_run_where_nothing_changed_adds_no_snapshot_and_no_ledger_line_and_a_stable_health_file(work):
     r = go(work, loader=serving(work), rebuild=True)
     assert r.ok and r.added == [] and r.ledger_lines_added == 0 and r.cap == "2026-08"
-    assert (work / "ledger" / "index.jsonl").read_bytes() == (ROOT / "ledger" / "index.jsonl").read_bytes()
+    assert (work / "ledger" / "index.jsonl").read_bytes() == (LAUNCH / "ledger.jsonl").read_bytes()
     health = json.loads((work / "data" / "health.json").read_text())["sources"]
     assert set(health) == {"desnz", "ecb", "eia", "ember", "eurostat", "worldbank"} and all(h == {"status": "ok", "last_good": "2026-09-30"} for h in health.values())
     first = (work / "data" / "health.json").read_bytes()
@@ -127,12 +128,12 @@ def test_the_site_shows_a_failing_source_with_its_last_good_date(work, no_parse,
 
 
 def test_simulated_fifteenth_appends_one_line_per_index_and_the_verifier_passes(tmp_path, raw_dir):
-    s = daily.simulate_publication(tmp_path, raw_dir)
+    s = daily.simulate_publication(tmp_path, raw_dir, LAUNCH / "manifest.jsonl")
     assert s["published_month"] == "2026-08" and s["simulated_date"] == "2026-09-15" and s["lines_after"] == s["lines_before"] + 2
     assert [(a["index"], a["month"], a["published"]) for a in s["appended"]] == [("retail", "2026-08", "2026-09-15"), ("wholesale", "2026-08", "2026-09-15")]
     assert {a["status"] for a in s["appended"]} == {"provisional", "final"} and s["earlier_lines_untouched"] and s["verifier_exit"] == 0
     assert "0 problems, chain intact" in s["verifier_output"]
-    # the appended values are the committed ledger's own newest values: nothing was invented
-    committed = {(ln["index"], ln["month"]): ln for ln in ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())}
+    # the appended values are the launch ledger's own newest values: nothing was invented
+    committed = {(ln["index"], ln["month"]): ln for ln in ledger.loads((LAUNCH / "ledger.jsonl").read_text())}
     for a in s["appended"]:
         assert committed[(a["index"], a["month"])]["value_usd_per_kwh"] == a["value_usd_per_kwh"]

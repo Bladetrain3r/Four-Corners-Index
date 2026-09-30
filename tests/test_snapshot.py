@@ -81,8 +81,8 @@ def test_restore_rejects_a_modified_member_an_unlisted_member_and_a_missing_one(
 
 def test_the_committed_archive_holds_exactly_the_manifests_snapshots(tmp_path):
     root = Path(__file__).resolve().parent.parent
-    n = snapshot.restore(root / "snapshots" / "raw_2026-09-29.tar.gz", tmp_path)
-    assert n == len({e["path"] for e in snapshot.read_manifest()})
+    n = snapshot.restore(root / "snapshots" / "raw_2026-09-29.tar.gz", tmp_path, root / "snapshots" / "launch" / "manifest.jsonl")
+    assert n == len({e["path"] for e in snapshot.read_manifest(root / "snapshots" / "launch" / "manifest.jsonl")})
 
 
 def test_partial_restore_and_packing_only_the_new_snapshots(tmp_path):

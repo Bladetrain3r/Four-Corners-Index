@@ -8,38 +8,42 @@ from pipeline import build, snapshot
 from pipeline.common import SourceError
 
 ROOT = Path(__file__).resolve().parent.parent
+LAUNCH = ROOT / "snapshots" / "launch"  # the state the committed archive was taken at; the daily job moves the live manifest, not this
+MANIFEST = LAUNCH / "manifest.jsonl"
 
 
 @pytest.fixture(scope="module")
 def raw_dir(tmp_path_factory):
     """The raw snapshots restored from the archive committed to git, so these tests run in CI as well as locally."""
     d = tmp_path_factory.mktemp("raw")
-    snapshot.restore(ROOT / "snapshots" / "raw_2026-09-29.tar.gz", d)
+    snapshot.restore(ROOT / "snapshots" / "raw_2026-09-29.tar.gz", d, MANIFEST)
     return d
 
 
 def test_two_offline_rebuilds_from_the_committed_archive_are_byte_identical_and_match_the_outputs(raw_dir):
-    assert reproduce.main(["--raw", str(raw_dir)]) == 0
+    assert reproduce.main(["--raw", str(raw_dir), "--manifest", str(MANIFEST), "--ledger-seed", str(LAUNCH / "ledger.jsonl"),
+                           "--expect", str(LAUNCH / "outputs.sha256.json")]) == 0
 
 
 def test_a_modified_raw_snapshot_is_rejected_by_its_manifest_hash(raw_dir, tmp_path):
     raw = tmp_path / "raw"
     shutil.copytree(raw_dir, raw)
-    latest = {(e["source"], e["name"]): e for e in snapshot.read_manifest()}[("ecb", "exr_monthly")]
+    latest = {(e["source"], e["name"]): e for e in snapshot.read_manifest(MANIFEST)}[("ecb", "exr_monthly")]
     victim = raw / latest["path"]
     victim.write_bytes(victim.read_bytes() + b"\n")
     with pytest.raises(SourceError, match=r"^\[ecb\].*does not match its manifest SHA-256"):
-        build.build(raw, tmp_path / "out")
+        build.build(raw, tmp_path / "out", MANIFEST)
 
 
 def test_the_manifest_lists_every_registered_request_with_a_sha256():
     from pipeline import registry
-    entries = {(e["source"], e["name"]) for e in snapshot.read_manifest()}
-    assert entries == {(r.source, r.name) for r in registry.REQUESTS}
-    assert all(len(e["sha256"]) == 64 and "api_key=" not in e["url"].replace("api_key=REDACTED", "") for e in snapshot.read_manifest())
+    for path in (MANIFEST, snapshot.MANIFEST):  # the launch manifest and the live one (which the daily job extends)
+        entries = {(e["source"], e["name"]) for e in snapshot.read_manifest(path)}
+        assert entries == {(r.source, r.name) for r in registry.REQUESTS}
+        assert all(len(e["sha256"]) == 64 and "api_key=" not in e["url"].replace("api_key=REDACTED", "") for e in snapshot.read_manifest(path))
 
 
 def test_rebuilding_never_appends_to_the_ledger_when_no_value_changed(raw_dir, tmp_path):
-    seed = ROOT / "ledger" / "index.jsonl"
-    info = build.build(raw_dir, tmp_path, ledger_seed=seed)
+    seed = LAUNCH / "ledger.jsonl"
+    info = build.build(raw_dir, tmp_path, MANIFEST, ledger_seed=seed)
     assert info["_added"] == 0 and info["ledger_lines"] == len(seed.read_text().splitlines())

@@ -2,17 +2,23 @@
 to each other and to the committed outputs.
 
     python -m checks.reproduce [--raw raw_cache]
+    python -m checks.reproduce --raw DIR --manifest snapshots/launch/manifest.jsonl --ledger-seed snapshots/launch/ledger.jsonl \\
+        --expect snapshots/launch/outputs.sha256.json      # CI: the pinned launch bundle, which the daily job never moves
+
+By default the rebuilds are compared with the committed outputs, which needs every raw snapshot the manifest lists (the
+daily job adds snapshots that live in Release assets). `--expect` compares with pinned hashes instead.
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import socket
 import sys
 import tempfile
 from pathlib import Path
 
-from pipeline import build
+from pipeline import build, snapshot
 
 ROOT = Path(__file__).resolve().parent.parent
 TREES = ("data/index", "data/series", "ledger/index.jsonl")  # generated outputs only (ledger/verify.py is hand-written)
@@ -39,22 +45,26 @@ def hashes(root: Path) -> dict[str, str]:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--raw", type=Path, default=ROOT / "raw_cache")
+    ap.add_argument("--manifest", type=Path, default=snapshot.MANIFEST)
+    ap.add_argument("--ledger-seed", type=Path, default=ROOT / "ledger" / "index.jsonl")
+    ap.add_argument("--expect", type=Path, help="JSON of {file: sha256} to compare with instead of the committed outputs")
     args = ap.parse_args(argv)
     real_connect, real_cc = socket.socket.connect, socket.create_connection
     socket.socket.connect, socket.create_connection = _deny, _deny  # type: ignore[method-assign,assignment]
     try:
         with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
-            seed = ROOT / "ledger" / "index.jsonl"  # the ledger is append-only history: a rebuild extends it, and must add nothing new
-            build.build(args.raw, Path(a), ledger_seed=seed)
-            build.build(args.raw, Path(b), ledger_seed=seed)
-            ha, hb, hc = hashes(Path(a)), hashes(Path(b)), hashes(ROOT)
+            seed = args.ledger_seed  # the ledger is append-only history: a rebuild extends it, and must add nothing new
+            build.build(args.raw, Path(a), args.manifest, ledger_seed=seed)
+            build.build(args.raw, Path(b), args.manifest, ledger_seed=seed)
+            ha, hb = hashes(Path(a)), hashes(Path(b))
+            hc = json.loads(args.expect.read_text()) if args.expect else hashes(ROOT)
     finally:
         socket.socket.connect, socket.create_connection = real_connect, real_cc  # type: ignore[method-assign]
     same_ab = ha == hb
     same_repo = ha == hc
     print(f"files per rebuild: {len(ha)}; network connections attempted: 0 (any attempt raises)")
     print(f"rebuild 1 == rebuild 2 (all {len(ha)} files byte-identical): {same_ab}")
-    print(f"rebuild == committed outputs: {same_repo}")
+    print(f"rebuild == {'pinned hashes' if args.expect else 'committed outputs'}: {same_repo}")
     for k in sorted(set(ha) | set(hc)):
         if ha.get(k) != hc.get(k):
             print("  differs from committed:", k)
