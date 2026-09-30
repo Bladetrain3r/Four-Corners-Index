@@ -42,4 +42,4 @@ def test_the_manifest_lists_every_registered_request_with_a_sha256():
 def test_rebuilding_never_appends_to_the_ledger_when_no_value_changed(raw_dir, tmp_path):
     seed = ROOT / "ledger" / "index.jsonl"
     info = build.build(raw_dir, tmp_path, ledger_seed=seed)
-    assert info["ledger_lines_added"] == 0 and info["ledger_lines"] == len(seed.read_text().splitlines())
+    assert info["_added"] == 0 and info["ledger_lines"] == len(seed.read_text().splitlines())

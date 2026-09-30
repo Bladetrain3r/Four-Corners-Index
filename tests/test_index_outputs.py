@@ -29,14 +29,14 @@ def wholesale():
     return _rows("wholesale.csv")
 
 
-@pytest.mark.parametrize("name,regions", [("retail", ("EU", "US", "CN")), ("wholesale", ("EU",))])
+@pytest.mark.parametrize("name,regions", [("retail", ("EU", "US", "CN", "GB")), ("wholesale", ("EU",))])
 def test_months_contiguous_from_2015_01_and_levels_positive(name, regions):
     rows = _rows(f"{name}.csv")
     assert [r["month"] for r in rows] == ix.months("2015-01", rows[-1]["month"])
     assert all(D(r["level_usd_per_kwh"]) > 0 and r["status"] in ("provisional", "final") for r in rows)
 
 
-@pytest.mark.parametrize("name,regions", [("retail", ("EU", "US", "CN")), ("wholesale", ("EU",))])
+@pytest.mark.parametrize("name,regions", [("retail", ("EU", "US", "CN", "GB")), ("wholesale", ("EU",))])
 def test_weights_sum_to_one_and_contributions_sum_to_level(name, regions):
     for r in _rows(f"{name}.csv"):
         assert abs(sum(D(r[f"weight_{g}"]) for g in regions) - 1) < D("0.000000001")
@@ -58,8 +58,8 @@ def test_final_never_follows_provisional(retail, wholesale):
     assert retail[-1]["status"] == "provisional"  # EU household is carried forward for 2026
 
 
-def test_retail_composition_excludes_russia_and_says_so(retail):
-    assert {r["composition"] for r in retail} == {"CN|EU|US"}
+def test_retail_composition_is_eu_us_china_uk_and_excludes_russia(retail):
+    assert {r["composition"] for r in retail} == {"CN|EU|GB|US"}
     weights = _rows("weights.csv")
     ru = [w for w in weights if w["region"] == "RU"]
     assert ru and all(w["share_retail_renormalised"] == "" and D(w["share_of_four"]) > 0 for w in ru)  # in the denominator, not priced
@@ -91,16 +91,27 @@ def test_wholesale_never_publishes_a_partial_month_as_final(wholesale):
     assert wholesale[-1]["month"] <= "2026-08"
 
 
-def test_ledger_chain_is_intact_and_matches_the_tables(retail, wholesale):
+def test_ledger_chain_is_intact_and_latest_lines_match_the_tables(retail, wholesale):
     lines = ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())
     assert ledger.verify(lines) == []
-    assert len(lines) == len(retail) + len(wholesale)
     cur = ledger.latest(lines)
-    for name, rows in (("retail", retail), ("wholesale", wholesale)):
+    for name, rows, version in (("retail", retail, 2), ("wholesale", wholesale, 1)):
         for r in rows:
             e = cur[(name, r["month"])]
             assert e["value_usd_per_kwh"] == r["level_usd_per_kwh"] and e["status"] == r["status"]
-            assert e["index_2015_100"] == r["index_2015_100"] and e["method_version"] == 1 and e["backfill"] is True
+            assert e["index_2015_100"] == r["index_2015_100"] and e["method_version"] == version
+
+
+def test_the_uk_revision_is_new_superseding_lines_and_the_v1_lines_are_untouched(retail, wholesale):
+    lines = ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())
+    v1 = [ln for ln in lines if ln["method_version"] == 1]
+    v2 = [ln for ln in lines if ln["method_version"] == 2]
+    assert len(v1) == len(retail) + len(wholesale) and len(v2) == len(retail)  # wholesale was not revised
+    assert all(ln["index"] == "retail" and "supersedes" in ln and ln["composition"] == ["CN", "EU", "GB", "US"] for ln in v2)
+    by_hash = {ln["hash"]: ln for ln in lines}
+    assert all(by_hash[ln["supersedes"]]["index"] == "retail" and by_hash[ln["supersedes"]]["month"] == ln["month"]
+               and by_hash[ln["supersedes"]]["method_version"] == 1 and by_hash[ln["supersedes"]]["composition"] == ["CN", "EU", "US"] for ln in v2)
+    assert all(ln.get("backfill") is True for ln in v1) and "backfill" not in v2[0]
 
 
 def test_method_thresholds_match_the_code_and_every_big_move_is_explained():
@@ -133,20 +144,19 @@ def test_method_md_was_committed_before_any_index_code():
 def test_retail_excluding_china_is_recomputed_independently_for_every_month(retail):
     w = {}
     for r in _rows("weights.csv"):
-        w[(r["year"], r["region"])] = D(r["share_of_four"])
+        w[(r["year"], r["region"])] = D(r["share_of_four"])  # share of the five basket regions
     usd = {(r["month"], r["region"]): D(r["usd_per_kwh"]) for r in _rows("region_prices.csv") if r["index"] == "retail"}
     for r in retail:
         y, m = r["month"][:4], r["month"]
-        weu, wus = w[(y, "EU")], w[(y, "US")]
-        expect = (weu * usd[(m, "EU")] + wus * usd[(m, "US")]) / (weu + wus)
+        regs = ("EU", "US", "GB")
+        expect = sum(w[(y, g)] * usd[(m, g)] for g in regs) / sum(w[(y, g)] for g in regs)
         assert abs(expect - D(r["exchina_level_usd_per_kwh"])) <= D("0.000001"), m
-        contrib = D(r["exchina_contrib_EU"]) + D(r["exchina_contrib_US"])
-        assert abs(contrib - D(r["exchina_level_usd_per_kwh"])) <= D("0.000002"), m
+        contrib = sum(D(r[f"exchina_contrib_{g}"]) for g in regs)
+        assert abs(contrib - D(r["exchina_level_usd_per_kwh"])) <= D("0.000003"), m
 
 
 def test_ex_china_index_averages_100_in_2015_and_is_not_a_ledger_series(retail):
     rows = [r for r in retail if r["month"].startswith("2015-")]
     assert abs(sum(D(r["exchina_index_2015_100"]) for r in rows) / 12 - 100) < D("0.01")
     assert {ln["index"] for ln in ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())} == {"retail", "wholesale"}
-    assert all(ln["method_version"] == 1 for ln in ledger.loads((ROOT / "ledger" / "index.jsonl").read_text()))  # headline unchanged
     assert D(retail[-1]["exchina_index_2015_100"]) > D(retail[-1]["index_2015_100"])  # the measured part rose more than the headline

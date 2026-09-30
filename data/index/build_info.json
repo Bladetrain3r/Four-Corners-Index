@@ -1,10 +1,12 @@
 {
-  "headline_method_version": 1,
+  "headline_method_version": {
+    "retail": 2,
+    "wholesale": 1
+  },
   "inputs_sha256": "9728b367d30b4273409b949906cc624102436b7f18f2d5d0aa2dbf7c1e6cf8a4",
-  "ledger_lines": 280,
-  "ledger_lines_added": 0,
-  "method_doc_version": 2,
-  "published": "2026-09-29",
+  "ledger_lines": 420,
+  "method_doc_version": 3,
+  "published": "2026-09-30",
   "retail_months": [
     "2015-01",
     "2026-08"
