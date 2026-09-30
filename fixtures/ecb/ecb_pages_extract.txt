@@ -1,0 +1,14 @@
+EXTRACT (whitespace-normalised text, not raw HTML; line ranges selected by script; link-broken lines re-joined with spaces; nothing else edited)
+
+== https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html ==
+The reference rates are usually updated at around 16:00 CET every working day, except on TARGET closing days . They are based on the daily concertation procedure between central banks across Europe, which normally takes place around 14:10 CET. The reference rates are published for information purposes only. Using the rates for transaction purposes is strongly discouraged.
+Owing to current trading activity in the EUR/RUB market, the European Central Bank (ECB) is not in a position to set a reference rate that is representative of prevailing market conditions. The ECB has therefore decided to suspend its publication of a euro reference rate for the Russian rouble until further notice. The ECB last published a EUR/RUB reference rate
+
+== https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html ==
+Copyright
+Copyright © for the entire content of this website: European Central Bank, Frankfurt am Main, Germany.
+Subject to the exception below, users of this website may make free use of the information obtained directly from it subject to the following conditions:
+When such information is distributed or reproduced, it must appear accurately and the ECB must be cited as the source.
+Where the information is incorporated in documents that are sold (regardless of the medium), the natural or legal person publishing the information must inform buyers, both before they pay any subscription or fee and each time they access the information taken from this website, that the information may be obtained free of charge through this website.
+If the information is modified by the user (e.g. by seasonal adjustment of statistical data or calculation of growth rates) this must be stated explicitly.
+When linking to this website from business sites or for promotional purposes, this website must load into the browser's entire window (i.e. it must not appear within another website's frame).

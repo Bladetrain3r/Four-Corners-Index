@@ -1,0 +1,84 @@
+[
+  {
+    "file": "exr_daily_usd_cny_zar_rub_last1_full.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+RUB.EUR.SP00.A?lastNObservations=1&format=csvdata",
+    "fetched_at": "2026-09-29T19:02:01Z",
+    "sha256": "b9b8d3befcfe63262e7e3eca35e24122ba1564877d7273acd522faed6dbf2238",
+    "note": "Full-metadata CSV, last observation per series; shows RUB last obs 2022-03-01. Untrimmed response.",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_daily_usd_cny_zar_2026-06-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2026-06-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:02Z",
+    "sha256": "45fa6fa03a07dc396b3db8a66c61872f7dacf49d4f6a0decf943e9620b21d460",
+    "note": "Daily ECB reference rates (units of currency per 1 EUR), 2026-06-01 onward, detail=dataonly (metadata columns dropped by the API).",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_monthly_usd_cny_zar_2022-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR.EUR.SP00.A?startPeriod=2022-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:03Z",
+    "sha256": "506abf9375817b820a62c96f17ed4e64966f5b91f5ac29c0f0430b5640f3cd7e",
+    "note": "Monthly averages (COLLECTION=A) of daily reference rates, 2022-01 onward; latest complete month only.",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_daily_rub_first_last.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.RUB.EUR.SP00.A?firstNObservations=1&lastNObservations=1&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:04Z",
+    "sha256": "2f5692ea7e5bcc287a35b3a453bd8ef3a8295e5dd110e1aa79387ecb182b90e7",
+    "note": "RUB first (1999-01-04) and last (2022-03-01) daily observations, proving suspension.",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_monthly_rub_last3.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.RUB.EUR.SP00.A?lastNObservations=3&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:05Z",
+    "sha256": "590a4383e00f79e4d32409c5e273c1f914338225967b3170ec21c4091dafba6e",
+    "note": "RUB monthly last 3 obs (last is 2022-02; 2022-03 monthly average not published).",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_monthly_first.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR+RUB.EUR.SP00.A?firstNObservations=1&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:05Z",
+    "sha256": "9a2b09aa4df8e1f0771d0dc3f6831adf038ae99ace88c5fbc945a0cb79749d71",
+    "note": "First monthly observation per series (history start).",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_daily_first.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+RUB.EUR.SP00.A?firstNObservations=1&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T19:02:06Z",
+    "sha256": "9559a3b837aa8abeafde943a4750561bcbacce41eeebea2231bd991a06657216",
+    "note": "First daily observation per series (history start).",
+    "source_kind": "live"
+  },
+  {
+    "file": "ecb_pages_extract.txt",
+    "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html ; https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+    "fetched_at": "2026-09-29T19:02:22Z",
+    "sha256": "43e68be1b7b7df290f3d9b220095d684637029311df2020c849b517de48909ae",
+    "note": "Text extract (selected lines, script-made) of the reference-rate page (RUB suspension, timing, transaction warning) and the ECB Disclaimer & copyright section. Raw HTML not stored (>100 KB each).",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_monthly_usd_cny_zar_gbp_2022-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/M.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2022-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T21:51:48Z",
+    "sha256": "56502ed67ca1a2c1fd64dec22c07f5ccfbb03c79613dc1fc992fd092414c8ce3",
+    "bytes": 13970,
+    "note": "Monthly averages USD, CNY, ZAR, GBP per EUR since 2022-01. Untrimmed for that window; adds GBP for the UK.",
+    "source_kind": "live"
+  },
+  {
+    "file": "exr_daily_usd_cny_zar_gbp_2026-06-01.csv",
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2026-06-01&format=csvdata&detail=dataonly",
+    "fetched_at": "2026-09-29T21:51:49Z",
+    "sha256": "9dda3eab6a264c84b58fa3fa8694888ad2e88ef7229ff42b32c443286eedabd3",
+    "bytes": 20026,
+    "note": "Daily USD, CNY, ZAR, GBP per EUR since 2026-06-01. Untrimmed for that window; adds GBP for the UK.",
+    "source_kind": "live"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-09-29",
+  "cutoff": "2024-09-22",
+  "keep_days": 730,
+  "months": 25,
+  "name": "henry_hub_daily",
+  "raw_sha256": "fd63cec3ce556097b0f25cf83453f0ecca1eb15e3cfb704d32ab7659e12b80f9",
+  "retrieved_at": "2026-09-29T21:17:20Z",
+  "role": "primary",
+  "rows": 496,
+  "source": "eia",
+  "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?api_key=REDACTED&frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2015-01-01&length=5000"
+}

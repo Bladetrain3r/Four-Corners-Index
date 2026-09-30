@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-09-29",
+  "cutoff": "2024-09-29",
+  "keep_days": 730,
+  "months": 25,
+  "name": "exr_daily",
+  "raw_sha256": "dd43a827b4bb42c215d09fee2594eaaaaf2edd208961fca8d512c883672a9ef9",
+  "retrieved_at": "2026-09-29T21:49:53Z",
+  "role": "primary",
+  "rows": 2040,
+  "source": "ecb",
+  "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly"
+}

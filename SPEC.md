@@ -25,6 +25,20 @@ method. It exists as a unit of account for readers (and later for the fleet's ow
    period's exchange rate. Inflation adjustment ("real") is a later toggle, not in scope.
 5. Price per **kWh**, never "per watt".
 
+## Decisions (Ziggy, STOP-1, 2026-09-29)
+
+6. **Wholesale index is EU-only and labelled so.** Other regions show "no source" and the reason.
+7. **Weights come from Ember Demand** for all regions. **The equal-weighted variant and contribution by region are on the headline page**, not one click down (this supersedes "one click down" under Visible metrics).
+8. **Confidence tiers.** Sourced bands are the headline. Low-confidence or high-latency equivalents are included where possible, highlighted as such (`confidence`: `primary`, `low_confidence`, `high_latency`).
+9. **Russia is high-uncertainty**, flagged on every figure. Secondary sources are allowed only where their terms permit reuse and the number traces to a kept snapshot; otherwise "no source".
+10. **South Africa** keeps only the layers with a public licence (mix and carbon intensity, coal, FX). Eskom tariffs are not used: their terms bar commercial use and automated collection. A publicly licensed tariff source would bring the price layers back.
+11. **No carbon (EUA) price.** Omitted and said so on the site.
+12. **Candidate layer, not built:** air-quality indicators (needs its own scoping and source check first).
+13. **Nowcast** (if any) is a separate line, never in "final"; decided at G4: none at launch (METHOD.md section 9).
+14. **United Kingdom: weight-bearing in the Retail index once its cross-check gate passes** (Ziggy, 2026-09-30: "bringing the UK in as a weight bearing index if you're confident in the sources"). Confident for the household series (DESNZ QEP 5.6.2 uses Eurostat's band DC, OGL v3.0, and matches Eurostat's own UK series to four decimals in all 11 overlapping semesters); **not** confident for UK wholesale (Ember does not say whether its UK price is converted from sterling), so UK wholesale stays out. The adapters are built and the series published; the UK enters the index at METHOD v3 after Ziggy rules on `reports/BLOCKED-G3b.md`. Until then it is beside the basket, not weighted.
+15. **Retail excluding China** is a headline-page variant beside the weighted and equal-weighted levels (Ziggy, after STOP-2; METHOD v2). Not a ledger series.
+16. **Raw snapshot archive** committed once to git as an exception (Ziggy, 2026-09-30): `snapshots/raw_2026-09-29.tar.gz`, about 8 MB; further snapshots go to Release assets in a session with a token.
+
 ## The three layers (what is tracked)
 
 **1. Cost: what a kWh costs, by buyer type**
@@ -41,7 +55,7 @@ method. It exists as a unit of account for readers (and later for the fleet's ow
 **3. Drivers: why it moves**
 - Natural gas: European hub (TTF) and US Henry Hub
 - Coal (a benchmark including South African coal if a free source carries it)
-- EU carbon (ETS) price, if a free, reusable source exists (G1 decides; otherwise omitted and said so)
+- EU carbon (ETS) price: omitted, no free reusable source (G1; decision 11)
 - FX to USD: EUR, CNY, RUB, ZAR
 
 ## Regions
@@ -52,7 +66,7 @@ method. It exists as a unit of account for readers (and later for the fleet's ow
 | US (national; states later) | yes | yes | yes | hubs, if a free series exists | yes | A |
 | China | yes | best effort (provincial catalogue basket) | best effort | none nationally (say so) | yes | C |
 | Russia | yes | best effort (Rosstat household) | no source found yet | two price zones, if reachable | yes | C |
-| South Africa | **beside** | yes (tariff-based) | yes (tariff-based) | no market (say so) | yes | B |
+| South Africa | **beside** | no source (Eskom terms; decision 10) | no source (decision 10) | no market (say so) | yes | B (mix only) |
 
 Badges: **A** is an official, machine-readable, regularly published source. **B** is official but tariff-derived or
 partly manual. **C** is best effort: administrative prices, irregular publication or hard access; shown with its
@@ -70,7 +84,7 @@ caveat. A missing value is shown as a gap with the reason, never interpolated si
 
 **One click down**
 - Per-region pages: long series, buyer-type comparison, price components (EU), mix over time, the sources used
-- Index page: the method, weights by year, the equal-weighted variant, contributions by region, and the revision ledger
+- Index page: the method, weights by year, and the revision ledger (the equal-weighted variant and contributions by region are on the headline page, per decision 7)
 - Downloads: every published series as CSV and JSON, plus the raw-snapshot manifest
 
 ## Index method (outline; `METHOD.md` is written and frozen at G4 before any index is computed)

@@ -1,0 +1,37 @@
+EXTRACTS (script-made; page text with tags stripped, nbsp->space, selected lines verbatim; no price data stored: none of these sources permits open redistribution).
+Checked 2026-09-29.
+
+== https://icapcarbonaction.com/en/terms-use-and-documentation-notes-allowance-price-explorer ==
+Graphics or underlying data provided by the ICAP Allowance Price Explorer may only be reproduced, redistributed and used for non-commercial purposes subject to ICAP's prior written permission.
+When permitted to use graphics or underlying data provided by the ICAP Allowance Price Explorer, users are required to reference both the ICAP Allowance Price Explorer and the original source of the data (as described below), as well as any disclaimers identified in the sources.
+Disclaimer on use or reference to ICE Data: INTERCONTINENTAL EXCHANGE, INC., ICE DATA LLP, AND/OR ANY OF ITS AFFILIATES (“ICE GROUP”), MAKES NO WARRANTY, EXPRESS OR IMPLIED, EITHER AS TO THE RESULTS TO BE OBTAINED FROM THE USE OF ICE FUTURES DATA AND/OR THE FIGURE AT WHICH ICE FUTURES DATA STANDS AT ANY PARTICULAR TIME ON ANY PARTICULAR DAY OR OTHERWISE. THE USE OF ICE FUTURES DATA IS PROVIDED ON AN ‘AS IS’ BASIS AND ICE GROUP DISCLAIMS ALL LIABILITY FOR ANY LOSS OR DAMAGE WHATSOEVER INCURRED BY THE USE OF ICE FUTURES DATA HEREIN, EVEN IF ICE GROUP HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, DAMAGES OR EXPENSES. ANY DISTRIBUTION OR COMMERCIAL USE OF ICE FUTURES DATA IS PROHIBITED WITHOUT THE PRIOR WRITTEN CONSENT OF ICE DATA LLP.
+. EEX data is not available for download. End-of-day ICE Data is only visible in the tool’s graph-format. Weekly average ICE Data is available for download and with a 6-month lag (to download this data, please select the system “
+. End-of-day ICE Data is only visible in the tool’s graph-format. Weekly average ICE Data is available for download and with a 6-month lag (see above for disclaimer on ICE Data). ICE Data corresponds to the closest upcoming December delivery as of the day of trading.
+. End-of-day ICE Data is only visible in the tool’s graph-format. Weekly average ICE Data is available for download and with a 6-month lag (see above for disclaimer on ICE Data). ICE Data corresponds to the closest upcoming December delivery as of the day of trading.
+. End-of-day ICE Data is only visible in the tool’s graph-format. Weekly average ICE Data is available for download and with a 6-month lag (see above for disclaimer on ICE Data). ICE Data corresponds to the closest upcoming December delivery as of the day of trading.
+
+== https://www.eex.com/en/disclaimer ==
+The design of this website and the text, images, graphics, layout, audio documents and video clips as well as databases contained herein are protected by copyright and are owned by EEX AG, except when otherwise stated. Neither this website nor the contents made available therein (including; graphic representations, audio and video clips, html code, buttons and text) may be copied, reprinted, published, transmitted, transferred, disseminated or distributed in any manner without the prior written approval of EEX AG. However, the preparation of a single copy for exclusive personal, non-commercial use by downloading onto an individual personal computer (including permanent or temporary saving on said PC, displaying of the contents in the offline mode and the preparation of a print-out of parts of the content) are expressly permitted. However, this shall be subject to the precondition that such activity does not involve changing the website and its content and that all references to copyrights, patents, trademarks and other property rights are contained in the copies made or that a corresponding reference is inserted. Any commercial use shall only be permitted with the express written approval of EEX AG.
+
+== https://www.eex.com/en/market-data/licensing-policies ==
+EEX AG offers companies the opportunity to retrieve data and use it in raw or derived form exclusively within their organisation or to disseminate it to third parties.
+Our Internal Usage Licence allows companies to
+Our External Usage Licence is designed for Vendors, i.e. companies which onward disseminate an EEX Group DataSource Product to third parties or Affiliated Companies (subscribers). The fees for an External Usage Licence depend on the type of usage and in the case of Commercial Usage on the number of Subscribers. The fee for External Usage will gradually increase with the number of Subscribers. We offer
+Media Usage
+A Media Usage
+
+== https://ember-energy.org/data/european-electricity-prices-and-costs/ ==
+This page has replaced both Ember’s carbon price tracker and Ember’s European power price tracker – given the content for both tools are now included in this page.
+The TTF and NBP prices are the benchmark price references for fossil gas traded in the EU and in the UK, respectively. Gas price data sourced from Montel,
+The fuel cost for hard coal is calculated using the front month settlement price for API 2 Rotterdam coal. The API 2 Rotterdam coal price is the benchmark price reference for hard coal imported into Europe. Price data sourced from Montel.
+Carbon costs are calculated using the EU and UK Emissions Trading Scheme prices, front December contract. Price data sourced from Montel. UK carbon costs include the carbon price support (CPS).
+Ember is an energy think tank that aims to accelerate the clean energy transition with data and policy. Ember is the trading name of Ember Energy Research CIC, a Community Interest Company registered in England & Wales #06714443. 'Ember' is a trademark held at the United Kingdom and European Union Intellectual Property Offices. All content is released under a Creative Commons Attribution Licence (CC-BY-4.0). Website powered by 100% renewable electricity.
+
+== https://energy.instrat.pl/en/prices/eu-ets/ ==
+Own representation by energy.instrat.pl • Data: EEX
+License: Creative Commons Attribution 4.0 International (CC BY 4.0) - unless stated otherwise
+
+== https://sandbag.be/carbon-price-viewer/ ==
+This Carbon Price Viewer shows the cost of emitting one tonne of Carbon Dioxide in Europe up to April 2026 . 
+Up until December 2009, the price shown is based on spot-month continuous contract calculation. After that date, it corresponds to auction settlement prices, from the European Energy Exchange AG. Where does the data come from? Up until December 2009, the price was sourced from Quandl . Since then, the data has been sourced from ICAP . 
+

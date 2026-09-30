@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-29",
+  "name": "henry_hub_monthly",
+  "raw_sha256": "58f32f97159006b62e6ba0ece07c84ba16c2e11291a2b58c36feeb7df5a1d1b0",
+  "retrieved_at": "2026-09-29T21:17:21Z",
+  "role": "primary",
+  "rows": 140,
+  "since": "2015-01-01",
+  "source": "eia",
+  "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?api_key=REDACTED&frequency=monthly&data[0]=value&facets[series][]=RNGWHHD&start=2015-01&length=5000"
+}

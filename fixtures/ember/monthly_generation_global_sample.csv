@@ -1,0 +1,246 @@
+Area,ISO 3 code,Date,Area type,Electricity source,Is aggregated source,Generation (TWh),Generation YoY change (TWh),Generation YoY change (%),Share of generation (%),Share of generation YoY change (% points),Emissions (MtCO2e),Emissions YoY change (MtCO2e),Emissions YoY change (%),Share of emissions (%),Emissions intensity (gCO2e/kWh),Continent,Ember region,EU member,OECD member,G20 member,G7 member,ASEAN member
+China,CHN,2016-01-01,Country or economy,Solar,False,3.37,,,0.7,,0.162,,,0.044,48.071,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Wind,False,16.113,,,3.347,,0.206,,,0.056,12.785,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Hydro,False,63.562,,,13.202,,1.525,,,0.416,23.992,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Bioenergy,False,3.649,,,0.758,,0.839,,,0.229,229.926,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Nuclear,False,14.689,,,3.051,,0.087,,,0.024,5.923,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Coal,False,361.155,,,75.012,,354.177,,,96.612,980.679,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Gas,False,16.037,,,3.331,,7.58,,,2.068,472.657,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Other fossil,False,2.887,,,0.6,,2.021,,,0.551,700.035,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Net imports,False,-1.02,,,-0.212,,0.0,,,0.0,0.0,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Wind and solar,True,19.483,,,4.047,,0.368,,,0.1,18.888,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,"Hydro, bioenergy and other renewables",True,67.211,,,13.96,,2.365,,,0.645,35.188,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Renewables,True,86.695,,,18.007,,2.733,,,0.746,31.524,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Clean,True,101.384,,,21.057,,2.819,,,0.769,27.805,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Fossil,True,380.079,,,78.942,,363.778,,,99.231,957.112,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Total generation,True,481.463,,,100.0,,366.597,,,100.0,761.423,Asia,Asia,False,False,True,False,False
+China,CHN,2016-01-01,Country or economy,Demand,True,480.444,,,99.788,,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Solar,False,141.85,11.181,8.557,13.829,0.912,6.809,0.537,8.562,1.245,48.001,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Wind,False,90.655,9.415,11.589,8.838,0.807,1.208,0.125,11.542,0.221,13.325,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Hydro,False,161.499,10.046,6.633,15.745,0.774,3.876,0.241,6.63,0.709,24.0,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Bioenergy,False,11.023,0.102,0.934,1.075,-0.005,2.535,0.023,0.916,0.464,229.974,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Nuclear,False,45.8,2.836,6.601,4.465,0.218,0.27,0.017,6.719,0.049,5.895,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Coal,False,530.019,-19.394,-3.53,51.674,-2.637,508.581,-19.467,-3.687,93.028,959.552,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Gas,False,35.119,-0.72,-2.009,3.424,-0.119,16.599,-0.34,-2.007,3.036,472.65,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Other fossil,False,9.742,0.63,6.914,0.95,0.049,6.819,0.441,6.914,1.247,699.959,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Net imports,False,-2.037,0.063,-3.0,-0.199,0.009,0.0,0.0,,0.0,0.0,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Wind and solar,True,232.504,20.595,9.719,22.668,1.72,8.017,0.662,9.001,1.466,34.481,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,"Hydro, bioenergy and other renewables",True,172.522,10.148,6.25,16.82,0.769,6.411,0.264,4.295,1.173,37.16,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Renewables,True,405.027,30.744,8.214,39.488,2.489,14.429,0.927,6.866,2.639,35.625,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Clean,True,450.827,33.579,8.048,43.953,2.707,14.698,0.943,6.856,2.689,32.602,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Fossil,True,574.879,-19.485,-3.278,56.047,-2.707,531.999,-19.366,-3.512,97.311,925.41,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Total generation,True,1025.706,14.095,1.393,100.0,0.0,546.698,-18.422,-3.26,100.0,532.997,Asia,Asia,False,False,True,False,False
+China,CHN,2026-07-01,Country or economy,Demand,True,1023.669,14.158,1.402,99.801,0.009,,,,,,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Solar,False,138.329,15.774,12.871,13.535,1.432,6.64,0.757,12.868,1.181,48.002,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Wind,False,80.995,10.706,15.231,7.925,0.984,1.08,0.143,15.261,0.192,13.334,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Hydro,False,152.105,4.051,2.736,14.883,0.262,3.651,0.098,2.758,0.649,24.003,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Bioenergy,False,11.026,0.093,0.851,1.079,-0.001,2.536,0.022,0.875,0.451,230.002,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Nuclear,False,46.7,4.013,9.401,4.57,0.355,0.275,0.024,9.562,0.049,5.889,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Coal,False,545.645,-24.654,-4.323,53.391,-2.927,523.576,-24.546,-4.478,93.13,959.554,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Gas,False,37.774,-1.093,-2.812,3.696,-0.142,17.853,-0.517,-2.814,3.176,472.627,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Other fossil,False,9.413,0.463,5.173,0.921,0.037,6.589,0.324,5.172,1.172,699.989,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Net imports,False,-1.887,-0.056,3.058,-0.185,-0.004,0.0,0.0,,0.0,0.0,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Wind and solar,True,219.324,26.48,13.731,21.461,2.417,7.72,0.9,13.196,1.373,35.199,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,"Hydro, bioenergy and other renewables",True,163.131,4.144,2.607,15.962,0.262,6.186,0.118,1.945,1.1,37.92,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Renewables,True,382.455,30.624,8.704,37.423,2.679,13.906,1.019,7.907,2.473,36.36,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Clean,True,429.155,34.637,8.78,41.992,3.032,14.181,1.042,7.931,2.522,33.044,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Fossil,True,592.831,-25.286,-4.091,58.008,-3.032,548.018,-24.739,-4.319,97.478,924.408,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Total generation,True,1021.987,9.352,0.924,100.0,0.0,562.199,-23.697,-4.045,100.0,550.104,Asia,Asia,False,False,True,False,False
+China,CHN,2026-08-01,Country or economy,Demand,True,1020.1,9.296,0.92,99.815,-0.004,,,,,,Asia,Asia,False,False,True,False,False
+EU,,2016-01-01,Region,Solar,False,2.889,,,1.123,,0.139,,,0.153,48.114,,,False,False,True,False,False
+EU,,2016-01-01,Region,Wind,False,29.756,,,11.57,,0.371,,,0.41,12.468,,,False,False,True,False,False
+EU,,2016-01-01,Region,Hydro,False,27.655,,,10.753,,0.664,,,0.733,24.01,,,False,False,True,False,False
+EU,,2016-01-01,Region,Bioenergy,False,10.091,,,3.924,,2.321,,,2.562,230.007,,,False,False,True,False,False
+EU,,2016-01-01,Region,Other renewables,False,1.513,,,0.588,,0.038,,,0.042,25.116,,,False,False,True,False,False
+EU,,2016-01-01,Region,Nuclear,False,74.666,,,29.032,,0.383,,,0.423,5.13,,,False,False,True,False,False
+EU,,2016-01-01,Region,Coal,False,56.938,,,22.139,,58.869,,,64.992,1033.914,,,False,False,True,False,False
+EU,,2016-01-01,Region,Gas,False,44.502,,,17.303,,21.37,,,23.593,480.203,,,False,False,True,False,False
+EU,,2016-01-01,Region,Other fossil,False,9.177,,,3.568,,6.424,,,7.092,700.011,,,False,False,True,False,False
+EU,,2016-01-01,Region,Net imports,False,-0.462,,,-0.18,,0.0,,,0.0,0.0,,,False,False,True,False,False
+EU,,2016-01-01,Region,Wind and solar,True,32.645,,,12.693,,0.51,,,0.563,15.623,,,False,False,True,False,False
+EU,,2016-01-01,Region,"Hydro, bioenergy and other renewables",True,39.259,,,15.265,,3.022,,,3.336,76.976,,,False,False,True,False,False
+EU,,2016-01-01,Region,Renewables,True,71.904,,,27.958,,3.532,,,3.899,49.121,,,False,False,True,False,False
+EU,,2016-01-01,Region,Clean,True,146.569,,,56.99,,3.915,,,4.322,26.711,,,False,False,True,False,False
+EU,,2016-01-01,Region,Fossil,True,110.616,,,43.01,,86.663,,,95.678,783.458,,,False,False,True,False,False
+EU,,2016-01-01,Region,Total generation,True,257.185,,,100.0,,90.578,,,100.0,352.19,,,False,False,True,False,False
+EU,,2016-01-01,Region,Demand,True,256.724,,,99.821,,,,,,,,,False,False,True,False,False
+EU,,2026-07-01,Region,Solar,False,56.744,10.856,23.658,25.238,3.903,2.724,0.521,23.65,6.023,48.005,,,False,False,True,False,False
+EU,,2026-07-01,Region,Wind,False,32.036,3.894,13.837,14.249,1.165,0.401,0.049,13.92,0.887,12.517,,,False,False,True,False,False
+EU,,2026-07-01,Region,Hydro,False,19.452,-5.237,-21.212,8.652,-2.827,0.467,-0.126,-21.248,1.033,24.008,,,False,False,True,False,False
+EU,,2026-07-01,Region,Bioenergy,False,8.249,0.805,10.814,3.669,0.208,1.897,0.185,10.806,4.195,229.967,,,False,False,True,False,False
+EU,,2026-07-01,Region,Other renewables,False,0.994,-0.149,-13.036,0.442,-0.089,0.021,-0.005,-19.231,0.046,21.127,,,False,False,True,False,False
+EU,,2026-07-01,Region,Nuclear,False,48.805,-0.992,-1.992,21.707,-1.445,0.251,-0.005,-1.953,0.555,5.143,,,False,False,True,False,False
+EU,,2026-07-01,Region,Coal,False,17.293,-0.706,-3.922,7.691,-0.677,17.795,-0.82,-4.405,39.349,1029.029,,,False,False,True,False,False
+EU,,2026-07-01,Region,Gas,False,35.254,0.942,2.745,15.68,-0.273,17.462,0.617,3.663,38.613,495.32,,,False,False,True,False,False
+EU,,2026-07-01,Region,Other fossil,False,6.007,0.337,5.944,2.672,0.036,4.205,0.236,5.946,9.298,700.017,,,False,False,True,False,False
+EU,,2026-07-01,Region,Net imports,False,-2.193,-1.223,126.082,-0.975,-0.524,0.0,0.0,,0.0,0.0,,,False,False,True,False,False
+EU,,2026-07-01,Region,Wind and solar,True,88.78,14.749,19.923,39.487,5.068,3.125,0.57,22.309,6.91,35.199,,,False,False,True,False,False
+EU,,2026-07-01,Region,"Hydro, bioenergy and other renewables",True,28.695,-4.581,-13.767,12.763,-2.708,2.386,0.055,2.36,5.276,83.15,,,False,False,True,False,False
+EU,,2026-07-01,Region,Renewables,True,117.476,10.169,9.477,52.25,2.36,5.511,0.625,12.792,12.186,46.912,,,False,False,True,False,False
+EU,,2026-07-01,Region,Clean,True,166.281,9.178,5.842,73.957,0.915,5.761,0.619,12.038,12.739,34.646,,,False,False,True,False,False
+EU,,2026-07-01,Region,Fossil,True,58.553,0.571,0.985,26.043,-0.915,39.462,0.032,0.081,87.261,673.954,,,False,False,True,False,False
+EU,,2026-07-01,Region,Total generation,True,224.834,9.748,4.532,100.0,0.0,45.223,0.651,1.461,100.0,201.14,,,False,False,True,False,False
+EU,,2026-07-01,Region,Demand,True,222.641,8.525,3.981,99.025,-0.524,,,,,,,,False,False,True,False,False
+EU,,2026-08-01,Region,Solar,False,52.039,7.775,17.565,24.263,2.587,2.498,0.373,17.553,5.392,48.002,,,False,False,True,False,False
+EU,,2026-08-01,Region,Wind,False,31.335,2.76,9.659,14.61,0.617,0.393,0.035,9.777,0.848,12.542,,,False,False,True,False,False
+EU,,2026-08-01,Region,Hydro,False,17.729,-4.8,-21.306,8.266,-2.766,0.425,-0.116,-21.442,0.917,23.972,,,False,False,True,False,False
+EU,,2026-08-01,Region,Bioenergy,False,8.446,0.665,8.546,3.938,0.128,1.943,0.153,8.547,4.194,230.05,,,False,False,True,False,False
+EU,,2026-08-01,Region,Other renewables,False,1.015,-0.037,-3.517,0.473,-0.042,0.022,-0.001,-4.348,0.047,21.675,,,False,False,True,False,False
+EU,,2026-08-01,Region,Nuclear,False,43.601,-5.783,-11.71,20.329,-3.854,0.224,-0.029,-11.462,0.484,5.137,,,False,False,True,False,False
+EU,,2026-08-01,Region,Coal,False,18.358,3.375,22.526,8.559,1.222,18.872,3.4,21.975,40.738,1027.999,,,False,False,True,False,False
+EU,,2026-08-01,Region,Gas,False,35.861,5.746,19.08,16.72,1.973,17.681,2.912,19.717,38.167,493.043,,,False,False,True,False,False
+EU,,2026-08-01,Region,Other fossil,False,6.098,0.572,10.351,2.843,0.137,4.269,0.401,10.367,9.215,700.066,,,False,False,True,False,False
+EU,,2026-08-01,Region,Net imports,False,-2.204,-0.661,42.839,-1.028,-0.272,0.0,0.0,,0.0,0.0,,,False,False,True,False,False
+EU,,2026-08-01,Region,Wind and solar,True,83.374,10.536,14.465,38.872,3.204,2.89,0.407,16.391,6.238,34.663,,,False,False,True,False,False
+EU,,2026-08-01,Region,"Hydro, bioenergy and other renewables",True,27.189,-4.173,-13.306,12.677,-2.681,2.39,0.037,1.572,5.159,87.903,,,False,False,True,False,False
+EU,,2026-08-01,Region,Renewables,True,110.563,6.362,6.106,51.549,0.522,5.28,0.444,9.181,11.398,47.756,,,False,False,True,False,False
+EU,,2026-08-01,Region,Clean,True,154.164,0.579,0.377,71.878,-3.332,5.504,0.415,8.155,11.881,35.702,,,False,False,True,False,False
+EU,,2026-08-01,Region,Fossil,True,60.317,9.693,19.147,28.122,3.332,40.822,6.713,19.681,88.12,676.791,,,False,False,True,False,False
+EU,,2026-08-01,Region,Total generation,True,214.481,10.272,5.03,100.0,0.0,46.326,7.127,18.182,100.001,215.991,,,False,False,True,False,False
+EU,,2026-08-01,Region,Demand,True,212.277,9.611,4.742,98.972,-0.273,,,,,,,,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Solar,False,0.022,,,0.021,,0.001,,,0.002,45.455,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Wind,False,0.032,,,0.031,,0.0,,,0.0,0.0,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Hydro,False,13.597,,,13.053,,0.323,,,0.659,23.755,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Bioenergy,False,0.054,,,0.052,,0.012,,,0.024,222.222,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Nuclear,False,19.25,,,18.48,,0.106,,,0.216,5.506,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Coal,False,18.732,,,17.983,,18.102,,,36.94,966.368,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Gas,False,51.172,,,49.126,,29.6,,,60.404,578.441,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Other fossil,False,1.305,,,1.253,,0.859,,,1.753,658.238,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Net imports,False,-1.335,,,-1.282,,0.0,,,0.0,0.0,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Wind and solar,True,0.054,,,0.052,,0.001,,,0.002,18.519,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,"Hydro, bioenergy and other renewables",True,13.651,,,13.105,,0.335,,,0.684,24.54,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Renewables,True,13.705,,,13.157,,0.336,,,0.686,24.517,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Clean,True,32.955,,,31.638,,0.442,,,0.902,13.412,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Fossil,True,71.209,,,68.362,,48.561,,,99.097,681.95,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Total generation,True,104.164,,,100.0,,49.003,,,99.999,470.441,Europe,Europe,False,False,True,False,False
+Russia,RUS,2019-01-01,Country or economy,Demand,True,102.829,,,98.718,,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Solar,False,0.322,0.032,11.034,0.396,0.043,0.015,0.001,7.143,0.05,46.584,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Wind,False,0.213,-0.146,-40.669,0.262,-0.175,0.002,-0.002,-50.0,0.007,9.39,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Hydro,False,19.401,1.875,10.698,23.87,2.552,0.461,0.045,10.817,1.532,23.762,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Bioenergy,False,0.049,-0.004,-7.547,0.06,-0.004,0.011,-0.001,-8.333,0.037,224.49,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Nuclear,False,18.304,0.736,4.189,22.521,1.152,0.101,0.004,4.124,0.336,5.518,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Coal,False,11.776,-0.942,-7.407,14.489,-0.981,11.394,-0.91,-7.396,37.865,967.561,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Gas,False,30.546,-2.431,-7.372,37.583,-2.529,17.669,-1.406,-7.371,58.718,578.439,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Other fossil,False,0.665,-0.054,-7.51,0.818,-0.057,0.438,-0.035,-7.4,1.456,658.647,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Net imports,False,-0.009,-0.008,800.0,-0.011,-0.01,0.0,0.0,,0.0,0.0,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Wind and solar,True,0.534,-0.116,-17.846,0.657,-0.134,0.018,0.0,0.0,0.06,33.708,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,"Hydro, bioenergy and other renewables",True,19.45,1.87,10.637,23.931,2.547,0.472,0.044,10.28,1.569,24.267,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Renewables,True,19.984,1.754,9.622,24.588,2.414,0.489,0.043,9.641,1.625,24.47,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Clean,True,38.288,2.49,6.956,47.109,3.566,0.59,0.047,8.656,1.961,15.41,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Fossil,True,42.988,-3.426,-7.381,52.891,-3.565,29.501,-2.351,-7.381,98.038,686.261,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Total generation,True,81.276,-0.936,-1.139,100.0,0.0,30.091,-2.304,-7.112,99.999,370.232,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-06-01,Country or economy,Demand,True,81.267,-0.944,-1.148,99.989,-0.009,,,,,,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Solar,False,0.323,0.015,4.87,0.38,0.03,0.015,0.0,0.0,0.049,46.44,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Wind,False,0.241,-0.059,-19.667,0.284,-0.057,0.003,0.0,0.0,0.01,12.448,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Hydro,False,20.999,3.5,20.001,24.72,4.843,0.499,0.083,19.952,1.621,23.763,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Bioenergy,False,0.051,-0.007,-12.069,0.06,-0.006,0.011,-0.002,-15.385,0.036,215.686,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Nuclear,False,19.415,0.159,0.826,22.856,0.983,0.107,0.001,0.943,0.348,5.511,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Coal,False,12.032,-1.84,-13.264,14.164,-1.593,11.641,-1.779,-13.256,37.826,967.503,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Gas,False,31.206,-4.749,-13.208,36.736,-4.105,18.051,-2.747,-13.208,58.655,578.446,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Other fossil,False,0.68,-0.106,-13.486,0.801,-0.092,0.448,-0.069,-13.346,1.456,658.824,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Net imports,False,-0.008,0.036,-81.818,-0.009,0.041,0.0,0.0,,0.0,0.0,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Wind and solar,True,0.564,-0.045,-7.389,0.664,-0.028,0.018,0.0,0.0,0.058,31.915,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,"Hydro, bioenergy and other renewables",True,21.049,3.492,19.89,24.779,4.836,0.51,0.082,19.159,1.657,24.229,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Renewables,True,21.613,3.447,18.975,25.443,4.808,0.528,0.082,18.386,1.716,24.43,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Clean,True,41.028,3.606,9.636,48.299,5.791,0.635,0.082,14.828,2.063,15.477,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Fossil,True,43.918,-6.695,-13.228,51.701,-5.791,30.14,-4.595,-13.229,97.937,686.279,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Total generation,True,84.947,-3.089,-3.509,100.001,0.0,30.775,-4.513,-12.789,100.0,362.285,Europe,Europe,False,False,True,False,False
+Russia,RUS,2026-07-01,Country or economy,Demand,True,84.938,-3.054,-3.471,99.99,0.039,,,,,,Europe,Europe,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Solar,False,0.44,,,2.059,,0.021,,,0.128,47.727,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Wind,False,0.6,,,2.808,,0.006,,,0.037,10.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Hydro,False,0.06,,,0.281,,0.001,,,0.006,16.667,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Other renewables,False,0.01,,,0.047,,0.0,,,0.0,0.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Nuclear,False,1.1,,,5.147,,0.006,,,0.037,5.455,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Coal,False,19.16,,,89.658,,16.362,,,99.791,853.967,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Gas,False,0.0,,,0.0,,0.0,,,0.0,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Other fossil,False,0.0,,,0.0,,0.0,,,0.0,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Net imports,False,-0.62,,,-2.901,,0.0,,,0.0,0.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Wind and solar,True,1.04,,,4.867,,0.027,,,0.165,25.962,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,"Hydro, bioenergy and other renewables",True,0.07,,,0.328,,0.002,,,0.012,28.571,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Renewables,True,1.11,,,5.194,,0.028,,,0.171,25.225,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Clean,True,2.21,,,10.342,,0.034,,,0.207,15.385,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Fossil,True,19.16,,,89.658,,16.362,,,99.791,853.967,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Total generation,True,21.37,,,100.0,,16.396,,,99.998,767.244,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2018-01-01,Country or economy,Demand,True,20.75,,,97.099,,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Solar,False,1.11,-0.07,-5.932,5.861,0.124,0.053,-0.003,-5.357,0.385,47.748,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Wind,False,0.87,-0.24,-21.622,4.593,-0.803,0.008,-0.003,-27.273,0.058,9.195,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Hydro,False,0.24,0.07,41.176,1.267,0.441,0.006,0.002,50.0,0.044,25.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Other renewables,False,0.03,0.0,0.0,0.158,0.012,0.001,0.0,0.0,0.007,33.333,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Nuclear,False,0.46,-0.22,-32.353,2.429,-0.877,0.002,-0.002,-50.0,0.015,4.348,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Coal,False,16.13,-0.99,-5.783,85.164,1.936,13.647,-0.844,-5.824,99.016,846.063,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Gas,False,0.0,0.0,,0.0,0.0,0.0,0.0,,0.0,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Other fossil,False,0.1,-0.18,-64.286,0.528,-0.833,0.066,-0.118,-64.13,0.479,660.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Net imports,False,0.22,0.94,-130.556,1.162,4.662,0.0,0.0,,0.0,0.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Wind and solar,True,1.98,-0.31,-13.537,10.454,-0.679,0.061,-0.006,-8.955,0.443,30.808,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,"Hydro, bioenergy and other renewables",True,0.27,0.07,35.0,1.426,0.454,0.007,0.002,40.0,0.051,25.926,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Renewables,True,2.25,-0.24,-9.639,11.88,-0.225,0.068,-0.004,-5.556,0.493,30.222,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Clean,True,2.71,-0.46,-14.511,14.308,-1.103,0.07,-0.005,-6.667,0.508,25.83,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Fossil,True,16.23,-1.17,-6.724,85.692,1.103,13.712,-0.963,-6.562,99.487,844.855,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Total generation,True,18.94,-1.63,-7.924,100.0,0.0,13.783,-0.968,-6.562,100.002,727.719,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-06-01,Country or economy,Demand,True,19.16,-0.69,-3.476,101.162,4.662,,,,,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Solar,False,1.27,0.04,3.252,6.543,0.708,0.06,0.002,3.448,0.42,47.244,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Wind,False,0.77,-0.37,-32.456,3.967,-1.441,0.007,-0.004,-36.364,0.049,9.091,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Hydro,False,0.05,-0.04,-44.444,0.258,-0.169,0.001,-0.001,-50.0,0.007,20.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Other renewables,False,0.03,0.0,0.0,0.155,0.013,0.001,0.0,0.0,0.007,33.333,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Nuclear,False,0.48,-0.22,-31.429,2.473,-0.848,0.002,-0.002,-50.0,0.014,4.167,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Coal,False,16.72,-0.97,-5.483,86.141,2.223,14.146,-0.827,-5.523,99.079,846.053,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Gas,False,0.0,0.0,,0.0,0.0,0.0,0.0,,0.0,,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Other fossil,False,0.09,-0.11,-55.0,0.464,-0.485,0.059,-0.073,-55.303,0.413,655.556,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Net imports,False,0.27,1.07,-133.75,1.391,5.186,0.0,0.0,,0.0,0.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Wind and solar,True,2.04,-0.33,-13.924,10.51,-0.733,0.068,-0.001,-1.449,0.476,33.333,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,"Hydro, bioenergy and other renewables",True,0.08,-0.04,-33.333,0.412,-0.157,0.002,-0.001,-33.333,0.014,25.0,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Renewables,True,2.12,-0.37,-14.859,10.922,-0.89,0.07,-0.003,-4.11,0.49,33.019,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Clean,True,2.6,-0.59,-18.495,13.395,-1.738,0.073,-0.003,-3.947,0.511,28.077,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Fossil,True,16.81,-1.08,-6.037,86.605,1.738,14.205,-0.9,-5.958,99.492,845.033,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Total generation,True,19.41,-1.67,-7.922,100.0,0.0,14.277,-0.904,-5.955,99.997,735.549,Africa,Africa,False,False,True,False,False
+South Africa,ZAF,2026-07-01,Country or economy,Demand,True,19.68,-0.6,-2.959,101.391,5.186,,,,,,Africa,Africa,False,False,True,False,False
+United States,USA,2001-01-01,Country or economy,Wind,False,0.389,,,0.117,,0.003,,,0.001,7.712,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Hydro,False,18.263,,,5.505,,0.438,,,0.212,23.983,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Bioenergy,False,4.4,,,1.326,,1.012,,,0.489,230.0,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Other renewables,False,1.325,,,0.399,,0.05,,,0.024,37.736,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Nuclear,False,68.707,,,20.709,,0.372,,,0.18,5.414,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Coal,False,177.287,,,53.437,,168.895,,,81.65,952.664,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Gas,False,42.389,,,12.777,,22.776,,,11.011,537.309,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Other fossil,False,19.01,,,5.73,,13.307,,,6.433,700.0,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Net imports,False,1.865,,,0.562,,0.0,,,0.0,0.0,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Wind and solar,True,0.389,,,0.117,,0.003,,,0.001,7.712,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,"Hydro, bioenergy and other renewables",True,23.988,,,7.23,,1.501,,,0.726,62.573,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Renewables,True,24.377,,,7.348,,1.504,,,0.727,61.698,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Clean,True,93.085,,,28.057,,1.876,,,0.907,20.154,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Fossil,True,238.686,,,71.943,,204.977,,,99.093,858.773,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Total generation,True,331.77,,,100.0,,206.853,,,100.0,623.483,North America,North America,False,True,True,True,False
+United States,USA,2001-01-01,Country or economy,Demand,True,333.635,,,100.562,,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Solar,False,52.839,9.558,22.084,11.292,1.796,2.536,0.459,22.099,1.341,47.995,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Wind,False,32.347,0.537,1.688,6.913,-0.066,0.275,0.004,1.476,0.145,8.502,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Hydro,False,21.528,2.032,10.423,4.601,0.323,0.517,0.049,10.47,0.273,24.015,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Bioenergy,False,3.93,-0.199,-4.82,0.84,-0.066,0.904,-0.046,-4.842,0.478,230.025,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Other renewables,False,1.438,-0.006,-0.416,0.307,-0.01,0.055,0.0,0.0,0.029,38.248,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Nuclear,False,71.411,0.63,0.89,15.261,-0.269,0.387,0.004,1.044,0.205,5.419,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Coal,False,75.682,-4.578,-5.704,16.174,-1.436,71.868,-4.366,-5.727,38.008,949.605,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Gas,False,206.447,4.456,2.206,44.119,-0.2,110.924,2.394,2.206,58.663,537.3,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Other fossil,False,2.313,-0.262,-10.175,0.494,-0.071,1.619,-0.184,-10.205,0.856,699.957,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Net imports,False,0.893,0.014,1.593,0.191,-0.002,0.0,0.0,,0.0,0.0,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Wind and solar,True,85.186,10.095,13.444,18.205,1.729,2.812,0.464,19.761,1.487,33.01,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,"Hydro, bioenergy and other renewables",True,26.896,1.826,7.284,5.748,0.247,1.475,0.003,0.204,0.78,54.841,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Renewables,True,112.083,11.922,11.903,23.953,1.977,4.287,0.466,12.196,2.267,38.248,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Clean,True,183.494,12.552,7.343,39.214,1.708,4.673,0.469,11.156,2.471,25.467,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Fossil,True,284.442,-0.385,-0.135,60.787,-1.707,184.412,-2.155,-1.155,97.528,648.329,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Total generation,True,467.936,12.167,2.67,100.0,0.0,189.085,-1.686,-0.884,100.0,404.083,North America,North America,False,True,True,True,False
+United States,USA,2026-07-01,Country or economy,Demand,True,468.828,12.18,2.667,100.191,-0.002,,,,,,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Solar,False,50.78,9.652,23.468,10.917,1.335,2.437,0.463,23.455,1.3,47.991,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Wind,False,33.906,6.599,24.166,7.289,0.927,0.289,0.057,24.569,0.154,8.524,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Hydro,False,19.482,-0.048,-0.246,4.188,-0.362,0.468,-0.001,-0.213,0.25,24.022,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Bioenergy,False,3.949,-0.088,-2.18,0.849,-0.092,0.908,-0.021,-2.26,0.485,229.932,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Other renewables,False,1.461,-0.044,-2.924,0.314,-0.037,0.056,-0.001,-1.754,0.03,38.33,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Nuclear,False,70.674,-0.031,-0.044,15.194,-1.279,0.383,0.0,0.0,0.204,5.419,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Coal,False,71.392,1.664,2.386,15.348,-0.897,67.795,1.565,2.363,36.177,949.616,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Gas,False,211.402,18.508,9.595,45.448,0.507,113.586,9.944,9.595,60.612,537.299,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Other fossil,False,2.109,-0.273,-11.461,0.453,-0.102,1.476,-0.191,-11.458,0.788,699.858,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Net imports,False,1.058,-0.043,-3.906,0.227,-0.03,0.0,0.0,,0.0,0.0,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Wind and solar,True,84.686,16.251,23.747,18.206,2.262,2.726,0.519,23.516,1.455,32.19,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,"Hydro, bioenergy and other renewables",True,24.892,-0.18,-0.718,5.351,-0.49,1.431,-0.023,-1.582,0.764,57.488,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Renewables,True,109.578,16.071,17.187,23.557,1.771,4.157,0.496,13.548,2.218,37.936,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Clean,True,180.251,16.039,9.767,38.751,0.492,4.54,0.496,12.265,2.423,25.187,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Fossil,True,284.902,19.898,7.509,61.249,-0.492,182.857,11.317,6.597,97.577,641.824,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Total generation,True,465.153,35.937,8.373,100.0,0.0,187.397,11.813,6.728,100.0,402.872,North America,North America,False,True,True,True,False
+United States,USA,2026-08-01,Country or economy,Demand,True,466.212,35.895,8.342,100.228,-0.028,,,,,,North America,North America,False,True,True,True,False

@@ -1,0 +1,18 @@
+[
+  {
+    "file": "eskom_website_terms_extract.txt",
+    "url": "https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf",
+    "fetched_at": "2026-09-29T19:05:14Z",
+    "sha256": "31f6e2530ae5e818fd73543a53b0c1c4266d5e40a7fd052a158f656857ee0da4",
+    "source_kind": "live",
+    "note": "TRIMMED by us: licence clause 2 (allowed use and licence) only. Full PDF sha256 50c41cef4e5f1732c9e1e2a6d6eac7e4d5f5b9cf33f983c8ef0143bcc5c1be26. Linked from https://www.eskom.co.za/about-eskom/website-terms-and-conditions/. Data-portal disclaimer at https://www.eskom.co.za/dataportal/disclaimer/ adds that data \"may not be exploited by the User for any purposes, including but not limited to, commercial purposes\"."
+  },
+  {
+    "file": "ntcsa_sawem_page_extract.txt",
+    "url": "https://www.ntcsa.co.za/sa-wholesale-electricity-market-sawem/",
+    "fetched_at": "2026-09-29T19:07:18Z",
+    "sha256": "68f658c16c34dd6ba4dc874b1e17d4652764e5da7c83ad5d27b9dca1acf9eca5",
+    "source_kind": "live",
+    "note": "TRIMMED by us: page text only. Evidence that the SAWEM portal is \"Coming soon\" and the page countdown (Apr 01 2026) has already elapsed, i.e. no operating day-ahead market on 2026-09-29."
+  }
+]

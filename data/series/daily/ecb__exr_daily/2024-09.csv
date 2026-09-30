@@ -1,0 +1,5 @@
+series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
+ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-09-30,2024-09-30,7.8511,CNY/EUR,CNY,,primary
+ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-09-30,2024-09-30,0.83543,GBP/EUR,GBP,,primary
+ecb:EXR:D:USD:EUR,USD,driver,,,,2024-09-30,2024-09-30,1.1196,USD/EUR,USD,,primary
+ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-09-30,2024-09-30,19.2258,ZAR/EUR,ZAR,,primary

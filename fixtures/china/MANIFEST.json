@@ -1,0 +1,34 @@
+[
+  {
+    "file": "nbs_energy_production_2026-08.html",
+    "url": "https://www.stats.gov.cn/english/PressRelease/202609/t20260916_1965338.html",
+    "fetched_at": "2026-09-29T19:12:15Z",
+    "sha256": "5be4133c446412ae78b76490474ce9c76f666fcd1b5b19672a54d31c4ebd8482",
+    "source_kind": "live",
+    "note": "Untrimmed HTML (19,020 bytes), NBS press release 2026-09-16; generation above designated size 943.8 bn kWh for Aug 2026 (text only, no table)."
+  },
+  {
+    "file": "nbs_terms_of_service.html",
+    "url": "https://www.stats.gov.cn/english/nbs/200701/t20070104_59236.html",
+    "fetched_at": "2026-09-29T19:12:36Z",
+    "sha256": "58d4c0ff784c9d187b4636808be3d2727dae4e73632d5f12ab2b8706d23affad",
+    "source_kind": "live",
+    "note": "Untrimmed HTML (20,858 bytes), NBS Terms of Service (2022-09-06): section III.1 \"You are allowed to download and use the statistical data on this website.\""
+  },
+  {
+    "file": "globalpetrolprices_terms_and_china_page_extract.txt",
+    "url": "https://www.globalpetrolprices.com/terms.php",
+    "fetched_at": "2026-09-29T19:12:52Z",
+    "sha256": "23a2d1662be33693356d5446caf4a9c10c51e966486a7e5831582f6f310a0188",
+    "source_kind": "live",
+    "note": "TRIMMED terms evidence only (no data). Licence line found: CC BY-NC-ND 3.0 (non-commercial, no derivatives), so NOT reusable for the index. China page (https://www.globalpetrolprices.com/China/electricity_prices/, fetched once, same time) was titled \"China electricity prices, December 2025\" on 2026-09-29, i.e. 9 months stale."
+  },
+  {
+    "file": "guangdong_drc_price_page_extract.txt",
+    "url": "https://drc.gd.gov.cn/spjg/content/post_846283.html",
+    "fetched_at": "2026-09-29T19:11:13Z",
+    "sha256": "ffae0ed9ea13d5b28549901367645a1c194538d92c56bf7700cf192bf7547fec",
+    "source_kind": "live",
+    "note": "TRIMMED: body and footer. Footer copyright line reads \"\u7248\u6743\u6240\u6709\uff1a\u5e7f\u4e1c\u7701\u53d1\u5c55\u548c\u6539\u9769\u59d4\u5458\u4f1a \u672a\u7ecf\u4e66\u9762\u6388\u6743\u7981\u6b62\u590d\u5236\u6216\u5efa\u7acb\u955c\u50cf\" (all rights reserved; copying or mirroring without written authorisation prohibited). Page itself is a 2014 stub pointing to an .xls of provincial tier prices (not fetched; 2014 vintage)."
+  }
+]

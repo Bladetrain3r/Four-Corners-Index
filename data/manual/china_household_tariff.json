@@ -1,0 +1,33 @@
+{
+  "note": "Dated facts read from official notices on 2026-09-29, kept as values with their source, not as mirrored files (the sites' terms do not allow mirroring; see fixtures/china/README.md). Each value traces to a source file whose SHA-256 was recorded when it was fetched; the saved extracts were removed from git after STOP-1 and remain in history at commit 7363eee (fixtures/china/MANIFEST.json).",
+  "series": [
+    {
+      "series_id": "manual:china:household:first_tier:shanghai",
+      "region": "CN", "layer": "cost", "buyer_type": "household", "unit": "CNY/kWh", "currency": "CNY",
+      "confidence": "low_confidence", "in_index": true,
+      "definition": "Shanghai first-tier residential electricity price, below 1 kV, non-time-of-use, first tier 0-3,120 kWh per household-year (administrative catalogue tariff, tax inclusive)",
+      "value": 0.617,
+      "notice": "沪发改价管(2012)020号, 2012-06-15",
+      "valid_from": "2012-06-15",
+      "last_confirmed": "2026-09-29",
+      "caveat": "The notice says the first tier is basically stable for three years; whether Shanghai re-issued it after 2012 was not checked. The value is 'per the 2012 notice'.",
+      "source_url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf",
+      "source_file": "shanghai_tiered_residential_tariff_2012_extract.txt",
+      "source_file_sha256": "29cc0b65955576cb0da45646c6286c2744b045daf53e37529966375a88083a7d"
+    },
+    {
+      "series_id": "manual:china:household:first_tier:guangdong",
+      "region": "CN", "layer": "cost", "buyer_type": "household", "unit": "CNY/kWh", "currency": "CNY",
+      "confidence": "low_confidence", "in_index": false,
+      "definition": "Guangdong (Shantou price list) first-tier residential price, 67.02 fen/kWh, effective 2021-12-01; comparison series only, history before 2021-12 not measured",
+      "value": 0.6702,
+      "notice": "Shantou residential price list effective 2021-12-01",
+      "valid_from": "2021-12-01",
+      "last_confirmed": "2026-09-29",
+      "caveat": "Comparison only. Price list notes levies separately (67.886875 fen with levies); the 67.02 fen basic price is used.",
+      "source_url": "https://www.shantou.gov.cn/attachment/0/82/82778/2192164.pdf",
+      "source_file": "guangdong_shantou_price_list_2021-12_extract.txt",
+      "source_file_sha256": "bb768c4253c20f4406c509974bda96d0a6d9822c3a797756f52b4e4f14b85751"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+ "sources": {
+  "desnz": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  },
+  "ecb": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  },
+  "eia": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  },
+  "ember": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  },
+  "eurostat": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  },
+  "worldbank": {
+   "last_good": "2026-09-30",
+   "status": "ok"
+  }
+ }
+}

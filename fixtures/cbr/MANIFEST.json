@@ -1,0 +1,10 @@
+[
+  {
+    "file": "cbr_terms_extract.txt",
+    "url": "https://www.cbr.ru/eng/user_agreement/ ; https://www.cbr.ru/eng/currency_base/daily/",
+    "fetched_at": "2026-09-29T19:04:13Z",
+    "sha256": "2fe6fe6ac9b5fda0949c8d0cd32da0bf0018513a6f6ece717c7bba5b28eff97c",
+    "note": "Text extract (selected lines, script-made) of Bank of Russia User Agreement and the daily-rates page disclaimer. Raw HTML not stored.",
+    "source_kind": "live"
+  }
+]

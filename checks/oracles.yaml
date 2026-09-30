@@ -1,0 +1,8 @@
+# Published figures used as "theirs" in G3 that are NOT saved as a fixture file (their sites' terms do not allow us to
+# keep the page). Each is a dated fact recorded from a fetched page on 2026-09-29 (SOURCES.md), with its URL.
+nea_china_consumption_2026_08:
+  value_twh: 1033.2
+  quote: "August 2026 total electricity consumption 1,033.2 bn kWh (+1.7%); NEA release relayed by Xinhua, dated 2026-09-24"
+  url: https://www.nea.gov.cn/20260924/9b291b0f1f524078855c63061fe5ced9/c.html
+  recorded: "2026-09-29"
+  recorded_in: SOURCES.md CN-3

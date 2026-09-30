@@ -1,0 +1,8 @@
+Southwest Power Pool - Terms & Conditions, Copyright section - verbatim extract
+URL: https://www.spp.org/terms-conditions/
+Fetched: 2026-09-29T19:26Z (minute precision)
+No data fixture saved for SPP: data endpoints not confirmed (portal is a JS single-page app) and commercial use needs written authorisation.
+
+All materials posted or otherwise available on this website are the exclusive copyrighted material of the author(s) or SPP. Permission is implicitly granted to copy and distribute (via computer network or printed form) in whole or in part (with appropriate citation) EXCEPT when such materials will be used, in whole or in part, within a commercial publication (printed or otherwise) or when the author(s) or SPP will be quoted in commercial materials, forums or publications. Any commercial use of these materials requires prior, express written authorization from the author(s) or a duly authorized officer of SPP.
+
+Your access to SPP’s website does not confer any license or ownership interest in either the form or content of SPP’s website, including any confidential information, proprietary information, or intellectual property of any kind or nature; SPP hereby expressly reserves such rights and property in their entirety.

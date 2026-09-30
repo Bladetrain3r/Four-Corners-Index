@@ -1,0 +1,139 @@
+# G3 tolerances. Written and committed BEFORE any cross-check is run (GATES.md G3); `git log` shows the order.
+# A tolerance may be tightened later, never loosened after a check ran without a logged reason.
+#
+# Disclosure: while scouting the oracles on 2026-09-29 I had already seen these of our-versus-theirs pairs, so the
+# tolerances below were set from the publisher's rounding and from the size of the definitional difference, not
+# from a passing margin: Eurostat EU-27 household 2025-S2 (0.2896 both), EU X_TAX 0.2059 (both); EIA July 2026 US
+# residential 18.31 and industrial 9.77 (both); World Bank vs IMF Europe gas for 2026-07 and 2026-08 (about 0.7-0.9%
+# apart); Ember vs EIA US generation for 2026-07 (about 3% apart); Ember EU demand vs Eurostat (4.1% vs inland
+# demand, 15.0% vs final consumption). Everything else had not been compared when this file was written.
+version: 1
+written: "2026-09-29"
+
+checks:
+  # ---- A badge: a figure the publisher itself states elsewhere ------------------------------------------------
+  eurostat_household_all_taxes_eu27:
+    badge: A
+    what: "EU-27 household band DC, all taxes (I_TAX), against the values Eurostat states in Statistics Explained 'Electricity price statistics'"
+    unit: EUR/kWh
+    abs: 0.0001
+    why: "Eurostat prints these to four decimals, so a match means equal to rounding."
+  eurostat_household_excl_taxes_eu27:
+    badge: A
+    what: "EU-27 household band DC excluding taxes (X_TAX) against the same article"
+    unit: EUR/kWh
+    abs: 0.0001
+    why: "As above."
+  eurostat_nonhousehold_excl_taxes_eu27_band_ic:
+    badge: A
+    what: "EU-27 non-household band IC (500-1,999 MWh/yr), excluding taxes (X_TAX), against the non-household values Eurostat states in the same article"
+    unit: EUR/kWh
+    abs: 0.0001
+    why: "As above. AMENDED after run 1 (evidence/G3-run1-red.md): I had assumed the article's non-household figure was an all-bands average (TOT_KWH); it is band IC. The four half-years then match to four decimals. The tolerance number is unchanged; the wrong premise was mine."
+  eia_us_retail_price_epm:
+    badge: A
+    what: "US residential and industrial average price, July 2026 and July 2025, against EIA Electric Power Monthly Table 5.6.A"
+    unit: USD/kWh
+    abs: 0.0001
+    why: "EPM prints cents per kWh to two decimals; 0.01 cent is 0.0001 USD/kWh."
+  eia_henry_hub_monthly_vs_daily:
+    badge: A
+    what: "EIA's own monthly Henry Hub value for 2026-08 against the mean of EIA's daily values for the same month"
+    unit: USD/MMBtu
+    abs: 0.01
+    why: "The monthly figure is published to two decimals and is an average of the daily prices."
+  ember_yearly_demand_vs_sum_of_monthly:
+    badge: A
+    gating: false          # AMENDED with Ziggy's word, 2026-09-29/30 (reports/BLOCKED-G3.md item B)
+    what: "Ember's yearly Demand for 2025 against the sum of Ember's own monthly Demand for 2025, for the five areas. INFORMATION ROW, not gating: Ember's two files differ in coverage for every area but the US (EU -6.1%, ZA -6.0%, RU -2.4%, CN -1.1%; total generation shows the same gaps)."
+    unit: TWh
+    rel: 0.01
+    why: "Recorded so the discrepancy stays visible in every run. Method rule (METHOD.md, G4): weights use Ember's yearly Demand; monthly Ember series are used only for shares and intensity, never mixed with yearly levels. The Ember gating check for the gate is the monthly-vs-daily price check."
+  ember_eu_price_monthly_vs_daily:
+    badge: A
+    what: "Ember's monthly wholesale price for 2026-06 against the mean of Ember's daily prices, for DE, FR, IT, ES, PL, NL"
+    unit: EUR/MWh
+    rel: 0.03
+    abs_floor: 2.0
+    why: "The monthly value is a load-weighted average and the daily mean is unweighted, so they differ a little; pass if within 3% or 2 EUR/MWh, whichever is larger."
+  ecb_monthly_vs_daily_mean:
+    badge: A
+    what: "ECB monthly average rate against the arithmetic mean of ECB daily rates, USD, CNY, ZAR, months 2026-06 to 2026-08"
+    unit: currency per EUR
+    rel: 0.0000001
+    why: "The ECB's monthly series is documented as the average of the observations in the period; equality is expected to floating-point rounding."
+
+  # ---- B and C: a sanity range plus a spot comparison against one independent published figure -----------------
+  worldbank_vs_imf_europe_gas:
+    badge: B
+    what: "World Bank Pink Sheet 'Natural gas, Europe' against IMF PCPS PNGASEU (both TTF-based). GATING: each of the latest 12 months within tolerance. AMENDED with Ziggy's word (reports/BLOCKED-G3.md item C): the original rule was every month 2023-09 to 2026-08; that sweep is kept as an information row naming the months outside."
+    unit: USD/MMBtu
+    rel: 0.05
+    gating_window_months: 12
+    why: "Two providers, similar but not identical benchmark definitions and revision timing. In run 1, 34 of 36 months were within 2% (median 0.64%) and only 2023-10 (8.8%) and 2023-11 (5.7%) exceeded 5%. The 12-month window was chosen after seeing which months diverge (post hoc, disclosed). Coal is deliberately not compared: the two benchmarks differ by definition."
+  ember_us_generation_vs_eia:
+    badge: B
+    what: "Ember US total generation against EIA utility-scale generation, 2026-05 to 2026-07; Ember includes an estimate of small-scale solar, so it should be at or above EIA"
+    unit: TWh
+    band_rel: [0.0, 0.08]
+    why: "Definitions differ; the expected band is Ember 0% to 8% above EIA."
+  ember_eu_demand_vs_eurostat_inland_demand:
+    badge: B
+    what: "Ember EU Demand 2025 against Eurostat nrg_cb_e inland demand (ID) 2025; Eurostat final consumption is reported alongside for information"
+    unit: TWh
+    rel: 0.06
+    why: "Both figures are provisional and the definitions may differ slightly; this check decides which Eurostat definition Ember's 'Demand' follows (open since STOP-1)."
+  ember_russia_demand_vs_so_ups:
+    badge: C
+    what: "Ember Russia Demand 2025 against SO UPS 2025 consumption of 1,177.3 bn kWh (dated fact recorded in SOURCES.md, RU-4)"
+    unit: TWh
+    rel: 0.005
+    why: "A single annual total quoted to one decimal; Russia is a low-confidence tier."
+  ember_china_demand_vs_nea:
+    badge: C
+    what: "Ember China Demand 2026-08 against the NEA monthly national electricity consumption of 1,033.2 bn kWh (dated fact recorded in SOURCES.md, CN-3)"
+    unit: TWh
+    rel: 0.03
+    why: "Different compilers and revision timing for a monthly total; 3%."
+
+  # ---- United Kingdom (added 2026-09-30, after Ziggy asked for it as weight-bearing; written BEFORE the UK checks are run) -----
+  # Oracle: Eurostat's own UK series in national currency (the UK stopped reporting after 2020-S1, so 11 semesters overlap).
+  # Nothing of our-versus-theirs for the UK had been compared when this was written; only the list of periods Eurostat holds
+  # (2015-S1 to 2020-S1) was looked at. Tax-level mapping is a HYPOTHESIS stated in advance: DESNZ household 'incl tax' includes
+  # VAT = Eurostat I_TAX, 'excl tax' = X_TAX; DESNZ non-household 'incl tax' = 'any taxes or charges relating to environmental or
+  # social policies' but not VAT = Eurostat X_VAT, 'excl tax' = X_TAX.
+  desnz_household_vs_eurostat_uk:
+    badge: A
+    gating_until: "2019-S2"   # AMENDED with Ziggy's word (reports/BLOCKED-G3b.md): 2020-S1 is an information row
+    what: "DESNZ QEP 5.6.2 Medium (2,500-4,999 kWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_204 band DC for the UK in national currency (I_TAX and X_TAX). GATING: every semester 2015-S1 to 2019-S2. 2020-S1 (the last semester Eurostat held for the UK) is an information row: excl tax differs by 0.0007 GBP/kWh; incl tax matches."
+    unit: GBP/kWh
+    abs: 0.0001
+    why: "DESNZ prints pence to five decimals, Eurostat GBP to four; 0.0001 GBP (0.01 penny) allows for Eurostat's rounding. The tolerance is unchanged. The 2020-S1 exclusion was chosen after seeing which rows failed (post hoc, disclosed); the series the Retail index uses (incl tax) matches in all eleven semesters."
+  desnz_nonhousehold_vs_eurostat_uk:
+    badge: A
+    gating_until: "2019-S2"
+    what: "DESNZ QEP 5.4.2 Medium (2,000-19,999 MWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_205 band ID for the UK in national currency (X_VAT and X_TAX). GATING: every semester 2015-S1 to 2019-S2. 2020-S1 is an information row: incl tax differs by 0.0010 GBP/kWh."
+    unit: GBP/kWh
+    abs: 0.0001
+    why: "As above. Information for the industrial layer only: the UK Retail weight uses the household series."
+
+sanity_ranges:   # inclusive plausibility bounds on every normalised point of the series; they catch unit errors (x100, x1000)
+  # AMENDED with Ziggy's word (reports/BLOCKED-G3.md item D): all-taxes keeps 0.03; the lower tax levels get 0.01 because
+  # Eurostat publishes NL household 2022-S1 at 0.0336 all taxes and 0.0278 excluding VAT (a real value, not a unit error).
+  eurostat_household_eur_per_kwh:     {series_prefix: "nrg_pc_204:", series_contains: ":I_TAX:", unit: EUR/kWh, min: 0.03, max: 0.80}
+  eurostat_household_lower_tax_levels: {series_prefix: "nrg_pc_204:", series_contains_any: [":X_VAT:", ":X_TAX:"], unit: EUR/kWh, min: 0.01, max: 0.80}
+  eurostat_nonhousehold_eur_per_kwh:  {series_prefix: "nrg_pc_205:", unit: EUR/kWh, min: 0.02, max: 0.60}
+  eia_us_retail_usd_per_kwh:          {series_prefix: "electricity/retail-sales:price:", unit: USD/kWh, min: 0.02, max: 0.50}
+  eia_henry_hub_usd_per_mmbtu:        {series_prefix: "natural-gas/pri/fut:RNGWHHD", unit: USD/MMBtu, min: 0.5, max: 40.0}
+  ember_day_ahead_monthly_eur_per_mwh: {series_prefix: "ember:monthly:day_ahead_price", unit: EUR/MWh, min: -100.0, max: 1000.0}
+  ember_day_ahead_daily_eur_per_mwh:  {series_prefix: "ember:daily:day_ahead_price", unit: EUR/MWh, min: -600.0, max: 4000.0}
+  ember_emissions_intensity:          {series_prefix: "ember:monthly:emissions_intensity", unit: gCO2e/kWh, min: 0.0, max: 1300.0}
+  ember_yearly_intensity:             {series_prefix: "ember:yearly:emissions_intensity", unit: gCO2e/kWh, min: 0.0, max: 1300.0}
+  ecb_usd_per_eur:                    {series_prefix: "ecb:EXR:", region: USD, min: 0.8, max: 1.6}
+  ecb_cny_per_eur:                    {series_prefix: "ecb:EXR:", region: CNY, min: 5.0, max: 10.0}
+  ecb_zar_per_eur:                    {series_prefix: "ecb:EXR:", region: ZAR, min: 10.0, max: 30.0}
+  worldbank_gas_usd_per_mmbtu:        {series_prefix: "worldbank:pink_sheet:natural_gas", unit: USD/MMBtu, min: 0.0, max: 100.0}
+  worldbank_coal_usd_per_t:           {series_prefix: "worldbank:pink_sheet:coal", unit: USD/t, min: 0.0, max: 600.0}
+  desnz_household_gbp_per_kwh:        {series_prefix: "desnz:qep_5.6.2:", unit: GBP/kWh, min: 0.05, max: 0.60}
+  desnz_nonhousehold_gbp_per_kwh:     {series_prefix: "desnz:qep_5.4.2:", unit: GBP/kWh, min: 0.03, max: 0.50}
+  ecb_gbp_per_eur:                    {series_prefix: "ecb:EXR:", region: GBP, min: 0.5, max: 1.1}

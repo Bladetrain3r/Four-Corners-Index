@@ -1,0 +1,212 @@
+[
+  {
+    "file": "retail_sales_route_meta.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales?api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:01:10Z",
+    "sha256": "acccf3be22e286970b02bb4d85b339d1e65d90cf5d139a31e32884dbdd6033ba",
+    "note": "Route metadata (frequencies, facets, data columns, startPeriod/endPeriod). Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "retail_sales_facet_sectorid.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales/facet/sectorid/?api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:01:43Z",
+    "sha256": "cdde8d2386b81562e129eed062b72a10b2b9b407a23114f3aac0cd8fbcf6013b",
+    "note": "Sector facet values. Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "retail_sales_us_monthly_2025-01_onwards.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=monthly&data[0]=price&data[1]=sales&facets[stateid][]=US&facets[sectorid][]=RES&facets[sectorid][]=COM&facets[sectorid][]=IND&facets[sectorid][]=ALL&start=2025-01&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:07:39Z",
+    "sha256": "303388cb53ad43eb9927a7fe4b90175bb76ab230a038db0b06fd0ffab6df10be",
+    "note": "Trimmed by request parameters: US national, sectors RES/COM/IND/ALL, start=2025-01 (76 rows of 1228 available). Price cents/kWh; sales million kWh.",
+    "source_kind": "live"
+  },
+  {
+    "file": "retail_sales_us_all_sectors_first_rows.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=monthly&data[0]=price&facets[stateid][]=US&facets[sectorid][]=ALL&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=2&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:07:43Z",
+    "sha256": "93a151f9ef669f06048f9d5865879e8aae9334a567ad021b5fed6d7662252977",
+    "note": "Trimmed: first 2 rows (period asc) to evidence history start 2001-01; response total=307 months. Carries the misleading \"incomplete return\" warning.",
+    "source_kind": "live"
+  },
+  {
+    "file": "retail_sales_us_annual_2023_onwards.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=annual&data[0]=sales&data[1]=price&facets[stateid][]=US&facets[sectorid][]=RES&facets[sectorid][]=COM&facets[sectorid][]=IND&facets[sectorid][]=ALL&facets[sectorid][]=TRA&facets[sectorid][]=OTH&start=2023&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:07:53Z",
+    "sha256": "402271cfbc6c69d311c9a066a38a9132afe2483290d2418cd60fbb7a4ac28de1",
+    "note": "Annual retail sales quantity (basket weights) and price, US, all six sectors, 2023-2025 (18 rows). Trimmed by start=2023.",
+    "source_kind": "live"
+  },
+  {
+    "file": "retail_sales_state_tx_ca_all_sectors_2026-05_onwards.json",
+    "url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=monthly&data[0]=price&facets[stateid][]=TX&facets[stateid][]=CA&facets[sectorid][]=ALL&start=2026-05&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:07:57Z",
+    "sha256": "2554f526d141dbb44e65c63ceb4910fb00f82ade0f6737223f80a92061e1e066",
+    "note": "State-level example (TX, CA), sector ALL, start=2026-05 (6 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "operational_data_route_meta.json",
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:04:27Z",
+    "sha256": "0b2b645aaa7f56c976a5ee4425f6a21c057b41bed4ffc8fa17efce6ee8efbd94",
+    "note": "Route metadata. Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "operational_data_facet_fueltypeid.json",
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/facet/fueltypeid?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:06:13Z",
+    "sha256": "779be0b8d74224f2b4f53b0bf5fc02c69d68d4bd2c405d49d5d10f8f437913bc",
+    "note": "fueltypeid facet values. Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "operational_data_facet_sectorid.json",
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/facet/sectorid?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:06:23Z",
+    "sha256": "6134442e71e157a03177e536988eb89029f683604bb01fae9dbb7d76f7ad15ee",
+    "note": "sectorid facet values (99 = All Sectors). Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "operational_data_us_generation_monthly_2026-05_onwards.json",
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?frequency=monthly&data[0]=generation&facets[location][]=US&facets[sectorid][]=99&facets[fueltypeid][]=ALL&facets[fueltypeid][]=NG&facets[fueltypeid][]=COL&facets[fueltypeid][]=NUC&facets[fueltypeid][]=WND&facets[fueltypeid][]=SUN&facets[fueltypeid][]=HYC&facets[fueltypeid][]=PET&facets[fueltypeid][]=OTH&facets[fueltypeid][]=GEO&facets[fueltypeid][]=BIO&facets[fueltypeid][]=HPS&facets[fueltypeid][]=AOR&start=2026-05&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:08:39Z",
+    "sha256": "60d3dbe0104c5442fee85062197bd120996ef503cf344acf1035ebd3de791098",
+    "note": "US, all sectors (99), 13 fuel codes, start=2026-05 (39 rows). Units thousand MWh (= GWh).",
+    "source_kind": "live"
+  },
+  {
+    "file": "operational_data_us_all_fuels_first_row.json",
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?frequency=monthly&data[0]=generation&facets[location][]=US&facets[sectorid][]=99&facets[fueltypeid][]=ALL&sort[0][column]=period&sort[0][direction]=asc&length=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:08:49Z",
+    "sha256": "a645cacc8dba405ffeb4740bfdf4eb72fd03c3bd46adb588b7df71f1ff1b1fbe",
+    "note": "Trimmed: first row (2001-01), total=307 months.",
+    "source_kind": "live"
+  },
+  {
+    "file": "rto_fuel_type_data_route_meta.json",
+    "url": "https://api.eia.gov/v2/electricity/rto/fuel-type-data?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:05:54Z",
+    "sha256": "3cc7114562d90a90981b7a318b0da7c1bdb301216b8062aa27de2c5d95215a3c",
+    "note": "Route metadata (hourly; startPeriod 2019-01-01). Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "rto_daily_fuel_type_data_route_meta.json",
+    "url": "https://api.eia.gov/v2/electricity/rto/daily-fuel-type-data?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:06:59Z",
+    "sha256": "a8bbd647522036e7fef44b89ca3f580717a49c34106d8a7e44ad20e38ecbfec4",
+    "note": "Route metadata (daily; startPeriod 2019-01-01). Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "rto_fuel_type_us48_hourly_2026-09-29.json",
+    "url": "https://api.eia.gov/v2/electricity/rto/fuel-type-data/data/?frequency=hourly&data[0]=value&facets[respondent][]=US48&start=2026-09-29T00&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:05Z",
+    "sha256": "e4492b62c8d9a325a4569983ed5351fdaef2be7ef070e9879346ef41c8e44f0a",
+    "note": "US48 (Lower 48), hourly UTC, start=2026-09-29T00 (64 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "rto_daily_fuel_type_us48_eastern_2026-09-25_onwards.json",
+    "url": "https://api.eia.gov/v2/electricity/rto/daily-fuel-type-data/data/?frequency=daily&data[0]=value&facets[respondent][]=US48&facets[timezone][]=Eastern&start=2026-09-25&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:08:57Z",
+    "sha256": "50fbf79ee4435f4c2b40e397e88d6859fb8ca70d1a0d1997de7c4458c91f8a55",
+    "note": "US48, daily, Eastern time zone, start=2026-09-25 (63 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "rto_fuel_type_us48_hourly_first_rows.json",
+    "url": "https://api.eia.gov/v2/electricity/rto/fuel-type-data/data/?frequency=hourly&data[0]=value&facets[respondent][]=US48&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=2&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:14Z",
+    "sha256": "299d43d53b15bccdcfbc889608ca68efd2c7c697f7f8292153c7a2b9501db028",
+    "note": "Trimmed: first 2 rows (history start 2019-01-01T00); total=664655 rows for US48.",
+    "source_kind": "live"
+  },
+  {
+    "file": "natural_gas_pri_fut_route_meta.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:27Z",
+    "sha256": "3dd30ba031cdf78148855e31e09f1e12c06081c9e6ef019b6150bf29be39473f",
+    "note": "Route metadata. Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "natural_gas_pri_fut_facet_series.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/facet/series?x=1&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:26Z",
+    "sha256": "94427d3bb36b7a5957b364c1c1a32b1050389eb5c31abc9ee1753d4b660fdd86",
+    "note": "series facet: RNGWHHD, RNGC1-4. Untrimmed.",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_daily_2026-09.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2026-09-01&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:40Z",
+    "sha256": "de06920bdd51a39f4e2f26f93c2c832400eb32601d33e4914948d7743de634c1",
+    "note": "RNGWHHD daily spot, start=2026-09-01 (15 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_monthly_2025-10_onwards.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?frequency=monthly&data[0]=value&facets[series][]=RNGWHHD&start=2025-10&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:46Z",
+    "sha256": "37c39b821de8b2df6c54a4213665cf2047e6573a86e3c90e8adf7b27a9774ebb",
+    "note": "RNGWHHD monthly average, start=2025-10 (11 rows).",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_daily_first_rows.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?frequency=daily&data[0]=value&facets[series][]=RNGWHHD&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=2&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:52Z",
+    "sha256": "25f10d6c85bf73fe22cb2cdee43187538a6f6d81fddbcf7033c5d68e8b205de4",
+    "note": "Trimmed: first 2 rows (1997-01-07); total=7466 daily rows.",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_monthly_first_rows.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?frequency=monthly&data[0]=value&facets[series][]=RNGWHHD&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=2&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:09:57Z",
+    "sha256": "cae1773b876170f9e7e9c0556be227c750d81cc66dd2cae5a18a82086e335d1c",
+    "note": "Trimmed: first 2 rows (1997-01); total=356 monthly rows.",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_daily_2026-01_peak_top3.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2026-01-15&end=2026-01-31&sort[0][column]=value&sort[0][direction]=desc&offset=0&length=3&api_key=REDACTED",
+    "fetched_at": "2026-09-29T19:10:01Z",
+    "sha256": "af37502e3b264d5a8ce2148f0dde8fcc1a6574e1f19453c3b42865316545e841",
+    "note": "Trimmed: top 3 daily values 2026-01-15..31 sorted by value desc (evidence for the 30.72 $/MMBtu spike).",
+    "source_kind": "live"
+  },
+  {
+    "file": "bulk_manifest_trimmed.json",
+    "url": "https://www.eia.gov/opendata/bulk/manifest.txt",
+    "fetched_at": "2026-09-29T19:10:10Z",
+    "sha256": "28bc16e2ae29632f12eed9ad1ddae226cf61467497083209d733e9682d651332",
+    "note": "Keyless. Trimmed from 28 KB to the ELEC, EBA and NG dataset entries and re-serialised as indented JSON (so the hash is of the trimmed file, not of the original download). Zips themselves NOT downloaded; HEAD 2026-09-29: ELEC.zip 293234846 bytes Last-Modified Fri 25 Sep 2026 10:09:38 GMT; EBA.zip 692669101 bytes Tue 29 Sep 2026 09:51:54 GMT; NG.zip 4425090 bytes Fri 25 Sep 2026 10:09:57 GMT.",
+    "source_kind": "live"
+  },
+  {
+    "file": "henry_hub_spot_daily_2026-08.json",
+    "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?api_key=REDACTED&frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2026-08-01&end=2026-08-31&sort[0][column]=period&sort[0][direction]=asc&offset=0&length=5000",
+    "fetched_at": "2026-09-29T20:29:40Z",
+    "sha256": "9e4585e1e525e9b073a3281dbdccf2e0c0ce15fc7ee3f0c188b86a5c8f06f017",
+    "bytes": 6306,
+    "note": "Henry Hub daily spot, 2026-08-01..2026-08-31, ascending. Untrimmed response for that window. Used by the G3 monthly-vs-daily check.",
+    "source_kind": "live"
+  },
+  {
+    "file": "epm_table_5_6_a_extract.txt",
+    "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "fetched_at": "2026-09-29T20:29:42Z",
+    "sha256": "c44401aafba566872eb722685628c595bf59b1661fa123214d7a1a72e8b2e310",
+    "bytes": 807,
+    "note": "TRIMMED: header row and the U.S. Total, Texas and California rows of the table, cells joined with ' | '. Oracle evidence for G3.",
+    "source_kind": "live"
+  }
+]

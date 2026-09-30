@@ -1,0 +1,11 @@
+PJM Data Miner page - verbatim extract (Acceptable Terms of Use section)
+URL: https://www.pjm.com/markets-and-operations/etools/data-miner-2
+Fetched: 2026-09-29T19:27Z (minute precision)
+Linked PDF 'Acceptable Terms of Use' (https://www.pjm.com/-/media/DotCom/etools/edatafeed/data-license-agreement-edata-feed-data-miner-2.pdf, 104,439 bytes) was downloaded but NOT read: no PDF text tool in this environment.
+api.pjm.com/api/v1/da_hrl_lmps returned HTTP 401 without a key. No data fixture saved.
+
+Data Miner provides members and non-members with easier, faster and more reliable access to PJM's public data. The tool features a robust architecture, monitoring of data quality, and the ability to search and filter data. Automatic queries can be received with a PJM account through the Data Miner application program interfaces (API).
+
+PJM Members may not exceed 600 data connections per minute. Non-members may not exceed 6 data connections per minute.
+
+Information and data contained in Data Miner is for internal use only and redistribution of information and or data contained in or derived from Data Miner is strictly prohibited without an active PJM Membership. A minimum level of Associate Membership is required.

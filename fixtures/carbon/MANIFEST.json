@@ -1,0 +1,10 @@
+[
+  {
+    "file": "carbon_licence_extracts.txt",
+    "url": "see file headings (ICAP, EEX, Ember, Instrat, Sandbag pages)",
+    "fetched_at": "2026-09-29T19:15:55Z",
+    "sha256": "8abe1fd2e653a9e48bdea37073d8d8ff7ec10f9355965b51026840bc46a74084",
+    "note": "Text extracts of licence/reuse statements for candidate EUA price sources; evidence for \"no free reusable source found\". No price data stored.",
+    "source_kind": "live"
+  }
+]

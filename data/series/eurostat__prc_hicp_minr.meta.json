@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-17",
+  "name": "prc_hicp_minr",
+  "raw_sha256": "8c275442c8d13e9038ddc4f203380354f421dd0e8f9c310adad6f5512294dead",
+  "retrieved_at": "2026-09-29T21:17:17Z",
+  "role": "primary",
+  "rows": 1268,
+  "since": "2015-01-01",
+  "source": "eurostat",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?geo=EU&geo=EA&geo=DE&geo=FR&geo=IT&geo=ES&geo=PL&geo=NL&coicop18=CP0451&unit=I25&unit=RCH_A&sinceTimePeriod=2020-01&format=JSON"
+}

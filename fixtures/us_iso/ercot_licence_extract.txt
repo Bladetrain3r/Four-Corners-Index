@@ -1,0 +1,5 @@
+ERCOT Website User Agreement (Terms of Use, last updated 07/20/2023) - verbatim extract
+URL: https://www.ercot.com/help/terms
+Fetched: 2026-09-29T19:22Z (minute precision)
+
+5. The information presented on this website has been compiled by or for ERCOT for general information purposes only. The publicly available contents of this website may be used, reproduced, and redistributed, provided that the contents are not modified and that you maintain all copyright and other notices contained in the contents, including this Agreement. Notwithstanding the foregoing, raw data provided in public portions of this website may be used, reproduced, and redistributed in compilations, charts, and analyses without maintaining such notices. ERCOT does not guarantee the accuracy of any such compilations, charts, or analyses.

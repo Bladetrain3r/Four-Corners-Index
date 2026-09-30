@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-08-12",
+  "name": "nrg_pc_204_c",
+  "raw_sha256": "d5fe29f0822bf8d57540ae1f54b1a7df08d646f5b401c6fec1c529dff8085a2d",
+  "retrieved_at": "2026-09-29T21:17:16Z",
+  "role": "primary",
+  "rows": 2614,
+  "since": "2015-01-01",
+  "source": "eurostat",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204_c?geo=EU27_2020&geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&currency=EUR&nrg_cons=KWH2500-4999&sinceTimePeriod=2017&format=JSON"
+}
