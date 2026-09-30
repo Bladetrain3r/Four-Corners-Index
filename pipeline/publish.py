@@ -2,7 +2,7 @@
 
     python -m pipeline.publish [--out site]
 
-Writes site/data/*.json, site/downloads/**, site/method.html. None of it is committed (see .gitignore): the deploy workflow
+Writes site/data/*.json, site/data/method.html, site/downloads/**. None of it is committed (see .gitignore): the deploy workflow
 runs this, so the repository does not grow by hundreds of kB a day. Deterministic.
 """
 from __future__ import annotations
@@ -109,7 +109,7 @@ def publish(out: Path) -> dict[str, Any]:
                                   "latest": {"retail": info["retail_months"][1], "wholesale": info["wholesale_months"][1]},
                                   "disclaimer": src["disclaimer"], "sponsor": src["sponsor"]})
     body = mdhtml.convert((ROOT / "METHOD.md").read_text())
-    (out / "method.html").write_text(f'<!-- generated from METHOD.md by pipeline.publish: do not edit -->\n<article class="prose">\n{body}\n</article>\n', encoding="utf-8")
+    (dd / "method.html").write_text(f'<!-- generated from METHOD.md by pipeline.publish: do not edit -->\n<article class="prose">\n{body}\n</article>\n', encoding="utf-8")
     return {"json": len(list(dd.glob("*.json"))), "downloads": len(files)}
 
 

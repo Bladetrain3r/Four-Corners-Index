@@ -26,7 +26,7 @@
        "industrial": {"gap": "No source found: no Russian industrial price per kWh was found, and the wholesale price is deliberately not used as a proxy."},
        "wholesale": {"gap": "No source. The ATS day-ahead pages are unreachable from the build environment."}}},
     {"id": "ZA", "name": "South Africa", "short": "South Africa", "in_basket": false, "badge": "B",
-     "badge_note": "Beside the basket, not in it. Generation data only.",
+     "badge_note": "Generation data only.",
      "cards": {
        "household": {"gap": "Dropped. Eskom's tariffs are official but its website terms bar commercial reuse and automated collection without written consent."},
        "industrial": {"gap": "Dropped, for the same reason."},

@@ -129,7 +129,7 @@ def test_the_ledger_and_manifest_downloads_are_byte_copies(site):
 
 def test_publish_is_deterministic(site, tmp_path):
     publish.publish(tmp_path)
-    for p in sorted((site / "data").glob("*.json")) + [site / "method.html"]:
+    for p in sorted((site / "data").glob("*.json")) + [site / "data" / "method.html"]:
         assert p.read_bytes() == (tmp_path / p.relative_to(site)).read_bytes(), p.name
     a = sorted(str(p.relative_to(site)) for p in (site / "downloads").rglob("*") if p.is_file())
     b = sorted(str(p.relative_to(tmp_path)) for p in (tmp_path / "downloads").rglob("*") if p.is_file())
@@ -147,7 +147,7 @@ def test_sources_json_has_attribution_for_every_source_shown(site):
 
 
 def test_method_page_is_generated_from_method_md_and_escapes_markup(site):
-    html = (site / "method.html").read_text()
+    html = (site / "data" / "method.html").read_text()
     assert "<h1" in html and "Method" in html and "Retail excluding China" in html and "<table>" in html
     assert "<script" not in html
 
