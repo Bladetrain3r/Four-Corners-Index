@@ -186,3 +186,29 @@ def test_dark_theme_is_selectable_and_persists(browser, base):
     page.wait_for_selector("footer.site")
     assert page.evaluate("document.documentElement.getAttribute('data-theme')") == "dark"
     page.close()
+
+
+def test_a_failing_source_shows_a_banner_and_its_last_good_date_on_every_page(browser, base):
+    meta_path = base[1] / "data" / "meta.json"
+    original = meta_path.read_text()
+    meta = json.loads(original)
+    assert "all 6 fetched sources" in _open(browser, base, "index.html").locator('[data-testid="health-line"]').inner_text()
+    meta["health"]["eia"] = {"status": "failed", "last_good": "2026-09-28", "failing_since": "2026-09-29", "message": "eia: forced failure (test flag --force-fail)"}
+    meta_path.write_text(json.dumps(meta))
+    try:
+        for path in ("index.html", "region.html?r=US"):
+            page = _open(browser, base, path)
+            banner = page.locator('[data-testid="health-banner"]').inner_text()
+            assert "eia" in banner and "last good 2026-09-28" in banner and "failing since 2026-09-29" in banner
+            assert "1 of 6 sources failing" in page.locator('[data-testid="health-line"]').inner_text()
+            if path == "index.html" and os.environ.get("FCI_SCREENSHOTS"):
+                SHOTS.mkdir(parents=True, exist_ok=True)
+                page.screenshot(path=str(SHOTS / "failing_source_banner.png"))  # the top of the page only
+            page.close()
+        page = _open(browser, base, "sources.html")
+        assert "Failing since 2026-09-29" in page.locator('[data-testid="health-eia"]').inner_text() and "Last good 2026-09-28" in page.locator('[data-testid="health-eia"]').inner_text()
+        assert "fetched and parsed fine" in page.locator('[data-testid="health-ecb"]').inner_text()
+        assert "kept by hand" in page.locator('[data-testid="health-shanghai"]').inner_text()
+        page.close()
+    finally:
+        meta_path.write_text(original)

@@ -1,0 +1,98 @@
+name: daily
+# One scheduled run a day: fetch every source separately, keep what changed, rebuild, record source health, commit what changed,
+# open an issue naming any failing source, then redeploy the site (which shows each source's last good date).
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+    inputs:
+      force_fail:
+        description: "Test flag: treat this source as failing (for example eia) to exercise the failure path"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore the raw snapshots (committed archive, then the monthly Release assets)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pipeline.snapshot --restore snapshots/raw_2026-09-29.tar.gz --partial
+          mkdir -p "$RUNNER_TEMP/assets"
+          for tag in $(gh release list --json tagName --jq '.[].tagName | select(startswith("raw-"))'); do
+            gh release download "$tag" --pattern 'raw_*.tar.gz' --dir "$RUNNER_TEMP/assets" || true
+          done
+          for f in "$RUNNER_TEMP"/assets/raw_*.tar.gz; do
+            [ -e "$f" ] && python -m pipeline.snapshot --restore "$f" --partial
+          done
+          git show HEAD:data/manifests/raw_snapshots.jsonl > "$RUNNER_TEMP/old_manifest.jsonl"
+      - name: Daily run
+        id: daily
+        continue-on-error: true
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          FORCE_FAIL: ${{ github.event.inputs.force_fail }}
+        run: |
+          args=(--issue-file "$RUNNER_TEMP/issue.md")
+          if [ -n "$FORCE_FAIL" ]; then args+=(--force-fail "$FORCE_FAIL"); fi
+          python -m pipeline.daily "${args[@]}"
+      - name: Verify the ledger
+        run: python ledger/verify.py ledger/index.jsonl
+      - name: Keep the new raw snapshots as a monthly Release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pipeline.snapshot --pack-new "$RUNNER_TEMP/raw_$(date -u +%Y-%m-%d).tar.gz" --since "$RUNNER_TEMP/old_manifest.jsonl"
+          for f in "$RUNNER_TEMP"/raw_*.tar.gz; do
+            [ -e "$f" ] || continue
+            tag="raw-$(date -u +%Y-%m)"
+            gh release view "$tag" > /dev/null 2>&1 || gh release create "$tag" --title "Raw snapshots $(date -u +%Y-%m)" \
+              --notes "Raw source snapshots, append-only. Every file's SHA-256 is in data/manifests/raw_snapshots.jsonl."
+            gh release upload "$tag" "$f"
+          done
+      - name: Commit what changed
+        run: |
+          git config user.name "four-corners-index[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add data ledger
+          if git diff --cached --quiet; then echo "nothing changed"; else
+            git commit -m "daily: data, ledger and source health $(date -u +%Y-%m-%d)"
+            git push
+          fi
+      - name: Open or update an issue naming the failing source
+        if: steps.daily.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="$(head -n 1 "$RUNNER_TEMP/issue.md")"
+          existing="$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then gh issue comment "$existing" --body-file "$RUNNER_TEMP/issue.md"
+          else gh issue create --title "$title" --body-file "$RUNNER_TEMP/issue.md"; fi
+      - name: Turn the run red when a source failed
+        if: steps.daily.outcome == 'failure'
+        run: exit 1
+
+  deploy:
+    needs: pipeline
+    if: ${{ !cancelled() }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

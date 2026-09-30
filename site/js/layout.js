@@ -32,6 +32,12 @@ export async function initPage(page) {
   try {
     const [src, meta] = await Promise.all([getJSON("data/sources.json"), getJSON("data/meta.json")]);
     $("#site-footer").replaceWith(footer(src, meta));
+    const failing = Object.entries(meta.health || {}).filter(([, h]) => h.status === "failed");
+    if (failing.length) {
+      main.prepend(el("div", { class: "notice", role: "status", "data-testid": "health-banner" }, el("strong", {}, "A data source is failing. "),
+        "The figures that depend on it are the last good ones: ", failing.map(([id, h]) => `${id} (last good ${h.last_good || "date not recorded"}, failing since ${h.failing_since})`).join("; "), ". ",
+        el("a", { href: "sources.html" }, "Source health")));
+    }
     return { main, src, meta, page };
   } catch (e) {
     $("#site-footer").replaceWith(el("footer", { class: "site" }, el("div", { class: "wrap" }, el("p", {}, "Attribution could not be loaded; see the Sources page and the repository."))));
@@ -47,5 +53,14 @@ function footer(src, meta) {
       el("a", { href: "https://github.com/Bladetrain3r/Four-Corners-Index" }, "Code and ledger on GitHub (MIT)")),
     el("p", {}, el("a", { href: src.sponsor.url }, "Sponsor this project"), ". ", src.sponsor.line),
     el("p", {}, src.disclaimer),
+    el("p", { class: "meta", "data-testid": "health-line" }, healthLine(meta)),
     el("p", { class: "meta" }, `Data build ${meta.published} · method version ${meta.method_doc_version} · inputs ${meta.inputs_sha256.slice(0, 12)}`)));
+}
+
+function healthLine(meta) {
+  const h = Object.values(meta.health || {});
+  if (!h.length) return "Source health: not recorded.";
+  const failing = h.filter((x) => x.status === "failed").length;
+  const last = h.map((x) => x.last_good).filter(Boolean).sort().pop();
+  return failing ? `Source health: ${failing} of ${h.length} sources failing; the rest last fetched ${last}.` : `Source health: all ${h.length} fetched sources fetched and parsed on ${last}.`;
 }

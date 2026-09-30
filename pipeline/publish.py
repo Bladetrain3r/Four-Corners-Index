@@ -19,6 +19,7 @@ from pipeline.snapshot import MANIFEST
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+HEALTH = DATA / "health.json"
 
 
 def _round(x: Any) -> Any:
@@ -88,7 +89,7 @@ def downloads(out: Path) -> list[dict[str, Any]]:
     return items
 
 
-def publish(out: Path) -> dict[str, Any]:
+def publish(out: Path, health: Path = HEALTH) -> dict[str, Any]:
     dd = out / "data"
     if dd.exists():
         shutil.rmtree(dd)
@@ -107,7 +108,8 @@ def publish(out: Path) -> dict[str, Any]:
     write_json(dd / "meta.json", {"method_doc_version": info["method_doc_version"], "headline_method_version": info["headline_method_version"],
                                   "inputs_sha256": info["inputs_sha256"], "published": info["published"], "snapshots": info["snapshots"],
                                   "latest": {"retail": info["retail_months"][1], "wholesale": info["wholesale_months"][1]},
-                                  "disclaimer": src["disclaimer"], "sponsor": src["sponsor"]})
+                                  "disclaimer": src["disclaimer"], "sponsor": src["sponsor"],
+                                  "health": json.loads(health.read_text())["sources"] if health.exists() else {}})
     body = mdhtml.convert((ROOT / "METHOD.md").read_text())
     (dd / "method.html").write_text(f'<!-- generated from METHOD.md by pipeline.publish: do not edit -->\n<article class="prose">\n{body}\n</article>\n', encoding="utf-8")
     return {"json": len(list(dd.glob("*.json"))), "downloads": len(files)}

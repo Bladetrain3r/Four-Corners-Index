@@ -169,15 +169,16 @@ def _index_csv(rows: list[dict[str, Any]], regions: tuple[str, ...]) -> str:
 
 
 def build(raw_dir: Path, out: Path, manifest: Path = snapshot.MANIFEST, manual: Path = ROOT / "data" / "manual" / "china_household_tariff.json",
-          ledger_seed: Path | None = None, published: str | None = None) -> dict[str, Any]:
-    """`ledger_seed`: an existing ledger to extend (append-only): only values that changed become new, superseding lines."""
+          ledger_seed: Path | None = None, published: str | None = None, max_month: str | None = None) -> dict[str, Any]:
+    """`ledger_seed`: an existing ledger to extend (append-only): only values that changed become new, superseding lines.
+    `max_month`: the last month to publish (the daily run sets it from the 15th-of-month rule); default: the last month with an ECB rate."""
     points, gaps, meta = _parse_all(raw_dir, manifest)
     snap_date = date.fromisoformat(max(e["retrieved_at"] for e in meta.values())[:10])
     fx_usd, fx_cny, fx_gbp = _fx(points)
     demand = _demand(points)
     id_by_country = {(p["region"], int(p["period_start"][:4])): ix.dec(p["value"]) for p in points[("eurostat", "nrg_cb_e")]
                      if p["series_id"] == "nrg_cb_e:ID:E7000" and p["region"] in registry.EU27}
-    last_fx = min(max(fx_usd), max(fx_cny), max(fx_gbp))
+    last_fx = min(max(fx_usd), max(fx_cny), max(fx_gbp), max_month or "9999-12")
     retail, retail_regions = build_retail(points, fx_usd, fx_cny, fx_gbp, demand, snap_date, manual, last_fx)
     wholesale, wholesale_regions, comp = build_wholesale(points, fx_usd, snap_date, id_by_country, last_fx)
     # series files

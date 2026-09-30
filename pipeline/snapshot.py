@@ -31,34 +31,44 @@ def _line(entry: dict[str, Any]) -> str:
     return json.dumps(entry, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n"
 
 
+def record(loaded: fetch.Loaded, raw_dir: Path, latest: dict[tuple[str, str], dict[str, Any]]) -> dict[str, Any] | None:
+    """Store one live response under raw_dir unless its bytes equal the latest snapshot's. Returns the manifest entry, or None if unchanged."""
+    req = loaded.request
+    if loaded.kind != "live":
+        raise SourceError(req.source, f"{req.name}: a snapshot must come from a live fetch, got {loaded.kind}")
+    digest = sha256_hex(loaded.raw)
+    prev = latest.get((req.source, req.name))
+    if prev and prev["sha256"] == digest:
+        return None
+    rel = f"{req.source}/{req.name}/{digest[:16]}.raw"
+    path = raw_dir / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(loaded.raw)
+    entry = {"source": req.source, "name": req.name, "url": http.redact(loaded.url), "retrieved_at": loaded.retrieved_at,
+             "sha256": digest, "bytes": len(loaded.raw), "path": rel, "role": req.role}
+    latest[(req.source, req.name)] = entry
+    return entry
+
+
+def append_manifest(manifest: Path, entries: list[dict[str, Any]]) -> None:
+    if entries:
+        manifest.parent.mkdir(parents=True, exist_ok=True)
+        with manifest.open("a") as f:
+            for e in entries:
+                f.write(_line(e))
+
+
 def take(mode: str = "live", raw_dir: Path = RAW, manifest: Path = MANIFEST, only: str | None = None) -> list[dict[str, Any]]:
     """Fetch and store. Returns the manifest lines added (empty if nothing changed)."""
-    existing = read_manifest(manifest)
-    latest = {(e["source"], e["name"]): e for e in existing}
+    latest = {(e["source"], e["name"]): e for e in read_manifest(manifest)}
     added: list[dict[str, Any]] = []
     for req in registry.REQUESTS:
         if only and req.source != only:
             continue
-        loaded = fetch.load(req, mode)
-        if loaded.kind != "live":
-            raise SourceError(req.source, f"{req.name}: a snapshot must come from a live fetch, got {loaded.kind}")
-        digest = sha256_hex(loaded.raw)
-        prev = latest.get((req.source, req.name))
-        if prev and prev["sha256"] == digest:
-            continue
-        rel = f"{req.source}/{req.name}/{digest[:16]}.raw"
-        path = raw_dir / rel
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(loaded.raw)
-        entry = {"source": req.source, "name": req.name, "url": http.redact(loaded.url), "retrieved_at": loaded.retrieved_at,
-                 "sha256": digest, "bytes": len(loaded.raw), "path": rel, "role": req.role}
-        added.append(entry)
-        latest[(req.source, req.name)] = entry
-    if added:
-        manifest.parent.mkdir(parents=True, exist_ok=True)
-        with manifest.open("a") as f:
-            for e in added:
-                f.write(_line(e))
+        entry = record(fetch.load(req, mode), raw_dir, latest)
+        if entry:
+            added.append(entry)
+    append_manifest(manifest, added)
     return added
 
 
@@ -78,9 +88,17 @@ def load_snapshots(raw_dir: Path = RAW, manifest: Path = MANIFEST) -> dict[tuple
     return out
 
 
-def archive(out_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST) -> int:
-    """One deterministic gzipped tar of every snapshot file the manifest lists (sorted, fixed mtime and owner). Returns the file count."""
-    entries = sorted({e["path"]: e for e in read_manifest(manifest)}.values(), key=lambda e: e["path"])
+def new_entries(manifest: Path, previous_manifest: Path) -> list[dict[str, Any]]:
+    """Manifest entries that are not in an earlier copy of the manifest (what a daily run added)."""
+    old = {(e["source"], e["name"], e["sha256"]) for e in read_manifest(previous_manifest)}
+    return [e for e in read_manifest(manifest) if (e["source"], e["name"], e["sha256"]) not in old]
+
+
+def archive(out_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST, entries: list[dict[str, Any]] | None = None) -> int:
+    """One deterministic gzipped tar of every snapshot file the manifest lists (sorted, fixed mtime and owner), or of `entries`. Returns the file count."""
+    if entries is None:
+        entries = list(read_manifest(manifest))
+    entries = sorted({e["path"]: e for e in entries}.values(), key=lambda e: e["path"])
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w", format=tarfile.PAX_FORMAT) as tar:
         for e in entries:
@@ -96,8 +114,10 @@ def archive(out_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST) -> i
     return len(entries)
 
 
-def restore(archive_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST) -> int:
-    """Extract the archive into raw_dir, checking every member against its manifest SHA-256. Returns the file count."""
+def restore(archive_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST, partial: bool = False) -> int:
+    """Extract the archive into raw_dir, checking every member against its manifest SHA-256. Returns the file count.
+    `partial`: the archive need not hold every manifest file (later snapshots live in other Release assets); a build still
+    refuses to run if the latest snapshot of any request is missing or altered."""
     expected = {e["path"]: e for e in read_manifest(manifest)}
     n = 0
     with tarfile.open(archive_path, mode="r:gz") as tar:
@@ -113,7 +133,7 @@ def restore(archive_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST) 
             dest.write_bytes(raw)
             n += 1
     missing = sorted(set(expected) - {m for m in expected if (raw_dir / m).is_file()})
-    if missing:
+    if missing and not partial:
         raise SourceError("snapshot", f"the archive lacks {len(missing)} snapshot files the manifest lists, first {missing[0]}")
     return n
 
@@ -124,12 +144,21 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--only")
     ap.add_argument("--archive", type=Path, help="write a deterministic tar.gz of every manifest snapshot and exit")
     ap.add_argument("--restore", type=Path, help="extract such an archive into raw_cache/, verifying every file, and exit")
+    ap.add_argument("--partial", action="store_true", help="with --restore: the archive may hold only some manifest files")
+    ap.add_argument("--pack-new", type=Path, help="write a tar.gz of the snapshots added since --since (a copy of the earlier manifest); writes nothing if none")
+    ap.add_argument("--since", type=Path, help="the earlier manifest, for --pack-new")
     args = ap.parse_args(argv)
+    if args.pack_new:
+        fresh = new_entries(MANIFEST, args.since) if args.since else []
+        if fresh:
+            archive(args.pack_new, entries=fresh)
+        print(f"{len(fresh)} new snapshot files" + (f" packed into {args.pack_new}" if fresh else ""))
+        return 0
     if args.archive:
         print(f"archived {archive(args.archive)} files to {args.archive}")
         return 0
     if args.restore:
-        print(f"restored {restore(args.restore)} files into {RAW}, all matching the manifest")
+        print(f"restored {restore(args.restore, partial=args.partial)} files into {RAW}, all matching the manifest")
         return 0
     added = take("live", only=args.only)
     for e in added:

@@ -83,3 +83,26 @@ def test_the_committed_archive_holds_exactly_the_manifests_snapshots(tmp_path):
     root = Path(__file__).resolve().parent.parent
     n = snapshot.restore(root / "snapshots" / "raw_2026-09-29.tar.gz", tmp_path)
     assert n == len({e["path"] for e in snapshot.read_manifest()})
+
+
+def test_partial_restore_and_packing_only_the_new_snapshots(tmp_path):
+    """A later daily run adds snapshots that live in another Release asset: pack them, restore each archive partially."""
+    import json
+    old = tmp_path / "old.jsonl"
+    manifest = tmp_path / "m.jsonl"
+    raw = tmp_path / "raw"
+    (raw / "s" / "a").mkdir(parents=True)
+    one, two = b"first", b"second"
+    e1 = {"source": "s", "name": "a", "sha256": sha256_hex(one), "path": "s/a/1.raw", "url": "u", "retrieved_at": "t", "bytes": 5, "role": "primary"}
+    e2 = {**e1, "sha256": sha256_hex(two), "path": "s/a/2.raw", "bytes": 6}
+    (raw / e1["path"]).write_bytes(one)
+    (raw / e2["path"]).write_bytes(two)
+    old.write_text(json.dumps(e1) + "\n")
+    manifest.write_text(json.dumps(e1) + "\n" + json.dumps(e2) + "\n")
+    fresh = snapshot.new_entries(manifest, old)
+    assert [e["path"] for e in fresh] == ["s/a/2.raw"]
+    assert snapshot.archive(tmp_path / "new.tar.gz", raw, manifest, entries=fresh) == 1
+    dest = tmp_path / "dest"
+    with pytest.raises(SourceError, match="lacks 1 snapshot"):
+        snapshot.restore(tmp_path / "new.tar.gz", dest, manifest)
+    assert snapshot.restore(tmp_path / "new.tar.gz", dest, manifest, partial=True) == 1 and (dest / e2["path"]).read_bytes() == two
