@@ -106,3 +106,32 @@ def test_partial_restore_and_packing_only_the_new_snapshots(tmp_path):
     with pytest.raises(SourceError, match="lacks 1 snapshot"):
         snapshot.restore(tmp_path / "new.tar.gz", dest, manifest)
     assert snapshot.restore(tmp_path / "new.tar.gz", dest, manifest, partial=True) == 1 and (dest / e2["path"]).read_bytes() == two
+
+
+def test_a_partial_restore_skips_members_the_manifest_does_not_list_but_a_full_one_refuses_them(tmp_path):
+    """A daily run can upload its raw files and then fail before its manifest commit lands: the asset must not break later restores."""
+    import json
+    raw = tmp_path / "raw"
+    (raw / "s" / "a").mkdir(parents=True)
+    body = b"orphan"
+    entry = {"source": "s", "name": "a", "sha256": sha256_hex(body), "path": "s/a/9.raw", "url": "u", "retrieved_at": "t", "bytes": 6, "role": "primary"}
+    (raw / entry["path"]).write_bytes(body)
+    listed = tmp_path / "listed.jsonl"
+    listed.write_text(json.dumps(entry) + "\n")
+    empty = tmp_path / "empty.jsonl"
+    empty.write_text("")
+    snapshot.archive(tmp_path / "a.tar.gz", raw, listed)
+    with pytest.raises(SourceError, match="is not in the manifest"):
+        snapshot.restore(tmp_path / "a.tar.gz", tmp_path / "o1", empty)
+    assert snapshot.restore(tmp_path / "a.tar.gz", tmp_path / "o2", empty, partial=True) == 0 and not (tmp_path / "o2" / "s").exists()
+
+
+def test_a_listed_but_missing_raw_file_is_kept_again_when_the_source_is_unchanged(tmp_path):
+    from pipeline import fetch, registry
+    req = registry.REQUESTS[0]
+    body = b"same bytes"
+    entry = {"source": req.source, "name": req.name, "sha256": sha256_hex(body), "path": f"{req.source}/{req.name}/x.raw", "url": "u", "retrieved_at": "t", "bytes": 10, "role": "primary"}
+    loaded = fetch.Loaded(req, body, "2026-10-01T00:00:00Z", "live", "u")
+    latest = {(req.source, req.name): entry}
+    assert snapshot.record(loaded, tmp_path, latest) is None  # unchanged: no new manifest line
+    assert (tmp_path / entry["path"]).read_bytes() == body  # but the file this checkout lacked is written

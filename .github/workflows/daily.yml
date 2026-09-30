@@ -58,7 +58,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python -m pipeline.snapshot --pack-new "$RUNNER_TEMP/raw_$(date -u +%Y-%m-%d).tar.gz" --since "$RUNNER_TEMP/old_manifest.jsonl"
+          python -m pipeline.snapshot --pack-new "$RUNNER_TEMP/raw_$(date -u +%Y-%m-%d)_${GITHUB_RUN_ID}.tar.gz" --since "$RUNNER_TEMP/old_manifest.jsonl"
           for f in "$RUNNER_TEMP"/raw_*.tar.gz; do
             [ -e "$f" ] || continue
             tag="raw-$(date -u +%Y-%m)"

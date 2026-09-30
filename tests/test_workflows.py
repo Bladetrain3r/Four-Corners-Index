@@ -95,3 +95,9 @@ def test_the_ledger_and_snapshot_commands_run_locally_the_way_the_workflow_runs_
     restore = subprocess.run([sys.executable, "-m", "pipeline.snapshot", "--restore", "snapshots/raw_2026-09-29.tar.gz", "--partial"],
                              cwd=ROOT, capture_output=True, text=True, check=False, env={"PATH": "/usr/bin:/bin", "HOME": str(tmp_path)})
     assert restore.returncode == 0 and "all matching the manifest" in restore.stdout
+
+
+def test_each_run_uploads_its_raw_snapshots_under_a_name_no_other_run_uses():
+    """A second run on the same day must not collide with the first one's Release asset (it did, on 2026-09-30)."""
+    pack = next(c for c in commands(load("daily")) if "--pack-new" in c)
+    assert "${GITHUB_RUN_ID}" in pack and "--clobber" not in "\n".join(commands(load("daily")))  # unique names; append-only, never overwrite

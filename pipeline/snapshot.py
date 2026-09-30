@@ -39,6 +39,10 @@ def record(loaded: fetch.Loaded, raw_dir: Path, latest: dict[tuple[str, str], di
     digest = sha256_hex(loaded.raw)
     prev = latest.get((req.source, req.name))
     if prev and prev["sha256"] == digest:
+        healed = raw_dir / prev["path"]
+        if not healed.is_file():  # the manifest lists it but this checkout lacks the file (its Release upload was lost): keep it again
+            healed.parent.mkdir(parents=True, exist_ok=True)
+            healed.write_bytes(loaded.raw)
         return None
     rel = f"{req.source}/{req.name}/{digest[:16]}.raw"
     path = raw_dir / rel
@@ -123,7 +127,11 @@ def restore(archive_path: Path, raw_dir: Path = RAW, manifest: Path = MANIFEST, 
     with tarfile.open(archive_path, mode="r:gz") as tar:
         for member in tar.getmembers():
             e = expected.get(member.name)
-            if e is None or not member.isfile() or ".." in Path(member.name).parts or Path(member.name).is_absolute():
+            if not member.isfile() or ".." in Path(member.name).parts or Path(member.name).is_absolute():
+                raise SourceError("snapshot", f"archive member {member.name!r} is not a plain file inside the archive")
+            if e is None and partial:
+                continue  # an asset uploaded by a run whose manifest commit never landed: not part of this manifest, so not restored
+            if e is None:
                 raise SourceError("snapshot", f"archive member {member.name!r} is not in the manifest")
             raw = tar.extractfile(member).read()  # type: ignore[union-attr]
             if sha256_hex(raw) != e["sha256"]:
