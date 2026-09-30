@@ -139,7 +139,7 @@ export function mount(host, spec, opts = {}) {
           while (i > 0 && (s.values[i] === null || s.values[i] === undefined)) i--;
           return { y: ys(s.values[i]), text: `${s.short || s.label} ${spec.yFmt ? spec.yFmt(s.values[i]) : num(s.values[i], 3)}`, i };
         });
-        const placed = spread(labs, 16);
+        const placed = spread(labs, 18);
         placed.forEach((l) => {
           const t = S("text", { x: w - m.r, y: l.y - 4, "text-anchor": "end", style: "fill:var(--text-primary);font-size:11px", stroke: "var(--surface-1)", "stroke-width": 3, "paint-order": "stroke" }, svg);
           t.textContent = l.text;
