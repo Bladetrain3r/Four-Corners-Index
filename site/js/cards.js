@@ -58,5 +58,5 @@ export function driversStrip(d) {
       el("p", { class: "meta" }, `${pct(i.change_12m)} in 12 months · ${monthLabel(i.latest.m)} · as of ${i.as_of}`),
       el("p", { class: "meta" }, i.source, " ", badge(i.badge)));
   });
-  return [el("div", { class: "sparks" }, sparks), notes.map((n) => el("p", { class: "notice", "data-testid": `driver-${n.id}` }, el("strong", {}, `${n.label}: no source. `), n.reason))];
+  return [el("div", { class: "sparks" }, sparks), notes.map((n) => el("p", { class: "notice", "data-testid": `driver-${n.id}` }, el("strong", {}, `${n.label}: no source. `), n.reason.startsWith(n.label + ":") ? n.reason.slice(n.label.length + 1).trim() : n.reason))];
 }

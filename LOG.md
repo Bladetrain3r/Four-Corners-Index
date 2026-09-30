@@ -152,3 +152,8 @@ decision: proceed to STOP-3 — reports/STOP-3.md; nothing is switched on: Pages
 
 ### G6 retrospective
 Rounds used: 1 (R22). What the evaluation caught that reading would not: the slow tests (only timing them showed the cost), the empty last-good date in the dry-run issue (only reading the live output showed it), and, by mutation, that the workflow test really does notice a wrong flag. What I would specify differently: the gate should say what "runs locally the way the workflow runs it" means when the workflow needs a token, a Release and a default branch (here: every command is run, every `gh` call is listed as unproved); and the cadence line should say whether a daily health record may be committed, since "no commit when nothing changed" and "show the last good date" pull against each other.
+
+### R23 — G5 fix: stray "[object HTMLParagraphElement]" above the home footer — 2026-09-30T14:00Z
+plan: fix the rendering bug Ziggy reported on the home page | eval: screenshot of the area; a browser test that no page's text contains "[object", "undefined" or "NaN" (red before the fix, green after) | expect: the two driver notices render as paragraphs
+result: green — cause: `el()` flattened children one level, and `driversStrip` returned `[div, [p, p]]`, so the inner array was stringified; `el()` now flattens fully. The test that would have caught it was missing: the earlier browser tests asserted on named elements, not on the page text. Also removed the repeated label in the two notices
+decision: proceed — pushed; STOP-3 stands

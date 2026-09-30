@@ -148,6 +148,8 @@ def test_pages_load_clean_fit_a_phone_and_touch_only_this_host(browser, base, pa
         assert page.hosts == {base[0].split("//")[1]}, (path, page.hosts)
         assert page.evaluate("document.documentElement.scrollWidth") <= width, (path, width)
         assert page.locator("h1").count() == 1 and "could not be loaded" not in page.content()
+        body = page.locator("body").inner_text()
+        assert "[object" not in body and "undefined" not in body and "NaN" not in body, path
         name = re.sub(r"[^a-z0-9]+", "_", path.lower()).strip("_")
         keep = {390: ("indices_html", "region_html_r_eu", "region_html_r_ru"), 1280: ("indices_html", "region_html_r_eu", "region_html_r_cn", "sources_html", "downloads_html")}
         if name in keep[width]:  # a curated set: full-page PNGs are large, so not every page at both widths
