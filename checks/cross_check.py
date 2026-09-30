@@ -262,7 +262,11 @@ def uk_checks() -> list[Row]:
             eu = {p["period_start"]: p["value"] for p in theirs if p["series_id"] == sid_e}
             for start in sorted(eu):
                 o = _one(ours, series_id=sid_d, period_start=start)["value"]
-                rows.append(_abs_row(check, f"{level} vs {tax} {start[:4]}-S{1 if start[5:7] == '01' else 2}", o, eu[start]))
+                label = f"{start[:4]}-S{1 if start[5:7] == '01' else 2}"
+                row = _abs_row(check, f"{level} vs {tax} {label}", o, eu[start])
+                if label > TOL["checks"][check]["gating_until"]:
+                    row.gating = False  # information row (Ziggy, BLOCKED-G3b)
+                rows.append(row)
     return rows
 
 

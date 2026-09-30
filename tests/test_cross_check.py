@@ -8,20 +8,7 @@ from checks import cross_check
 ROOT = Path(__file__).resolve().parent.parent
 ROWS = cross_check.run()  # fixture mode: offline and reproducible
 
-# Red for a real, documented reason and waiting for the owner's word (reports/BLOCKED-G3b.md). Strict xfail: shows as xfailed in every
-# run, and CI fails if one turns green without this list being updated.
-OPEN = {
-    "desnz_household_vs_eurostat_uk": "2020-S1 excl-tax differs by 0.0007 GBP/kWh, see reports/BLOCKED-G3b.md",
-    "desnz_nonhousehold_vs_eurostat_uk": "2020-S1 incl-tax differs by 0.0010 GBP/kWh, see reports/BLOCKED-G3b.md",
-}
-
-
-def _params() -> list:
-    return [pytest.param(cid, id=cid, marks=[pytest.mark.xfail(strict=True, reason=OPEN[cid])] if cid in OPEN else [])
-            for cid in cross_check.TOL["checks"]]
-
-
-@pytest.mark.parametrize("check_id", _params())
+@pytest.mark.parametrize("check_id", list(cross_check.TOL["checks"]))
 def test_cross_check_passes(check_id):
     rows = [r for r in ROWS if r.check == check_id and r.gating]
     if cross_check.TOL["checks"][check_id].get("gating") is False:
@@ -77,6 +64,10 @@ def test_the_uk_household_all_taxes_series_used_by_the_index_matches_in_every_se
     assert len(rows) == 11 and all(r.passed for r in rows)  # 2015-S1 to 2020-S1, including the last one
 
 
-def test_the_open_uk_rows_are_exactly_the_2020_s1_semester():
-    bad = [r for r in ROWS if r.check.startswith("desnz_") and r.check.endswith("_uk") and not r.passed]
-    assert sorted(r.item for r in bad) == ["excl_tax vs X_TAX 2020-S1", "incl_tax vs X_VAT 2020-S1"]
+def test_the_two_uk_2020_s1_rows_are_information_only_and_visible():
+    info = [r for r in ROWS if r.check.startswith("desnz_") and not r.gating]
+    assert sorted(r.item for r in info) == ["excl_tax vs X_TAX 2020-S1", "excl_tax vs X_TAX 2020-S1", "incl_tax vs I_TAX 2020-S1", "incl_tax vs X_VAT 2020-S1"]
+    outside = sorted(r.item for r in info if not r.passed)
+    assert outside == ["excl_tax vs X_TAX 2020-S1", "incl_tax vs X_VAT 2020-S1"]  # the two known differences stay visible
+    gating = [r for r in ROWS if r.check.startswith("desnz_") and r.gating]
+    assert len(gating) == 40 and all(r.passed for r in gating)

@@ -1,3 +1,5 @@
+# RESOLVED — Ziggy took the recommendation on 2026-09-30 ("Go with your recommendation on both"): the UK checks gate on 2015-S1 to 2019-S2 (40 rows, tolerance unchanged), 2020-S1 is an information row; UK wholesale stays out. Original report follows unchanged.
+
 # BLOCKED — G3b (UK cross-checks) — 2026-09-30
 
 **Why I stopped on the UK.** Two rows of the UK cross-check are red for a real reason that no change of mine fixes, and I do not loosen a check without Ziggy's word. Everything else went ahead (the ex-China variant, the snapshot archive), because none of it needs the UK numbers. Tolerances (`checks/tolerances.yaml`) were committed before the UK check was run (`64a189f`); the runner is `checks/cross_check.py::uk_checks`.

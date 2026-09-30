@@ -104,16 +104,18 @@ checks:
   # social policies' but not VAT = Eurostat X_VAT, 'excl tax' = X_TAX.
   desnz_household_vs_eurostat_uk:
     badge: A
-    what: "DESNZ QEP 5.6.2 Medium (2,500-4,999 kWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_204 band DC for the UK in national currency (I_TAX and X_TAX), every semester 2015-S1 to 2020-S1"
+    gating_until: "2019-S2"   # AMENDED with Ziggy's word (reports/BLOCKED-G3b.md): 2020-S1 is an information row
+    what: "DESNZ QEP 5.6.2 Medium (2,500-4,999 kWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_204 band DC for the UK in national currency (I_TAX and X_TAX). GATING: every semester 2015-S1 to 2019-S2. 2020-S1 (the last semester Eurostat held for the UK) is an information row: excl tax differs by 0.0007 GBP/kWh; incl tax matches."
     unit: GBP/kWh
     abs: 0.0001
-    why: "DESNZ prints pence to five decimals, Eurostat GBP to four; 0.0001 GBP (0.01 penny) allows for Eurostat's rounding. DESNZ says its UK series follows Eurostat's methodology and is supplied to it."
+    why: "DESNZ prints pence to five decimals, Eurostat GBP to four; 0.0001 GBP (0.01 penny) allows for Eurostat's rounding. The tolerance is unchanged. The 2020-S1 exclusion was chosen after seeing which rows failed (post hoc, disclosed); the series the Retail index uses (incl tax) matches in all eleven semesters."
   desnz_nonhousehold_vs_eurostat_uk:
     badge: A
-    what: "DESNZ QEP 5.4.2 Medium (2,000-19,999 MWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_205 band ID for the UK in national currency (X_VAT and X_TAX), every semester 2015-S1 to 2020-S1"
+    gating_until: "2019-S2"
+    what: "DESNZ QEP 5.4.2 Medium (2,000-19,999 MWh) incl tax and excl tax, United Kingdom, against Eurostat nrg_pc_205 band ID for the UK in national currency (X_VAT and X_TAX). GATING: every semester 2015-S1 to 2019-S2. 2020-S1 is an information row: incl tax differs by 0.0010 GBP/kWh."
     unit: GBP/kWh
     abs: 0.0001
-    why: "As above. Information for the industrial layer only: the UK is weight-bearing in the Retail index, which uses the household series."
+    why: "As above. Information for the industrial layer only: the UK Retail weight uses the household series."
 
 sanity_ranges:   # inclusive plausibility bounds on every normalised point of the series; they catch unit errors (x100, x1000)
   # AMENDED with Ziggy's word (reports/BLOCKED-G3.md item D): all-taxes keeps 0.03; the lower tax levels get 0.01 because
