@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-07-13",
+  "name": "wdi_pm25",
+  "raw_sha256": "6d58023d12dfab3b36fd83e79fb90c726a3ab62c69fe24a1ef12ef74860e4bd9",
+  "retrieved_at": "2026-10-01T14:16:14Z",
+  "role": "primary",
+  "rows": 204,
+  "since": "1990-01-01",
+  "source": "worldbank",
+  "url": "https://api.worldbank.org/v2/country/CHN;EUU;GBR;RUS;USA;ZAF/indicator/EN.ATM.PM25.MC.M3?format=json&per_page=500&date=1990:2030"
+}
