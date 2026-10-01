@@ -49,3 +49,14 @@ def test_rebuilding_never_appends_to_the_ledger_when_no_value_changed(raw_dir, t
     seed = LAUNCH / "ledger.jsonl"
     info = build.build(raw_dir, tmp_path, MANIFEST, ledger_seed=seed)
     assert info["_added"] == 0 and info["ledger_lines"] == len(seed.read_text().splitlines())
+
+
+def test_the_rebuilt_build_info_equals_the_launch_one_except_the_method_document_version(raw_dir, tmp_path):
+    """The pinned comparison leaves build_info.json out because it records the method document version (3 at launch, 4 since the air tab and Eskom)."""
+    import json
+    build.build(raw_dir, tmp_path, MANIFEST, ledger_seed=LAUNCH / "ledger.jsonl")
+    rebuilt = json.loads((tmp_path / "data" / "index" / "build_info.json").read_text())
+    launch = json.loads((LAUNCH / "build_info.json").read_text())
+    assert launch["method_doc_version"] == 3 and rebuilt["method_doc_version"] == build.METHOD_DOC_VERSION
+    launch["method_doc_version"] = rebuilt["method_doc_version"]
+    assert rebuilt == launch  # same inputs hash, same snapshots, same ledger lines, same months

@@ -20,7 +20,7 @@ from pipeline.common import SourceError
 
 ROOT = Path(__file__).resolve().parent.parent
 HEADLINE_METHOD_VERSION = {"retail": 2, "wholesale": 1}  # the ledger's method_version per index: the headline definition (METHOD.md v3 added the UK to Retail)
-METHOD_DOC_VERSION = 3
+METHOD_DOC_VERSION = 4
 BASKET = ("EU", "US", "CN", "RU", "GB")
 RETAIL_REGIONS = ("EU", "US", "CN", "GB")  # RU has no price (METHOD section 1)
 EXCHINA_REGIONS = ("EU", "US", "GB")  # the regions with measured prices

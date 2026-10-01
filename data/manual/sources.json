@@ -70,13 +70,19 @@
       "quote": "",
       "attribution": "Shanghai DRC notice 沪发改价管(2012)020号, read 2026-09-29.",
       "modified": "Converted to US dollars at ECB cross rates (modified data). Low confidence: whether the tariff was re-issued after 2012 is not confirmed."
+    },
+    {
+      "id": "eskom",
+      "name": "Eskom (South Africa): tariff booklet 2026/27 and 'Historical average prices and increase'",
+      "datasets": "Two figures typed in by hand: the Homelight 20A tariff for 2026/27 (including VAT) and the realised average price of 'Industrial (Excl NPA)' customers for 2025/26",
+      "licence": "Eskom website terms and conditions (September 2021): private, personal, educational and non-commercial use; small quotations that are acknowledged",
+      "licence_url": "https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf",
+      "quote": "Users may quote small and reasonable amounts of content ... subject to such a quote being placed in inverted commas and acknowledged. (Clause 2.8.)",
+      "attribution": "Source: Eskom, Tariff booklet 2026/27 and Historical average prices and increase, read 2026-09-29. \"Homelight 20A\" and \"Industrial (Excl NPA)\" are Eskom's own names.",
+      "modified": "Entered by hand as dated facts, never fetched automatically (clause 2.10 bars robots and crawlers without written consent). The Homelight figure is as published (270.30 c/kWh including 15% VAT, shown as ZAR 2.7030); the industrial figure is a realised average price, not a tariff. This project takes no payment for the data (a sponsor link exists; there is no paywall) and reads clause 2.1 as allowing it; Eskom has not been asked for written consent and does not endorse this page. If Eskom objects, the two figures are removed. A series from Eskom would need Eskom's written consent."
     }
   ],
   "not_used": [
-    {
-      "name": "Eskom (South Africa) tariffs and data portal",
-      "reason": "The website terms bar commercial use and automated collection without written consent. Dropped."
-    },
     {
       "name": "Bank of Russia exchange rates",
       "reason": "Its user agreement requires the consent of the rightsholders. No rouble rate is shown."
@@ -100,6 +106,10 @@
     {
       "name": "UK wholesale prices via Ember",
       "reason": "Ember does not say whether its UK price is converted from sterling and no independent figure exists to test it."
+    },
+    {
+      "name": "Eskom (South Africa): automated collection of tariffs, and the Eskom Data Portal",
+      "reason": "Eskom's website terms bar crawlers, robots and spiders \"for any purposes\" without written consent (clause 2.10), and the Data Portal says its data \"may not be exploited by the User for any purposes, including but not limited to, commercial purposes\". So nothing is fetched from Eskom automatically; only the two hand-entered figures listed under sources used are shown."
     }
   ],
   "sponsor": {

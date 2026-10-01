@@ -278,3 +278,20 @@ def test_air_tab_without_data_says_so_and_still_explains_what_it_is(browser, bas
         page.close()
     finally:
         air_path.write_text(original)
+
+
+def test_south_africa_shows_the_two_eskom_figures_with_their_caveats_and_the_sources_page_states_the_terms(browser, base):
+    page = _open(browser, base, "index.html")
+    hh, ind, wh = (page.locator(f'[data-testid="ZA-{k}"]') for k in ("household", "industrial", "wholesale"))
+    assert hh.get_attribute("data-status") == "value" and ind.get_attribute("data-status") == "value" and wh.get_attribute("data-status") == "gap"
+    assert "tariff year 2026/27" in hh.inner_text() and "low confidence" in hh.inner_text() and "municipal tariff" in hh.inner_text() and "ZAR" in hh.inner_text()
+    assert "financial year 2025/26" in ind.inner_text() and "realised average price" in ind.inner_text()
+    assert hh.locator("a").get_attribute("href").startswith("https://www.eskom.co.za/")
+    page.get_by_role("radio", name="Rand").check()
+    assert hh.locator(".v").inner_text().startswith("2.70")  # in rand the native figure shows as published
+    page.close()
+    src = _open(browser, base, "sources.html")
+    card = src.locator('[data-testid="source-eskom"]').inner_text()
+    assert "never fetched automatically" in card and "inverted commas and acknowledged" in card and "If Eskom objects" in card
+    assert "clause 2.10" in src.locator("#sources-not-used").inner_text()
+    src.close()
