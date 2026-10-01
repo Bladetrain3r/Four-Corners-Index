@@ -104,14 +104,26 @@ def test_ledger_chain_is_intact_and_latest_lines_match_the_tables(retail, wholes
 
 def test_the_uk_revision_is_new_superseding_lines_and_the_v1_lines_are_untouched(retail, wholesale):
     lines = ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())
-    v1 = [ln for ln in lines if ln["method_version"] == 1]
-    v2 = [ln for ln in lines if ln["method_version"] == 2]
-    assert len(v1) == len(retail) + len(wholesale) and len(v2) == len(retail)  # wholesale was not revised
-    assert all(ln["index"] == "retail" and "supersedes" in ln and ln["composition"] == ["CN", "EU", "GB", "US"] for ln in v2)
     by_hash = {ln["hash"]: ln for ln in lines}
+    v1 = [ln for ln in lines if ln["method_version"] == 1]  # all of Wholesale, and Retail as launched
+    v2 = [ln for ln in lines if ln["method_version"] == 2]
+    assert all(ln["index"] == "retail" for ln in v2)  # wholesale is still at headline version 1
+    # (a) the restatement when the UK joined (METHOD v3): one line per launch month, each superseding that month's v1 line
+    restated = [ln for ln in v2 if "supersedes" in ln and by_hash[ln["supersedes"]]["method_version"] == 1]
+    assert len(restated) == 140 and {ln["published"] for ln in restated} == {"2026-09-30"}
+    assert all(ln["composition"] == ["CN", "EU", "GB", "US"] for ln in restated)
     assert all(by_hash[ln["supersedes"]]["index"] == "retail" and by_hash[ln["supersedes"]]["month"] == ln["month"]
-               and by_hash[ln["supersedes"]]["method_version"] == 1 and by_hash[ln["supersedes"]]["composition"] == ["CN", "EU", "US"] for ln in v2)
-    assert all(ln.get("backfill") is True for ln in v1) and "backfill" not in v2[0]
+               and by_hash[ln["supersedes"]]["composition"] == ["CN", "EU", "US"] for ln in restated)
+    # (b) everything after launch is either a new month (no supersedes) or a revision of the same month's latest line (for example provisional to final)
+    later = [ln for ln in v2 if ln not in restated]
+    for ln in later:
+        if "supersedes" in ln:
+            old = by_hash[ln["supersedes"]]
+            assert old["method_version"] == 2 and (old["index"], old["month"]) == (ln["index"], ln["month"]) and old["published"] <= ln["published"]
+    # (c) the launch v1 lines are exactly as they were: 280 backfill lines, never edited
+    launch = ledger.loads((ROOT / "snapshots" / "launch" / "ledger.jsonl").read_text())
+    assert lines[:len(launch)] == launch and len(launch) == 420
+    assert all(ln.get("backfill") is True for ln in v1[:280]) and "backfill" not in restated[0]
 
 
 def test_method_thresholds_match_the_code_and_every_big_move_is_explained():
