@@ -1,7 +1,7 @@
 // Header, navigation, theme toggle and footer shared by every page.
 import { el, getJSON, store, $ } from "./util.js";
 
-const NAV = [["index.html", "Overview"], ["indices.html", "The indices"], ["region.html?r=EU", "Regions", "region.html"], ["method.html", "Method"], ["sources.html", "Sources"], ["downloads.html", "Downloads"]];
+const NAV = [["index.html", "Overview"], ["indices.html", "The indices"], ["region.html?r=EU", "Regions", "region.html"], ["air.html", "Air quality"], ["method.html", "Method"], ["sources.html", "Sources"], ["downloads.html", "Downloads"]];
 const THEMES = [["auto", "Theme: auto"], ["light", "Theme: light"], ["dark", "Theme: dark"]];
 
 function applyTheme(t) {

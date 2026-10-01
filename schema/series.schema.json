@@ -35,7 +35,8 @@
       "enum": [
         "cost",
         "mix",
-        "driver"
+        "driver",
+        "air"
       ]
     },
     "buyer_type": {

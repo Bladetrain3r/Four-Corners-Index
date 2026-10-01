@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CHROMIUM = (glob.glob("/opt/pw-browsers/chromium-*/chrome-linux/chrome") or [None])[0] or os.environ.get("CHROMIUM_PATH")
 pytestmark = pytest.mark.skipif(not CHROMIUM or not Path(CHROMIUM).exists(), reason="no Chromium available")
 SHOTS = ROOT / "evidence" / "G5"
-PAGES = ["index.html", "indices.html", "region.html?r=EU", "region.html?r=CN", "region.html?r=RU", "method.html", "sources.html", "downloads.html"]
+PAGES = ["index.html", "indices.html", "air.html", "region.html?r=EU", "region.html?r=CN", "region.html?r=RU", "method.html", "sources.html", "downloads.html"]
 
 
 @pytest.fixture(scope="module")
@@ -214,3 +214,67 @@ def test_a_failing_source_shows_a_banner_and_its_last_good_date_on_every_page(br
         page.close()
     finally:
         meta_path.write_text(original)
+
+
+def _air_doc_from_fixture(tmp_path):
+    """The air.json the daily run's data would give, built from the real-response fixture."""
+    import csv
+
+    from pipeline import site_air, site_data
+    from tests.test_site_air import write_series_from_fixture
+    write_series_from_fixture(tmp_path)
+    real_rows, real_meta = site_data.series_rows, site_data.meta
+    site_data.series_rows = lambda n: list(csv.DictReader((tmp_path / "data" / "series" / f"{n}.csv").open(encoding="utf-8"))) if n == site_air.SERIES else real_rows(n)
+    site_data.meta = lambda n: json.loads((tmp_path / "data" / "series" / f"{n}.meta.json").read_text()) if n == site_air.SERIES else real_meta(n)
+    try:
+        return site_air.air_doc()
+    finally:
+        site_data.series_rows, site_data.meta = real_rows, real_meta
+
+
+def test_air_tab_shows_each_value_with_year_source_licence_guideline_and_a_table(browser, base, tmp_path):
+    air_path = base[1] / "data" / "air.json"
+    original = air_path.read_text()
+    doc = _air_doc_from_fixture(tmp_path)
+    air_path.write_text(json.dumps(doc))
+    try:
+        for width in (1280, 390):
+            page = _open(browser, base, "air.html", width)
+            for r in doc["regions"]:
+                card = page.locator(f'[data-testid="air-{r["id"]}"]')
+                assert card.locator(f'[data-testid="air-{r["id"]}-value"]').inner_text().startswith(f"{r['latest']['value']:.1f}")
+                text = card.inner_text()
+                assert str(r["latest"]["year"]) in text and "CC BY-4.0" in text and "× the WHO guideline" in text and "Quality B" in text and doc["as_of"] in text
+            vals = [float(page.locator(f'[data-testid="air-row-{r["id"]}"] td').first.inner_text()) for r in sorted(doc["regions"], key=lambda r: -r["latest"]["value"])]
+            assert vals == sorted(vals, reverse=True) and len(vals) == 6
+            assert "image table" in page.locator('[data-testid="air-guideline-note"]').inner_text() and "not an index" in page.locator('[data-testid="air-method"]').inner_text() + page.locator("p.lede").inner_text()
+            page.get_by_role("button", name="View as table").click()
+            assert page.locator(".chartcard table tbody tr").count() == len(doc["regions"][0]["series"])
+            assert page.errors == [] and page.evaluate("document.documentElement.scrollWidth") <= width
+            if width == 1280 and os.environ.get("FCI_SCREENSHOTS"):
+                _shot(page, "air_desktop.png")
+            if width == 390 and os.environ.get("FCI_SCREENSHOTS"):
+                _shot(page, "air_phone.png")
+            page.close()
+    finally:
+        air_path.write_text(original)
+
+
+def test_air_tab_without_data_says_so_and_still_explains_what_it_is(browser, base):
+    air_path = base[1] / "data" / "air.json"
+    original = air_path.read_text()
+    from pipeline import site_air
+    from tests.test_site_air import site_data
+    real = site_data.series_rows
+    site_data.series_rows = lambda n: (_ for _ in ()).throw(FileNotFoundError(n)) if n == site_air.SERIES else real(n)
+    try:
+        air_path.write_text(json.dumps(site_air.air_doc()))
+    finally:
+        site_data.series_rows = real
+    try:
+        page = _open(browser, base, "air.html")
+        assert "No data yet" in page.locator('[data-testid="air-not-yet"]').inner_text() and page.locator('[data-testid="air-method"]').count() == 1
+        assert page.locator("#air-cards").count() == 0 and page.errors == []
+        page.close()
+    finally:
+        air_path.write_text(original)

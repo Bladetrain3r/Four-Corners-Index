@@ -4,6 +4,7 @@ Never puts a key in an exception, a log line or a recorded URL: `redact` runs on
 """
 from __future__ import annotations
 
+import http.client
 import os
 import re
 import time
@@ -57,7 +58,7 @@ def get(source: str, url: str, *, headers: dict[str, str] | None = None, retries
         _last_call[host] = time.monotonic()
         try:
             status, body, resp_headers = opener(url, hdrs, timeout)
-        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as exc:
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError, http.client.HTTPException) as exc:  # HTTPException: a body cut off mid-download
             last = f"network error {type(exc).__name__}: {redact(str(exc))}"
         else:
             if status == 200:

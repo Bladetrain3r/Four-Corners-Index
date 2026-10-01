@@ -84,6 +84,10 @@ def fetch_all(today: date, raw_dir: Path, manifest: Path, *, mode: str = "live",
             bad.add(req.source)
             failures.setdefault(req.source, []).append(_redact(f"{req.name}: {e}"))
             continue
+        except Exception as e:  # noqa: BLE001  one source's unexpected error is that source's failure, never the end of the run
+            bad.add(req.source)
+            failures.setdefault(req.source, []).append(_redact(f"{req.name}: unexpected {type(e).__name__}: {e}"))
+            continue
         if entry:
             added.append(entry)
     snapshot.append_manifest(manifest, added)

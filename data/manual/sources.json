@@ -1,51 +1,110 @@
 {
   "note": "Attribution and reuse terms for every source shown on the site. Quotes are the sentences read on the publisher's page on 2026-09-29 (SOURCES.md has the URLs and the surrounding text). 'modified' says what this project changed, as the licences ask.",
   "used": [
-    {"id": "eurostat", "name": "Eurostat", "datasets": "nrg_pc_204 (household prices), nrg_pc_205 (non-household prices), nrg_pc_204_c (price components), nrg_cb_e (electricity supply and consumption, used for wholesale weights)",
-     "licence": "Eurostat copyright notice", "licence_url": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
-     "quote": "Reuse of statistical data, metadata, publications, and other dissemination tools published on this website for commercial or non-commercial purposes is authorised provided the source is acknowledged.",
-     "attribution": "Source: Eurostat (dataset codes as listed), accessed 2026-09-29.",
-     "modified": "Prices are shown as published; USD figures are converted at ECB monthly average rates (modified data). A disclaimer of Eurostat's non-responsibility applies to our conversions and aggregation."},
-    {"id": "eia", "name": "U.S. Energy Information Administration (EIA)", "datasets": "Electric Power Monthly and API v2: retail-sales (price by sector), natural-gas prices (Henry Hub spot)",
-     "licence": "U.S. government work, public domain; EIA reuse policy", "licence_url": "https://www.eia.gov/about/copyrights_reuse.php",
-     "quote": "U.S. government publications are in the public domain and are not subject to copyright protection.",
-     "attribution": "Source: U.S. Energy Information Administration.",
-     "modified": "Retail prices are converted from cents to dollars per kWh; nothing else is changed. This is not an EIA product and EIA does not endorse it."},
-    {"id": "ember", "name": "Ember", "datasets": "Monthly Electricity Data (generation by source, demand, emissions intensity), Yearly Electricity Data (demand for weights), European Wholesale Electricity Price Data (day-ahead prices, from ENTSO-E)",
-     "licence": "Creative Commons Attribution 4.0 (CC-BY-4.0)", "licence_url": "https://ember-energy.org/creative-commons/",
-     "quote": "All content is released under a Creative Commons Attribution Licence (CC-BY-4.0).",
-     "attribution": "Source: Ember (ember-energy.org), CC-BY-4.0.",
-     "modified": "Country prices are aggregated to an EU-27 demand-weighted average and converted to US dollars at ECB rates; generation shares are computed from Ember's generation figures."},
-    {"id": "ecb", "name": "European Central Bank", "datasets": "Euro foreign exchange reference rates (monthly and daily averages for USD, CNY, ZAR, GBP)",
-     "licence": "ECB disclaimer and copyright: free use with citation", "licence_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-     "quote": "When such information is distributed or reproduced, it must appear accurately and the ECB must be cited as the source.",
-     "attribution": "Source: European Central Bank, euro foreign exchange reference rates.",
-     "modified": "Monthly rates are the ECB's own averages. Cross rates (for example CNY per USD) and every conversion into US dollars, euro or rand are calculated by this project and are modified data, as the ECB's terms require us to say."},
-    {"id": "worldbank", "name": "The World Bank", "datasets": "Commodity Price Data (The Pink Sheet): natural gas (Europe TTF, US), coal (Australia, South Africa)",
-     "licence": "Creative Commons Attribution 4.0 (CC BY 4.0), with the World Bank's additional terms", "licence_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
-     "quote": "Unless specifically labeled otherwise, these Datasets are provided to you under a Creative Commons Attribution 4.0 International License (CC BY 4.0), with the additional terms below.",
-     "attribution": "The World Bank: Commodity Price Data (The Pink Sheet): Bloomberg, World Gas Intelligence, Coal Week.",
-     "modified": "Shown as published (nominal US dollars). The latest months can be revised in the next monthly update."},
-    {"id": "desnz", "name": "Department for Energy Security and Net Zero (DESNZ), United Kingdom", "datasets": "Quarterly Energy Prices tables 5.6.2 (household) and 5.4.2 (non-household), United Kingdom column",
-     "licence": "Open Government Licence v3.0", "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-     "quote": "All content is available under the Open Government Licence v3.0, except where otherwise stated",
-     "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
-     "modified": "Pence per kWh are converted to pounds and to US dollars at ECB rates (modified data)."},
-    {"id": "shanghai", "name": "Shanghai Municipal Development and Reform Commission", "datasets": "Residential electricity price notice 沪发改价管(2012)020号 (first-tier tariff)",
-     "licence": "No licence stated; the figure is a published administrative price, cited with its link", "licence_url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf",
-     "quote": "",
-     "attribution": "Shanghai DRC notice 沪发改价管(2012)020号, read 2026-09-29.",
-     "modified": "Converted to US dollars at ECB cross rates (modified data). Low confidence: whether the tariff was re-issued after 2012 is not confirmed."}
+    {
+      "id": "eurostat",
+      "name": "Eurostat",
+      "datasets": "nrg_pc_204 (household prices), nrg_pc_205 (non-household prices), nrg_pc_204_c (price components), nrg_cb_e (electricity supply and consumption, used for wholesale weights)",
+      "licence": "Eurostat copyright notice",
+      "licence_url": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "quote": "Reuse of statistical data, metadata, publications, and other dissemination tools published on this website for commercial or non-commercial purposes is authorised provided the source is acknowledged.",
+      "attribution": "Source: Eurostat (dataset codes as listed), accessed 2026-09-29.",
+      "modified": "Prices are shown as published; USD figures are converted at ECB monthly average rates (modified data). A disclaimer of Eurostat's non-responsibility applies to our conversions and aggregation."
+    },
+    {
+      "id": "eia",
+      "name": "U.S. Energy Information Administration (EIA)",
+      "datasets": "Electric Power Monthly and API v2: retail-sales (price by sector), natural-gas prices (Henry Hub spot)",
+      "licence": "U.S. government work, public domain; EIA reuse policy",
+      "licence_url": "https://www.eia.gov/about/copyrights_reuse.php",
+      "quote": "U.S. government publications are in the public domain and are not subject to copyright protection.",
+      "attribution": "Source: U.S. Energy Information Administration.",
+      "modified": "Retail prices are converted from cents to dollars per kWh; nothing else is changed. This is not an EIA product and EIA does not endorse it."
+    },
+    {
+      "id": "ember",
+      "name": "Ember",
+      "datasets": "Monthly Electricity Data (generation by source, demand, emissions intensity), Yearly Electricity Data (demand for weights), European Wholesale Electricity Price Data (day-ahead prices, from ENTSO-E)",
+      "licence": "Creative Commons Attribution 4.0 (CC-BY-4.0)",
+      "licence_url": "https://ember-energy.org/creative-commons/",
+      "quote": "All content is released under a Creative Commons Attribution Licence (CC-BY-4.0).",
+      "attribution": "Source: Ember (ember-energy.org), CC-BY-4.0.",
+      "modified": "Country prices are aggregated to an EU-27 demand-weighted average and converted to US dollars at ECB rates; generation shares are computed from Ember's generation figures."
+    },
+    {
+      "id": "ecb",
+      "name": "European Central Bank",
+      "datasets": "Euro foreign exchange reference rates (monthly and daily averages for USD, CNY, ZAR, GBP)",
+      "licence": "ECB disclaimer and copyright: free use with citation",
+      "licence_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+      "quote": "When such information is distributed or reproduced, it must appear accurately and the ECB must be cited as the source.",
+      "attribution": "Source: European Central Bank, euro foreign exchange reference rates.",
+      "modified": "Monthly rates are the ECB's own averages. Cross rates (for example CNY per USD) and every conversion into US dollars, euro or rand are calculated by this project and are modified data, as the ECB's terms require us to say."
+    },
+    {
+      "id": "worldbank",
+      "name": "The World Bank",
+      "datasets": "Commodity Price Data (The Pink Sheet): natural gas (Europe TTF, US), coal (Australia, South Africa); World Development Indicators: PM2.5 air pollution, mean annual exposure (EN.ATM.PM25.MC.M3)",
+      "licence": "Creative Commons Attribution 4.0 (CC BY 4.0), with the World Bank's additional terms",
+      "licence_url": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+      "quote": "Unless specifically labeled otherwise, these Datasets are provided to you under a Creative Commons Attribution 4.0 International License (CC BY 4.0), with the additional terms below.",
+      "attribution": "The World Bank: Commodity Price Data (The Pink Sheet): Bloomberg, World Gas Intelligence, Coal Week. The World Bank: World Development Indicators, PM2.5 air pollution, mean annual exposure (EN.ATM.PM25.MC.M3), from the Institute for Health Metrics and Evaluation (IHME) Global Burden of Disease 2023 air pollution exposure estimates.",
+      "modified": "Shown as published (nominal US dollars for prices; µg/m³ for PM2.5). The latest price months can be revised in the next monthly update. The PM2.5 series is the World Bank's republication of IHME's estimates, labelled CC BY-4.0 on its indicator page (read 2026-10-01); IHME's own terms were not readable from the build environment. If IHME or the World Bank objects, the series is removed."
+    },
+    {
+      "id": "desnz",
+      "name": "Department for Energy Security and Net Zero (DESNZ), United Kingdom",
+      "datasets": "Quarterly Energy Prices tables 5.6.2 (household) and 5.4.2 (non-household), United Kingdom column",
+      "licence": "Open Government Licence v3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "quote": "All content is available under the Open Government Licence v3.0, except where otherwise stated",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "modified": "Pence per kWh are converted to pounds and to US dollars at ECB rates (modified data)."
+    },
+    {
+      "id": "shanghai",
+      "name": "Shanghai Municipal Development and Reform Commission",
+      "datasets": "Residential electricity price notice 沪发改价管(2012)020号 (first-tier tariff)",
+      "licence": "No licence stated; the figure is a published administrative price, cited with its link",
+      "licence_url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf",
+      "quote": "",
+      "attribution": "Shanghai DRC notice 沪发改价管(2012)020号, read 2026-09-29.",
+      "modified": "Converted to US dollars at ECB cross rates (modified data). Low confidence: whether the tariff was re-issued after 2012 is not confirmed."
+    }
   ],
   "not_used": [
-    {"name": "Eskom (South Africa) tariffs and data portal", "reason": "The website terms bar commercial use and automated collection without written consent. Dropped."},
-    {"name": "Bank of Russia exchange rates", "reason": "Its user agreement requires the consent of the rightsholders. No rouble rate is shown."},
-    {"name": "Rosstat and ATS (Russia)", "reason": "Unreachable from the build environment (certificate chain not trusted, connection reset). Not bypassed."},
-    {"name": "EU carbon price (EUA)", "reason": "No free, reusable source. EEX auction files are downloadable but not open-licensed."},
-    {"name": "US hub and ISO wholesale prices", "reason": "EIA's hub files are ICE data republished with permission; only CAISO and ERCOT allow reuse and neither has history back to 2015; NYISO and MISO grant no licence; ISO-NE, PJM and SPP restrict redistribution."},
-    {"name": "GlobalPetrolPrices", "reason": "Licensed CC BY-NC-ND: no commercial use, no derivatives."},
-    {"name": "UK wholesale prices via Ember", "reason": "Ember does not say whether its UK price is converted from sterling and no independent figure exists to test it."}
+    {
+      "name": "Eskom (South Africa) tariffs and data portal",
+      "reason": "The website terms bar commercial use and automated collection without written consent. Dropped."
+    },
+    {
+      "name": "Bank of Russia exchange rates",
+      "reason": "Its user agreement requires the consent of the rightsholders. No rouble rate is shown."
+    },
+    {
+      "name": "Rosstat and ATS (Russia)",
+      "reason": "Unreachable from the build environment (certificate chain not trusted, connection reset). Not bypassed."
+    },
+    {
+      "name": "EU carbon price (EUA)",
+      "reason": "No free, reusable source. EEX auction files are downloadable but not open-licensed."
+    },
+    {
+      "name": "US hub and ISO wholesale prices",
+      "reason": "EIA's hub files are ICE data republished with permission; only CAISO and ERCOT allow reuse and neither has history back to 2015; NYISO and MISO grant no licence; ISO-NE, PJM and SPP restrict redistribution."
+    },
+    {
+      "name": "GlobalPetrolPrices",
+      "reason": "Licensed CC BY-NC-ND: no commercial use, no derivatives."
+    },
+    {
+      "name": "UK wholesale prices via Ember",
+      "reason": "Ember does not say whether its UK price is converted from sterling and no independent figure exists to test it."
+    }
   ],
-  "sponsor": {"url": "https://github.com/sponsors/Bladetrain3r", "line": "There is no paywall, no gated data, and no sponsor influence on the numbers or the method."},
+  "sponsor": {
+    "url": "https://github.com/sponsors/Bladetrain3r",
+    "line": "There is no paywall, no gated data, and no sponsor influence on the numbers or the method."
+  },
   "disclaimer": "Not a coin, not a forecast, not advice. Nominal prices in the currency of the time, converted at each period's exchange rate."
 }

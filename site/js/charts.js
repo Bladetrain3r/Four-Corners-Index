@@ -23,9 +23,13 @@ export function niceTicks(lo, hi, n = 5) {
   return ticks;
 }
 
-function spread(labels, minGap) {
+function spread(labels, minGap, maxY = Infinity) {
   const s = labels.slice().sort((a, b) => a.y - b.y);
   for (let i = 1; i < s.length; i++) if (s[i].y - s[i - 1].y < minGap) s[i].y = s[i - 1].y + minGap;
+  if (s.length && s[s.length - 1].y > maxY) {  // never run into the axis labels: push the stack back up from the bottom
+    s[s.length - 1].y = maxY;
+    for (let i = s.length - 2; i >= 0; i--) if (s[i + 1].y - s[i].y < minGap) s[i].y = s[i + 1].y - minGap;
+  }
   return s;
 }
 
@@ -85,7 +89,7 @@ export function mount(host, spec, opts = {}) {
     }
     const annual = spec.xs[0].length === 4;
     if (annual) {
-      const every = w < 520 && n > 6 ? 2 : 1;
+      const every = Math.max(w < 520 && n > 6 ? 2 : 1, Math.ceil((n * 40) / (w - m.l - m.r)));  // thin the labels so they never touch
       spec.xs.forEach((x, i) => { if (i % every === 0) S("text", { x: xs(i), y: h - 6, "text-anchor": "middle" }, axis).textContent = x; });
     } else {
       const firstYear = Number(spec.xs[0].slice(0, 4)), lastYear = Number(spec.xs[n - 1].slice(0, 4));
@@ -139,7 +143,7 @@ export function mount(host, spec, opts = {}) {
           while (i > 0 && (s.values[i] === null || s.values[i] === undefined)) i--;
           return { y: ys(s.values[i]), text: `${s.short || s.label} ${spec.yFmt ? spec.yFmt(s.values[i]) : num(s.values[i], 3)}`, i };
         });
-        const placed = spread(labs, 18);
+        const placed = spread(labs, 18, h - m.b - 2);
         placed.forEach((l) => {
           const t = S("text", { x: w - m.r, y: l.y - 4, "text-anchor": "end", style: "fill:var(--text-primary);font-size:11px", stroke: "var(--surface-1)", "stroke-width": 3, "paint-order": "stroke" }, svg);
           t.textContent = l.text;

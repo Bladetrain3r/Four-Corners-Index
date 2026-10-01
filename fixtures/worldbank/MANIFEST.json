@@ -4,7 +4,7 @@
     "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
     "fetched_at": "2026-09-29T19:07:00Z",
     "sha256": "b78a9a34e7f41520e09a41b0eb540c06a61177c00fe9a097c18a35d0428463cc",
-    "note": "TRIMMED extraction (script-made) from full XLSX (586735 bytes, full-file sha256 9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225, Last-Modified Wed, 02 Sep 2026 20:17:37 GMT, sheet \"Monthly Prices\", file header \"Updated on September 02, 2026\"). Kept: 4 title rows, column-name row, unit row, and last 36 monthly rows (2023M09-2026M08); only columns Coal Australian, Coal South African, Natural gas US, Natural gas Europe, LNG Japan, Natural gas index. Values as published (\"\u2026\" = n/a).",
+    "note": "TRIMMED extraction (script-made) from full XLSX (586735 bytes, full-file sha256 9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225, Last-Modified Wed, 02 Sep 2026 20:17:37 GMT, sheet \"Monthly Prices\", file header \"Updated on September 02, 2026\"). Kept: 4 title rows, column-name row, unit row, and last 36 monthly rows (2023M09-2026M08); only columns Coal Australian, Coal South African, Natural gas US, Natural gas Europe, LNG Japan, Natural gas index. Values as published (\"…\" = n/a).",
     "source_kind": "live"
   },
   {
@@ -53,6 +53,14 @@
     "fetched_at": "2026-09-29T19:10:42Z",
     "sha256": "9c77d5930326c379acb0e65f3d5abf115aa27e5ef48c8e7745071ca684d61b63",
     "note": "Text extract of IMF data-usage terms (mentions Primary Commodity Prices). Not raw HTML.",
+    "source_kind": "live"
+  },
+  {
+    "file": "wdi_pm25_exposure_2010_onwards.json",
+    "url": "https://api.worldbank.org/v2/country/CHN;EUU;GBR;RUS;USA;ZAF/indicator/EN.ATM.PM25.MC.M3?format=json&per_page=500&date=1990:2030",
+    "fetched_at": "2026-10-01T13:37:05Z",
+    "sha256": "e04b893b18747a7caa19a718f363a9fc2cd75343364a2f1459246b4e721cb03c",
+    "note": "TRIMMED: the real response (216 rows, 1990-2025, header lastupdated 2026-07-13, source note: IHME GBD 2023 air pollution exposure estimates) with the rows before 2010 removed to keep the fixture small (96 rows kept); nothing else changed. 2024 and 2025 are null for every area (the publisher's lag). The indicator page states 'License: CC BY-4.0' (https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3, read 2026-10-01).",
     "source_kind": "live"
   }
 ]

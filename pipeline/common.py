@@ -12,7 +12,7 @@ REQUIRED = (
     "source", "series_id", "region", "layer", "period_start", "period_end", "value", "unit",
     "as_of", "retrieved_at", "raw_sha256", "confidence",
 )
-LAYERS = {"cost", "mix", "driver"}
+LAYERS = {"cost", "mix", "driver", "air"}
 BUYERS = {"household", "industrial", "wholesale"}
 CONFIDENCE = {"primary", "low_confidence", "high_latency"}
 _SHA = re.compile(r"^[0-9a-f]{64}$")

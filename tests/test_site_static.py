@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 SITE = Path(__file__).resolve().parent.parent / "site"
-PAGES = ["index", "indices", "region", "method", "sources", "downloads"]
+PAGES = ["index", "indices", "region", "air", "method", "sources", "downloads"]
 
 
 def _lum(hex_: str) -> float:
