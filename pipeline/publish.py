@@ -14,7 +14,7 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from pipeline import mdhtml, site_data
+from pipeline import mdhtml, site_air, site_data
 from pipeline.snapshot import MANIFEST
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -101,6 +101,7 @@ def publish(out: Path, health: Path = HEALTH) -> dict[str, Any]:
     for rid, doc in detail.items():
         write_json(dd / f"region_{rid}.json", doc)
     write_json(dd / "drivers.json", site_data.drivers_doc())
+    write_json(dd / "air.json", site_air.air_doc())
     src = site_data.manual("sources.json")
     write_json(dd / "sources.json", src)
     files = downloads(out)

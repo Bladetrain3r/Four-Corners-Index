@@ -153,6 +153,12 @@ def regions_docs() -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
                 cards[kind] = {"status": "value", "value": float(row["local_value"]) / 1000.0, "currency": "EUR", "period_start": wholesale_months[-1] + "-01",
                                "period_end": wholesale_months[-1] + "-28", "as_of": m["as_of"], "retrieved": m["retrieved_at"][:10], "source": fact["source"],
                                "url": fact["url"], "source_id": fact["source_id"], "confidence": "primary", "provisional": False, "note": ""}
+            elif rid == "ZA":  # two hand-entered Eskom figures; never fetched
+                e = manual("eskom_tariffs.json")
+                f = e["facts"][kind]
+                cards[kind] = {"status": "value", "value": f["value"], "currency": f["currency"], "period_start": f["period_start"], "period_end": f["period_end"],
+                               "period_label": f["period_label"], "as_of": e["read"], "retrieved": e["read"], "source": fact["source"], "url": fact["url"], "source_id": "eskom",
+                               "confidence": f["confidence"], "provisional": False, "note": f["note"]}
             elif rid == "CN":
                 t = next(s for s in manual("china_household_tariff.json")["series"] if s["in_index"])
                 cards[kind] = {"status": "value", "value": t["value"], "currency": "CNY", "period_start": t["valid_from"], "period_end": t["last_confirmed"],
@@ -223,6 +229,8 @@ def _region_detail(rid: str, entry: dict[str, Any], region_price, retail_months,
         s["household_comparison"] = {"label": "Comparison: Guangdong (Shantou price list) first tier, from 2021-12", "currency": "CNY", "unit": "CNY/kWh",
                                      "points": [{"s": m + "-01", "e": m + "-28", "v": t[1]["value"]} for m in retail_months if m >= "2021-12"]}
         d["sources"] = ["shanghai", "ember", "ecb"]
+    elif rid == "ZA":
+        d["sources"] = ["eskom", "ember"]
     else:
         d["sources"] = ["ember"]
     if rid in ("EU", "US", "CN", "GB"):

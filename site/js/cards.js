@@ -11,7 +11,7 @@ function priceRow(kind, c, cur, perEur, regionId) {
   }
   const v = convert(c.value, c.currency, cur, perEur);
   const native = c.currency === cur ? null : ` (${num(c.value, DIGITS[c.currency] ?? 3)} ${c.currency})`;
-  const period = c.period_end.slice(0, 4) === "2026" && c.note.startsWith("An administrative") ? `in force since ${c.period_start}` : periodLabel(c.period_start, c.period_end);
+  const period = c.period_label ? c.period_label : c.period_end.slice(0, 4) === "2026" && c.note.startsWith("An administrative") ? `in force since ${c.period_start}` : periodLabel(c.period_start, c.period_end);
   return el("div", { class: "row", "data-testid": `${regionId}-${kind}`, "data-status": "value" }, head,
     el("div", { class: "v" }, num(v, DIGITS[cur]), " ", el("small", {}, `${cur}/kWh${native || ""}`)),
     el("div", { class: "meta" }, `${period} · as of ${c.as_of}`, c.provisional ? " · preliminary" : "", c.confidence === "low_confidence" ? " · ⚠ low confidence" : ""),

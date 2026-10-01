@@ -35,11 +35,13 @@ def test_a_modified_raw_snapshot_is_rejected_by_its_manifest_hash(raw_dir, tmp_p
         build.build(raw, tmp_path / "out", MANIFEST)
 
 
-def test_the_manifest_lists_every_registered_request_with_a_sha256():
+def test_the_manifest_lists_every_required_request_with_a_sha256_and_nothing_unregistered():
     from pipeline import registry
+    required = {(r.source, r.name) for r in registry.REQUESTS if not r.optional}
+    every = {(r.source, r.name) for r in registry.REQUESTS}
     for path in (MANIFEST, snapshot.MANIFEST):  # the launch manifest and the live one (which the daily job extends)
         entries = {(e["source"], e["name"]) for e in snapshot.read_manifest(path)}
-        assert entries == {(r.source, r.name) for r in registry.REQUESTS}
+        assert required <= entries <= every  # optional requests (added after launch) may or may not be there yet
         assert all(len(e["sha256"]) == 64 and "api_key=" not in e["url"].replace("api_key=REDACTED", "") for e in snapshot.read_manifest(path))
 
 
@@ -47,3 +49,14 @@ def test_rebuilding_never_appends_to_the_ledger_when_no_value_changed(raw_dir, t
     seed = LAUNCH / "ledger.jsonl"
     info = build.build(raw_dir, tmp_path, MANIFEST, ledger_seed=seed)
     assert info["_added"] == 0 and info["ledger_lines"] == len(seed.read_text().splitlines())
+
+
+def test_the_rebuilt_build_info_equals_the_launch_one_except_the_method_document_version(raw_dir, tmp_path):
+    """The pinned comparison leaves build_info.json out because it records the method document version (3 at launch, 4 since the air tab and Eskom)."""
+    import json
+    build.build(raw_dir, tmp_path, MANIFEST, ledger_seed=LAUNCH / "ledger.jsonl")
+    rebuilt = json.loads((tmp_path / "data" / "index" / "build_info.json").read_text())
+    launch = json.loads((LAUNCH / "build_info.json").read_text())
+    assert launch["method_doc_version"] == 3 and rebuilt["method_doc_version"] == build.METHOD_DOC_VERSION
+    launch["method_doc_version"] = rebuilt["method_doc_version"]
+    assert rebuilt == launch  # same inputs hash, same snapshots, same ledger lines, same months

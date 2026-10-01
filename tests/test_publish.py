@@ -58,7 +58,9 @@ def test_the_known_gaps_are_present_with_their_reasons(site):
     regs = {r["id"]: r for r in _j(site, "regions.json")["regions"]}
     assert regs["US"]["cards"]["wholesale"]["status"] == "gap" and "ICE" in regs["US"]["cards"]["wholesale"]["reason"]
     assert all(regs["RU"]["cards"][k]["status"] == "gap" for k in ("household", "industrial", "wholesale"))
-    assert "Eskom" in regs["ZA"]["cards"]["household"]["reason"] and "market" in regs["ZA"]["cards"]["wholesale"]["reason"]
+    za = regs["ZA"]["cards"]
+    assert za["household"]["status"] == "value" and za["household"]["source_id"] == "eskom" and za["household"]["confidence"] == "low_confidence"
+    assert za["industrial"]["status"] == "value" and za["industrial"]["period_label"] == "financial year 2025/26" and "market" in za["wholesale"]["reason"]
     assert "sterling" in regs["GB"]["cards"]["wholesale"]["reason"]
     assert regs["CN"]["cards"]["household"]["confidence"] == "low_confidence" and regs["CN"]["badge"] == "C"
     assert regs["EU"]["cards"]["household"]["value"] == pytest.approx(0.2896) and regs["GB"]["cards"]["household"]["value"] == pytest.approx(0.297773, abs=1e-6)
@@ -80,7 +82,7 @@ def test_region_detail_files_have_series_mix_over_time_and_sources(site):
         for s in d["series"].values():
             assert s["points"] and s["currency"] and s["unit"]
     assert set(_j(site, "region_EU.json")["series"]) >= {"household", "industrial", "industrial_comparison", "wholesale"}
-    assert _j(site, "region_ZA.json")["series"] == {} and len(_j(site, "region_ZA.json")["gaps"]) == 3
+    assert _j(site, "region_ZA.json")["series"] == {} and list(_j(site, "region_ZA.json")["gaps"]) == ["wholesale"] and _j(site, "region_ZA.json")["sources"] == ["eskom", "ember"]
 
 
 def test_eu_price_components_are_published_with_their_reconciliation_to_the_half_year_prices(site):

@@ -20,11 +20,12 @@ from pipeline.common import SourceError
 
 ROOT = Path(__file__).resolve().parent.parent
 HEADLINE_METHOD_VERSION = {"retail": 2, "wholesale": 1}  # the ledger's method_version per index: the headline definition (METHOD.md v3 added the UK to Retail)
-METHOD_DOC_VERSION = 3
+METHOD_DOC_VERSION = 4
 BASKET = ("EU", "US", "CN", "RU", "GB")
 RETAIL_REGIONS = ("EU", "US", "CN", "GB")  # RU has no price (METHOD section 1)
 EXCHINA_REGIONS = ("EU", "US", "GB")  # the regions with measured prices
 DAILY = {"henry_hub_daily", "prices_daily", "exr_daily"}
+SINCE = {"wdi_pm25": "1990-01-01"}  # every series is kept from 2015 except this annual one, whose history starts in 1990
 CARRY_EU, CARRY_US = 12, 3  # METHOD section 6
 EIA_PROVISIONAL_MONTHS = 12
 EU_SERIES = "nrg_pc_204:KWH2500-4999:I_TAX:EUR"
@@ -32,13 +33,15 @@ EU_SERIES = "nrg_pc_204:KWH2500-4999:I_TAX:EUR"
 
 def _parse_all(raw_dir: Path, manifest: Path) -> tuple[dict[tuple[str, str], list[dict[str, Any]]], list[dict[str, Any]], dict[tuple[str, str], dict[str, Any]]]:
     snaps = snapshot.load_snapshots(raw_dir, manifest)
-    missing = [(r.source, r.name) for r in registry.REQUESTS if (r.source, r.name) not in snaps]
+    missing = [(r.source, r.name) for r in registry.REQUESTS if (r.source, r.name) not in snaps and not r.optional]
     if missing:
         raise SourceError("build", f"no raw snapshot for {missing}; run python -m pipeline.snapshot")
     points: dict[tuple[str, str], list[dict[str, Any]]] = {}
     gaps: list[dict[str, Any]] = []
     meta: dict[tuple[str, str], dict[str, Any]] = {}
     for req in registry.REQUESTS:
+        if (req.source, req.name) not in snaps:  # an optional request an older manifest does not have
+            continue
         entry, raw = snaps[(req.source, req.name)]
         g: list[dict[str, Any]] = []
         points[(req.source, req.name)] = req.parse(raw, entry["retrieved_at"], "live", g)
@@ -186,7 +189,7 @@ def build(raw_dir: Path, out: Path, manifest: Path = snapshot.MANIFEST, manual: 
     for (source, name), pts in points.items():
         m = {"source": source, "name": name, "raw_sha256": meta[(source, name)]["sha256"], "retrieved_at": meta[(source, name)]["retrieved_at"],
              "url": meta[(source, name)]["url"], "as_of": max(p["as_of"] for p in pts), "role": meta[(source, name)]["role"]}
-        counts[f"{source}/{name}"] = (outputs.write_daily if name in DAILY else outputs.write_series)(out, source, name, pts, m)
+        counts[f"{source}/{name}"] = (outputs.write_daily if name in DAILY else outputs.write_series)(out, source, name, pts, m, **({"since": SINCE[name]} if name in SINCE else {}))
     gap_cols = ("source", "series_id", "region", "period_start", "period_end", "reason")
     outputs.write(out / "data" / "series" / "gaps.csv", outputs.csv_text(gap_cols, sorted(gaps, key=lambda g: (g["source"], g["series_id"], g["region"], g["period_start"]))))
     # index files

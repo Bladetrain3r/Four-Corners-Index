@@ -110,7 +110,7 @@ def test_pink_sheet_url_is_resolved_from_the_landing_page():
 
 
 def test_every_registry_request_has_a_fixture_that_parses_and_no_key_in_url():
-    assert len(registry.REQUESTS) == 19
+    assert len(registry.REQUESTS) == 20
     for req in registry.REQUESTS:
         assert "api_key=" not in req.url or "api_key={key}" in req.url
         loaded = fetch.load(req, "fixture")
@@ -134,3 +134,17 @@ def test_live_fetch_resolves_the_uk_workbook_url_through_the_content_api():
     loaded = fetch.load(_req("desnz", "qep_562"), "live", opener=op, now=lambda: "2026-10-01T00:00:00Z")
     assert op.calls[0].endswith("/international-domestic-energy-prices") and op.calls[1] == "https://assets.example/z/table_561.xlsx"
     assert loaded.raw == b"WORKBOOK-BYTES" and loaded.kind == "live"
+
+
+def test_http_a_body_cut_off_mid_download_is_retried_then_a_source_error_not_a_traceback():
+    """Seen on the first rehearsal of G7: IncompleteRead(27590448 bytes read, 742616 more expected) escaped and would have ended the daily run."""
+    from http.client import IncompleteRead
+    calls = []
+
+    def op(url, headers, timeout):
+        calls.append(url)
+        raise IncompleteRead(b"x" * 10, 5)
+
+    with pytest.raises(SourceError, match=r"^\[ember\].*after 3 attempts.*IncompleteRead"):
+        http.get("ember", "https://example.org/x", retries=2, opener=op, sleep=NO_SLEEP)
+    assert len(calls) == 3

@@ -1,0 +1,37 @@
+{
+  "indicator": {
+    "id": "EN.ATM.PM25.MC.M3",
+    "label": "PM2.5 air pollution, mean annual exposure",
+    "unit": "µg/m³",
+    "definition": "The average level of exposure of a nation's population to concentrations of suspended particles measuring less than 2.5 microns in aerodynamic diameter, weighted by population in urban and rural areas (the World Bank's definition).",
+    "source_note": "A model estimate, not a station reading: the World Bank cites the Institute for Health Metrics and Evaluation (IHME) Global Burden of Disease 2023 air pollution exposure estimates as its source. Annual values; the newest years are published about two and a half years late.",
+    "url": "https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3",
+    "licence_line": "License: CC BY-4.0 (as stated on the World Bank indicator page, read 2026-10-01)"
+  },
+  "guideline": {
+    "value": 5,
+    "unit": "µg/m³",
+    "label": "WHO 2021 guideline, annual mean",
+    "source": "WHO global air quality guidelines (2021)",
+    "url": "https://www.who.int/publications/i/item/9789240034228",
+    "verification": "WHO's own pages show the guideline levels only in an image table, which could not be read in the build environment. The value is as quoted in Global Challenges (2024), 'Toward Better and Healthier Air Quality': 'the WHO 2021 annual average PM2.5 guideline (5 µg m−3)' (https://pmc.ncbi.nlm.nih.gov/articles/PMC11009431/). To be checked against the WHO table by a person.",
+    "read": "2026-10-01"
+  },
+  "regions": {
+    "EU": {"note": "The World Bank's 'European Union' aggregate."},
+    "US": {"note": ""},
+    "CN": {"note": ""},
+    "RU": {"note": "Russia's air quality is modelled here like everyone else's; unlike its prices, this figure has a source."},
+    "ZA": {"note": ""},
+    "GB": {"note": ""}
+  },
+  "badge": "B",
+  "badge_note": "Quality B: official-grade, one consistent model for every region, annual and about two and a half years late. A modelled exposure estimate, not a measurement.",
+  "method": [
+    "This page is a comparison tab, not a third index: the data are annual, modelled and years late, so they cannot be turned into a monthly index without inventing something.",
+    "Each value is the population-weighted mean annual concentration of fine particles (PM2.5) the people of a region are exposed to. Population weighting means dense cities count for more than empty land.",
+    "A missing year is shown as missing. The newest years are empty because the World Bank has not published them yet; nothing is filled in or forecast.",
+    "The fuel shares beside the values are Ember's annual generation shares for the same year, computed from twelve complete months. They are shown so that a reader can see what each region burns; power generation is one of several sources of fine particles (traffic, industry, heating, dust, agriculture and cooking are others), and the two are not shown as cause and effect.",
+    "Cities and stations are not shown. Ground-monitor data (for example US EPA and the EU's EEA) may be added later; this model is the only source that covers all six regions on one basis, including China, Russia and South Africa, where no open monitor data could be reused."
+  ]
+}

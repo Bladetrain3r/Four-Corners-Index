@@ -24,6 +24,9 @@ ROOT = Path(__file__).resolve().parent.parent
 TREES = ("data/index", "data/series", "ledger/index.jsonl")  # generated outputs only (ledger/verify.py is hand-written)
 
 
+BUILD_INFO = "data/index/build_info.json"
+
+
 class NetworkBlocked(RuntimeError):
     pass
 
@@ -58,6 +61,9 @@ def main(argv: list[str] | None = None) -> int:
             build.build(args.raw, Path(b), args.manifest, ledger_seed=seed)
             ha, hb = hashes(Path(a)), hashes(Path(b))
             hc = json.loads(args.expect.read_text()) if args.expect else hashes(ROOT)
+            if args.expect:  # build_info.json records the method document version, which moved after launch: tests/test_reproduce.py checks it separately
+                for h in (ha, hb, hc):
+                    h.pop(BUILD_INFO, None)
     finally:
         socket.socket.connect, socket.create_connection = real_connect, real_cc  # type: ignore[method-assign]
     same_ab = ha == hb

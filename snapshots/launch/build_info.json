@@ -1,0 +1,60 @@
+{
+  "headline_method_version": {
+    "retail": 2,
+    "wholesale": 1
+  },
+  "inputs_sha256": "9728b367d30b4273409b949906cc624102436b7f18f2d5d0aa2dbf7c1e6cf8a4",
+  "ledger_lines": 420,
+  "method_doc_version": 3,
+  "published": "2026-09-30",
+  "retail_months": [
+    "2015-01",
+    "2026-08"
+  ],
+  "series_rows": {
+    "desnz/qep_542": 43,
+    "desnz/qep_562": 44,
+    "ecb/exr_daily": 2040,
+    "ecb/exr_monthly": 560,
+    "eia/generation_cross_check": 1668,
+    "eia/henry_hub_daily": 496,
+    "eia/henry_hub_monthly": 140,
+    "eia/retail_price": 278,
+    "ember/monthly_generation": 9016,
+    "ember/prices_daily": 21792,
+    "ember/prices_monthly": 4004,
+    "ember/yearly_generation": 825,
+    "eurostat/nrg_cb_e": 615,
+    "eurostat/nrg_pc_204": 1848,
+    "eurostat/nrg_pc_204_c": 2614,
+    "eurostat/nrg_pc_205": 1848,
+    "eurostat/nrg_pc_205_ic": 1848,
+    "eurostat/prc_hicp_minr": 1268,
+    "worldbank/pink_sheet_monthly": 700
+  },
+  "snapshots": {
+    "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
+    "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
+    "ecb/exr_daily": "dd43a827b4bb42c215d09fee2594eaaaaf2edd208961fca8d512c883672a9ef9",
+    "ecb/exr_monthly": "df512c426da692670390f844ca6c413959626e8cddf58043029941c49b4bde04",
+    "eia/generation_cross_check": "18d5cee686f4a1ff651b4af958d8829eef56f0f285b404e61c21bddacdf09d1a",
+    "eia/henry_hub_daily": "fd63cec3ce556097b0f25cf83453f0ecca1eb15e3cfb704d32ab7659e12b80f9",
+    "eia/henry_hub_monthly": "58f32f97159006b62e6ba0ece07c84ba16c2e11291a2b58c36feeb7df5a1d1b0",
+    "eia/retail_price": "144f71a54bf7a11fec29beae0ed81f1c4992ec781824481da2041d3f084ca685",
+    "ember/monthly_generation": "6c8a587a5dfe32277616135e3c5af8e3cb60dff8eba1d4bc18b9b936b0c75d55",
+    "ember/prices_daily": "5b79cc55311b74f5d7ff6de9a3951ecf3e0c7f0d3372f0a710669b0633090b45",
+    "ember/prices_monthly": "65eefaed002689cb0699979a8e2790d635febe13829959d0ec3672bf0807d91c",
+    "ember/yearly_generation": "ea214963f4a98b26f52aaf541736d4310349a905e64f83e63425bfc3ab6255d7",
+    "eurostat/nrg_cb_e": "b3a319c41d2378e6a6decb83b13f207afef1484cb4510bae1ba631a36e8c9728",
+    "eurostat/nrg_pc_204": "14d2ed729cb8e40805357f764fc4b4424f9b2957a2bf9df95cbb39c91114227b",
+    "eurostat/nrg_pc_204_c": "d5fe29f0822bf8d57540ae1f54b1a7df08d646f5b401c6fec1c529dff8085a2d",
+    "eurostat/nrg_pc_205": "58277d05de6545b3b317d6b855c6134cf4cb62ee627255d8e44d54d46f65d093",
+    "eurostat/nrg_pc_205_ic": "b98eaa1735134085028be91fd590bc1055a5c0e684cbd1feb40acc5c52a67dc0",
+    "eurostat/prc_hicp_minr": "8c275442c8d13e9038ddc4f203380354f421dd0e8f9c310adad6f5512294dead",
+    "worldbank/pink_sheet_monthly": "9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225"
+  },
+  "wholesale_months": [
+    "2015-01",
+    "2026-08"
+  ]
+}

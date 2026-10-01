@@ -7,7 +7,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pipeline import desnz, ecb, eia, ember, eurostat, worldbank
+from pipeline import desnz, ecb, eia, ember, eurostat, worldbank, worldbank_wdi
 from pipeline.common import SourceError
 
 EU27 = ("BE", "BG", "CZ", "DK", "DE", "EE", "IE", "EL", "ES", "FR", "HR", "IT", "CY", "LV", "LT", "LU", "HU", "MT",
@@ -35,6 +35,7 @@ class Request:
     parse: Callable[[bytes, str, str, list[dict[str, Any]] | None], list[dict[str, Any]]]  # (raw, retrieved_at, kind, gaps) -> points
     key_env: str | None = None
     role: str = "primary"  # 'cross_check' requests feed G3 only
+    optional: bool = False  # added after launch: a build from an older manifest (the pinned launch bundle) runs without it
 
 
 def _es(dataset: str) -> Callable[..., list[dict[str, Any]]]:
@@ -85,6 +86,8 @@ REQUESTS: tuple[Request, ...] = (
             "exr_daily_usd_cny_zar_gbp_2026-06-01.csv", lambda raw, at, kind, gaps: ecb.parse(raw, at)),
     Request("worldbank", "pink_sheet_monthly", "resolve:pink_sheet",
             "pink_sheet_monthly_gas_coal_last36.csv", _wb),
+    Request("worldbank", "wdi_pm25", "https://api.worldbank.org/v2/country/CHN;EUU;GBR;RUS;USA;ZAF/indicator/EN.ATM.PM25.MC.M3?format=json&per_page=500&date=1990:2030",
+            "wdi_pm25_exposure_2010_onwards.json", lambda raw, at, kind, gaps: worldbank_wdi.parse(raw, at, gaps), optional=True),
     Request("desnz", "qep_562", "resolve:desnz_domestic", "table_562_medium_domestic_eu_uk.csv",
             lambda raw, at, kind, gaps: desnz.parse(raw, at, "5.6.2", kind, gaps=gaps)),
     Request("desnz", "qep_542", "resolve:desnz_nondomestic", "table_542_medium_nondomestic_eu_uk.csv",

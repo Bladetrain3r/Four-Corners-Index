@@ -1,44 +1,149 @@
 {
   "note": "Hand-authored facts the data files do not carry: badges, the source behind each card, and the reason for every 'no source'. A card without a value must have a reason here (tests enforce it). Reasons are drawn from SOURCES.md and the STOP reports.",
   "regions": [
-    {"id": "EU", "name": "European Union (EU-27)", "short": "EU", "in_basket": true, "badge": "A",
-     "badge_note": "Official, machine-readable, regularly published sources.",
-     "cards": {
-       "household": {"source": "Eurostat nrg_pc_204, household band DC (2,500-4,999 kWh/yr), all taxes and levies, EU-27 aggregate, half-yearly", "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204", "source_id": "eurostat"},
-       "industrial": {"source": "Eurostat nrg_pc_205, non-household band ID (2,000-19,999 MWh/yr), excluding VAT and recoverable levies, EU-27 aggregate, half-yearly", "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205", "source_id": "eurostat"},
-       "wholesale": {"source": "Ember European wholesale electricity prices (day-ahead, from ENTSO-E), monthly, demand-weighted across EU-27 member states with a price", "url": "https://ember-energy.org/data/european-wholesale-electricity-price-data/", "source_id": "ember"}}},
-    {"id": "US", "name": "United States", "short": "US", "in_basket": true, "badge": "A",
-     "badge_note": "Official, machine-readable, regularly published sources.",
-     "cards": {
-       "household": {"source": "EIA Electric Power Monthly / API v2 retail-sales, residential average price, monthly (preliminary for the latest months)", "url": "https://www.eia.gov/electricity/monthly/", "source_id": "eia"},
-       "industrial": {"source": "EIA retail-sales, industrial average price, monthly (preliminary for the latest months)", "url": "https://www.eia.gov/electricity/monthly/", "source_id": "eia"},
-       "wholesale": {"gap": "No reusable source. EIA's hub price files are ICE data republished with permission; of the seven US grid operators only CAISO (about 39 months of keyless history) and ERCOT (about 31 days) publish under terms that clearly allow reuse, and neither reaches back to 2015."}}},
-    {"id": "CN", "name": "China", "short": "China", "in_basket": true, "badge": "C",
-     "badge_note": "Best effort: an administrative tariff from one city, low confidence.",
-     "cards": {
-       "household": {"source": "Shanghai first-tier residential tariff (below 1 kV, first 3,120 kWh per household-year), per notice 沪发改价管(2012)020号; whether it was re-issued since is not confirmed", "url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf", "source_id": "shanghai", "confidence": "low_confidence"},
-       "industrial": {"gap": "Not measured. Only monthly provincial agency-purchase prices for default-supply commercial and industrial users exist, published on sites whose terms do not allow mirroring; they cover a shrinking slice of industry and were not adopted."},
-       "wholesale": {"gap": "No national wholesale market."}}},
-    {"id": "RU", "name": "Russia", "short": "Russia", "in_basket": true, "badge": "C",
-     "badge_note": "High uncertainty: no reusable price source; generation data is Ember's estimate.",
-     "cards": {
-       "household": {"gap": "No source. Rosstat's certificate chain is not trusted from the build environment and was not bypassed; no reusable secondary source was found."},
-       "industrial": {"gap": "No source found: no Russian industrial price per kWh was found, and the wholesale price is deliberately not used as a proxy."},
-       "wholesale": {"gap": "No source. The ATS day-ahead pages are unreachable from the build environment."}}},
-    {"id": "ZA", "name": "South Africa", "short": "South Africa", "in_basket": false, "badge": "B",
-     "badge_note": "Generation data only.",
-     "cards": {
-       "household": {"gap": "Dropped. Eskom's tariffs are official but its website terms bar commercial reuse and automated collection without written consent."},
-       "industrial": {"gap": "Dropped, for the same reason."},
-       "wholesale": {"gap": "No wholesale market operates (the market operator's portal reads 'Coming soon')."}}},
-    {"id": "GB", "name": "United Kingdom", "short": "UK", "in_basket": true, "badge": "A",
-     "badge_note": "Official DESNZ tables on Eurostat's own consumption bands; wholesale not used.",
-     "cards": {
-       "household": {"source": "DESNZ Quarterly Energy Prices table 5.6.2, Medium (2,500-4,999 kWh/yr, Eurostat band DC), including taxes, levies and VAT, half-yearly", "url": "https://www.gov.uk/government/statistical-data-sets/international-domestic-energy-prices", "source_id": "desnz"},
-       "industrial": {"source": "DESNZ Quarterly Energy Prices table 5.4.2, Medium (2,000-19,999 MWh/yr, Eurostat band ID), taxes and levies but not VAT, half-yearly", "url": "https://www.gov.uk/government/statistical-data-sets/international-non-domestic-energy-prices", "source_id": "desnz"},
-       "wholesale": {"gap": "Not used. Ember's UK price series does not say whether it is converted from sterling, and no independent figure exists to test it against."}}}
+    {
+      "id": "EU",
+      "name": "European Union (EU-27)",
+      "short": "EU",
+      "in_basket": true,
+      "badge": "A",
+      "badge_note": "Official, machine-readable, regularly published sources.",
+      "cards": {
+        "household": {
+          "source": "Eurostat nrg_pc_204, household band DC (2,500-4,999 kWh/yr), all taxes and levies, EU-27 aggregate, half-yearly",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204",
+          "source_id": "eurostat"
+        },
+        "industrial": {
+          "source": "Eurostat nrg_pc_205, non-household band ID (2,000-19,999 MWh/yr), excluding VAT and recoverable levies, EU-27 aggregate, half-yearly",
+          "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205",
+          "source_id": "eurostat"
+        },
+        "wholesale": {
+          "source": "Ember European wholesale electricity prices (day-ahead, from ENTSO-E), monthly, demand-weighted across EU-27 member states with a price",
+          "url": "https://ember-energy.org/data/european-wholesale-electricity-price-data/",
+          "source_id": "ember"
+        }
+      }
+    },
+    {
+      "id": "US",
+      "name": "United States",
+      "short": "US",
+      "in_basket": true,
+      "badge": "A",
+      "badge_note": "Official, machine-readable, regularly published sources.",
+      "cards": {
+        "household": {
+          "source": "EIA Electric Power Monthly / API v2 retail-sales, residential average price, monthly (preliminary for the latest months)",
+          "url": "https://www.eia.gov/electricity/monthly/",
+          "source_id": "eia"
+        },
+        "industrial": {
+          "source": "EIA retail-sales, industrial average price, monthly (preliminary for the latest months)",
+          "url": "https://www.eia.gov/electricity/monthly/",
+          "source_id": "eia"
+        },
+        "wholesale": {
+          "gap": "No reusable source. EIA's hub price files are ICE data republished with permission; of the seven US grid operators only CAISO (about 39 months of keyless history) and ERCOT (about 31 days) publish under terms that clearly allow reuse, and neither reaches back to 2015."
+        }
+      }
+    },
+    {
+      "id": "CN",
+      "name": "China",
+      "short": "China",
+      "in_basket": true,
+      "badge": "C",
+      "badge_note": "Best effort: an administrative tariff from one city, low confidence.",
+      "cards": {
+        "household": {
+          "source": "Shanghai first-tier residential tariff (below 1 kV, first 3,120 kWh per household-year), per notice 沪发改价管(2012)020号; whether it was re-issued since is not confirmed",
+          "url": "https://fgw.sh.gov.cn/cmsres/20/207f6574daeb48949d247f39ec7a3322/dd80cd964bb1c65cd46d22caa85e55f3.pdf",
+          "source_id": "shanghai",
+          "confidence": "low_confidence"
+        },
+        "industrial": {
+          "gap": "Not measured. Only monthly provincial agency-purchase prices for default-supply commercial and industrial users exist, published on sites whose terms do not allow mirroring; they cover a shrinking slice of industry and were not adopted."
+        },
+        "wholesale": {
+          "gap": "No national wholesale market."
+        }
+      }
+    },
+    {
+      "id": "RU",
+      "name": "Russia",
+      "short": "Russia",
+      "in_basket": true,
+      "badge": "C",
+      "badge_note": "High uncertainty: no reusable price source; generation data is Ember's estimate.",
+      "cards": {
+        "household": {
+          "gap": "No source. Rosstat's certificate chain is not trusted from the build environment and was not bypassed; no reusable secondary source was found."
+        },
+        "industrial": {
+          "gap": "No source found: no Russian industrial price per kWh was found, and the wholesale price is deliberately not used as a proxy."
+        },
+        "wholesale": {
+          "gap": "No source. The ATS day-ahead pages are unreachable from the build environment."
+        }
+      }
+    },
+    {
+      "id": "ZA",
+      "name": "South Africa",
+      "short": "South Africa",
+      "in_basket": false,
+      "badge": "B",
+      "badge_note": "Generation from Ember; two hand-entered Eskom figures (Eskom's direct customers only; most households pay a municipal tariff).",
+      "cards": {
+        "household": {
+          "source": "Eskom Homelight 20A (prepaid, low-usage) tariff 2026/27, including 15% VAT, from Eskom's tariff booklet",
+          "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/07/Eskom-Tariff-booklet_Final.pdf",
+          "source_id": "eskom",
+          "confidence": "low_confidence"
+        },
+        "industrial": {
+          "source": "Eskom realised average price, 'Industrial (Excl NPA)' customers, financial year 2025/26, from Eskom's 'Historical average prices and increase'",
+          "url": "https://www.eskom.co.za/distribution/tariffs-and-charges/tariff-history/",
+          "source_id": "eskom",
+          "confidence": "primary"
+        },
+        "wholesale": {
+          "gap": "No wholesale market operates (the market operator's portal reads 'Coming soon')."
+        }
+      }
+    },
+    {
+      "id": "GB",
+      "name": "United Kingdom",
+      "short": "UK",
+      "in_basket": true,
+      "badge": "A",
+      "badge_note": "Official DESNZ tables on Eurostat's own consumption bands; wholesale not used.",
+      "cards": {
+        "household": {
+          "source": "DESNZ Quarterly Energy Prices table 5.6.2, Medium (2,500-4,999 kWh/yr, Eurostat band DC), including taxes, levies and VAT, half-yearly",
+          "url": "https://www.gov.uk/government/statistical-data-sets/international-domestic-energy-prices",
+          "source_id": "desnz"
+        },
+        "industrial": {
+          "source": "DESNZ Quarterly Energy Prices table 5.4.2, Medium (2,000-19,999 MWh/yr, Eurostat band ID), taxes and levies but not VAT, half-yearly",
+          "url": "https://www.gov.uk/government/statistical-data-sets/international-non-domestic-energy-prices",
+          "source_id": "desnz"
+        },
+        "wholesale": {
+          "gap": "Not used. Ember's UK price series does not say whether it is converted from sterling, and no independent figure exists to test it against."
+        }
+      }
+    }
   ],
-  "mix_source": {"source": "Ember Monthly Electricity Data (generation by source, demand, emissions intensity)", "url": "https://ember-energy.org/data/monthly-electricity-data/", "source_id": "ember"},
+  "mix_source": {
+    "source": "Ember Monthly Electricity Data (generation by source, demand, emissions intensity)",
+    "url": "https://ember-energy.org/data/monthly-electricity-data/",
+    "source_id": "ember"
+  },
   "drivers_notes": {
     "carbon": "EU carbon price (EUA): no free, reusable source exists (EEX auction files are not open-licensed), so it is omitted.",
     "rub": "RUB per USD: the ECB stopped publishing a rouble reference rate on 2022-03-01, and the Bank of Russia's terms require the consent of the rightsholders, so no rouble rate is shown."

@@ -1,0 +1,46 @@
+{
+  "note": "Two figures typed in by hand from Eskom's own publications, as dated facts. Nothing is fetched from eskom.co.za by the pipeline (Eskom's terms bar crawlers and robots without written consent, clause 2.10). Values are as read on 2026-09-29 and quoted under clause 2.8 (small and reasonable amounts, acknowledged).",
+  "read": "2026-09-29",
+  "terms": {
+    "url": "https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf",
+    "page": "https://www.eskom.co.za/about-eskom/website-terms-and-conditions/",
+    "clause_2_1": "Eskom licenses the User to view, download and print the content of the Eskom website, provided that such content is used for private, personal, educational and/or non-commercial purposes only.",
+    "clause_2_2": "Content from the Eskom website may not be used or exploited by Users for any commercial and non-private purposes without the prior written consent of Eskom.",
+    "clause_2_8": "Users may quote small and reasonable amounts of content ... subject to such a quote being placed in inverted commas and acknowledged.",
+    "clause_2_10": "no person may use applications (including web crawlers, robots or web spiders) to search, collect or copy content from the Eskom website, for any purposes, without the prior written consent of Eskom."
+  },
+  "facts": {
+    "household": {
+      "label": "Homelight 20A",
+      "what": "Eskom's prepaid 20 A tariff for low-usage supplies, energy charge",
+      "value": 2.7030,
+      "currency": "ZAR",
+      "unit": "ZAR/kWh",
+      "as_published": "270.30 c/kWh including 15% VAT (235.04 c/kWh excluding VAT)",
+      "period_start": "2026-04-01",
+      "period_end": "2027-03-31",
+      "period_label": "tariff year 2026/27",
+      "source": "Eskom, Tariff booklet 2026/27, Homelight 20A (non-local-authority tariffs, 1 April 2026 to 31 March 2027)",
+      "url": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/07/Eskom-Tariff-booklet_Final.pdf",
+      "landing": "https://www.eskom.co.za/distribution/2026-2027-tariff-increase/",
+      "confidence": "low_confidence",
+      "note": "Eskom's prepaid low-usage tariff, not an average household: most South African households pay a municipal tariff, which is not collected centrally. Includes 15% VAT, as Eskom publishes it. Hand-entered from Eskom's booklet, read 2026-09-29."
+    },
+    "industrial": {
+      "label": "Industrial (Excl NPA)",
+      "what": "Eskom's realised average price (revenue per kWh sold) for industrial customers excluding negotiated pricing agreements",
+      "value": 2.1203,
+      "currency": "ZAR",
+      "unit": "ZAR/kWh",
+      "as_published": "212.03 c/kWh, financial year 2025/26 (1 April 2025 to 31 March 2026)",
+      "period_start": "2025-04-01",
+      "period_end": "2026-03-31",
+      "period_label": "financial year 2025/26",
+      "source": "Eskom, 'Historical average prices and increase' workbook, sheet 'Historical trend', row 'Industrial (Excl NPA)'",
+      "url": "https://www.eskom.co.za/distribution/tariffs-and-charges/tariff-history/",
+      "file": "https://www.eskom.co.za/distribution/wp-content/uploads/2026/09/Historical-average-prices-and-increase.xlsx",
+      "confidence": "primary",
+      "note": "A realised average price, not a list tariff, for Eskom's direct industrial customers without negotiated pricing agreements; municipal customers are not included. The workbook does not say whether VAT is included; businesses recover it, so it is read as excluding VAT. Hand-entered, read 2026-09-29."
+    }
+  }
+}
