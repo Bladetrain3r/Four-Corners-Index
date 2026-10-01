@@ -29,8 +29,13 @@ def test_index_json_matches_the_csv_tables(site):
     assert abs(idx["retail"][-1]["ex_level"] - float(rows[-1]["exchina_level_usd_per_kwh"])) < 1e-9
     assert len(idx["wholesale"]) == len(list(csv.DictReader((ROOT / "data" / "index" / "wholesale.csv").open())))
     assert all(r["published"] and r["method_version"] in (1, 2) for r in idx["retail"] + idx["wholesale"])
-    assert len(idx["revisions"]) == 140 and all(r["method_version"] == 2 for r in idx["revisions"])
-    assert idx["ledger"]["lines"] == 420 and len(idx["ledger"]["head"]) == 64
+    lines = [json.loads(x) for x in (ROOT / "ledger" / "index.jsonl").read_text().splitlines()]
+    superseding = [ln for ln in lines if ln.get("supersedes")]
+    assert len(idx["revisions"]) == len(superseding) >= 140 and all(r["method_version"] == 2 for r in idx["revisions"] if r["index"] == "retail")
+    # the first 140 are the restatement when the UK joined Retail (METHOD v3); the daily job adds later ones as inputs age (for example a month turning final)
+    first = idx["revisions"][:140]
+    assert {r["index"] for r in first} == {"retail"} and {r["published"] for r in first} == {"2026-09-30"}
+    assert idx["ledger"]["lines"] == len(lines) >= 420 and idx["ledger"]["head"] == lines[-1]["hash"] and len(idx["ledger"]["head"]) == 64
 
 
 def test_fx_covers_every_index_month_with_the_currencies_the_toggle_needs(site):

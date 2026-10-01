@@ -6,6 +6,16 @@ import { retailChartSpec, contribSpec, wholesaleSpec } from "./tiles.js";
 const { main, meta, error } = await initPage("indices");
 $("#loading")?.remove();
 
+function revisionSummary(revs) {
+  const first = revs.length ? revs[0].published : "";
+  const restated = revs.filter((r) => r.published === first);
+  const later = revs.filter((r) => r.published !== first);
+  const statusOnly = later.filter((r) => Number(r.from) === Number(r.to)).length;
+  let t = `Revisions so far: ${revs.length}. ${restated.length} restate every Retail month when the UK joined (METHOD version 3, ${first}).`;
+  if (later.length) t += ` ${later.length} later: ${statusOnly} where a month turned final at the same value (its last provisional input aged out), ${later.length - statusOnly} where the value changed.`;
+  return t;
+}
+
 const table = (label, head, rows, cls = "") => el("div", { class: `datatable ${cls}`, tabindex: "0", role: "region", "aria-label": label },
   el("table", {}, el("thead", {}, el("tr", {}, head.map((h) => el("th", { scope: "col" }, h)))), el("tbody", {}, rows)));
 
@@ -48,7 +58,7 @@ else {
     // Ledger and revisions
     main.append(el("h2", { text: "Revision ledger" }),
       el("p", {}, `${idx.ledger.lines} ledger lines, hash-chained; head ${idx.ledger.head.slice(0, 16)}… A revision is a new line that names the line it supersedes; nothing is edited. Check it with `, el("code", {}, "python ledger/verify.py ledger/index.jsonl"), ". ", el("a", { href: "downloads.html" }, "Download the ledger.")),
-      el("p", { class: "meta" }, `Revisions so far: ${idx.revisions.length}. All are from METHOD version 3 (the UK joining Retail), each Retail month restated once.`),
+      el("p", { class: "meta", "data-testid": "revisions-summary" }, revisionSummary(idx.revisions)),
       table("Revisions", ["Index", "Month", "Was", "Now", "Status", "Published", "Line"],
         idx.revisions.map((r) => el("tr", {}, el("th", { scope: "row" }, r.index), el("td", {}, monthLabel(r.month)), el("td", {}, num(+r.from, 4)), el("td", {}, num(+r.to, 4)), el("td", {}, r.from_status === r.to_status ? r.to_status : `${r.from_status} → ${r.to_status}`), el("td", {}, r.published), el("td", {}, el("code", {}, r.hash)))), "tablewide"));
   } catch (e) { fail(main, e); }

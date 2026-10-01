@@ -295,3 +295,14 @@ def test_south_africa_shows_the_two_eskom_figures_with_their_caveats_and_the_sou
     assert "never fetched automatically" in card and "inverted commas and acknowledged" in card and "If Eskom objects" in card
     assert "clause 2.10" in src.locator("#sources-not-used").inner_text()
     src.close()
+
+
+def test_the_indices_page_describes_the_revisions_it_lists_whatever_their_number(browser, base):
+    revs = _idx(base)["revisions"]
+    page = _open(browser, base, "indices.html")
+    text = page.locator('[data-testid="revisions-summary"]').inner_text()
+    assert text.startswith(f"Revisions so far: {len(revs)}.") and "restate every Retail month when the UK joined" in text
+    later = [r for r in revs if r["published"] != revs[0]["published"]]
+    assert (f"{len(later)} later" in text) == bool(later)
+    assert page.locator("table", has_text="Was").locator("tbody tr").count() == len(revs)
+    page.close()
