@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-09-02",
+  "as_of": "2026-10-02",
   "name": "pink_sheet_monthly",
-  "raw_sha256": "9fdcfa8a2aed9a1bb545a10c1a5ce036c6a0acd4766f450424ca800b4b5a0225",
-  "retrieved_at": "2026-09-29T21:17:28Z",
+  "raw_sha256": "ea1c350827878ea3bbe30e3cda16a13fd3bd5b409b8458940dc94a36b5a33154",
+  "retrieved_at": "2026-10-03T05:35:44Z",
   "role": "primary",
-  "rows": 700,
+  "rows": 705,
   "since": "2015-01-01",
   "source": "worldbank",
   "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"

@@ -139,6 +139,7 @@ worldbank:pink_sheet:coal_australia,AU,driver,,coal,,2026-05-01,2026-05-31,136.9
 worldbank:pink_sheet:coal_australia,AU,driver,,coal,,2026-06-01,2026-06-30,138.5,USD/t,USD,,primary
 worldbank:pink_sheet:coal_australia,AU,driver,,coal,,2026-07-01,2026-07-31,131.9,USD/t,USD,,primary
 worldbank:pink_sheet:coal_australia,AU,driver,,coal,,2026-08-01,2026-08-31,135.2,USD/t,USD,,primary
+worldbank:pink_sheet:coal_australia,AU,driver,,coal,,2026-09-01,2026-09-30,147.1,USD/t,USD,,primary
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2015-01-01,2015-01-31,59.3,USD/t,USD,,primary
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2015-02-01,2015-02-28,63.5,USD/t,USD,,primary
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2015-03-01,2015-03-31,59.9,USD/t,USD,,primary
@@ -279,6 +280,7 @@ worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2026-05-01,2026-05-31,95
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2026-06-01,2026-06-30,96.3,USD/t,USD,,primary
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2026-07-01,2026-07-31,96.3,USD/t,USD,,primary
 worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2026-08-01,2026-08-31,96.8,USD/t,USD,,primary
+worldbank:pink_sheet:coal_south_africa,ZA,driver,,coal,,2026-09-01,2026-09-30,98.2,USD/t,USD,,primary
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2015-01-01,2015-01-31,16.19,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2015-02-01,2015-02-28,14.2,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2015-03-01,2015-03-31,13.04,USD/MMBtu,USD,,primary
@@ -417,8 +419,9 @@ worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-03-01,2026-03-31,11.42,USD/M
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-04-01,2026-04-30,15.65,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-05-01,2026-05-31,12.88,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-06-01,2026-06-30,11.79,USD/MMBtu,USD,,primary
-worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-07-01,2026-07-31,13.85,USD/MMBtu,USD,estimate,primary
-worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-08-01,2026-08-31,13.94,USD/MMBtu,USD,estimate,primary
+worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-07-01,2026-07-31,13.85,USD/MMBtu,USD,,primary
+worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-08-01,2026-08-31,15.27,USD/MMBtu,USD,estimate,primary
+worldbank:pink_sheet:lng_japan,JP,driver,,gas,,2026-09-01,2026-09-30,14.25,USD/MMBtu,USD,estimate,primary
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2015-01-01,2015-01-31,9.25,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2015-02-01,2015-02-28,8.27,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2015-03-01,2015-03-31,8.27,USD/MMBtu,USD,,primary
@@ -559,6 +562,7 @@ worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2026-05-01,2026-05-31,16
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2026-06-01,2026-06-30,15.17,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2026-07-01,2026-07-31,18.06,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2026-08-01,2026-08-31,21.11,USD/MMBtu,USD,,primary
+worldbank:pink_sheet:natural_gas_europe,EU,driver,,gas,,2026-09-01,2026-09-30,25.42,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2015-01-01,2015-01-31,2.97,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2015-02-01,2015-02-28,2.85,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2015-03-01,2015-03-31,2.8,USD/MMBtu,USD,,primary
@@ -699,3 +703,4 @@ worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2026-05-01,2026-05-31,2.93,U
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2026-06-01,2026-06-30,3.15,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2026-07-01,2026-07-31,2.89,USD/MMBtu,USD,,primary
 worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2026-08-01,2026-08-31,2.77,USD/MMBtu,USD,,primary
+worldbank:pink_sheet:natural_gas_us,US,driver,,gas,,2026-09-01,2026-09-30,2.95,USD/MMBtu,USD,,primary
