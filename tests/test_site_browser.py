@@ -194,6 +194,8 @@ def test_a_failing_source_shows_a_banner_and_its_last_good_date_on_every_page(br
     meta_path = base[1] / "data" / "meta.json"
     original = meta_path.read_text()
     meta = json.loads(original)
+    meta["health"] = {k: {"status": "ok", "last_good": "2026-09-30"} for k in ("desnz", "ecb", "eia", "ember", "eurostat", "worldbank")}  # a fixed state, not today's
+    meta_path.write_text(json.dumps(meta))
     assert "all 6 fetched sources" in _open(browser, base, "index.html").locator('[data-testid="health-line"]').inner_text()
     meta["health"]["eia"] = {"status": "failed", "last_good": "2026-09-28", "failing_since": "2026-09-29", "message": "eia: forced failure (test flag --force-fail)"}
     meta_path.write_text(json.dumps(meta))

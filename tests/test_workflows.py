@@ -101,3 +101,14 @@ def test_each_run_uploads_its_raw_snapshots_under_a_name_no_other_run_uses():
     """A second run on the same day must not collide with the first one's Release asset (it did, on 2026-09-30)."""
     pack = next(c for c in commands(load("daily")) if "--pack-new" in c)
     assert "${GITHUB_RUN_ID}" in pack and "--clobber" not in "\n".join(commands(load("daily")))  # unique names; append-only, never overwrite
+
+
+def test_a_failed_site_build_or_deploy_opens_an_issue_even_when_the_data_pipeline_succeeded():
+    """2026-10-03 to 05: the pipeline was green, the Pages gate failed, the site froze, and nothing said so."""
+    d = load("daily")
+    job = d["jobs"]["report-site-failure"]
+    assert job["needs"] == ["pipeline", "deploy"] and "needs.deploy.result == 'failure'" in job["if"] and "!cancelled()" in job["if"]
+    assert job["permissions"] == {"issues": "write"}
+    text = "\n".join(s["run"] for s in job["steps"] if "run" in s)
+    assert "gh issue create" in text and "gh issue comment" in text and "Site build or deploy failing" in text  # one issue, commented on while it stays red
+    assert "GH_REPO" in str(job["steps"])  # no checkout in this job, so gh needs the repository named

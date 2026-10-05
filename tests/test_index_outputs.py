@@ -83,12 +83,19 @@ def test_region_prices_are_local_value_times_fx():
 
 def test_eu_household_is_carried_after_the_last_published_semester():
     eu = {r["month"]: r for r in _rows("region_prices.csv") if r["index"] == "retail" and r["region"] == "EU"}
-    assert eu["2025-12"]["carried"] == "0" and eu["2026-01"]["carried"] == "1" and eu["2026-01"]["provisional"] == "1"
-    assert eu["2015-06"]["provisional"] == "0"
+    published = [r for r in csv.DictReader((ROOT / "data" / "series" / "eurostat__nrg_pc_204.csv").open())
+                 if r["region"] == "EU" and r["series_id"] == "nrg_pc_204:KWH2500-4999:I_TAX:EUR"]
+    last = max(r["period_end"] for r in published)[:7]  # the last month of the newest published semester, whatever it is today
+    assert eu[last]["carried"] == "0" and eu["2015-06"]["provisional"] == "0"
+    after = [m for m in eu if m > last]
+    assert all(eu[m]["carried"] == "1" and eu[m]["provisional"] == "1" for m in after)  # and everything after it is carried and provisional
+    assert all(eu[m]["carried"] == "0" for m in eu if m <= last)
 
 
 def test_wholesale_never_publishes_a_partial_month_as_final(wholesale):
-    assert wholesale[-1]["month"] <= "2026-08"
+    lines = ledger.loads((ROOT / "ledger" / "index.jsonl").read_text())
+    newest = ledger.latest(lines)[("wholesale", wholesale[-1]["month"])]
+    assert wholesale[-1]["month"] < newest["published"][:7]  # a month is never published in its own month: the partial month is left out
 
 
 def test_ledger_chain_is_intact_and_latest_lines_match_the_tables(retail, wholesale):
