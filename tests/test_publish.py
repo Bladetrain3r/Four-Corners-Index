@@ -68,6 +68,16 @@ def test_the_known_gaps_are_present_with_their_reasons(site):
     assert za["industrial"]["status"] == "value" and za["industrial"]["period_label"] == "financial year 2025/26" and "market" in za["wholesale"]["reason"]
     assert "sterling" in regs["GB"]["cards"]["wholesale"]["reason"]
     assert regs["CN"]["cards"]["household"]["confidence"] == "low_confidence" and regs["CN"]["badge"] == "C"
+    for rid, name, sid in (("EU", "eurostat__nrg_pc_204", "nrg_pc_204:KWH2500-4999:I_TAX:EUR"), ("GB", "desnz__qep_562", "desnz:qep_5.6.2:medium:incl_tax")):
+        pts = [r for r in csv.DictReader((ROOT / "data" / "series" / f"{name}.csv").open()) if r["series_id"] == sid and (rid == "GB" or r["region"] == rid)]
+        newest = max(pts, key=lambda r: r["period_start"])
+        assert regs[rid]["cards"]["household"]["value"] == pytest.approx(float(newest["value"]), abs=1e-5)  # a card is the newest point of its series, whatever it is today
+        assert regs[rid]["cards"]["household"]["period_start"] == newest["period_start"]
+
+
+def test_the_values_on_the_cards_at_launch_are_the_published_ones(launch_site):
+    """Pinned to the launch bundle: these numbers were read from Eurostat and DESNZ on 2026-09-29 and do not move."""
+    regs = {r["id"]: r for r in _j(launch_site, "regions.json")["regions"]}
     assert regs["EU"]["cards"]["household"]["value"] == pytest.approx(0.2896) and regs["GB"]["cards"]["household"]["value"] == pytest.approx(0.297773, abs=1e-6)
 
 
@@ -102,14 +112,13 @@ def test_eu_price_components_are_published_with_their_reconciliation_to_the_half
             # measured: the annual components differ from the half-year mean by -0.9% to +2.3% (largest in 2021 and 2023); 3% is the
             # bound chosen after looking at those numbers, to catch a broken decomposition, not to certify the publisher's data
             assert abs(rec[y["year"]]["difference"]) / rec[y["year"]]["half_year_mean"] < 0.03, y["year"]
-    assert abs(rec["2025"]["difference"]) < 0.001  # the latest year reconciles closely
 
 
 def test_drivers_have_twelve_month_sparklines_and_the_two_omissions_are_explained(site):
     items = {i["id"]: i for i in _j(site, "drivers.json")["items"]}
     values = [i for i in items.values() if i["status"] == "value"]
     assert len(values) == 8 and all(len(i["series"]) == 13 and i["as_of"] and i["source"] and i["badge"] == "A" for i in values)
-    assert items["ttf"]["latest"]["v"] == 21.11 and items["ttf"]["change_12m"] == pytest.approx(0.893, abs=0.001)
+    assert items["ttf"]["latest"]["v"] > 0 and items["ttf"]["change_12m"] > -1 and items["ttf"]["latest"]["m"] >= items["ttf"]["series"][0]["m"]
     assert items["carbon"]["status"] == "gap" and "no free" in items["carbon"]["reason"]
     assert items["rub"]["status"] == "gap" and "rightsholders" in items["rub"]["reason"]
 
@@ -164,3 +173,14 @@ def test_markdown_converter_handles_the_constructs_and_escapes():
     assert "<h1 id=\"t\">T</h1>" in out and "<strong>bold</strong>" in out and "<em>it</em>" in out and "<code>code</code>" in out
     assert "&lt;b&gt;x&lt;/b&gt;" in out and '<a href="https://a.b/c">l</a>' in out
     assert out.count("<li>") == 4 and "<th>h1</th>" in out and "<td>y</td>" in out and "<blockquote>" in out
+
+
+def test_the_drivers_at_launch_are_the_published_ones(launch_site):
+    """Pinned to the launch bundle (World Bank Pink Sheet of 2026-09-02, ECB of 2026-09-29): the live values move every month."""
+    items = {i["id"]: i for i in _j(launch_site, "drivers.json")["items"]}
+    assert items["ttf"]["latest"]["v"] == 21.11 and items["ttf"]["change_12m"] == pytest.approx(0.893, abs=0.001)
+
+
+def test_the_eu_components_reconcile_closely_in_the_latest_launch_year(launch_site):
+    rec = {r["year"]: r for r in _j(launch_site, "region_EU.json")["components"]["reconciliation"]}
+    assert abs(rec["2025"]["difference"]) < 0.001

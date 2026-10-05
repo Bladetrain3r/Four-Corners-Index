@@ -60,8 +60,12 @@ def test_the_fuel_mix_beside_each_value_is_the_same_year_and_adds_up(with_series
 
 def test_annual_mix_uses_complete_years_only():
     mix = site_air.annual_mix()
-    years = {y for (_r, y) in mix}
-    assert 2023 in years and max(years) < 2026  # the running year has fewer than twelve months and is left out
+    assert (("EU", 2023)) in mix
+    months: dict[tuple[str, int], set[str]] = {}
+    for r in site_data.series_rows("ember__monthly_generation"):
+        if r["series_id"] == "ember:monthly:generation" and r["fuel"] == "total":
+            months.setdefault((r["region"], int(r["period_start"][:4])), set()).add(r["period_start"][:7])
+    assert set(mix) == {k for k, m in months.items() if len(m) == 12}  # exactly the complete years: the running year is left out until it is complete
     assert all(abs(v["coal"] + v["gas"] + v["other_fossil"] + v["clean"] - 1) < 1e-4 for v in mix.values())  # same rounding bound as above
 
 

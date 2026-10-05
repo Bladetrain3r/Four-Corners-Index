@@ -96,3 +96,24 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/pages.yml
+
+  report-site-failure:
+    # A source failure opens its own issue (the pipeline job). This one covers the other way a day goes wrong: the data is fine but the
+    # Pages build or deploy fails, so the site silently keeps showing an older version (three days, 2026-10-03 to 05, before this existed).
+    needs: [pipeline, deploy]
+    if: ${{ !cancelled() && needs.deploy.result == 'failure' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open or update an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Site build or deploy failing"
+          body="The Pages build or deploy failed in $RUN_URL. The data pipeline step ran, but the site is still showing the last version that deployed. Open the 'deploy / build' job: the failing step ('Check the built site' runs the tests on the freshly built site) names the assertion."
+          existing="$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then gh issue comment "$existing" --body "$body"
+          else gh issue create --title "$title" --body "$body"; fi
