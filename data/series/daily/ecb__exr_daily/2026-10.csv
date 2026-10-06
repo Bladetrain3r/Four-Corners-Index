@@ -1,9 +1,13 @@
 series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2026-10-01,2026-10-01,7.5748,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2026-10-02,2026-10-02,7.5259,CNY/EUR,CNY,,primary
+ecb:EXR:D:CNY:EUR,CNY,driver,,,,2026-10-05,2026-10-05,7.5118,CNY/EUR,CNY,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2026-10-01,2026-10-01,0.85373,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2026-10-02,2026-10-02,0.85033,GBP/EUR,GBP,,primary
+ecb:EXR:D:GBP:EUR,GBP,driver,,,,2026-10-05,2026-10-05,0.8472,GBP/EUR,GBP,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2026-10-01,2026-10-01,1.1298,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2026-10-02,2026-10-02,1.1225,USD/EUR,USD,,primary
+ecb:EXR:D:USD:EUR,USD,driver,,,,2026-10-05,2026-10-05,1.1204,USD/EUR,USD,,primary
 ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2026-10-01,2026-10-01,18.6934,ZAR/EUR,ZAR,,primary
 ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2026-10-02,2026-10-02,18.7839,ZAR/EUR,ZAR,,primary
+ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2026-10-05,2026-10-05,18.6263,ZAR/EUR,ZAR,,primary

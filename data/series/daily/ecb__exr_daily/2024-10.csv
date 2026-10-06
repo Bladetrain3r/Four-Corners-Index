@@ -1,7 +1,4 @@
 series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
-ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-02,2024-10-02,7.7702,CNY/EUR,CNY,,primary
-ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-03,2024-10-03,7.7477,CNY/EUR,CNY,,primary
-ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-04,2024-10-04,7.7407,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-07,2024-10-07,7.7077,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-08,2024-10-08,7.7449,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-09,2024-10-09,7.7435,CNY/EUR,CNY,,primary
@@ -21,9 +18,6 @@ ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-28,2024-10-28,7.7099,CNY/EUR,CNY,,primar
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-29,2024-10-29,7.6895,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-30,2024-10-30,7.7054,CNY/EUR,CNY,,primary
 ecb:EXR:D:CNY:EUR,CNY,driver,,,,2024-10-31,2024-10-31,7.7436,CNY/EUR,CNY,,primary
-ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-02,2024-10-02,0.83288,GBP/EUR,GBP,,primary
-ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-03,2024-10-03,0.84258,GBP/EUR,GBP,,primary
-ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-04,2024-10-04,0.83735,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-07,2024-10-07,0.83918,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-08,2024-10-08,0.83778,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-09,2024-10-09,0.8374,GBP/EUR,GBP,,primary
@@ -43,9 +37,6 @@ ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-28,2024-10-28,0.8329,GBP/EUR,GBP,,primar
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-29,2024-10-29,0.8302,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-30,2024-10-30,0.83425,GBP/EUR,GBP,,primary
 ecb:EXR:D:GBP:EUR,GBP,driver,,,,2024-10-31,2024-10-31,0.83753,GBP/EUR,GBP,,primary
-ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-02,2024-10-02,1.1071,USD/EUR,USD,,primary
-ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-03,2024-10-03,1.1039,USD/EUR,USD,,primary
-ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-04,2024-10-04,1.1029,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-07,2024-10-07,1.0982,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-08,2024-10-08,1.0982,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-09,2024-10-09,1.0957,USD/EUR,USD,,primary
@@ -65,9 +56,6 @@ ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-28,2024-10-28,1.0818,USD/EUR,USD,,primar
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-29,2024-10-29,1.0774,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-30,2024-10-30,1.0815,USD/EUR,USD,,primary
 ecb:EXR:D:USD:EUR,USD,driver,,,,2024-10-31,2024-10-31,1.0882,USD/EUR,USD,,primary
-ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-02,2024-10-02,19.2605,ZAR/EUR,ZAR,,primary
-ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-03,2024-10-03,19.3017,ZAR/EUR,ZAR,,primary
-ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-04,2024-10-04,19.2809,ZAR/EUR,ZAR,,primary
 ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-07,2024-10-07,19.0978,ZAR/EUR,ZAR,,primary
 ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-08,2024-10-08,19.1784,ZAR/EUR,ZAR,,primary
 ecb:EXR:D:ZAR:EUR,ZAR,driver,,,,2024-10-09,2024-10-09,19.3282,ZAR/EUR,ZAR,,primary
