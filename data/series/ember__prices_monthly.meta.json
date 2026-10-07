@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-03",
+  "as_of": "2026-10-07",
   "name": "prices_monthly",
-  "raw_sha256": "36e86ccf5456e2a6e1a55ab99e55ac289d7542b2c847b84a40b1423e3c4f12f7",
-  "retrieved_at": "2026-10-03T05:35:39Z",
+  "raw_sha256": "aff27f85a8d4aae6a745f69f4acf08be2836bd552a485a9bdc90ba2ac6d2aebe",
+  "retrieved_at": "2026-10-07T05:30:22Z",
   "role": "primary",
-  "rows": 4031,
+  "rows": 4036,
   "since": "2015-01-01",
   "source": "ember",
   "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_monthly.csv"
