@@ -594,6 +594,7 @@ nrg_pc_205:MWH2000-19999:I_TAX:EUR,SE,cost,industrial,,,2024-01-01,2024-06-30,0.
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SE,cost,industrial,,,2024-07-01,2024-12-31,0.0907,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SE,cost,industrial,,,2025-01-01,2025-06-30,0.1048,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SE,cost,industrial,,,2025-07-01,2025-12-31,0.1065,EUR/kWh,EUR,,primary
+nrg_pc_205:MWH2000-19999:I_TAX:EUR,SE,cost,industrial,,,2026-01-01,2026-06-30,0.132,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SI,cost,industrial,,,2015-01-01,2015-06-30,0.0882,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SI,cost,industrial,,,2015-07-01,2015-12-31,0.0919,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:I_TAX:EUR,SI,cost,industrial,,,2016-01-01,2016-06-30,0.0868,EUR/kWh,EUR,,primary
@@ -1235,6 +1236,7 @@ nrg_pc_205:MWH2000-19999:X_TAX:EUR,SE,cost,industrial,,,2024-01-01,2024-06-30,0.
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SE,cost,industrial,,,2024-07-01,2024-12-31,0.072,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SE,cost,industrial,,,2025-01-01,2025-06-30,0.0833,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SE,cost,industrial,,,2025-07-01,2025-12-31,0.0846,EUR/kWh,EUR,,primary
+nrg_pc_205:MWH2000-19999:X_TAX:EUR,SE,cost,industrial,,,2026-01-01,2026-06-30,0.105,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SI,cost,industrial,,,2015-01-01,2015-06-30,0.063,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SI,cost,industrial,,,2015-07-01,2015-12-31,0.0631,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_TAX:EUR,SI,cost,industrial,,,2016-01-01,2016-06-30,0.0594,EUR/kWh,EUR,,primary
@@ -1876,6 +1878,7 @@ nrg_pc_205:MWH2000-19999:X_VAT:EUR,SE,cost,industrial,,,2024-01-01,2024-06-30,0.
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SE,cost,industrial,,,2024-07-01,2024-12-31,0.0725,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SE,cost,industrial,,,2025-01-01,2025-06-30,0.0838,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SE,cost,industrial,,,2025-07-01,2025-12-31,0.0852,EUR/kWh,EUR,,primary
+nrg_pc_205:MWH2000-19999:X_VAT:EUR,SE,cost,industrial,,,2026-01-01,2026-06-30,0.1056,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SI,cost,industrial,,,2015-01-01,2015-06-30,0.0723,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SI,cost,industrial,,,2015-07-01,2015-12-31,0.0753,EUR/kWh,EUR,,primary
 nrg_pc_205:MWH2000-19999:X_VAT:EUR,SI,cost,industrial,,,2016-01-01,2016-06-30,0.0712,EUR/kWh,EUR,,primary

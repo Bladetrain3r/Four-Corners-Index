@@ -1,6 +1,4 @@
 series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
-ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-05,2024-10-05,84.04,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-06,2024-10-06,56.64,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-07,2024-10-07,87.36,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-08,2024-10-08,78.06,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-09,2024-10-09,80.02,EUR/MWh,EUR,,primary
@@ -26,8 +24,6 @@ ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-28,2024-10-28,113.86,EUR
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-29,2024-10-29,135.64,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-30,2024-10-30,128.24,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,AT,cost,wholesale,,,2024-10-31,2024-10-31,109.66,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-05,2024-10-05,69.22,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-06,2024-10-06,37.25,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-07,2024-10-07,75.81,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-08,2024-10-08,68.08,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-09,2024-10-09,66.45,EUR/MWh,EUR,,primary
@@ -53,8 +49,6 @@ ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-28,2024-10-28,101.78,EUR
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-29,2024-10-29,120.63,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-30,2024-10-30,112.06,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BE,cost,wholesale,,,2024-10-31,2024-10-31,107.52,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-05,2024-10-05,85.47,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-06,2024-10-06,59.66,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-07,2024-10-07,88.09,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-08,2024-10-08,76.53,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-09,2024-10-09,78.91,EUR/MWh,EUR,,primary
@@ -80,8 +74,6 @@ ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-28,2024-10-28,127.61,EUR
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-29,2024-10-29,151.38,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-30,2024-10-30,128.38,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,BG,cost,wholesale,,,2024-10-31,2024-10-31,122.68,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-05,2024-10-05,83.91,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-06,2024-10-06,53.58,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-07,2024-10-07,84.7,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-08,2024-10-08,76.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-09,2024-10-09,76.06,EUR/MWh,EUR,,primary
@@ -107,8 +99,6 @@ ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-28,2024-10-28,117.4,EUR/
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-29,2024-10-29,128.01,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-30,2024-10-30,126.98,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CH,cost,wholesale,,,2024-10-31,2024-10-31,104.4,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-05,2024-10-05,84.85,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-06,2024-10-06,58.01,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-07,2024-10-07,92.88,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-08,2024-10-08,82.69,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-09,2024-10-09,81.63,EUR/MWh,EUR,,primary
@@ -134,8 +124,6 @@ ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-28,2024-10-28,117.7,EUR/
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-29,2024-10-29,141.57,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-30,2024-10-30,125.0,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,CZ,cost,wholesale,,,2024-10-31,2024-10-31,104.99,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-05,2024-10-05,86.49,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-06,2024-10-06,55.3,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-07,2024-10-07,86.44,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-08,2024-10-08,91.93,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-09,2024-10-09,81.57,EUR/MWh,EUR,,primary
@@ -161,8 +149,6 @@ ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-28,2024-10-28,95.32,EUR/
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-29,2024-10-29,136.15,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-30,2024-10-30,129.7,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DE,cost,wholesale,,,2024-10-31,2024-10-31,102.32,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-05,2024-10-05,82.88,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-06,2024-10-06,50.94,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-07,2024-10-07,72.99,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-08,2024-10-08,87.14,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-09,2024-10-09,82.48,EUR/MWh,EUR,,primary
@@ -188,8 +174,6 @@ ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-28,2024-10-28,110.02,EUR
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-29,2024-10-29,140.98,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-30,2024-10-30,98.83,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,DK,cost,wholesale,,,2024-10-31,2024-10-31,40.63,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-05,2024-10-05,115.97,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-06,2024-10-06,71.89,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-07,2024-10-07,133.87,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-08,2024-10-08,70.08,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-09,2024-10-09,27.15,EUR/MWh,EUR,,primary
@@ -215,8 +199,6 @@ ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-28,2024-10-28,121.75,EUR
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-29,2024-10-29,158.47,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-30,2024-10-30,14.27,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EE,cost,wholesale,,,2024-10-31,2024-10-31,49.8,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-05,2024-10-05,87.85,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-06,2024-10-06,69.94,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-07,2024-10-07,97.11,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-08,2024-10-08,86.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-09,2024-10-09,86.41,EUR/MWh,EUR,,primary
@@ -242,8 +224,6 @@ ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-28,2024-10-28,116.08,EUR
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-29,2024-10-29,121.14,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-30,2024-10-30,109.78,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,EL,cost,wholesale,,,2024-10-31,2024-10-31,90.05,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-05,2024-10-05,56.19,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-06,2024-10-06,23.34,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-07,2024-10-07,53.21,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-08,2024-10-08,29.96,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-09,2024-10-09,26.87,EUR/MWh,EUR,,primary
@@ -269,8 +249,6 @@ ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-28,2024-10-28,76.43,EUR/
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-29,2024-10-29,73.24,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-30,2024-10-30,84.07,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ES,cost,wholesale,,,2024-10-31,2024-10-31,101.44,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-05,2024-10-05,98.59,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-06,2024-10-06,28.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-07,2024-10-07,106.29,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-08,2024-10-08,27.38,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-09,2024-10-09,5.24,EUR/MWh,EUR,,primary
@@ -296,8 +274,6 @@ ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-28,2024-10-28,3.54,EUR/M
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-29,2024-10-29,38.71,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-30,2024-10-30,1.66,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FI,cost,wholesale,,,2024-10-31,2024-10-31,26.71,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-05,2024-10-05,60.05,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-06,2024-10-06,24.31,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-07,2024-10-07,55.68,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-08,2024-10-08,31.33,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-09,2024-10-09,32.89,EUR/MWh,EUR,,primary
@@ -323,8 +299,6 @@ ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-28,2024-10-28,81.7,EUR/M
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-29,2024-10-29,86.57,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-30,2024-10-30,79.65,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,FR,cost,wholesale,,,2024-10-31,2024-10-31,97.29,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-05,2024-10-05,88.6,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-06,2024-10-06,85.46,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-07,2024-10-07,109.54,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-08,2024-10-08,105.44,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-09,2024-10-09,93.79,EUR/MWh,EUR,,primary
@@ -351,8 +325,6 @@ ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-28,2024-10-28,114.73,EUR
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-29,2024-10-29,126.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-30,2024-10-30,124.31,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,GB,cost,wholesale,,,2024-10-31,2024-10-31,109.48,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-05,2024-10-05,83.28,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-06,2024-10-06,57.48,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-07,2024-10-07,92.96,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-08,2024-10-08,74.73,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-09,2024-10-09,83.01,EUR/MWh,EUR,,primary
@@ -378,8 +350,6 @@ ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-28,2024-10-28,118.36,EUR
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-29,2024-10-29,140.84,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-30,2024-10-30,125.97,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HR,cost,wholesale,,,2024-10-31,2024-10-31,116.94,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-05,2024-10-05,84.5,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-06,2024-10-06,59.33,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-07,2024-10-07,95.54,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-08,2024-10-08,75.87,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-09,2024-10-09,88.92,EUR/MWh,EUR,,primary
@@ -405,8 +375,6 @@ ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-28,2024-10-28,120.11,EUR
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-29,2024-10-29,141.04,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-30,2024-10-30,126.37,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,HU,cost,wholesale,,,2024-10-31,2024-10-31,121.14,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-05,2024-10-05,97.4,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-06,2024-10-06,80.96,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-07,2024-10-07,105.6,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-08,2024-10-08,126.79,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-09,2024-10-09,122.07,EUR/MWh,EUR,,primary
@@ -433,8 +401,6 @@ ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-28,2024-10-28,117.23,EUR
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-29,2024-10-29,131.5,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-30,2024-10-30,189.51,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2024-10-31,2024-10-31,189.33,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-05,2024-10-05,114.46,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-06,2024-10-06,117.37,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-07,2024-10-07,124.78,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-08,2024-10-08,113.11,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-09,2024-10-09,110.08,EUR/MWh,EUR,,primary
@@ -460,8 +426,6 @@ ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-28,2024-10-28,118.37,EUR
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-29,2024-10-29,129.26,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-30,2024-10-30,126.42,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2024-10-31,2024-10-31,116.32,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-05,2024-10-05,115.97,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-06,2024-10-06,71.89,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-07,2024-10-07,133.87,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-08,2024-10-08,70.08,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-09,2024-10-09,27.15,EUR/MWh,EUR,,primary
@@ -487,8 +451,6 @@ ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-28,2024-10-28,121.75,EUR
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-29,2024-10-29,158.47,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-30,2024-10-30,14.27,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LT,cost,wholesale,,,2024-10-31,2024-10-31,49.8,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-05,2024-10-05,86.49,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-06,2024-10-06,55.3,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-07,2024-10-07,86.44,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-08,2024-10-08,91.93,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-09,2024-10-09,81.57,EUR/MWh,EUR,,primary
@@ -514,8 +476,6 @@ ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-28,2024-10-28,95.32,EUR/
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-29,2024-10-29,136.15,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-30,2024-10-30,129.7,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LU,cost,wholesale,,,2024-10-31,2024-10-31,102.32,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-05,2024-10-05,115.97,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-06,2024-10-06,71.89,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-07,2024-10-07,133.87,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-08,2024-10-08,70.08,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-09,2024-10-09,27.15,EUR/MWh,EUR,,primary
@@ -541,8 +501,6 @@ ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-28,2024-10-28,121.75,EUR
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-29,2024-10-29,158.47,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-30,2024-10-30,14.27,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,LV,cost,wholesale,,,2024-10-31,2024-10-31,49.8,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-05,2024-10-05,86.99,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-06,2024-10-06,55.84,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-07,2024-10-07,90.75,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-08,2024-10-08,94.75,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-09,2024-10-09,80.17,EUR/MWh,EUR,,primary
@@ -568,8 +526,6 @@ ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-28,2024-10-28,117.68,EUR
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-29,2024-10-29,129.45,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-30,2024-10-30,131.04,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,ME,cost,wholesale,,,2024-10-31,2024-10-31,114.73,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-05,2024-10-05,91.41,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-06,2024-10-06,66.12,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-07,2024-10-07,96.1,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-08,2024-10-08,100.34,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-09,2024-10-09,85.6,EUR/MWh,EUR,,primary
@@ -595,8 +551,6 @@ ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-28,2024-10-28,125.27,EUR
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-29,2024-10-29,133.41,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-30,2024-10-30,141.78,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,MK,cost,wholesale,,,2024-10-31,2024-10-31,115.03,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-05,2024-10-05,80.46,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-06,2024-10-06,52.19,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-07,2024-10-07,83.98,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-08,2024-10-08,84.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-09,2024-10-09,80.36,EUR/MWh,EUR,,primary
@@ -622,8 +576,6 @@ ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-28,2024-10-28,105.71,EUR
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-29,2024-10-29,134.17,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-30,2024-10-30,118.73,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NL,cost,wholesale,,,2024-10-31,2024-10-31,109.89,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-05,2024-10-05,36.24,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-06,2024-10-06,32.84,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-07,2024-10-07,36.34,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-08,2024-10-08,36.71,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-09,2024-10-09,31.77,EUR/MWh,EUR,,primary
@@ -649,8 +601,6 @@ ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-28,2024-10-28,19.76,EUR/
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-29,2024-10-29,36.14,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-30,2024-10-30,16.24,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,NO,cost,wholesale,,,2024-10-31,2024-10-31,12.05,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-05,2024-10-05,114.62,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-06,2024-10-06,108.39,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-07,2024-10-07,121.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-08,2024-10-08,95.14,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-09,2024-10-09,96.82,EUR/MWh,EUR,,primary
@@ -676,8 +626,6 @@ ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-28,2024-10-28,131.31,EUR
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-29,2024-10-29,142.86,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-30,2024-10-30,124.3,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PL,cost,wholesale,,,2024-10-31,2024-10-31,94.49,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-05,2024-10-05,56.19,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-06,2024-10-06,23.34,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-07,2024-10-07,53.21,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-08,2024-10-08,29.96,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-09,2024-10-09,26.87,EUR/MWh,EUR,,primary
@@ -703,8 +651,6 @@ ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-28,2024-10-28,76.17,EUR/
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-29,2024-10-29,73.24,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-30,2024-10-30,84.41,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,PT,cost,wholesale,,,2024-10-31,2024-10-31,101.04,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-05,2024-10-05,84.43,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-06,2024-10-06,59.66,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-07,2024-10-07,88.09,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-08,2024-10-08,76.53,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-09,2024-10-09,78.91,EUR/MWh,EUR,,primary
@@ -730,8 +676,6 @@ ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-28,2024-10-28,127.61,EUR
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-29,2024-10-29,151.38,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-30,2024-10-30,128.38,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RO,cost,wholesale,,,2024-10-31,2024-10-31,122.68,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-05,2024-10-05,82.9,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-06,2024-10-06,59.41,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-07,2024-10-07,87.08,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-08,2024-10-08,89.64,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-09,2024-10-09,77.9,EUR/MWh,EUR,,primary
@@ -757,8 +701,6 @@ ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-28,2024-10-28,126.23,EUR
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-29,2024-10-29,136.36,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-30,2024-10-30,140.39,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,RS,cost,wholesale,,,2024-10-31,2024-10-31,109.2,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-05,2024-10-05,26.07,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-06,2024-10-06,24.91,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-07,2024-10-07,37.07,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-08,2024-10-08,25.86,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-09,2024-10-09,8.35,EUR/MWh,EUR,,primary
@@ -784,8 +726,6 @@ ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-28,2024-10-28,10.26,EUR/
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-29,2024-10-29,50.48,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-30,2024-10-30,7.37,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SE,cost,wholesale,,,2024-10-31,2024-10-31,11.77,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-05,2024-10-05,82.79,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-06,2024-10-06,56.94,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-07,2024-10-07,92.1,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-08,2024-10-08,74.17,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-09,2024-10-09,81.79,EUR/MWh,EUR,,primary
@@ -811,8 +751,6 @@ ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-28,2024-10-28,117.57,EUR
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-29,2024-10-29,140.2,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-30,2024-10-30,126.03,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SI,cost,wholesale,,,2024-10-31,2024-10-31,115.6,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SK,cost,wholesale,,,2024-10-05,2024-10-05,85.25,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,SK,cost,wholesale,,,2024-10-06,2024-10-06,60.79,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SK,cost,wholesale,,,2024-10-07,2024-10-07,96.83,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SK,cost,wholesale,,,2024-10-08,2024-10-08,78.06,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,SK,cost,wholesale,,,2024-10-09,2024-10-09,84.49,EUR/MWh,EUR,,primary

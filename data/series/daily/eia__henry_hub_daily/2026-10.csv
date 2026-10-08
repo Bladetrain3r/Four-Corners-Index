@@ -1,0 +1,5 @@
+series_id,region,layer,buyer_type,fuel,component,period_start,period_end,value,unit,currency,source_flag,confidence
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-10-01,2026-10-01,3.0,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-10-02,2026-10-02,2.9,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-10-05,2026-10-05,2.96,USD/MMBtu,USD,,primary
+natural-gas/pri/fut:RNGWHHD:daily,US,driver,,gas,,2026-10-06,2026-10-06,3.03,USD/MMBtu,USD,,primary

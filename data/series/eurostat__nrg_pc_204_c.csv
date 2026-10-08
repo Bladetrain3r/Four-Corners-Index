@@ -1204,7 +1204,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2021-01-01,2021-12-31,0.04
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2022-01-01,2022-12-31,0.0461,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2023-01-01,2023-12-31,0.0468,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2024-01-01,2024-12-31,0.0467,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2025-01-01,2025-12-31,0.0523,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NETC,2025-01-01,2025-12-31,0.052,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2017-01-01,2017-12-31,0.0575,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2018-01-01,2018-12-31,0.0583,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2019-01-01,2019-12-31,0.0589,EUR/kWh,EUR,,primary
@@ -1213,7 +1213,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2021-01-01,2021-12-31,0
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2022-01-01,2022-12-31,0.0655,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2023-01-01,2023-12-31,0.0703,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2024-01-01,2024-12-31,0.0707,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2025-01-01,2025-12-31,0.0794,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,NRG_SUP,2025-01-01,2025-12-31,0.0794,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,OTH,2017-01-01,2017-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,OTH,2018-01-01,2018-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,OTH,2019-01-01,2019-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1255,7 +1255,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2021-01-01,202
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2022-01-01,2022-12-31,0.03,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2023-01-01,2023-12-31,0.031,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2024-01-01,2024-12-31,0.0304,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2025-01-01,2025-12-31,0.0321,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG,2025-01-01,2025-12-31,0.0321,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG_ALLOW,2024-01-01,2024-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_FEE_LEV_CHRG_ALLOW,2025-01-01,2025-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_NUC,2017-01-01,2017-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1278,7 +1278,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2021-01-01,2021-12-31,0
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2022-01-01,2022-12-31,0.0139,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2023-01-01,2023-12-31,0.0139,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2024-01-01,2024-12-31,0.0134,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2025-01-01,2025-12-31,0.0133,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW,2025-01-01,2025-12-31,0.0133,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW_ALLOW,2023-01-01,2023-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW_ALLOW,2024-01-01,2024-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,TAX_RNW_ALLOW,2025-01-01,2025-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1290,7 +1290,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2021-01-01,2021-12-31,0.015
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2022-01-01,2022-12-31,0.0161,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2023-01-01,2023-12-31,0.017,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2024-01-01,2024-12-31,0.017,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2025-01-01,2025-12-31,0.0188,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,HR,cost,household,,VAT,2025-01-01,2025-12-31,0.0188,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HU,cost,household,,ALLOW_OTH,2024-01-01,2024-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HU,cost,household,,ALLOW_OTH,2025-01-01,2025-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,HU,cost,household,,NETC,2017-01-01,2017-12-31,0.043,EUR/kWh,EUR,,primary
@@ -1828,7 +1828,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2021-01-01,2021-12-31,0.02
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2022-01-01,2022-12-31,0.027,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2023-01-01,2023-12-31,0.028,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2024-01-01,2024-12-31,0.044,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2025-01-01,2025-12-31,0.047,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NETC,2025-01-01,2025-12-31,0.047,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2017-01-01,2017-12-31,0.0985,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2018-01-01,2018-12-31,0.098,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2019-01-01,2019-12-31,0.0971,EUR/kWh,EUR,,primary
@@ -1837,7 +1837,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2021-01-01,2021-12-31,0
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2022-01-01,2022-12-31,0.0944,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2023-01-01,2023-12-31,0.0915,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2024-01-01,2024-12-31,0.0771,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2025-01-01,2025-12-31,0.0726,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,NRG_SUP,2025-01-01,2025-12-31,0.0732,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,OTH,2017-01-01,2017-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,OTH,2018-01-01,2018-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,OTH,2019-01-01,2019-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1868,7 +1868,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2021-01-01,2021-12-31,0
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2022-01-01,2022-12-31,0.0015,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2023-01-01,2023-12-31,0.0015,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2024-01-01,2024-12-31,0.0015,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2025-01-01,2025-12-31,0.0015,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV,2025-01-01,2025-12-31,0.0015,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV_ALLOW,2022-01-01,2022-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV_ALLOW,2023-01-01,2023-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_ENV_ALLOW,2024-01-01,2024-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1881,7 +1881,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2021-01-01,202
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2022-01-01,2022-12-31,0.0076,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2023-01-01,2023-12-31,0.0076,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2024-01-01,2024-12-31,0.0076,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2025-01-01,2025-12-31,0.0076,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG,2025-01-01,2025-12-31,0.0076,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG_ALLOW,2023-01-01,2023-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG_ALLOW,2024-01-01,2024-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,TAX_FEE_LEV_CHRG_ALLOW,2025-01-01,2025-12-31,0.0,EUR/kWh,EUR,,primary
@@ -1919,7 +1919,7 @@ nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2021-01-01,2021-12-31,0.006
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2022-01-01,2022-12-31,0.0061,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2023-01-01,2023-12-31,0.0061,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2024-01-01,2024-12-31,0.0061,EUR/kWh,EUR,,primary
-nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2025-01-01,2025-12-31,0.0061,EUR/kWh,EUR,p,primary
+nrg_pc_204_c:KWH2500-4999:EUR,MT,cost,household,,VAT,2025-01-01,2025-12-31,0.0061,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,NL,cost,household,,ALLOW_OTH,2017-01-01,2017-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,NL,cost,household,,ALLOW_OTH,2018-01-01,2018-12-31,0.0,EUR/kWh,EUR,,primary
 nrg_pc_204_c:KWH2500-4999:EUR,NL,cost,household,,ALLOW_OTH,2019-01-01,2019-12-31,0.0,EUR/kWh,EUR,,primary
