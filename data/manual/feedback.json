@@ -1,6 +1,0 @@
-{
-  "note": "The feedback form in the footer is hidden until 'endpoint' and 'contact' are both set. endpoint: the https URL of the receiver (feedback/server.py, see feedback/README.md), ending in /feedback. contact: where a visitor can ask for their message to be deleted (an email address or a URL). retention_days: how long a comment and an email are kept before 'prune' deletes them (the vote stays).",
-  "endpoint": null,
-  "contact": null,
-  "retention_days": 90
-}

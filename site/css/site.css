@@ -154,14 +154,6 @@ blockquote { margin: 8px 0 0; padding: 2px 12px; border-left: 3px solid var(--bo
 .datatable.full { max-height: none; }
 .datatable.text td:nth-child(2) { text-align: left; }
 .datatable.text th, .datatable.text td { vertical-align: top; }
-details.feedback { margin: 14px 0; max-width: 560px; }
-details.feedback > summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
-.feedback-form fieldset { border: 0; padding: 0; margin: 0 0 10px; }
-.feedback-form legend { padding: 0; margin-bottom: 6px; font-weight: 600; }
-.feedback-form .votes { display: flex; gap: 10px; flex-wrap: wrap; }
-.feedback-form button { min-height: 44px; padding: 8px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); font: inherit; cursor: pointer; }
-.feedback-form button.vote[aria-pressed="true"] { background: var(--accent); color: var(--surface-1); border-color: var(--accent); }
-.feedback-form button.send:disabled { opacity: .55; cursor: not-allowed; }
-.feedback-form label { display: block; margin-bottom: 4px; }
-.feedback-form textarea, .feedback-form input[type="email"] { width: 100%; max-width: 560px; font: inherit; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-1); color: var(--text-primary); }
-.feedback-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.feedback-links { margin: 14px 0; }
+.feedback-links a.vote { display: inline-block; min-height: 44px; line-height: 28px; padding: 8px 16px; margin: 0 10px 6px 0; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-1); color: var(--text-primary); text-decoration: none; }
+.feedback-links a.vote:hover { border-color: var(--accent); }

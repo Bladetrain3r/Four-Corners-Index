@@ -1,6 +1,6 @@
 // Header, navigation, theme toggle and footer shared by every page.
 import { el, getJSON, store, $ } from "./util.js";
-import { feedbackBlock } from "./feedback.js";
+import { feedbackLinks } from "./feedback.js";
 
 const NAV = [["index.html", "Overview"], ["indices.html", "The indices"], ["region.html?r=EU", "Regions", "region.html"], ["air.html", "Air quality"], ["method.html", "Method"], ["sources.html", "Sources"], ["downloads.html", "Downloads"]];
 const THEMES = [["auto", "Theme: auto"], ["light", "Theme: light"], ["dark", "Theme: dark"]];
@@ -53,7 +53,7 @@ function footer(src, meta) {
     el("p", {}, el("a", { href: "sources.html" }, "Licences, modifications and sources not used"), " · ", el("a", { href: "method.html" }, "Method"), " · ",
       el("a", { href: "https://github.com/Bladetrain3r/Four-Corners-Index" }, "Code and ledger on GitHub (MIT)")),
     el("p", {}, el("a", { href: src.sponsor.url }, "Sponsor this project"), ". ", src.sponsor.line),
-    meta.feedback ? feedbackBlock(meta.feedback, location.pathname.split("/").pop() ? "/" + location.pathname.split("/").pop() : "/") : null,
+    feedbackLinks(),
     el("p", {}, src.disclaimer),
     el("p", { class: "meta", "data-testid": "health-line" }, healthLine(meta)),
     el("p", { class: "meta" }, `Data build ${meta.published} · method version ${meta.method_doc_version} · inputs ${meta.inputs_sha256.slice(0, 12)}`)));

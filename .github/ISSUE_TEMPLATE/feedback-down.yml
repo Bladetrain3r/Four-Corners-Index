@@ -1,0 +1,22 @@
+name: "Feedback: not useful"
+description: Tell us what was wrong, missing or confusing on a page of the Four Corners Index.
+title: "👎 Not useful: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **This issue is public**, with your GitHub name on it. Please do not put personal details in it. Replies come here, on this thread.
+        If you are reporting a wrong number, say which one, on which page, and what you expected: every figure on the site has a source link and a date.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Filled in for you from the page you were on.
+  - type: textarea
+    id: comment
+    attributes:
+      label: What was wrong, missing or confusing? (optional)
+      description: A line is plenty. You can leave this empty and just submit the thumbs-down.
+    validations:
+      required: false

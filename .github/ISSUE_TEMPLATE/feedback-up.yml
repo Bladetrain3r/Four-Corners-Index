@@ -1,0 +1,21 @@
+name: "Feedback: useful"
+description: Tell us what worked on a page of the Four Corners Index.
+title: "👍 Useful: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **This issue is public**, with your GitHub name on it. Please do not put personal details in it. Replies come here, on this thread.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Filled in for you from the page you were on.
+  - type: textarea
+    id: comment
+    attributes:
+      label: What was useful? (optional)
+      description: A line is plenty. You can leave this empty and just submit the thumbs-up.
+    validations:
+      required: false

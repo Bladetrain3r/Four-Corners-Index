@@ -6,3 +6,4 @@
 - **Alternative regions with public cost data**: Brazil, Turkiye.
 - **Browser tests in CI**: Ziggy is not worried about it for now (2026-10-01).
 - **Open source questions** (EIA revision window, the Shanghai tariff's currency and re-issue, Ember's UK currency): Ziggy is not sure; they stay open.
+- **Feedback receiver for Ziggy's own hosted services**: the stdlib receiver built and tested for Four Corners (then dropped in favour of GitHub Issues) is at commit `297e686` on the branch `claude/optimistic-gates-u7dyq8`: `git checkout 297e686 -- feedback/ tests/test_feedback_server.py`.
