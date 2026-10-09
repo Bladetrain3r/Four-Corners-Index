@@ -36,13 +36,13 @@ worldbank:wdi:EN.ATM.PM25.MC.M3,CN,air,,,,2023-01-01,2023-12-31,31.991575365069,
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1990-01-01,1990-12-31,23.8452940146391,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1991-01-01,1991-12-31,23.689727118304,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1992-01-01,1992-12-31,23.3904705578653,ug/m3,,,high_latency
-worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1993-01-01,1993-12-31,23.0939564376522,ug/m3,,,high_latency
+worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1993-01-01,1993-12-31,23.0939564376521,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1994-01-01,1994-12-31,22.7991327010506,ug/m3,,,high_latency
-worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1995-01-01,1995-12-31,22.7867570113897,ug/m3,,,high_latency
+worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1995-01-01,1995-12-31,22.7867570113896,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1996-01-01,1996-12-31,22.2093423727705,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1997-01-01,1997-12-31,21.9164879231202,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1998-01-01,1998-12-31,21.6245197256357,ug/m3,,,high_latency
-worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1999-01-01,1999-12-31,21.3317583514573,ug/m3,,,high_latency
+worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,1999-01-01,1999-12-31,21.3317583514574,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,2000-01-01,2000-12-31,20.8923024848145,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,2001-01-01,2001-12-31,19.6528101195956,ug/m3,,,high_latency
 worldbank:wdi:EN.ATM.PM25.MC.M3,EU,air,,,,2002-01-01,2002-12-31,20.8139797191183,ug/m3,,,high_latency
