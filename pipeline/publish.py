@@ -14,7 +14,7 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from pipeline import mdhtml, site_air, site_data
+from pipeline import mdhtml, site_air, site_data, site_feedback
 from pipeline.snapshot import MANIFEST
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -110,7 +110,8 @@ def publish(out: Path, health: Path = HEALTH) -> dict[str, Any]:
                                   "inputs_sha256": info["inputs_sha256"], "published": info["published"], "snapshots": info["snapshots"],
                                   "latest": {"retail": info["retail_months"][1], "wholesale": info["wholesale_months"][1]},
                                   "disclaimer": src["disclaimer"], "sponsor": src["sponsor"],
-                                  "health": json.loads(health.read_text())["sources"] if health.exists() else {}})
+                                  "health": json.loads(health.read_text())["sources"] if health.exists() else {},
+                                  "feedback": site_feedback.config()})
     body = mdhtml.convert((ROOT / "METHOD.md").read_text())
     (dd / "method.html").write_text(f'<!-- generated from METHOD.md by pipeline.publish: do not edit -->\n<article class="prose">\n{body}\n</article>\n', encoding="utf-8")
     return {"json": len(list(dd.glob("*.json"))), "downloads": len(files)}

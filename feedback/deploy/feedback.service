@@ -1,0 +1,26 @@
+[Unit]
+Description=Four Corners Index feedback receiver
+After=network.target
+
+[Service]
+User=feedback
+Group=feedback
+WorkingDirectory=/opt/four-corners
+EnvironmentFile=/etc/feedback.env
+ExecStart=/usr/bin/python3 -m feedback.server serve --host 127.0.0.1 --port 8787 --trust-proxy --origins ${FEEDBACK_ORIGINS}
+Restart=on-failure
+RestartSec=5
+# The receiver needs one writable directory and nothing else.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/feedback
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target

@@ -308,3 +308,133 @@ def test_the_indices_page_describes_the_revisions_it_lists_whatever_their_number
     assert (f"{len(later)} later" in text) == bool(later)
     assert page.locator("table", has_text="Was").locator("tbody tr").count() == len(revs)
     page.close()
+
+
+# ---- the feedback form: hidden by default; with an endpoint it contacts exactly one extra host, and only when Send is pressed ----
+
+def _with_feedback(base, endpoint, retention=90):
+    path = base[1] / "data" / "meta.json"
+    original = path.read_text()
+    meta = json.loads(original)
+    meta["feedback"] = {"endpoint": endpoint, "host": re.match(r"https?://([^/]+)", endpoint).group(1), "contact": "feedback@example.org", "retention_days": retention, "max_comment": 1000}
+    path.write_text(json.dumps(meta))
+    return path, original
+
+
+@pytest.fixture
+def receiver(base, tmp_path):
+    import threading
+
+    from feedback import server
+    store = server.Store(tmp_path / "fb" / "feedback.jsonl")
+    httpd = server.make_server("127.0.0.1", 0, store, {base[0]}, limiter=server.RateLimiter(per_hour=3, per_day=10))
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    yield f"http://127.0.0.1:{httpd.server_address[1]}/feedback", store
+    httpd.shutdown()
+    httpd.server_close()
+
+
+@pytest.mark.parametrize("path", ["index.html", "air.html", "region.html?r=EU", "sources.html"])
+def test_without_an_endpoint_there_is_no_feedback_form_anywhere(browser, base, path):
+    page = _open(browser, base, path)
+    assert page.locator('[data-testid="feedback"]').count() == 0 and page.hosts == {base[0].split("//")[1]}
+    page.close()
+
+
+def test_the_form_sends_the_vote_comment_and_email_to_the_receiver_and_only_then_contacts_it(browser, base, receiver):
+    endpoint, store = receiver
+    path, original = _with_feedback(base, endpoint)
+    try:
+        page = _open(browser, base, "air.html")
+        site_host, rx_host = base[0].split("//")[1], endpoint.split("//")[1].split("/")[0]
+        assert page.hosts == {site_host}, "the page must not contact the feedback host before anyone presses Send"
+        page.locator('[data-testid="feedback"] summary').click()
+        send = page.get_by_role("button", name="Send feedback")
+        assert send.is_disabled()
+        priv = page.locator('[data-testid="feedback-privacy"]').inner_text()
+        assert "90 days" in priv and rx_host in priv and "feedback@example.org" in priv and "never shown on this site or shared" in priv and "No cookies" in priv
+        page.get_by_role("button", name="Useful", exact=False).first.click()
+        assert send.is_enabled() and page.locator('button[data-vote="up"]').get_attribute("aria-pressed") == "true"
+        page.get_by_label("Anything to add? (optional)").fill("  Lovely charts, the table view is great.  ")
+        page.get_by_label("Email, only if you want a reply (optional)").fill("reader@example.com")
+        send.click()
+        page.wait_for_function("document.querySelector('[data-testid=feedback-status]').textContent.includes('Thank you')")
+        (row,) = store.rows()
+        assert (row["vote"], row["page"], row["comment"], row["email"], row["reply"]) == ("up", "/air.html", "Lovely charts, the table view is great.", "reader@example.com", True)
+        assert page.hosts == {site_host, rx_host} and page.errors == []
+        assert page.get_by_label("Anything to add? (optional)").input_value() == "" and send.is_disabled()  # cleared, ready for another
+        page.close()
+    finally:
+        path.write_text(original)
+
+
+def test_a_vote_alone_is_enough_and_a_bad_email_blocks_the_send_with_a_message_and_sends_nothing(browser, base, receiver):
+    endpoint, store = receiver
+    path, original = _with_feedback(base, endpoint)
+    try:
+        page = _open(browser, base, "index.html")
+        page.locator('[data-testid="feedback"] summary').click()
+        page.locator('button[data-vote="down"]').click()
+        page.get_by_label("Email, only if you want a reply (optional)").fill("not an email")
+        page.get_by_role("button", name="Send feedback").click()
+        assert "does not look right" in page.locator('[data-testid="feedback-status"]').inner_text() and store.rows() == []
+        page.get_by_label("Email, only if you want a reply (optional)").fill("")
+        page.get_by_role("button", name="Send feedback").click()
+        page.wait_for_function("document.querySelector('[data-testid=feedback-status]').textContent.includes('Thank you')")
+        (row,) = store.rows()
+        assert (row["vote"], row["comment"], row["email"], row["page"]) == ("down", None, None, "/index.html")
+        page.close()
+    finally:
+        path.write_text(original)
+
+
+def test_when_the_receiver_is_down_or_refuses_the_text_is_kept_and_the_page_says_so(browser, base, receiver):
+    endpoint, store = receiver
+    dead = endpoint.replace(endpoint.split("//")[1].split("/")[0], "127.0.0.1:1")
+    path, original = _with_feedback(base, dead)
+    try:
+        page = _open(browser, base, "index.html")
+        page.locator('[data-testid="feedback"] summary').click()
+        page.locator('button[data-vote="up"]').click()
+        page.get_by_label("Anything to add? (optional)").fill("keep this text")
+        page.get_by_role("button", name="Send feedback").click()
+        page.wait_for_function("document.querySelector('[data-testid=feedback-status]').textContent.includes('Could not send')")
+        assert "could not be reached" in page.locator('[data-testid="feedback-status"]').inner_text()
+        assert page.get_by_label("Anything to add? (optional)").input_value() == "keep this text" and page.get_by_role("button", name="Send feedback").is_enabled()
+        page.close()
+        path.write_text(json.dumps({**json.loads(original), "feedback": {"endpoint": endpoint, "host": "x", "contact": "c", "retention_days": 90, "max_comment": 1000}}))
+        page = _open(browser, base, "index.html")
+        page.locator('[data-testid="feedback"] summary').click()
+        for i in range(4):  # the receiver here allows three an hour
+            page.locator('button[data-vote="up"]').click()
+            page.get_by_role("button", name="Send feedback").click()
+            page.wait_for_function("document.querySelector('[data-testid=feedback-status]').textContent.length > 0 && !document.querySelector('[data-testid=feedback-status]').textContent.includes('Sending')")
+        assert "sent a few already" in page.locator('[data-testid="feedback-status"]').inner_text() and len(store.rows()) == 3
+        page.close()
+    finally:
+        path.write_text(original)
+
+
+def test_the_form_is_usable_by_keyboard_and_fits_a_phone(browser, base, receiver):
+    endpoint, _ = receiver
+    path, original = _with_feedback(base, endpoint)
+    try:
+        page = _open(browser, base, "index.html", 390)
+        page.locator('[data-testid="feedback"] summary').focus()
+        page.keyboard.press("Enter")
+        page.keyboard.press("Tab")
+        assert page.evaluate("document.activeElement.dataset.vote") == "up"
+        page.keyboard.press("Space")
+        assert page.locator('button[data-vote="up"]').get_attribute("aria-pressed") == "true"
+        assert page.evaluate("document.documentElement.scrollWidth") <= 390
+        trap = page.locator('input[name="website"]')
+        assert trap.get_attribute("tabindex") == "-1" and trap.input_value() == "" and page.locator(".hp").get_attribute("aria-hidden") == "true"
+        for tab in range(8):  # the honeypot is never reachable by keyboard
+            page.keyboard.press("Tab")
+            assert page.evaluate("document.activeElement.name") != "website"
+        if os.environ.get("FCI_SCREENSHOTS"):
+            SHOTS.mkdir(parents=True, exist_ok=True)
+            page.locator('[data-testid="feedback"]').screenshot(path=str(SHOTS / "feedback_phone.png"))
+        page.close()
+    finally:
+        path.write_text(original)
