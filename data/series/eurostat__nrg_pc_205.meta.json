@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-07",
+  "as_of": "2026-10-09",
   "name": "nrg_pc_205",
-  "raw_sha256": "005290f444350f14bfde3aeee94c734209840068ad3959dd8e3c2230099e9e10",
-  "retrieved_at": "2026-10-08T05:30:20Z",
+  "raw_sha256": "8710f0b2aa26bd830e84defeddacc94c86ddbee3442b0eadcf7fc20e98bb8468",
+  "retrieved_at": "2026-10-10T05:27:45Z",
   "role": "primary",
-  "rows": 1926,
+  "rows": 1929,
   "since": "2015-01-01",
   "source": "eurostat",
   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?geo=EU27_2020&geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&currency=EUR&nrg_cons=MWH2000-19999&sinceTimePeriod=2015-S1&format=JSON"

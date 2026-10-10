@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-10-09",
-  "cutoff": "2024-10-07",
+  "as_of": "2026-10-10",
+  "cutoff": "2024-10-08",
   "keep_days": 730,
   "months": 25,
   "name": "prices_daily",
-  "raw_sha256": "ed61532896124873b0b5ebc83c372e4d69162582a6397ea8a8f5001d4419fa06",
-  "retrieved_at": "2026-10-09T05:31:13Z",
+  "raw_sha256": "b01513c3543742d0828549a7c972d8d06a7c762501c911e3a18018e94dab928f",
+  "retrieved_at": "2026-10-10T05:28:01Z",
   "role": "primary",
-  "rows": 21801,
+  "rows": 21772,
   "source": "ember",
   "url": "https://files.ember-energy.org/public-downloads/price/outputs/european_wholesale_electricity_price_data_daily.csv"
 }
