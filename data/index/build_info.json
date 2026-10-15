@@ -3,25 +3,25 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "769646969485637f24311746d0c6522271bd07f41ae5a69ea0fcddc23105c62e",
-  "ledger_lines": 430,
+  "inputs_sha256": "f0b2460a598e7286a26774459c102b8ff1cfd340735a7fa6dc0a8b53322f1e0f",
+  "ledger_lines": 432,
   "method_doc_version": 4,
-  "published": "2026-10-07",
+  "published": "2026-10-15",
   "retail_months": [
     "2015-01",
-    "2026-08"
+    "2026-09"
   ],
   "series_rows": {
     "desnz/qep_542": 43,
     "desnz/qep_562": 44,
-    "ecb/exr_daily": 2040,
+    "ecb/exr_daily": 2044,
     "ecb/exr_monthly": 564,
     "eia/generation_cross_check": 1668,
     "eia/henry_hub_daily": 496,
     "eia/henry_hub_monthly": 141,
     "eia/retail_price": 278,
     "ember/monthly_generation": 9078,
-    "ember/prices_daily": 21656,
+    "ember/prices_daily": 21627,
     "ember/prices_monthly": 4036,
     "ember/yearly_generation": 825,
     "eurostat/nrg_cb_e": 615,
@@ -36,15 +36,15 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "dd20c2a407a4e8a0d87347c168291ddf4325b7d28d508ecd6d2b79fb1de360e6",
+    "ecb/exr_daily": "78828f90f6c891e123954245af6efcdd0e44b3641c216ecba794f6d87e993628",
     "ecb/exr_monthly": "e73ec1c0701c79dea1e3fd3c44308f53a5c4ac5e5309e26d368ebc7a9a127d87",
     "eia/generation_cross_check": "18d5cee686f4a1ff651b4af958d8829eef56f0f285b404e61c21bddacdf09d1a",
     "eia/henry_hub_daily": "0ea8494dd6a3953a521af08a5cea06936125bd3459eed7fc9f659d466d53913b",
     "eia/henry_hub_monthly": "a41d32067a77802549b8dc228143f5b2df3f47451d8e7b211ac97b3f84f9d90f",
     "eia/retail_price": "144f71a54bf7a11fec29beae0ed81f1c4992ec781824481da2041d3f084ca685",
     "ember/monthly_generation": "182bf4a3be2521c650f29d05d5cf8f5afde8828cfea59f40538b3df2af5df893",
-    "ember/prices_daily": "a0f0bbf84390ab7098b940ea4903787c63727d85b1a683dc3da83e8d15abbce8",
-    "ember/prices_monthly": "de2879770d09c2a991b6c7d1bca1998beeba9e0881bfe2a00268e09323e97804",
+    "ember/prices_daily": "cb99d8033269f8884bd5533e6428b27217c137ad91bbeb00bcd3f8216a3b81b7",
+    "ember/prices_monthly": "868cd48e57941f5342250498a36e69890afbbafa000bf640aee21b8ce42b2179",
     "ember/yearly_generation": "b2ac49fa9b27035fedda3c6afb85917bf136de9253bfcbaf09c3410904ec7cd1",
     "eurostat/nrg_cb_e": "04eabf445e1b3da01bd66ac3a8fc344e7c477947045741720cdbc2b9306cfa71",
     "eurostat/nrg_pc_204": "478dbccdebbfa7949983d8c4f333f6ca7ea41f91f1d60f8030f1fd47c3f6c38e",
@@ -57,6 +57,6 @@
   },
   "wholesale_months": [
     "2015-01",
-    "2026-08"
+    "2026-09"
   ]
 }
