@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-16",
   "name": "prc_hicp_minr",
-  "raw_sha256": "7e9242d62eb3fc365d87f4ab60dbfbbbb81fccd81412d057722d09c51c36808d",
-  "retrieved_at": "2026-10-03T05:35:27Z",
+  "raw_sha256": "a789b2980ba36595c47e9b11c7db2ae45fab8ca9c6a281c0368ab39c515f94c3",
+  "retrieved_at": "2026-10-17T05:24:59Z",
   "role": "primary",
-  "rows": 1268,
+  "rows": 1284,
   "since": "2015-01-01",
   "source": "eurostat",
   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?geo=EU&geo=EA&geo=DE&geo=FR&geo=IT&geo=ES&geo=PL&geo=NL&coicop18=CP0451&unit=I25&unit=RCH_A&sinceTimePeriod=2020-01&format=JSON"

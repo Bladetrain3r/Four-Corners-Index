@@ -79,6 +79,7 @@ prc_hicp_minr:CP0451:I25,DE,cost,household,,,2026-05-01,2026-05-31,95.02,index 2
 prc_hicp_minr:CP0451:I25,DE,cost,household,,,2026-06-01,2026-06-30,94.78,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,DE,cost,household,,,2026-07-01,2026-07-31,94.68,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,DE,cost,household,,,2026-08-01,2026-08-31,94.5,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,DE,cost,household,,,2026-09-01,2026-09-30,94.56,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2020-01-01,2020-01-31,69.51,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2020-02-01,2020-02-29,69.51,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2020-03-01,2020-03-31,68.78,index 2025=100,,,primary
@@ -159,6 +160,7 @@ prc_hicp_minr:CP0451:I25,EA,cost,household,,,2026-05-01,2026-05-31,97.85,index 2
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2026-06-01,2026-06-30,100.12,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2026-07-01,2026-07-31,101.48,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EA,cost,household,,,2026-08-01,2026-08-31,102.08,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,EA,cost,household,,,2026-09-01,2026-09-30,103.44,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2020-01-01,2020-01-31,77.47,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2020-02-01,2020-02-29,74.21,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2020-03-01,2020-03-31,70.02,index 2025=100,,,primary
@@ -239,6 +241,7 @@ prc_hicp_minr:CP0451:I25,ES,cost,household,,,2026-05-01,2026-05-31,90.66,index 2
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2026-06-01,2026-06-30,105.29,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2026-07-01,2026-07-31,108.89,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,ES,cost,household,,,2026-08-01,2026-08-31,109.69,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,ES,cost,household,,,2026-09-01,2026-09-30,111.67,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2020-01-01,2020-01-31,68.19,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2020-02-01,2020-02-29,68.26,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2020-03-01,2020-03-31,67.66,index 2025=100,,,primary
@@ -319,6 +322,7 @@ prc_hicp_minr:CP0451:I25,EU,cost,household,,,2026-05-01,2026-05-31,98.95,index 2
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2026-06-01,2026-06-30,100.9,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2026-07-01,2026-07-31,101.78,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,EU,cost,household,,,2026-08-01,2026-08-31,102.58,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,EU,cost,household,,,2026-09-01,2026-09-30,104.08,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2020-01-01,2020-01-31,76.53,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2020-02-01,2020-02-29,78.24,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2020-03-01,2020-03-31,78.24,index 2025=100,,,primary
@@ -399,6 +403,7 @@ prc_hicp_minr:CP0451:I25,FR,cost,household,,,2026-05-01,2026-05-31,97.51,index 2
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2026-06-01,2026-06-30,97.61,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2026-07-01,2026-07-31,97.61,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,FR,cost,household,,,2026-08-01,2026-08-31,99.63,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,FR,cost,household,,,2026-09-01,2026-09-30,99.89,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2020-01-01,2020-01-31,62.5,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2020-02-01,2020-02-29,62.1,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2020-03-01,2020-03-31,61.8,index 2025=100,,,primary
@@ -479,6 +484,7 @@ prc_hicp_minr:CP0451:I25,IT,cost,household,,,2026-05-01,2026-05-31,106.3,index 2
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2026-06-01,2026-06-30,107.8,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2026-07-01,2026-07-31,112.2,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,IT,cost,household,,,2026-08-01,2026-08-31,113.6,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,IT,cost,household,,,2026-09-01,2026-09-30,116.8,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2020-01-01,2020-01-31,67.6,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2020-02-01,2020-02-29,66.98,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2020-03-01,2020-03-31,66.0,index 2025=100,,,primary
@@ -559,6 +565,7 @@ prc_hicp_minr:CP0451:I25,NL,cost,household,,,2026-05-01,2026-05-31,97.14,index 2
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2026-06-01,2026-06-30,97.16,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2026-07-01,2026-07-31,98.38,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,NL,cost,household,,,2026-08-01,2026-08-31,99.2,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,NL,cost,household,,,2026-09-01,2026-09-30,100.2,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2020-01-01,2020-01-31,55.63,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2020-02-01,2020-02-29,57.73,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2020-03-01,2020-03-31,57.73,index 2025=100,,,primary
@@ -639,6 +646,7 @@ prc_hicp_minr:CP0451:I25,PL,cost,household,,,2026-05-01,2026-05-31,108.36,index 
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2026-06-01,2026-06-30,108.36,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2026-07-01,2026-07-31,108.36,index 2025=100,,,primary
 prc_hicp_minr:CP0451:I25,PL,cost,household,,,2026-08-01,2026-08-31,108.36,index 2025=100,,,primary
+prc_hicp_minr:CP0451:I25,PL,cost,household,,,2026-09-01,2026-09-30,108.36,index 2025=100,,,primary
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2020-01-01,2020-01-31,3.9,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2020-02-01,2020-02-29,4.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2020-03-01,2020-03-31,4.5,% annual change,,,primary
@@ -719,6 +727,7 @@ prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2026-05-01,2026-05-31,-5.0,% annu
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2026-06-01,2026-06-30,-5.2,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2026-07-01,2026-07-31,-5.3,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2026-08-01,2026-08-31,-5.6,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,DE,cost,household,,,2026-09-01,2026-09-30,-5.5,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2020-01-01,2020-01-31,-0.9,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2020-02-01,2020-02-29,-0.3,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2020-03-01,2020-03-31,-0.9,% annual change,,,primary
@@ -799,6 +808,7 @@ prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2026-05-01,2026-05-31,-0.8,% annu
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2026-06-01,2026-06-30,1.7,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2026-07-01,2026-07-31,2.1,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2026-08-01,2026-08-31,2.8,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,EA,cost,household,,,2026-09-01,2026-09-30,4.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2020-01-01,2020-01-31,-12.5,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2020-02-01,2020-02-29,-12.1,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2020-03-01,2020-03-31,-14.2,% annual change,,,primary
@@ -879,6 +889,7 @@ prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2026-05-01,2026-05-31,-5.5,% annu
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2026-06-01,2026-06-30,6.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2026-07-01,2026-07-31,8.3,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2026-08-01,2026-08-31,9.2,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,ES,cost,household,,,2026-09-01,2026-09-30,11.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2021-01-01,2021-01-31,4.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2021-02-01,2021-02-28,2.1,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2021-03-01,2021-03-31,4.0,% annual change,,,primary
@@ -947,6 +958,7 @@ prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2026-05-01,2026-05-31,1.2,% annua
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2026-06-01,2026-06-30,3.6,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2026-07-01,2026-07-31,1.6,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2026-08-01,2026-08-31,2.3,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,EU,cost,household,,,2026-09-01,2026-09-30,4.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2020-01-01,2020-01-31,7.3,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2020-02-01,2020-02-29,9.7,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2020-03-01,2020-03-31,9.7,% annual change,,,primary
@@ -1027,6 +1039,7 @@ prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2026-05-01,2026-05-31,-0.8,% annu
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2026-06-01,2026-06-30,-0.7,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2026-07-01,2026-07-31,-1.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2026-08-01,2026-08-31,1.1,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,FR,cost,household,,,2026-09-01,2026-09-30,1.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2020-01-01,2020-01-31,-3.5,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2020-02-01,2020-02-29,-3.7,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2020-03-01,2020-03-31,-4.0,% annual change,,,primary
@@ -1107,6 +1120,7 @@ prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2026-05-01,2026-05-31,7.0,% annua
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2026-06-01,2026-06-30,12.5,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2026-07-01,2026-07-31,13.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2026-08-01,2026-08-31,16.9,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,IT,cost,household,,,2026-09-01,2026-09-30,20.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2020-01-01,2020-01-31,-38.2,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2020-02-01,2020-02-29,-39.2,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2020-03-01,2020-03-31,-39.7,% annual change,,,primary
@@ -1187,6 +1201,7 @@ prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2026-05-01,2026-05-31,-2.3,% annu
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2026-06-01,2026-06-30,-2.0,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2026-07-01,2026-07-31,-0.9,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2026-08-01,2026-08-31,-0.1,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,NL,cost,household,,,2026-09-01,2026-09-30,0.8,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2020-01-01,2020-01-31,9.4,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2020-02-01,2020-02-29,13.2,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2020-03-01,2020-03-31,13.2,% annual change,,,primary
@@ -1267,3 +1282,4 @@ prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2026-05-01,2026-05-31,12.9,% annu
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2026-06-01,2026-06-30,12.9,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2026-07-01,2026-07-31,4.2,% annual change,,,primary
 prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2026-08-01,2026-08-31,4.2,% annual change,,,primary
+prc_hicp_minr:CP0451:RCH_A,PL,cost,household,,,2026-09-01,2026-09-30,4.2,% annual change,,,primary
