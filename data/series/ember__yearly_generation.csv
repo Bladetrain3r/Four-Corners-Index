@@ -19,8 +19,8 @@ ember:yearly:emissions_intensity,EU,mix,,total,,2020-01-01,2020-12-31,261.198,gC
 ember:yearly:emissions_intensity,EU,mix,,total,,2021-01-01,2021-12-31,272.53,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,EU,mix,,total,,2022-01-01,2022-12-31,291.569,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,EU,mix,,total,,2023-01-01,2023-12-31,236.007,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,EU,mix,,total,,2024-01-01,2024-12-31,211.644,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,EU,mix,,total,,2025-01-01,2025-12-31,210.596,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,EU,mix,,total,,2024-01-01,2024-12-31,211.631,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,EU,mix,,total,,2025-01-01,2025-12-31,210.536,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,GB,mix,,total,,2015-01-01,2015-12-31,397.778,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,GB,mix,,total,,2016-01-01,2016-12-31,333.442,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,GB,mix,,total,,2017-01-01,2017-12-31,302.179,gCO2e/kWh,,,primary
@@ -29,9 +29,9 @@ ember:yearly:emissions_intensity,GB,mix,,total,,2019-01-01,2019-12-31,268.425,gC
 ember:yearly:emissions_intensity,GB,mix,,total,,2020-01-01,2020-12-31,242.581,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,GB,mix,,total,,2021-01-01,2021-12-31,267.064,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,GB,mix,,total,,2022-01-01,2022-12-31,255.04,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,GB,mix,,total,,2023-01-01,2023-12-31,235.617,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,GB,mix,,total,,2024-01-01,2024-12-31,216.473,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,GB,mix,,total,,2025-01-01,2025-12-31,218.207,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,GB,mix,,total,,2023-01-01,2023-12-31,235.15,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,GB,mix,,total,,2024-01-01,2024-12-31,216.236,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,GB,mix,,total,,2025-01-01,2025-12-31,218.001,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,RU,mix,,total,,2015-01-01,2015-12-31,444.357,gCO2e/kWh,,,low_confidence
 ember:yearly:emissions_intensity,RU,mix,,total,,2016-01-01,2016-12-31,442.771,gCO2e/kWh,,,low_confidence
 ember:yearly:emissions_intensity,RU,mix,,total,,2017-01-01,2017-12-31,439.718,gCO2e/kWh,,,low_confidence
@@ -64,7 +64,7 @@ ember:yearly:emissions_intensity,ZA,mix,,total,,2021-01-01,2021-12-31,741.526,gC
 ember:yearly:emissions_intensity,ZA,mix,,total,,2022-01-01,2022-12-31,729.094,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,ZA,mix,,total,,2023-01-01,2023-12-31,714.465,gCO2e/kWh,,,primary
 ember:yearly:emissions_intensity,ZA,mix,,total,,2024-01-01,2024-12-31,717.755,gCO2e/kWh,,,primary
-ember:yearly:emissions_intensity,ZA,mix,,total,,2025-01-01,2025-12-31,699.115,gCO2e/kWh,,,primary
+ember:yearly:emissions_intensity,ZA,mix,,total,,2025-01-01,2025-12-31,699.199,gCO2e/kWh,,,primary
 ember:yearly:generation,CN,mix,,bioenergy,,2015-01-01,2015-12-31,38.973,TWh,,,primary
 ember:yearly:generation,CN,mix,,bioenergy,,2016-01-01,2016-12-31,47.08,TWh,,,primary
 ember:yearly:generation,CN,mix,,bioenergy,,2017-01-01,2017-12-31,57.025,TWh,,,primary
@@ -196,7 +196,7 @@ ember:yearly:generation,EU,mix,,bioenergy,,2021-01-01,2021-12-31,171.56,TWh,,,pr
 ember:yearly:generation,EU,mix,,bioenergy,,2022-01-01,2022-12-31,165.27,TWh,,,primary
 ember:yearly:generation,EU,mix,,bioenergy,,2023-01-01,2023-12-31,156.84,TWh,,,primary
 ember:yearly:generation,EU,mix,,bioenergy,,2024-01-01,2024-12-31,156.85,TWh,,,primary
-ember:yearly:generation,EU,mix,,bioenergy,,2025-01-01,2025-12-31,155.796,TWh,,,primary
+ember:yearly:generation,EU,mix,,bioenergy,,2025-01-01,2025-12-31,155.861,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2015-01-01,2015-12-31,705.03,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2016-01-01,2016-12-31,659.16,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2017-01-01,2017-12-31,638.86,TWh,,,primary
@@ -207,7 +207,7 @@ ember:yearly:generation,EU,mix,,coal,,2021-01-01,2021-12-31,419.0,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2022-01-01,2022-12-31,448.43,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2023-01-01,2023-12-31,318.59,TWh,,,primary
 ember:yearly:generation,EU,mix,,coal,,2024-01-01,2024-12-31,271.83,TWh,,,primary
-ember:yearly:generation,EU,mix,,coal,,2025-01-01,2025-12-31,258.326,TWh,,,primary
+ember:yearly:generation,EU,mix,,coal,,2025-01-01,2025-12-31,258.207,TWh,,,primary
 ember:yearly:generation,EU,mix,,demand,,2015-01-01,2015-12-31,2863.72,TWh,,,primary
 ember:yearly:generation,EU,mix,,demand,,2016-01-01,2016-12-31,2892.05,TWh,,,primary
 ember:yearly:generation,EU,mix,,demand,,2017-01-01,2017-12-31,2918.43,TWh,,,primary
@@ -217,8 +217,8 @@ ember:yearly:generation,EU,mix,,demand,,2020-01-01,2020-12-31,2767.06,TWh,,,prim
 ember:yearly:generation,EU,mix,,demand,,2021-01-01,2021-12-31,2882.27,TWh,,,primary
 ember:yearly:generation,EU,mix,,demand,,2022-01-01,2022-12-31,2790.35,TWh,,,primary
 ember:yearly:generation,EU,mix,,demand,,2023-01-01,2023-12-31,2709.72,TWh,,,primary
-ember:yearly:generation,EU,mix,,demand,,2024-01-01,2024-12-31,2759.248,TWh,,,primary
-ember:yearly:generation,EU,mix,,demand,,2025-01-01,2025-12-31,2774.508,TWh,,,primary
+ember:yearly:generation,EU,mix,,demand,,2024-01-01,2024-12-31,2759.431,TWh,,,primary
+ember:yearly:generation,EU,mix,,demand,,2025-01-01,2025-12-31,2774.548,TWh,,,primary
 ember:yearly:generation,EU,mix,,gas,,2015-01-01,2015-12-31,394.84,TWh,,,primary
 ember:yearly:generation,EU,mix,,gas,,2016-01-01,2016-12-31,464.77,TWh,,,primary
 ember:yearly:generation,EU,mix,,gas,,2017-01-01,2017-12-31,523.62,TWh,,,primary
@@ -240,7 +240,7 @@ ember:yearly:generation,EU,mix,,hydro,,2021-01-01,2021-12-31,348.25,TWh,,,primar
 ember:yearly:generation,EU,mix,,hydro,,2022-01-01,2022-12-31,276.11,TWh,,,primary
 ember:yearly:generation,EU,mix,,hydro,,2023-01-01,2023-12-31,330.44,TWh,,,primary
 ember:yearly:generation,EU,mix,,hydro,,2024-01-01,2024-12-31,369.68,TWh,,,primary
-ember:yearly:generation,EU,mix,,hydro,,2025-01-01,2025-12-31,325.261,TWh,,,primary
+ember:yearly:generation,EU,mix,,hydro,,2025-01-01,2025-12-31,325.256,TWh,,,primary
 ember:yearly:generation,EU,mix,,net_imports,,2015-01-01,2015-12-31,-6.65,TWh,,,primary
 ember:yearly:generation,EU,mix,,net_imports,,2016-01-01,2016-12-31,0.65,TWh,,,primary
 ember:yearly:generation,EU,mix,,net_imports,,2017-01-01,2017-12-31,-4.55,TWh,,,primary
@@ -273,7 +273,7 @@ ember:yearly:generation,EU,mix,,other_fossil,,2021-01-01,2021-12-31,100.41,TWh,,
 ember:yearly:generation,EU,mix,,other_fossil,,2022-01-01,2022-12-31,105.87,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_fossil,,2023-01-01,2023-12-31,91.08,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_fossil,,2024-01-01,2024-12-31,89.11,TWh,,,primary
-ember:yearly:generation,EU,mix,,other_fossil,,2025-01-01,2025-12-31,87.331,TWh,,,primary
+ember:yearly:generation,EU,mix,,other_fossil,,2025-01-01,2025-12-31,87.236,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_renewables,,2015-01-01,2015-12-31,7.09,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_renewables,,2016-01-01,2016-12-31,7.23,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_renewables,,2017-01-01,2017-12-31,7.23,TWh,,,primary
@@ -284,7 +284,7 @@ ember:yearly:generation,EU,mix,,other_renewables,,2021-01-01,2021-12-31,7.03,TWh
 ember:yearly:generation,EU,mix,,other_renewables,,2022-01-01,2022-12-31,6.93,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_renewables,,2023-01-01,2023-12-31,6.72,TWh,,,primary
 ember:yearly:generation,EU,mix,,other_renewables,,2024-01-01,2024-12-31,6.68,TWh,,,primary
-ember:yearly:generation,EU,mix,,other_renewables,,2025-01-01,2025-12-31,7.493,TWh,,,primary
+ember:yearly:generation,EU,mix,,other_renewables,,2025-01-01,2025-12-31,7.492,TWh,,,primary
 ember:yearly:generation,EU,mix,,solar,,2015-01-01,2015-12-31,100.2,TWh,,,primary
 ember:yearly:generation,EU,mix,,solar,,2016-01-01,2016-12-31,100.49,TWh,,,primary
 ember:yearly:generation,EU,mix,,solar,,2017-01-01,2017-12-31,106.58,TWh,,,primary
@@ -305,8 +305,8 @@ ember:yearly:generation,EU,mix,,total,,2020-01-01,2020-12-31,2753.09,TWh,,,prima
 ember:yearly:generation,EU,mix,,total,,2021-01-01,2021-12-31,2874.99,TWh,,,primary
 ember:yearly:generation,EU,mix,,total,,2022-01-01,2022-12-31,2777.41,TWh,,,primary
 ember:yearly:generation,EU,mix,,total,,2023-01-01,2023-12-31,2710.19,TWh,,,primary
-ember:yearly:generation,EU,mix,,total,,2024-01-01,2024-12-31,2771.558,TWh,,,primary
-ember:yearly:generation,EU,mix,,total,,2025-01-01,2025-12-31,2798.488,TWh,,,primary
+ember:yearly:generation,EU,mix,,total,,2024-01-01,2024-12-31,2771.741,TWh,,,primary
+ember:yearly:generation,EU,mix,,total,,2025-01-01,2025-12-31,2798.528,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2015-01-01,2015-12-31,263.28,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2016-01-01,2016-12-31,266.91,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2017-01-01,2017-12-31,312.43,TWh,,,primary
@@ -316,8 +316,8 @@ ember:yearly:generation,EU,mix,,wind,,2020-01-01,2020-12-31,398.16,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2021-01-01,2021-12-31,386.94,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2022-01-01,2022-12-31,421.83,TWh,,,primary
 ember:yearly:generation,EU,mix,,wind,,2023-01-01,2023-12-31,478.06,TWh,,,primary
-ember:yearly:generation,EU,mix,,wind,,2024-01-01,2024-12-31,489.368,TWh,,,primary
-ember:yearly:generation,EU,mix,,wind,,2025-01-01,2025-12-31,479.515,TWh,,,primary
+ember:yearly:generation,EU,mix,,wind,,2024-01-01,2024-12-31,489.551,TWh,,,primary
+ember:yearly:generation,EU,mix,,wind,,2025-01-01,2025-12-31,479.71,TWh,,,primary
 ember:yearly:generation,GB,mix,,bioenergy,,2015-01-01,2015-12-31,29.26,TWh,,,primary
 ember:yearly:generation,GB,mix,,bioenergy,,2016-01-01,2016-12-31,30.07,TWh,,,primary
 ember:yearly:generation,GB,mix,,bioenergy,,2017-01-01,2017-12-31,31.9,TWh,,,primary
@@ -348,9 +348,9 @@ ember:yearly:generation,GB,mix,,demand,,2019-01-01,2019-12-31,348.36,TWh,,,prima
 ember:yearly:generation,GB,mix,,demand,,2020-01-01,2020-12-31,324.459,TWh,,,primary
 ember:yearly:generation,GB,mix,,demand,,2021-01-01,2021-12-31,325.605,TWh,,,primary
 ember:yearly:generation,GB,mix,,demand,,2022-01-01,2022-12-31,325.677,TWh,,,primary
-ember:yearly:generation,GB,mix,,demand,,2023-01-01,2023-12-31,308.297,TWh,,,primary
-ember:yearly:generation,GB,mix,,demand,,2024-01-01,2024-12-31,306.446,TWh,,,primary
-ember:yearly:generation,GB,mix,,demand,,2025-01-01,2025-12-31,311.288,TWh,,,primary
+ember:yearly:generation,GB,mix,,demand,,2023-01-01,2023-12-31,308.907,TWh,,,primary
+ember:yearly:generation,GB,mix,,demand,,2024-01-01,2024-12-31,306.776,TWh,,,primary
+ember:yearly:generation,GB,mix,,demand,,2025-01-01,2025-12-31,311.584,TWh,,,primary
 ember:yearly:generation,GB,mix,,gas,,2015-01-01,2015-12-31,99.88,TWh,,,primary
 ember:yearly:generation,GB,mix,,gas,,2016-01-01,2016-12-31,143.13,TWh,,,primary
 ember:yearly:generation,GB,mix,,gas,,2017-01-01,2017-12-31,136.75,TWh,,,primary
@@ -436,9 +436,9 @@ ember:yearly:generation,GB,mix,,total,,2019-01-01,2019-12-31,327.19,TWh,,,primar
 ember:yearly:generation,GB,mix,,total,,2020-01-01,2020-12-31,310.301,TWh,,,primary
 ember:yearly:generation,GB,mix,,total,,2021-01-01,2021-12-31,307.9,TWh,,,primary
 ember:yearly:generation,GB,mix,,total,,2022-01-01,2022-12-31,324.58,TWh,,,primary
-ember:yearly:generation,GB,mix,,total,,2023-01-01,2023-12-31,292.53,TWh,,,primary
-ember:yearly:generation,GB,mix,,total,,2024-01-01,2024-12-31,284.16,TWh,,,primary
-ember:yearly:generation,GB,mix,,total,,2025-01-01,2025-12-31,293.363,TWh,,,primary
+ember:yearly:generation,GB,mix,,total,,2023-01-01,2023-12-31,293.14,TWh,,,primary
+ember:yearly:generation,GB,mix,,total,,2024-01-01,2024-12-31,284.49,TWh,,,primary
+ember:yearly:generation,GB,mix,,total,,2025-01-01,2025-12-31,293.659,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2015-01-01,2015-12-31,40.27,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2016-01-01,2016-12-31,37.16,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2017-01-01,2017-12-31,49.65,TWh,,,primary
@@ -447,9 +447,9 @@ ember:yearly:generation,GB,mix,,wind,,2019-01-01,2019-12-31,63.84,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2020-01-01,2020-12-31,75.62,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2021-01-01,2021-12-31,64.93,TWh,,,primary
 ember:yearly:generation,GB,mix,,wind,,2022-01-01,2022-12-31,80.21,TWh,,,primary
-ember:yearly:generation,GB,mix,,wind,,2023-01-01,2023-12-31,82.15,TWh,,,primary
-ember:yearly:generation,GB,mix,,wind,,2024-01-01,2024-12-31,83.28,TWh,,,primary
-ember:yearly:generation,GB,mix,,wind,,2025-01-01,2025-12-31,86.145,TWh,,,primary
+ember:yearly:generation,GB,mix,,wind,,2023-01-01,2023-12-31,82.76,TWh,,,primary
+ember:yearly:generation,GB,mix,,wind,,2024-01-01,2024-12-31,83.61,TWh,,,primary
+ember:yearly:generation,GB,mix,,wind,,2025-01-01,2025-12-31,86.44,TWh,,,primary
 ember:yearly:generation,RU,mix,,bioenergy,,2015-01-01,2015-12-31,0.481,TWh,,,low_confidence
 ember:yearly:generation,RU,mix,,bioenergy,,2016-01-01,2016-12-31,0.446,TWh,,,low_confidence
 ember:yearly:generation,RU,mix,,bioenergy,,2017-01-01,2017-12-31,0.52,TWh,,,low_confidence
@@ -713,7 +713,7 @@ ember:yearly:generation,ZA,mix,,bioenergy,,2021-01-01,2021-12-31,0.41,TWh,,,prim
 ember:yearly:generation,ZA,mix,,bioenergy,,2022-01-01,2022-12-31,0.36,TWh,,,primary
 ember:yearly:generation,ZA,mix,,bioenergy,,2023-01-01,2023-12-31,0.47,TWh,,,primary
 ember:yearly:generation,ZA,mix,,bioenergy,,2024-01-01,2024-12-31,0.47,TWh,,,primary
-ember:yearly:generation,ZA,mix,,bioenergy,,2025-01-01,2025-12-31,0.47,TWh,,,primary
+ember:yearly:generation,ZA,mix,,bioenergy,,2025-01-01,2025-12-31,0.427,TWh,,,primary
 ember:yearly:generation,ZA,mix,,coal,,2015-01-01,2015-12-31,227.3,TWh,,,primary
 ember:yearly:generation,ZA,mix,,coal,,2016-01-01,2016-12-31,229.58,TWh,,,primary
 ember:yearly:generation,ZA,mix,,coal,,2017-01-01,2017-12-31,228.7,TWh,,,primary
@@ -735,7 +735,7 @@ ember:yearly:generation,ZA,mix,,demand,,2021-01-01,2021-12-31,241.89,TWh,,,prima
 ember:yearly:generation,ZA,mix,,demand,,2022-01-01,2022-12-31,237.636,TWh,,,primary
 ember:yearly:generation,ZA,mix,,demand,,2023-01-01,2023-12-31,232.388,TWh,,,primary
 ember:yearly:generation,ZA,mix,,demand,,2024-01-01,2024-12-31,246.194,TWh,,,primary
-ember:yearly:generation,ZA,mix,,demand,,2025-01-01,2025-12-31,236.786,TWh,,,primary
+ember:yearly:generation,ZA,mix,,demand,,2025-01-01,2025-12-31,236.744,TWh,,,primary
 ember:yearly:generation,ZA,mix,,gas,,2015-01-01,2015-12-31,0.0,TWh,,,primary
 ember:yearly:generation,ZA,mix,,gas,,2016-01-01,2016-12-31,0.0,TWh,,,primary
 ember:yearly:generation,ZA,mix,,gas,,2017-01-01,2017-12-31,0.0,TWh,,,primary
@@ -812,7 +812,7 @@ ember:yearly:generation,ZA,mix,,total,,2021-01-01,2021-12-31,245.46,TWh,,,primar
 ember:yearly:generation,ZA,mix,,total,,2022-01-01,2022-12-31,239.146,TWh,,,primary
 ember:yearly:generation,ZA,mix,,total,,2023-01-01,2023-12-31,232.938,TWh,,,primary
 ember:yearly:generation,ZA,mix,,total,,2024-01-01,2024-12-31,247.494,TWh,,,primary
-ember:yearly:generation,ZA,mix,,total,,2025-01-01,2025-12-31,242.721,TWh,,,primary
+ember:yearly:generation,ZA,mix,,total,,2025-01-01,2025-12-31,242.679,TWh,,,primary
 ember:yearly:generation,ZA,mix,,wind,,2015-01-01,2015-12-31,3.07,TWh,,,primary
 ember:yearly:generation,ZA,mix,,wind,,2016-01-01,2016-12-31,4.21,TWh,,,primary
 ember:yearly:generation,ZA,mix,,wind,,2017-01-01,2017-12-31,7.02,TWh,,,primary

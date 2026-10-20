@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-19",
   "name": "nrg_pc_204_c",
-  "raw_sha256": "3232c619c82b2ebd117f007e4419acd28c83bf30bdf7600921297c327ab45d45",
-  "retrieved_at": "2026-10-17T05:24:58Z",
+  "raw_sha256": "56b264165be95c5867c3233962a92b623b8fd8515ca29af4dfc8046985d417a8",
+  "retrieved_at": "2026-10-20T05:27:19Z",
   "role": "primary",
   "rows": 2614,
   "since": "2015-01-01",
