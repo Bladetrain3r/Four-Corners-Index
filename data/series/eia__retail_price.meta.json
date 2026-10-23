@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-23",
   "name": "retail_price",
-  "raw_sha256": "144f71a54bf7a11fec29beae0ed81f1c4992ec781824481da2041d3f084ca685",
-  "retrieved_at": "2026-09-29T21:17:19Z",
+  "raw_sha256": "b6b02e418c366752a198d6996afcac860fa0ce38d37611481fdfb980453a3a62",
+  "retrieved_at": "2026-10-23T05:26:39Z",
   "role": "primary",
   "rows": 278,
   "since": "2015-01-01",
