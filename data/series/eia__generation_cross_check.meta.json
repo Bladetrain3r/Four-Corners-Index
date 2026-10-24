@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "name": "generation_cross_check",
-  "raw_sha256": "9d4ed55fbde67cbddd99161006f01d52433f421f5bf9df94c429bbc24772b3b1",
-  "retrieved_at": "2026-10-23T05:26:43Z",
+  "raw_sha256": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
+  "retrieved_at": "2026-10-24T05:25:29Z",
   "role": "cross_check",
-  "rows": 1668,
+  "rows": 1680,
   "since": "2015-01-01",
   "source": "eia",
   "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?api_key=REDACTED&frequency=monthly&data[0]=generation&facets[location][]=US&facets[sectorid][]=99&start=2015-01&length=5000&facets[fueltypeid][]=ALL&facets[fueltypeid][]=NG&facets[fueltypeid][]=COL&facets[fueltypeid][]=NUC&facets[fueltypeid][]=WND&facets[fueltypeid][]=SUN&facets[fueltypeid][]=HYC&facets[fueltypeid][]=PET&facets[fueltypeid][]=BIO&facets[fueltypeid][]=GEO&facets[fueltypeid][]=OTH&facets[fueltypeid][]=HPS"
