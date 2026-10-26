@@ -147,7 +147,9 @@ ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-18,2026-10-18,262.14,EUR
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-19,2026-10-19,262.99,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-20,2026-10-20,275.94,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-21,2026-10-21,227.58,EUR/MWh,EUR,,primary
-ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-22,2026-10-22,233.24,EUR/MWh,EUR,,primary
+ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-22,2026-10-22,233.52,EUR/MWh,EUR,,primary
+ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-23,2026-10-23,265.97,EUR/MWh,EUR,,primary
+ember:daily:day_ahead_price,IE,cost,wholesale,,,2026-10-24,2026-10-24,215.03,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2026-10-01,2026-10-01,209.96,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2026-10-02,2026-10-02,217.07,EUR/MWh,EUR,,primary
 ember:daily:day_ahead_price,IT,cost,wholesale,,,2026-10-03,2026-10-03,182.59,EUR/MWh,EUR,,primary
