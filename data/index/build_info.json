@@ -3,10 +3,10 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "ffaa4205ba0b36d76408d4099133978ebf289beaa3b355943f40bade1ddf6b4b",
-  "ledger_lines": 491,
+  "inputs_sha256": "57c7b704ac9571ced634404ab95fb7b91e03abac12b58dfc99a0b71b160e5952",
+  "ledger_lines": 500,
   "method_doc_version": 4,
-  "published": "2026-10-24",
+  "published": "2026-10-27",
   "retail_months": [
     "2015-01",
     "2026-09"
@@ -14,7 +14,7 @@
   "series_rows": {
     "desnz/qep_542": 43,
     "desnz/qep_562": 44,
-    "ecb/exr_daily": 2044,
+    "ecb/exr_daily": 2036,
     "ecb/exr_monthly": 564,
     "eia/generation_cross_check": 1680,
     "eia/henry_hub_daily": 499,
@@ -36,16 +36,16 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "4957d5ffb11d64442cccce96f4537aec7a1f7b04fd412bbb82efde67829d63fb",
+    "ecb/exr_daily": "c0c7dd3dbb83abbf9869a4690c0e94c9356cae5992bdd8ab2a916157a73001e7",
     "ecb/exr_monthly": "e73ec1c0701c79dea1e3fd3c44308f53a5c4ac5e5309e26d368ebc7a9a127d87",
     "eia/generation_cross_check": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
     "eia/henry_hub_daily": "3b542707f7c30ec54bf46ea2c7b26ca3d713e1347925f3f4123f06088af9e70d",
     "eia/henry_hub_monthly": "a41d32067a77802549b8dc228143f5b2df3f47451d8e7b211ac97b3f84f9d90f",
     "eia/retail_price": "c359d04c4f4929ec66cef8636e852ca050cc9b8f071376ea6d14fbcff4898243",
     "ember/monthly_generation": "4e5284a33b81ea1abdba15178f55b6da72b1a2a8f9cf73fcae247ef02723275b",
-    "ember/prices_daily": "c7c6a2b2d99b7b4502a99cbc54d872983a6c99ccfc0012b8bea8053b61f85c89",
+    "ember/prices_daily": "6c55428e09012ebc4ca1b1ccb640fade0231db18976b78967445e9df4d25bc72",
     "ember/prices_monthly": "42cd28929a46e45488140dc37663c41c9be9be88c88b54bb44a9a326e68a752b",
-    "ember/yearly_generation": "91d30fb170dac8a62130f7b39e11ecbb301f902e08400e9561510882eadcd701",
+    "ember/yearly_generation": "afe1e315ce8fef7ddb2e2569243b3ac4e93cfe8146ac1be5392e362bd6afbe72",
     "eurostat/nrg_cb_e": "d7edf54b05278a8a80288a6dc6c97b8e9fb21e0bce1f0fc6d62b4321a5c59011",
     "eurostat/nrg_pc_204": "472cd3dff2ae57d2127b79d1d129111a84ff460428554ae09c6f7016ed6f99b3",
     "eurostat/nrg_pc_204_c": "56b264165be95c5867c3233962a92b623b8fd8515ca29af4dfc8046985d417a8",

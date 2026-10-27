@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-20",
+  "as_of": "2026-10-27",
   "name": "yearly_generation",
-  "raw_sha256": "91d30fb170dac8a62130f7b39e11ecbb301f902e08400e9561510882eadcd701",
-  "retrieved_at": "2026-10-20T05:29:35Z",
+  "raw_sha256": "afe1e315ce8fef7ddb2e2569243b3ac4e93cfe8146ac1be5392e362bd6afbe72",
+  "retrieved_at": "2026-10-27T05:28:32Z",
   "role": "primary",
   "rows": 825,
   "since": "2015-01-01",
