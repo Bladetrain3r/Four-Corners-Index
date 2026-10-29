@@ -3,7 +3,7 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "6366fb71566ebc634524fe9664f8fc35fc105bf2399958442678062cfeefbb73",
+  "inputs_sha256": "e9d2fc80afd5f852474bde7f5a91c726a9dcc178c39917662669959471836a20",
   "ledger_lines": 500,
   "method_doc_version": 4,
   "published": "2026-10-27",
@@ -14,7 +14,7 @@
   "series_rows": {
     "desnz/qep_542": 43,
     "desnz/qep_562": 44,
-    "ecb/exr_daily": 2040,
+    "ecb/exr_daily": 2044,
     "ecb/exr_monthly": 564,
     "eia/generation_cross_check": 1680,
     "eia/henry_hub_daily": 499,
@@ -36,10 +36,10 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "19882d0c00c213adb376f4ea0e761e85d6bbd37c7b3bc0cef65e724c6167aca6",
+    "ecb/exr_daily": "f30dd87a8ce0002ef78be130a8d7f5a85db96b6265d06efa49ec0f85ea472a16",
     "ecb/exr_monthly": "e73ec1c0701c79dea1e3fd3c44308f53a5c4ac5e5309e26d368ebc7a9a127d87",
     "eia/generation_cross_check": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
-    "eia/henry_hub_daily": "3b542707f7c30ec54bf46ea2c7b26ca3d713e1347925f3f4123f06088af9e70d",
+    "eia/henry_hub_daily": "e616c55d85a761e95481917251b41940f0481ba5a7e61c8279e3ecec843f39be",
     "eia/henry_hub_monthly": "a41d32067a77802549b8dc228143f5b2df3f47451d8e7b211ac97b3f84f9d90f",
     "eia/retail_price": "c359d04c4f4929ec66cef8636e852ca050cc9b8f071376ea6d14fbcff4898243",
     "ember/monthly_generation": "4e5284a33b81ea1abdba15178f55b6da72b1a2a8f9cf73fcae247ef02723275b",
