@@ -1,15 +1,15 @@
 {
  "sources": {
   "desnz": {
-   "last_good": "2026-10-29",
+   "last_good": "2026-10-30",
    "status": "ok"
   },
   "ecb": {
-   "last_good": "2026-10-29",
+   "last_good": "2026-10-30",
    "status": "ok"
   },
   "eia": {
-   "last_good": "2026-10-29",
+   "last_good": "2026-10-30",
    "status": "ok"
   },
   "ember": {
@@ -19,11 +19,11 @@
    "status": "failed"
   },
   "eurostat": {
-   "last_good": "2026-10-29",
+   "last_good": "2026-10-30",
    "status": "ok"
   },
   "worldbank": {
-   "last_good": "2026-10-29",
+   "last_good": "2026-10-30",
    "status": "ok"
   }
  }
