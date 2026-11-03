@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-10-31",
-  "cutoff": "2024-10-30",
+  "as_of": "2026-11-03",
+  "cutoff": "2024-11-02",
   "keep_days": 730,
   "months": 25,
   "name": "exr_daily",
-  "raw_sha256": "713acc3cf22b45b5170394a1077fc7ce0fe2b1beaf58a084fc153419272ad163",
-  "retrieved_at": "2026-10-31T05:19:10Z",
+  "raw_sha256": "5443bf6159abd34a822de7ccc1a700edf5d90db3a9065d3d6bd7150dfc18fded",
+  "retrieved_at": "2026-11-03T05:19:08Z",
   "role": "primary",
-  "rows": 2044,
+  "rows": 2036,
   "source": "ecb",
   "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY+ZAR+GBP.EUR.SP00.A?startPeriod=2015-01-01&format=csvdata&detail=dataonly"
 }

@@ -3,10 +3,10 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "2adcac58bd96c782f62efde2e00f35ac3e18468429ab3c525dd20b5b567787eb",
-  "ledger_lines": 507,
+  "inputs_sha256": "6ff6ae9e397a9c6e0687aad97a078b0ff85994d2638785169f862ee83614bd8f",
+  "ledger_lines": 508,
   "method_doc_version": 4,
-  "published": "2026-10-31",
+  "published": "2026-11-03",
   "retail_months": [
     "2015-01",
     "2026-09"
@@ -14,7 +14,7 @@
   "series_rows": {
     "desnz/qep_542": 43,
     "desnz/qep_562": 44,
-    "ecb/exr_daily": 2044,
+    "ecb/exr_daily": 2036,
     "ecb/exr_monthly": 568,
     "eia/generation_cross_check": 1680,
     "eia/henry_hub_daily": 499,
@@ -36,7 +36,7 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "713acc3cf22b45b5170394a1077fc7ce0fe2b1beaf58a084fc153419272ad163",
+    "ecb/exr_daily": "5443bf6159abd34a822de7ccc1a700edf5d90db3a9065d3d6bd7150dfc18fded",
     "ecb/exr_monthly": "ca62211bb89c6a7d7b3dc9d16a0302295532fa3edcdf49d76a4bf65479b21e94",
     "eia/generation_cross_check": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
     "eia/henry_hub_daily": "e616c55d85a761e95481917251b41940f0481ba5a7e61c8279e3ecec843f39be",
