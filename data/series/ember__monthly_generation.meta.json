@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-31",
+  "as_of": "2026-11-04",
   "name": "monthly_generation",
-  "raw_sha256": "1981727c5041412fa8e4143122c4cf5671aabacec23c6243491def2637dbb199",
-  "retrieved_at": "2026-10-31T05:19:03Z",
+  "raw_sha256": "e9814d266356024ef4327fa19cc0fabc6a8bd8552d7be85b43405910cefefa38",
+  "retrieved_at": "2026-11-04T05:19:48Z",
   "role": "primary",
-  "rows": 9102,
+  "rows": 9128,
   "since": "2015-01-01",
   "source": "ember",
   "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv"
