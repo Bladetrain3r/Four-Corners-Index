@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-11-04",
   "name": "prc_hicp_minr",
-  "raw_sha256": "a789b2980ba36595c47e9b11c7db2ae45fab8ca9c6a281c0368ab39c515f94c3",
-  "retrieved_at": "2026-10-17T05:24:59Z",
+  "raw_sha256": "5d0f55beadbc59332bf62536324a48d0a36fae354b25f0ea1043bf238e806f28",
+  "retrieved_at": "2026-11-05T05:18:56Z",
   "role": "primary",
   "rows": 1284,
   "since": "2015-01-01",
