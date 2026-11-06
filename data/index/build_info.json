@@ -3,7 +3,7 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "16c724c67d352b17c940b15d51b58dddaaf82c1877a446e4f0766d912cd14cf0",
+  "inputs_sha256": "7711eb0ca19b6ad2b5aa212b67c587cc335fc1b5f434f3e1aba54dd9a348fd94",
   "ledger_lines": 508,
   "method_doc_version": 4,
   "published": "2026-11-03",
@@ -36,7 +36,7 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "6214be91cb267b53f05b470de0c17df49cede28b0ee229fb99e3970529ce404c",
+    "ecb/exr_daily": "881db3c184b7815aaf84ae9610cda34072ca15cbefe5fd79eef5db52377dba30",
     "ecb/exr_monthly": "ca62211bb89c6a7d7b3dc9d16a0302295532fa3edcdf49d76a4bf65479b21e94",
     "eia/generation_cross_check": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
     "eia/henry_hub_daily": "d8de1665584c790ae7fac63a52628d5343c04146759bc0759e104591ca209bec",
