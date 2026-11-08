@@ -68,10 +68,12 @@ def test_ember_prices_monthly_and_daily_with_eurostat_country_codes(fixture_byte
 
 
 def test_ember_prices_accept_moldova_in_monthly_and_daily_files(fixture_bytes):
-    for fixture, period in ((PRICE_M, "monthly"), (PRICE_D, "daily")):
+    expected = ((PRICE_M, "monthly", 29.94, "2015-01-31"), (PRICE_D, "daily", 22.34, "2015-01-01"))
+    for (fixture, period, value, period_end) in expected:
         raw, m = fixture_bytes("ember", fixture)
-        points = ember.parse_prices(raw.replace(b",AUT,", b",MDA,", 1), m["fetched_at"], period)
-        assert _one(points, region="MD", period_start="2015-01-01")["value"] > 0
+        raw = raw.replace(b"Austria,AUT,", b"Moldova,MDA,", 1)
+        point = _one(ember.parse_prices(raw, m["fetched_at"], period), region="MD", period_start="2015-01-01")
+        assert point["value"] == value and point["period_end"] == period_end
 
 
 def test_ember_output_deterministic(fixture_bytes):
