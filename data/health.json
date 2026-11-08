@@ -13,10 +13,8 @@
    "status": "ok"
   },
   "ember": {
-   "failing_since": "2026-10-28",
-   "last_good": "2026-10-27",
-   "message": "prices_monthly: [ember] prices_monthly: the response no longer parses (SourceError: [ember] monthly wholesale price: unknown country code 'MDA' (Moldova))",
-   "status": "failed"
+   "last_good": "2026-11-08",
+   "status": "ok"
   },
   "eurostat": {
    "last_good": "2026-11-08",
