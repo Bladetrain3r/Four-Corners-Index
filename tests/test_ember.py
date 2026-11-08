@@ -67,6 +67,15 @@ def test_ember_prices_monthly_and_daily_with_eurostat_country_codes(fixture_byte
     assert _one(d, region="AT", period_start="2015-01-01")["value"] == 22.34
 
 
+def test_ember_prices_accept_moldova_in_monthly_and_daily_files(fixture_bytes):
+    expected = ((PRICE_M, "monthly", 29.94, "2015-01-31"), (PRICE_D, "daily", 22.34, "2015-01-01"))
+    for (fixture, period, value, period_end) in expected:
+        raw, m = fixture_bytes("ember", fixture)
+        raw = raw.replace(b"Austria,AUT,", b"Moldova,MDA,", 1)
+        point = _one(ember.parse_prices(raw, m["fetched_at"], period), region="MD", period_start="2015-01-01")
+        assert point["value"] == value and point["period_end"] == period_end
+
+
 def test_ember_output_deterministic(fixture_bytes):
     raw, m = fixture_bytes("ember", PRICE_M)
     assert dumps(ember.parse_prices(raw, m["fetched_at"])) == dumps(ember.parse_prices(raw, m["fetched_at"]))
