@@ -43,6 +43,7 @@ ISO3 = {
     "FIN": "FI", "FRA": "FR", "DEU": "DE", "GRC": "EL", "HUN": "HU", "IRL": "IE", "ITA": "IT", "LVA": "LV",
     "LTU": "LT", "LUX": "LU", "MNE": "ME", "NLD": "NL", "MKD": "MK", "NOR": "NO", "POL": "PL", "PRT": "PT",
     "ROU": "RO", "SRB": "RS", "SVK": "SK", "SVN": "SI", "ESP": "ES", "SWE": "SE", "CHE": "CH", "GBR": "GB",
+    "MDA": "MD",
 }
 
 
