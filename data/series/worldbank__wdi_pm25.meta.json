@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-08",
+  "as_of": "2026-11-11",
   "name": "wdi_pm25",
-  "raw_sha256": "0b1ad6a9c07ed9938702a7c4298b9f25353abcd7df4e1552121090951bdbec62",
-  "retrieved_at": "2026-10-09T05:31:17Z",
+  "raw_sha256": "7377e1bc57c950ffca723cb8ea54a76b80d32489db7807cb524f89244b2623de",
+  "retrieved_at": "2026-11-12T05:21:08Z",
   "role": "primary",
   "rows": 204,
   "since": "1990-01-01",

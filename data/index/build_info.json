@@ -3,7 +3,7 @@
     "retail": 2,
     "wholesale": 1
   },
-  "inputs_sha256": "6f520d484013176442ba6fb8e55b2e76b3a98da19fac6cfa850524a2b73f2d9d",
+  "inputs_sha256": "5290cba4d2a9845a8adbd5b9f3357dbe6faa165a8022ca17b672378b49a8196a",
   "ledger_lines": 508,
   "method_doc_version": 4,
   "published": "2026-11-03",
@@ -14,7 +14,7 @@
   "series_rows": {
     "desnz/qep_542": 43,
     "desnz/qep_562": 44,
-    "ecb/exr_daily": 2040,
+    "ecb/exr_daily": 2044,
     "ecb/exr_monthly": 568,
     "eia/generation_cross_check": 1680,
     "eia/henry_hub_daily": 499,
@@ -36,7 +36,7 @@
   "snapshots": {
     "desnz/qep_542": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
     "desnz/qep_562": "4d8bb9de8b053c0cff384076dc165644c7698c47dccbae89d51594fd313a5a82",
-    "ecb/exr_daily": "5a731a5d3681be9a7c05fba4d9a09d3b79ffb5b285abdfee42e58c011ffb5465",
+    "ecb/exr_daily": "b792333bf4c959510cf05a6a0b7b3013415fb5eb100ff1db746172e491a7cad4",
     "ecb/exr_monthly": "ca62211bb89c6a7d7b3dc9d16a0302295532fa3edcdf49d76a4bf65479b21e94",
     "eia/generation_cross_check": "6a384868b8e38149e0e4757d0b1f438a7cbec0c30e3ae46939d3a603c135e649",
     "eia/henry_hub_daily": "d8de1665584c790ae7fac63a52628d5343c04146759bc0759e104591ca209bec",
@@ -53,7 +53,7 @@
     "eurostat/nrg_pc_205_ic": "2b354c255f30be6bbaa727566d02cf7e567404284e2ab0dccc53bf572fc1d2d8",
     "eurostat/prc_hicp_minr": "5d0f55beadbc59332bf62536324a48d0a36fae354b25f0ea1043bf238e806f28",
     "worldbank/pink_sheet_monthly": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2",
-    "worldbank/wdi_pm25": "0b1ad6a9c07ed9938702a7c4298b9f25353abcd7df4e1552121090951bdbec62"
+    "worldbank/wdi_pm25": "7377e1bc57c950ffca723cb8ea54a76b80d32489db7807cb524f89244b2623de"
   },
   "wholesale_months": [
     "2015-01",
