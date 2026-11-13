@@ -1,27 +1,29 @@
 {
  "sources": {
   "desnz": {
-   "last_good": "2026-11-12",
+   "last_good": "2026-11-13",
    "status": "ok"
   },
   "ecb": {
-   "last_good": "2026-11-12",
+   "last_good": "2026-11-13",
    "status": "ok"
   },
   "eia": {
-   "last_good": "2026-11-12",
+   "last_good": "2026-11-13",
    "status": "ok"
   },
   "ember": {
+   "failing_since": "2026-11-13",
    "last_good": "2026-11-12",
-   "status": "ok"
+   "message": "prices_monthly: [ember] prices_monthly: the response no longer parses (SourceError: [ember] monthly wholesale price: unknown country code 'XKX' (Kosovo))",
+   "status": "failed"
   },
   "eurostat": {
-   "last_good": "2026-11-12",
+   "last_good": "2026-11-13",
    "status": "ok"
   },
   "worldbank": {
-   "last_good": "2026-11-12",
+   "last_good": "2026-11-13",
    "status": "ok"
   }
  }
