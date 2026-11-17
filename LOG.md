@@ -199,3 +199,8 @@ decision: proceed — pushed; needs a merge, after which the push-triggered Page
 plan: accept Ember's newly published Moldova country code in both wholesale price parsers and cover the mapping with monthly and daily fixture mutations | eval: `python3.12 -m pytest tests/test_ember.py`, `python3.12 -m pipeline.fetch --mode fixture --only ember`, full `pytest`, Ruff | expect: MDA parses as Eurostat region MD without changing unknown-code failures
 result: green — 11 Ember tests, 234 full-suite tests (3 skipped), 4 Ember fixture requests parsed, Ruff clean
 decision: proceed — the one-line ISO3 mapping fixes both reported source failures while keeping unsupported codes loud
+
+### R32 — source/ember — 2026-11-17T09:00Z
+plan: map Ember's newly published Kosovo code XKX to Eurostat's XK in both wholesale price parsers and add monthly/daily regression coverage | eval: `python3.12 -m pytest tests/test_ember.py`, `python3.12 -m pipeline.fetch --mode fixture --only ember`, full `pytest`, Ruff | expect: XKX parses as XK in both periods while unsupported codes still fail loudly
+result: green — 12 Ember tests, 235 full-suite tests (3 skipped), 4 Ember fixture requests parsed, Ruff clean; manual checks confirmed XKX→XK and XXX remains rejected
+decision: proceed — the focused mapping and regression coverage resolve both reported Ember price failures without weakening unknown-code validation
