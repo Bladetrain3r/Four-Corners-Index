@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-15",
-  "cutoff": "2024-11-11",
+  "as_of": "2026-11-19",
+  "cutoff": "2024-11-17",
   "keep_days": 730,
   "months": 25,
   "name": "henry_hub_daily",
-  "raw_sha256": "28a1222a535965d2ffad12de797a0b7a7c174f3e25a33c50005ed75b36a9618f",
-  "retrieved_at": "2026-11-15T05:19:51Z",
+  "raw_sha256": "63106a170a3c5045da3ac11d6d4c42ec12e0237434fb3bfb3547af3a77f99c68",
+  "retrieved_at": "2026-11-19T05:19:16Z",
   "role": "primary",
-  "rows": 500,
+  "rows": 499,
   "source": "eia",
   "url": "https://api.eia.gov/v2/natural-gas/pri/fut/data/?api_key=REDACTED&frequency=daily&data[0]=value&facets[series][]=RNGWHHD&start=2015-01-01&length=5000"
 }
