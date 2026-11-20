@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-19",
+  "as_of": "2026-11-20",
   "name": "prices_monthly",
-  "raw_sha256": "be261a1796749e2e5d8a8b06c74dd91caae90d89cda772cf42b6949b53594b83",
-  "retrieved_at": "2026-11-19T05:19:30Z",
+  "raw_sha256": "9fed6ce8e23c626d703c04aaa169a9d4c75fddc16491cc09e8c3d0856e1a3142",
+  "retrieved_at": "2026-11-20T05:19:31Z",
   "role": "primary",
   "rows": 4071,
   "since": "2015-01-01",
