@@ -3,28 +3,6 @@ eia,natural-gas/pri/fut:RNGWHHD:daily,US,2018-01-05,2018-01-05,EIA published no 
 ember,ember:daily:day_ahead_price,EL,2026-06-30,2026-06-30,Ember published no price
 ember,ember:daily:day_ahead_price,HR,2026-06-30,2026-06-30,Ember published no price
 ember,ember:daily:day_ahead_price,HU,2026-06-30,2026-06-30,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-03-09,2025-03-09,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-03-10,2025-03-10,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-18,2025-04-18,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-19,2025-04-19,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-20,2025-04-20,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-21,2025-04-21,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-22,2025-04-22,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-04-23,2025-04-23,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-05-16,2025-05-16,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-05-17,2025-05-17,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-05-18,2025-05-18,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-05-19,2025-05-19,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-05-20,2025-05-20,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-07-06,2025-07-06,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-07-07,2025-07-07,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-08-18,2025-08-18,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-08-19,2025-08-19,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-09-07,2025-09-07,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-09-08,2025-09-08,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-09-09,2025-09-09,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-09-23,2025-09-23,Ember published no price
-ember,ember:daily:day_ahead_price,MK,2025-09-24,2025-09-24,Ember published no price
 ember,ember:daily:day_ahead_price,NL,2026-06-30,2026-06-30,Ember published no price
 ember,ember:daily:day_ahead_price,RO,2026-06-30,2026-06-30,Ember published no price
 ember,ember:daily:day_ahead_price,SI,2026-05-01,2026-05-01,Ember published no price
@@ -84,12 +62,6 @@ ember,ember:daily:day_ahead_price,SI,2026-06-27,2026-06-27,Ember published no pr
 ember,ember:daily:day_ahead_price,SI,2026-06-28,2026-06-28,Ember published no price
 ember,ember:daily:day_ahead_price,SI,2026-06-29,2026-06-29,Ember published no price
 ember,ember:daily:day_ahead_price,SK,2026-06-30,2026-06-30,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-03-01,2025-03-31,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-04-01,2025-04-30,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-05-01,2025-05-31,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-07-01,2025-07-31,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-08-01,2025-08-31,Ember published no price
-ember,ember:monthly:day_ahead_price,MK,2025-09-01,2025-09-30,Ember published no price
 worldbank,worldbank:pink_sheet:coal_australia,AU,1960-01-01,1960-01-31,World Bank marks this month not available
 worldbank,worldbank:pink_sheet:coal_australia,AU,1960-02-01,1960-02-29,World Bank marks this month not available
 worldbank,worldbank:pink_sheet:coal_australia,AU,1960-03-01,1960-03-31,World Bank marks this month not available
