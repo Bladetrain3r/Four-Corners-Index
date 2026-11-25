@@ -139,6 +139,7 @@ electricity/electric-power-operational-data:generation,US,mix,,bioenergy,,2026-0
 electricity/electric-power-operational-data:generation,US,mix,,bioenergy,,2026-06-01,2026-06-30,3693.71038,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,bioenergy,,2026-07-01,2026-07-31,4011.40823,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,bioenergy,,2026-08-01,2026-08-31,4048.75881,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,bioenergy,,2026-09-01,2026-09-30,3691.82656,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2015-01-01,2015-01-31,131505.83386,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2015-02-01,2015-02-28,126064.92431,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2015-03-01,2015-03-31,107883.87479,GWh,,,primary
@@ -279,6 +280,7 @@ electricity/electric-power-operational-data:generation,US,mix,,coal,,2026-05-01,
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2026-06-01,2026-06-30,54886.07578,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2026-07-01,2026-07-31,74979.26349,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,coal,,2026-08-01,2026-08-31,70351.26903,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,coal,,2026-09-01,2026-09-30,63692.93746,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2015-01-01,2015-01-31,101690.97336,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2015-02-01,2015-02-28,91440.16871,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2015-03-01,2015-03-31,99550.14498,GWh,,,primary
@@ -419,6 +421,7 @@ electricity/electric-power-operational-data:generation,US,mix,,gas,,2026-05-01,2
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2026-06-01,2026-06-30,163096.47519,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2026-07-01,2026-07-31,205225.06959,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,gas,,2026-08-01,2026-08-31,209842.94095,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,gas,,2026-09-01,2026-09-30,176756.50701,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2015-01-01,2015-01-31,24138.3839,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2015-02-01,2015-02-28,22286.07601,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2015-03-01,2015-03-31,24280.90476,GWh,,,primary
@@ -559,6 +562,7 @@ electricity/electric-power-operational-data:generation,US,mix,,hydro,,2026-05-01
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2026-06-01,2026-06-30,23127.24351,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2026-07-01,2026-07-31,19447.28345,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,hydro,,2026-08-01,2026-08-31,18587.62555,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,hydro,,2026-09-01,2026-09-30,15475.17704,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2015-01-01,2015-01-31,74269.974,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2015-02-01,2015-02-28,63461.493,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2015-03-01,2015-03-31,64546.799,GWh,,,primary
@@ -699,6 +703,7 @@ electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2026-05-
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2026-06-01,2026-06-30,68786.11,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2026-07-01,2026-07-31,71171.673,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2026-08-01,2026-08-31,70661.112,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,nuclear,,2026-09-01,2026-09-30,64719.687,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2015-01-01,2015-01-31,2972.96671,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2015-02-01,2015-02-28,6320.62132,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2015-03-01,2015-03-31,1778.49118,GWh,,,primary
@@ -839,6 +844,7 @@ electricity/electric-power-operational-data:generation,US,mix,,oil,,2026-05-01,2
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2026-06-01,2026-06-30,1400.89592,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2026-07-01,2026-07-31,1776.95182,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,oil,,2026-08-01,2026-08-31,1510.30137,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,oil,,2026-09-01,2026-09-30,1663.81858,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,other,,2015-01-01,2015-01-31,1113.68171,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,other,,2015-01-01,2015-01-31,1361.91486,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,other,,2015-02-01,2015-02-28,980.18381,GWh,,,primary
@@ -1119,6 +1125,8 @@ electricity/electric-power-operational-data:generation,US,mix,,other,,2026-07-01
 electricity/electric-power-operational-data:generation,US,mix,,other,,2026-07-01,2026-07-31,1347.25322,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,other,,2026-08-01,2026-08-31,300.17538,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,other,,2026-08-01,2026-08-31,1363.40896,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,other,,2026-09-01,2026-09-30,305.64067,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,other,,2026-09-01,2026-09-30,1360.25342,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2015-01-01,2015-01-31,-551.05,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2015-02-01,2015-02-28,-456.06,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2015-03-01,2015-03-31,-409.305,GWh,,,primary
@@ -1259,6 +1267,7 @@ electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2026-06-01,2026-06-30,-467.855,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2026-07-01,2026-07-31,-524.031,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2026-08-01,2026-08-31,-565.366,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,pumped_storage,,2026-09-01,2026-09-30,-572.501,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2015-01-01,2015-01-31,1155.35063,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2015-02-01,2015-02-28,1483.55386,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2015-03-01,2015-03-31,2072.25703,GWh,,,primary
@@ -1399,6 +1408,7 @@ electricity/electric-power-operational-data:generation,US,mix,,solar,,2026-05-01
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2026-06-01,2026-06-30,38526.99908,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2026-07-01,2026-07-31,41043.99639,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,solar,,2026-08-01,2026-08-31,38818.73419,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,solar,,2026-09-01,2026-09-30,33023.11413,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,total,,2015-01-01,2015-01-31,360452.84324,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,total,,2015-02-01,2015-02-28,334595.61098,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,total,,2015-03-01,2015-03-31,324313.51714,GWh,,,primary
@@ -1539,6 +1549,7 @@ electricity/electric-power-operational-data:generation,US,mix,,total,,2026-05-01
 electricity/electric-power-operational-data:generation,US,mix,,total,,2026-06-01,2026-06-30,397565.95856,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,total,,2026-07-01,2026-07-31,451966.70113,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,total,,2026-08-01,2026-08-31,449405.55472,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,total,,2026-09-01,2026-09-30,394918.36345,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2015-01-01,2015-01-31,15162.14633,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2015-02-01,2015-02-28,14921.54534,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2015-03-01,2015-03-31,15307.92894,GWh,,,primary
@@ -1679,3 +1690,4 @@ electricity/electric-power-operational-data:generation,US,mix,,wind,,2026-05-01,
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2026-06-01,2026-06-30,41707.39694,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2026-07-01,2026-07-31,31888.5227,GWh,,,primary
 electricity/electric-power-operational-data:generation,US,mix,,wind,,2026-08-01,2026-08-31,33317.43101,GWh,,,primary
+electricity/electric-power-operational-data:generation,US,mix,,wind,,2026-09-01,2026-09-30,33647.68519,GWh,,,primary
