@@ -9,7 +9,7 @@ desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2018-01-01,2018-06-30,0.086
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2018-07-01,2018-12-31,0.09037826822604553,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2019-01-01,2019-06-30,0.08111037266769144,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2019-07-01,2019-12-31,0.082531749260775,GBP/kWh,GBP,,primary
-desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2020-01-01,2020-06-30,0.08572341844235039,GBP/kWh,GBP,,primary
+desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2020-01-01,2020-06-30,0.08566059175735324,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2020-07-01,2020-12-31,0.07951029615895694,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2021-01-01,2021-06-30,0.08082768897644371,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2021-07-01,2021-12-31,0.10965855896529607,GBP/kWh,GBP,,primary
@@ -20,6 +20,8 @@ desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2023-07-01,2023-12-31,0.253
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2024-01-01,2024-06-30,0.2410664522796969,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2024-07-01,2024-12-31,0.21178601950449902,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2025-01-01,2025-06-30,0.2047696052839911,GBP/kWh,GBP,,primary
+desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2025-07-01,2025-12-31,0.18617394440702864,GBP/kWh,GBP,,primary
+desnz:qep_5.4.2:medium:excl_tax,GB,cost,industrial,,,2026-01-01,2026-06-30,0.18586573080374394,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2015-01-01,2015-06-30,0.1003918483028839,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2015-07-01,2015-12-31,0.1003864447638839,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2016-01-01,2016-06-30,0.0987213645046793,GBP/kWh,GBP,,primary
@@ -42,3 +44,4 @@ desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2024-01-01,2024-06-30,0.299
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2024-07-01,2024-12-31,0.2742787532921053,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2025-01-01,2025-06-30,0.26613276458955937,GBP/kWh,GBP,,primary
 desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2025-07-01,2025-12-31,0.25076861052992316,GBP/kWh,GBP,,primary
+desnz:qep_5.4.2:medium:incl_tax,GB,cost,industrial,,,2026-01-01,2026-06-30,0.2507988875478645,GBP/kWh,GBP,,primary

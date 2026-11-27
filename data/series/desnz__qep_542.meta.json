@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-09-29",
+  "as_of": "2026-11-27",
   "name": "qep_542",
-  "raw_sha256": "39235711ac1084ba3c6b548fcd8590680b0987b7a3f3344c1f6421aeb7f7d620",
-  "retrieved_at": "2026-09-29T21:49:56Z",
+  "raw_sha256": "02ccf41532ff0ca8b490fe2a3353c379f6a49251613201c1730d69ede37e4572",
+  "retrieved_at": "2026-11-27T05:25:47Z",
   "role": "primary",
-  "rows": 43,
+  "rows": 46,
   "since": "2015-01-01",
   "source": "desnz",
-  "url": "https://assets.publishing.service.gov.uk/media/6a1565099819be865f421cda/table_541.xlsx"
+  "url": "https://assets.publishing.service.gov.uk/media/6b06be7044b16eb36a9dbe67/table_541.xlsx"
 }
